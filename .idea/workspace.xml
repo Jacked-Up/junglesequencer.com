@@ -1,32 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jungle-website.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/2019-05-28-first-blog-post.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/2019-05-29-long-blog-post.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/2021-08-01-mdx-blog-post.mdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/2021-08-26-welcome/docusaurus-plushie-banner.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/2021-08-26-welcome/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/authors.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/intro.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tutorial-basics/_category_.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tutorial-basics/congratulations.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tutorial-basics/create-a-blog-post.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tutorial-basics/create-a-document.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tutorial-basics/create-a-page.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tutorial-basics/deploy-your-site.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tutorial-basics/markdown-features.mdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tutorial-extras/_category_.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tutorial-extras/img/docsVersionDropdown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tutorial-extras/img/localeDropdown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tutorial-extras/manage-docs-versions.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tutorial-extras/translate-your-site.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +37,10 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "dev",
     "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
@@ -71,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699124575776</updated>
-      <workItem from="1699124576819" duration="254000" />
+      <workItem from="1699124576819" duration="3282000" />
     </task>
     <servers />
   </component>
