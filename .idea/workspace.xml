@@ -5,40 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/frequently-asked-questions.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/_category_.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/event-node.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/io-node.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/jungle-runtime.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/jungle-tree.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/get-started/img/package-manager-dropdown.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/get-started/update-jungle.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Nodes/_category_.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/getting-started/_category_.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Nodes/branch-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/branch-node.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Nodes/io-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/identity-node.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Nodes/node-examples/_category_.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tutorials/_category_.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Nodes/node-examples/dialog-system/_category_.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tutorials/dialog-system/_category_.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Nodes/node-examples/dialog-system/dialog-branch-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tutorials/dialog-system/dialog-branch-node.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Nodes/node-examples/dialog-system/dialog-choice-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tutorials/dialog-system/dialog-choice-node.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Nodes/node-examples/dialog-system/dialog-ui.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tutorials/dialog-system/dialog-ui.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Nodes/node-examples/dialog-system/getting-started.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tutorials/dialog-system/getting-started.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/installation.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/installation.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/intro.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-basics/_category_.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-basics/congratulations.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-basics/create-a-blog-post.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-basics/create-a-document.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-basics/create-a-page.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-basics/deploy-your-site.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-basics/markdown-features.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-extras/_category_.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-extras/img/docsVersionDropdown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-extras/img/localeDropdown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-extras/manage-docs-versions.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tutorial-extras/translate-your-site.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/getting-started/_category_.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/get-started/_category_.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/installation.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/get-started/install-jungle.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docusaurus-intro.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/logo.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,24 +35,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "jack",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/zackj/Documents/GitHub/jungle-website/docs/getting-started",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;jack&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zackj/Documents/GitHub/jungle-website/docs/getting-started&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\getting-started" />
@@ -89,6 +62,8 @@
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\nodes\node-examples" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\get-started\img" />
+      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\get-started" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\static\img" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\Documentation\Nodes" />
@@ -110,6 +85,7 @@
       <workItem from="1699368720045" duration="25000" />
       <workItem from="1699368756839" duration="1191000" />
       <workItem from="1699370035766" duration="1831000" />
+      <workItem from="1699398791702" duration="3140000" />
     </task>
     <servers />
   </component>
