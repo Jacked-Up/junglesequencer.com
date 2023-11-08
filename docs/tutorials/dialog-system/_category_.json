@@ -1,0 +1,8 @@
+{
+  "label": "Dialog System",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Lets build a fully functional node-based dialog system using Jungle."
+  }
+}
