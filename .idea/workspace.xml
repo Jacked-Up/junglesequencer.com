@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/get-started/img/package-manager-dropdown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/get-started/update-jungle.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/node-properties.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/getting-started/_category_.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/get-started/_category_.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/installation.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/get-started/install-jungle.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docusaurus-intro.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/_category_.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/_category_.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +39,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;jack&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/zackj/Documents/GitHub/jungle-website/docs/getting-started&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zackj/Documents/GitHub/jus-website&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -85,7 +81,10 @@
       <workItem from="1699368720045" duration="25000" />
       <workItem from="1699368756839" duration="1191000" />
       <workItem from="1699370035766" duration="1831000" />
-      <workItem from="1699398791702" duration="3140000" />
+      <workItem from="1699398791702" duration="5056000" />
+      <workItem from="1699544271823" duration="544000" />
+      <workItem from="1699623085364" duration="66000" />
+      <workItem from="1699891425252" duration="4433000" />
     </task>
     <servers />
   </component>

@@ -1,8 +1,4 @@
 {
   "label": "Jungle Nodes",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "..."
-  }
+  "position": 2
 }
