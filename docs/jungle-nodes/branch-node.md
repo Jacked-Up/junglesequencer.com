@@ -84,6 +84,49 @@ public override Port.Info GetInputPortInfo()
 public override Port.Info[] GetOutputPortsInfo()
 ```
 
+## Attribute
+
+All Branch nodes are required to have a **BranchNode** class attribute defined. This attribute defines the input port
+and output ports on the node. 
+
+Here's a list of all the properties you can define in the **BranchNode** attribute:
+
+| Name            | Type     | Notes                                    |
+|-----------------|----------|------------------------------------------|
+| InputPortName   | string   | Defines the name of the input port       |
+| InputPortType   | type     | Defines the input ports accepted type    |
+| OutputPortNames | string[] | Defines the names for each output port   |
+| OutputPortTypes | type[]   | Defines the outputted type for each port |
+
+How would you define a Branch Node?
+
+```csharp
+[NodeProperties(
+    // Your nodes properties
+)]
+[BranchNode(
+    InputPortName = "Value"
+    InputPortType = typeof(int),
+    OutputPortNames = new []{ "Is Greater Than", "Is Less Than" },
+    OutputPortTypes = new []{ typeof(Port.None), typeof(Port.None) }
+)]
+public class IsGreatorThanNode : BranchNode
+...
+```
+
+:::tip TIP
+If you're feeling lazy, you can always define the **BranchNode** attribute with no definitions. Instead, Jungle will
+give the ports default names and types.
+```csharp
+[NodeProperties(
+    // Your nodes properties
+)]
+[BranchNode]
+public class MyBranchNode : BranchNode
+...
+```
+:::
+
 ## Boilerplate
 
 ```csharp
@@ -120,3 +163,7 @@ public class MyBranchNode : BranchNode
     }
 }
 ```
+
+### Example
+
+

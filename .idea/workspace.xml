@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/node-properties.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/_category_.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/_category_.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/branch-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/branch-node.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <workItem from="1699398791702" duration="5056000" />
       <workItem from="1699544271823" duration="544000" />
       <workItem from="1699623085364" duration="66000" />
-      <workItem from="1699891425252" duration="4433000" />
+      <workItem from="1699891425252" duration="5824000" />
     </task>
     <servers />
   </component>
