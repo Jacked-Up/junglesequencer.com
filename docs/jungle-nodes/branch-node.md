@@ -20,112 +20,194 @@ If you plan to use only a single output from the branch node, we recommend build
 
 ## API
 
-Branch Node inherits from Jungle Node.
-
 ```csharp
 using Jungle;
 ```
 
-### Overrides
+### Methods
 
-Called immediately when this node is called. **(REQUIRED)**
-- Input value is sent from the connected node.
-:::danger WARNING
-Never **trust** the input value to be of the type declared in the **Branch Node** attribute. While Jungle does check for 
-these exceptions automatically, you should always be ready to throw an exception for the incorrect type.
+#### Abstract
+
+Called immediately when the Branch Node is called by another node.
+<br />The **inputValue** parameter is the value passed in from the node that called this node.
+```csharp
+protected abstract void OnStart(in object inputValue);
+```
+
+Called every frame while the Branch Node is running. Always called after **OnStart**.
+```csharp
+protected abstract void OnUpdate();
+```
+:::info 
+Both **OnStart** and **OnUpdate** are required methods in all Jungle Nodes. Your code **will not** compile without them.
 :::
 
-```csharp
-protected override void OnStart(in object inputValue)
-```
+#### Virtual
 
 Called immediately after this Branch Node is stopped.
 ```csharp
-protected override void OnStop()
+protected virtual void OnStop() {}
 ```
 
-Called every frame while this node is running. **(REQUIRED)**
+Called whenever a validation is requested on this Branch Node.
+<br />Should return any issues found with this node.
 ```csharp
-protected override void OnUpdate()
+protected virtual Issue[] OnValidation() {}
 ```
 
+Override this if you want to add dynamic node context in the Jungle Editor.
+<br />Called on _every_ validation pass.
 ```csharp
-public override string GetDetails()
+public override string GetDetails() {}
 ```
 
+#### Calls
+
+Sends the port calls out to the requested ports.
 ```csharp
-protected override ValidationResult[] OnValidation(ValidationRequest[] requests)
+protected void Call(Port.Call[] portCalls)
 ```
 
-### Methods
-
-Sends out port calls.
-```csharp
-protected void Call(IEnumerable<Port.Call> portCalls)
-```
-
-Stops this Branch Node and doesn't send any port calls.
+Stops the Branch Node without sending out any port calls.
 ```csharp
 protected void Stop()
 ```
 
-Sends out port calls and then stops this Branch Node.
+Both sends the port calls out to the requested ports and stops the Branch Node.
 ```csharp
-protected void CallAndStop(IEnumerable<Port.Call> portCalls)
+protected void CallAndStop(Port.Call[] portCalls)
 ```
 
 ### Properties
 
+Reference to the nodes Jungle Tree.
+```csharp
+public JungleTree JungleTree { get; }
+```
+
+List of the Jungle Nodes output ports.
+```csharp
+public Port[] OutputPorts { get; }
+```
+
+Called when the Jungle Node is validated. Callback is true if issues were detected.
+```csharp
+public Action<bool> OnValidated
+```
+
+True if the Jungle Node is currently running.
+```csharp
+public bool IsRunning { get; }
+```
+
+Returns the Jungle Nodes title.
+```csharp
+public string GetTitle()
+```
+
+Returns a brief description of the Jungle Nodes function.
+```csharp
+public string GetDescription()
+```
+
+Returns the Jungle Nodes category.
+```csharp
+public string GetCategory()
+```
+
+Returns the Jungle Nodes accent color.
+```csharp
+public Color GetColor()
+```
+
+Returns the Jungle Nodes script icon.
+```csharp
+public Texture GetIcon()
+```
+
+:::warning EDITOR ONLY
+Fetching the Jungle Nodes icon only works in the Unity editor. In a build, this will return a blank white texture.
+:::
+
+Returns the Jungle Nodes unique id.
+```csharp
+public string GetUid()
+```
+
+Returns true if the Jungle Node is declared deprecated.
+```csharp
+public bool IsDeprecated()
+```
+
+Returns true if the Jungle Node is limited to one instance per Jungle Tree.
+```csharp
+public bool IsLimitedOnePerTree()
+```
+
+Returns info about the Jungle Nodes input port.
 ```csharp
 public override Port.Info GetInputPortInfo()
 ```
 
+Returns info about the Jungle Nodes output ports.
 ```csharp
 public override Port.Info[] GetOutputPortsInfo()
 ```
 
 ## Attribute
 
-All Branch nodes are required to have a **BranchNode** class attribute defined. This attribute defines the input port
+All Branch Nodes are required to have a `BranchNode` class attribute defined. This attribute defines the input port
 and output ports on the node. 
 
-Here's a list of all the properties you can define in the **BranchNode** attribute:
+Here's a list of all the properties you can define in the `BranchNode` attribute:
 
-| Name            | Type     | Notes                                    |
-|-----------------|----------|------------------------------------------|
-| InputPortName   | string   | Defines the name of the input port       |
-| InputPortType   | type     | Defines the input ports accepted type    |
-| OutputPortNames | string[] | Defines the names for each output port   |
-| OutputPortTypes | type[]   | Defines the outputted type for each port |
+| Name               | Type       | Notes                                    |
+|--------------------|------------|------------------------------------------|
+| `InputPortName`    | `string`   | Defines the name of the input port       |
+| `InputPortType`    | `type`     | Defines the input ports accepted type    |
+| `OutputPortNames`  | `string[]` | Defines the names for each output port   |
+| `OutputPortTypes`  | `type[]`   | Defines the outputted type for each port |
 
-How would you define a Branch Node?
+```csharp
+[BranchNode(
+    InputPortName = "My Input"
+    InputPortType = typeof(Port.None),
+    OutputPortNames = new []{ "My Output A",     "My Output B"     },
+    OutputPortTypes = new []{ typeof(Port.None), typeof(Port.None) }
+)]
+```
+
+- The input port would be named _"My Input"_ and would accept the type _"Port.None"_.
+- The output ports would be named _"My Output A"_ and "My Output B" and both would output the type _"Port.None"_.
+
+The output port names and types should be defined in the same order.
+
+:::warning WARNING
+The **OutputPortNames** and **OutputPortTypes** arrays must **always** be the same length.
+:::
+
+### Example
 
 ```csharp
 [NodeProperties(
-    // Your nodes properties
+    ...
 )]
 [BranchNode(
     InputPortName = "Value"
-    InputPortType = typeof(int),
-    OutputPortNames = new []{ "Is Greater Than", "Is Less Than" },
-    OutputPortTypes = new []{ typeof(Port.None), typeof(Port.None) }
+    InputPortType = typeof(float),
+    OutputPortNames = new []{ "Square Root", "Greator than One" },
+    OutputPortTypes = new []{ typeof(float), typeof(bool) }
 )]
-public class IsGreatorThanNode : BranchNode
+public class FindSquareRootNode : BranchNode
 ...
 ```
 
-:::tip TIP
-If you're feeling lazy, you can always define the **BranchNode** attribute with no definitions. Instead, Jungle will
-give the ports default names and types.
-```csharp
-[NodeProperties(
-    // Your nodes properties
-)]
-[BranchNode]
-public class MyBranchNode : BranchNode
-...
-```
-:::
+In this example, we defined **FindSquareRootNode**'s input port to be named **Value** and accept type **float**. We
+also defined two output ports named **Square Root** and **Greater than One** that output type **float** and **bool**
+respectively. With this setup, we could create the logic in this class so that if the input value is greater than one,
+it would call output port **Greater than One** with a value of **true**, and if the input value is less than one, it
+would call output port **Greater than One** with a value of **false**. We could also call output port **Square Root**
+with the square root of the input value.
 
 ## Boilerplate
 
@@ -143,7 +225,7 @@ using Jungle;
 [BranchNode(
     InputPortName = "Input",
     InputPortType = typeof(Port.None),
-    OutputPortNames = new []{ "Output A", "Output B" },
+    OutputPortNames = new []{ "Output A",        "Output B" },
     OutputPortTypes = new []{ typeof(Port.None), typeof(Port.None) }
 )]
 public class MyBranchNode : BranchNode
@@ -164,6 +246,48 @@ public class MyBranchNode : BranchNode
 }
 ```
 
-### Example
+## Example
 
+Here's a simple example of a branch node that takes a boolean value and branches based on that value.
 
+```csharp
+using Jungle;
+
+[NodeProperties(
+    Title = "Boolean Branch",
+    Description = "Branches based on a boolean value.",
+    Category = "Math",
+    Color = Red
+)]
+[BranchNode(
+    InputPortName = "Value",
+    InputPortType = typeof(bool),
+    OutputPortNames = new []{ "True",            "False" },
+    OutputPortTypes = new []{ typeof(Port.None), typeof(Port.None) }
+)]
+public class BooleanBranchNode : BranchNode
+{
+    protected override void OnStart(in object inputValue)
+    {
+        bool value = (bool)inputValue;
+        if (value)
+        {
+            // We defined output port 1 to be the "True" branch above.
+            CallAndStop(new []
+            {
+                new Port.Call(0, new Port.None())
+            });
+        }
+        else
+        {
+            // We defined output port 2 to be the "False" branch above.
+            CallAndStop(new []
+            {
+                new Port.Call(1, new Port.None())
+            });
+        }
+    }
+    
+    protected override void OnUpdate() { }
+}
+```

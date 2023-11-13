@@ -113,7 +113,7 @@ lead to unexpected behavior.
 When you set the deprecated property to true, the node will no longer be available in the node explorer and the Jungle
 Validator will mark all instances of the node within Jungle Trees as deprecated so that you can safely remove them.
 
-:::warning WARNING
+:::danger DANGER
 You should **NEVER** delete a Jungle Node script from your project until it has been removed from all Jungle Trees.
 :::
 
