@@ -3,21 +3,18 @@ title: Branch Node
 sidebar_position: 1
 ---
 
-The branch node is the most powerful node type in Jungle. The branch node takes a single input of any type, and outputs
+The Branch Node is the most powerful node type in Jungle. The Branch Node takes a single input of any type, and outputs
 to any number of outputs that all can output any types.
 
 :::info NOTE
-
 The branch node is limited to a maximum of **256** outputs.
-
 :::
 
 :::tip ONLY NEED ONE OUTPUT?
-
 If you plan to use only a single output from the branch node, we recommend building an **IO Node** instead.
-
 :::
 
+---
 ## API
 
 ```csharp
@@ -26,6 +23,7 @@ using Jungle;
 
 ### Methods
 
+---
 #### Abstract
 
 Called immediately when the Branch Node is called by another node.
@@ -42,6 +40,7 @@ protected abstract void OnUpdate();
 Both **OnStart** and **OnUpdate** are required methods in all Jungle Nodes. Your code **will not** compile without them.
 :::
 
+---
 #### Virtual
 
 Called immediately after this Branch Node is stopped.
@@ -61,11 +60,14 @@ Override this if you want to add dynamic node context in the Jungle Editor.
 public override string GetDetails() {}
 ```
 
+---
 #### Calls
 
 Sends the port calls out to the requested ports.
 ```csharp
-protected void Call(Port.Call[] portCalls)
+protected void Call(Port.Call[] portCalls) // For multiple port calls
+// OR
+protected void Call(Port.Call portCall)    // For only one port call
 ```
 
 Stops the Branch Node without sending out any port calls.
@@ -75,9 +77,12 @@ protected void Stop()
 
 Both sends the port calls out to the requested ports and stops the Branch Node.
 ```csharp
-protected void CallAndStop(Port.Call[] portCalls)
+protected void CallAndStop(Port.Call[] portCalls) // For multiple port calls
+// OR
+protected void CallAndStop(Port.Call portCall)    // For only one port call
 ```
 
+---
 ### Properties
 
 Reference to the nodes Jungle Tree.
@@ -154,6 +159,7 @@ Returns info about the Jungle Nodes output ports.
 public override Port.Info[] GetOutputPortsInfo()
 ```
 
+---
 ## Attribute
 
 All Branch Nodes are required to have a `BranchNode` class attribute defined. This attribute defines the input port
@@ -186,7 +192,7 @@ The output port names and types should be defined in the same order.
 The **OutputPortNames** and **OutputPortTypes** arrays must **always** be the same length.
 :::
 
-### Example
+#### Attribute Example
 
 ```csharp
 [NodeProperties(
@@ -209,6 +215,7 @@ it would call output port **Greater than One** with a value of **true**, and if 
 would call output port **Greater than One** with a value of **false**. We could also call output port **Square Root**
 with the square root of the input value.
 
+---
 ## Boilerplate
 
 ```csharp
@@ -225,7 +232,7 @@ using Jungle;
 [BranchNode(
     InputPortName = "Input",
     InputPortType = typeof(Port.None),
-    OutputPortNames = new []{ "Output A",        "Output B" },
+    OutputPortNames = new []{ "My Output A",     "My Output B" },
     OutputPortTypes = new []{ typeof(Port.None), typeof(Port.None) }
 )]
 public class MyBranchNode : BranchNode
@@ -246,6 +253,7 @@ public class MyBranchNode : BranchNode
 }
 ```
 
+---
 ## Example
 
 Here's a simple example of a branch node that takes a boolean value and branches based on that value.
@@ -269,23 +277,21 @@ public class BooleanBranchNode : BranchNode
 {
     protected override void OnStart(in object inputValue)
     {
-        bool value = (bool)inputValue;
-        if (value)
+        // Only continue if the input value is a boolean
+        if (inputValue is bool inputBoolean)
         {
-            // We defined output port 1 to be the "True" branch above.
-            CallAndStop(new []
+            if (inputBoolean)
             {
-                new Port.Call(0, new Port.None())
-            });
-        }
-        else
-        {
-            // We defined output port 2 to be the "False" branch above.
-            CallAndStop(new []
+                // We defined output port 1 to be the "True" branch above
+                CallAndStop(new Port.Call(0, new Port.None());
+            }
+            else
             {
-                new Port.Call(1, new Port.None())
-            });
+                // We defined output port 2 to be the "False" branch above
+                CallAndStop(new Port.Call(1, new Port.None());
+            }
         }
+        else throw new JungleException("Input value is not a boolean!");
     }
     
     protected override void OnUpdate() { }

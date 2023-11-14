@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/_category_.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/custom-node-inspectors.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/custom-node-types.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jungle-exception.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/tutorials/logic-gates/_category_.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/tutorials/logic-gates/getting-started.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/branch-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/branch-node.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/event-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/event-node.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/identity-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/identity-node.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/io-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/io-node.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/node-properties.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/node-properties.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-runtime.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-runtime.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +46,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "jack",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/zackj/Documents/GitHub/jungle-website/docs/jungle-nodes/advanced",
+    "last_opened_file_path": "C:/Users/zackj/Documents/GitHub/jungle-website/docs/tutorials/logic-gates",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,11 +58,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\tutorials\logic-gates" />
+      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\jungle-nodes\advanced" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\getting-started" />
-      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\jungle-nodes" />
-      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\nodes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\get-started\img" />
@@ -88,7 +91,7 @@
       <workItem from="1699398791702" duration="5056000" />
       <workItem from="1699544271823" duration="544000" />
       <workItem from="1699623085364" duration="66000" />
-      <workItem from="1699891425252" duration="17098000" />
+      <workItem from="1699891425252" duration="25999000" />
     </task>
     <servers />
   </component>

@@ -14,6 +14,7 @@ using Jungle;
 
 ### Methods
 
+---
 #### Abstract
 
 Called immediately when the IO Node is called by another node.
@@ -31,6 +32,7 @@ protected abstract void OnUpdate();
 Both **OnStart** and **OnUpdate** are required methods in all Jungle Nodes. Your code **will not** compile without them.
 :::
 
+---
 #### Virtual
 
 Called immediately after this IO Node is stopped.
@@ -50,6 +52,7 @@ Override this if you want to add dynamic node context in the Jungle Editor.
 public override string GetDetails() {}
 ```
 
+---
 #### Calls
 
 Sends the output value to any nodes connected to this IO Node's output.
@@ -67,6 +70,7 @@ Both sends the output value to any nodes connected to this IO Node's output and 
 protected void CallAndStop(object outputValue)
 ```
 
+---
 ### Properties
 
 Reference to the nodes Jungle Tree.
@@ -143,6 +147,7 @@ Returns info about the Jungle Nodes output ports.
 public override Port.Info[] GetOutputPortsInfo()
 ```
 
+---
 ## Attribute
 
 All IO Nodes are required to have an `IONode` class attribute defined. This attribute defines the input port and 
@@ -169,7 +174,8 @@ Here's a list of all the properties you can define in the `IONode` attribute:
 - The input port would be named _"My Input"_ and would accept the type _"Port.None"_.
 - The output port would be named _"My Output"_ and would output the type _"Port.None"_.
 
-### Example
+---
+#### Attribute Example
 
 ```csharp
 [NodeProperties(
@@ -189,6 +195,7 @@ In this example, we defined **MultiplyByTwoNode**'s input port to be named **Val
 also defined an output port named **Value * 2** that outputs type **float**. With this setup, we could create the logic
 in this class so that it would call output port **Value * 2** with the input value multiplied by two.
 
+---
 ## Boilerplate
 
 ```csharp
@@ -220,6 +227,46 @@ public class MyIONode : IONode
 }
 ```
 
+---
 ## Example
 
+Here's a simple example of an IO Node that reverses the inputted string and outputs it.
 
+```csharp
+using Jungle;
+
+[NodeProperties(
+    Title = "String Reverser",
+    Description = "Reverses the characters in a string.",
+    Category = "Nodes/String Operations",
+    Color = JungleNode.Teal
+)]
+[IONode(
+    InputPortName = "Input String",
+    InputPortType = typeof(string),
+    OutputPortName = "Reversed String",
+    OutputPortType = typeof(string)
+)]
+public class StringReverserNode : IONode
+{
+    protected override void OnStart(in object inputValue)
+    {
+        if (inputValue is string inputString)
+        {
+            // Reverse the input string
+            string reversedString = ReverseString(inputString);
+            CallAndStop(reversedString);
+        }
+        else Stop();
+    }
+    
+    protected override void OnUpdate() { }
+    
+    private string ReverseString(string str)
+    {
+        char[] charArray = str.ToCharArray();
+        Array.Reverse(charArray);
+        return new string(charArray);
+    }
+}
+```
