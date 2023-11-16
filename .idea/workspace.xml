@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/jungle-exception.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tutorials/logic-gates/_category_.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/tutorials/logic-gates/getting-started.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/extras/_category_.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/extras/img/cache-options.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/extras/jungle-cache.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/branch-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/branch-node.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/event-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/event-node.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/identity-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/identity-node.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/io-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/io-node.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/jungle-runtime.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-runtime.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-exception.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/extras/jungle-exception.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-runtime.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/extras/jungle-runtime.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/tutorials/logic-gates/_category_.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/tutorials/logic-gates/getting-started.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +44,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "jack",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/zackj/Documents/GitHub/jungle-website/docs/tutorials/logic-gates",
+    "last_opened_file_path": "C:/Users/zackj/Documents/GitHub/jungle-website/docs/extras/img/cache-options.jpg",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,18 +56,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\extras" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\tutorials\logic-gates" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\jungle-nodes\advanced" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\getting-started" />
-      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\jungle-nodes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\extras" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\get-started\img" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\get-started" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\static\img" />
-      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\Documentation\Nodes" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -91,7 +89,8 @@
       <workItem from="1699398791702" duration="5056000" />
       <workItem from="1699544271823" duration="544000" />
       <workItem from="1699623085364" duration="66000" />
-      <workItem from="1699891425252" duration="25999000" />
+      <workItem from="1699891425252" duration="26594000" />
+      <workItem from="1700075587292" duration="5228000" />
     </task>
     <servers />
   </component>

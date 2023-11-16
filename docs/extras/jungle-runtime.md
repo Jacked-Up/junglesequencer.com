@@ -1,9 +1,7 @@
 ---
 title: Jungle Runtime
-sidebar_position: 5
+sidebar_position: 0
 ---
-
-An explanation of the Jungle Runtime and how it works.
 
 :::info NO PUBLIC API
 The Jungle Runtime has no public API. It is automatically managed by Jungle and should never be interacted with directly.
@@ -21,7 +19,7 @@ scene loads.
 :::danger INSTANTIATION AND DESTRUCTION
 - **Never** create a new instance of the Jungle Runtime.
 - **Never** destroy the Jungle Runtime instance. 
-<br />_Both will break Jungle and create unexpected behavior._
+<br />_Both actions could break Jungle and cause some unexpected behavior._
 :::
 
 ---
@@ -33,4 +31,4 @@ The Jungle Runtime listens for three different methods:
 3. Before Render Update
 
 When any of these calls are invoked, the Jungle Runtime will immediately report them to any running Jungle Trees.
-<br />In this way, a Jungle Trees update frequency can be **dynamic** and **modular**.
+<br />In this way, a Jungle Trees update frequency can be **dynamic**.
