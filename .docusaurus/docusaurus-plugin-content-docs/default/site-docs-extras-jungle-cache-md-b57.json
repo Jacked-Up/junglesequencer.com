@@ -1,0 +1,28 @@
+{
+  "id": "extras/jungle-cache",
+  "title": "Jungle Cache",
+  "description": "The Jungle Cache has exposed API, but it is not recommended you call any methods on it directly.",
+  "source": "@site/docs/extras/jungle-cache.md",
+  "sourceDirName": "extras",
+  "slug": "/extras/jungle-cache",
+  "permalink": "/docs/extras/jungle-cache",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/extras/jungle-cache.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "Jungle Cache",
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Jungle Runtime",
+    "permalink": "/docs/extras/jungle-runtime"
+  },
+  "next": {
+    "title": "Jungle Exception",
+    "permalink": "/docs/extras/jungle-exception"
+  }
+}

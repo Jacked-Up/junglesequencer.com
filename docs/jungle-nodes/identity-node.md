@@ -1,13 +1,13 @@
 ---
-title: Identity Node
+title: Generic Node
 sidebar_position: 3
 ---
 
-The Identity Node is the simplest node in Jungle. It takes a single input of any type, and outputs the same value to a 
+The Generic Node is the simplest node in Jungle. It takes a single input of any type, and outputs the same value to a 
 single output of the same type.
 
 :::info NOTE
-The inputted value, also called the **identity**, is stored internally and cannot be modified or changed.
+The inputted value is stored internally and cannot be modified or changed.
 :::
 
 ## API
@@ -21,12 +21,12 @@ using Jungle;
 ---
 #### Abstract
 
-Called immediately when the Identity Node is called by another node.
+Called immediately when the Generic Node is called by another node.
 ```csharp
 protected abstract void OnStart();
 ```
 
-Called every frame while the Identity Node is running. Always called after **OnStart**.
+Called every frame while the Generic Node is running. Always called after **OnStart**.
 ```csharp
 protected abstract void OnUpdate();
 ```
@@ -38,12 +38,12 @@ Both **OnStart** and **OnUpdate** are required methods in all Jungle Nodes. Your
 ---
 #### Virtual
 
-Called immediately after this Identity Node is stopped.
+Called immediately after this Generic Node is stopped.
 ```csharp
 protected virtual void OnStop() {}
 ```
 
-Called whenever a validation is requested on this Identity Node.
+Called whenever a validation is requested on this Generic Node.
 <br />Should return any issues found with this node.
 ```csharp
 protected virtual Issue[] OnValidation() {}
@@ -58,17 +58,17 @@ public override string GetDetails() {}
 ---
 #### Calls
 
-Sends the identity to any nodes connected to this Identity Node's output.
+Sends the Generic to any nodes connected to this Generic Node's output.
 ```csharp
 protected void Call()
 ```
 
-Stops the Identity Node without sending out the identity.
+Stops the Generic Node without sending out the Generic.
 ```csharp
 protected void Stop()
 ```
 
-Both sends the identity to any nodes connected to this Identity Node's output and stops the Identity Node.
+Both sends the Generic to any nodes connected to this Generic Node's output and stops the Generic Node.
 ```csharp
 protected void CallAndStop()
 ```
@@ -153,10 +153,10 @@ public override Port.Info[] GetOutputPortsInfo()
 ---
 ### Attribute
 
-All Identity Nodes are required to have a `IdentityNode` class attribute defined. This attribute defines the input port
+All Generic Nodes are required to have a `GenericNode` class attribute defined. This attribute defines the input port
 and output port on the node.
 
-Here's a list of all the properties you can define in the `IdentityNode` attribute:
+Here's a list of all the properties you can define in the `GenericNode` attribute:
 
 | Property          | Type     | Description                         |
 |-------------------|----------|-------------------------------------|
@@ -164,7 +164,7 @@ Here's a list of all the properties you can define in the `IdentityNode` attribu
 | `OutputPortName`  | `string` | Defines the name of the output port |
 
 ```csharp
-[IdentityNode(
+[GenericNode(
     InputPortName = "My Input",
     OutputPortName = "My Output"
 )]
@@ -180,7 +180,7 @@ Here's a list of all the properties you can define in the `IdentityNode` attribu
 [NodeProperties(
     ...
 )]
-[IdentityNode(
+[GenericNode(
     InputPortName = "Start",
     OutputPortName = "Elapsed"
 )]
@@ -198,18 +198,18 @@ defined the output port to be named **Elapsed** and output the same type as the 
 using Jungle;
 
 [NodeProperties(
-    Title = "My Identity Node",
-    Description = "Example implementation of a identity node.",
-    Category = "Nodes/Identity Node",
+    Title = "My Generic Node",
+    Description = "Example implementation of a Generic node.",
+    Category = "Nodes/Generic Node",
     Color = Red,
     Deprecated = false,
     LimitOnePerTree = false
 )]
-[IdentityNode(
+[GenericNode(
     InputPortName = "Input",
     OutputPortName = "Output"
 )]
-public class MyIdentityNode : IdentityNode
+public class MyGenericNode : GenericNode
 {
     protected override void OnStart()
     {
@@ -226,20 +226,20 @@ public class MyIdentityNode : IdentityNode
 ---
 ## Example
 
-Here's a simple example of an Identity Node that prints "Hello, World!" to the console.
+Here's a simple example of an Generic Node that prints "Hello, World!" to the console.
 
 ```csharp
 [NodeProperties(
     Title = "Hello World",
     Description = "Prints \"Hello, World!\" to the console.",
-    Category = "Nodes/Identity Node",
+    Category = "Nodes/Generic Node",
     Color = Red
 )]
-[IdentityNode(
+[GenericNode(
     InputPortName = "Start",
     OutputPortName = "Next"
 )]
-public class HelloWorldNode : IdentityNode
+public class HelloWorldNode : GenericNode
 {
     protected override void OnStart()
     {

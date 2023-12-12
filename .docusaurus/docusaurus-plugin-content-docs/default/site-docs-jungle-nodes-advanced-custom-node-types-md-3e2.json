@@ -1,0 +1,28 @@
+{
+  "id": "jungle-nodes/advanced/custom-node-types",
+  "title": "Custom Node Types",
+  "description": "",
+  "source": "@site/docs/jungle-nodes/advanced/custom-node-types.md",
+  "sourceDirName": "jungle-nodes/advanced",
+  "slug": "/jungle-nodes/advanced/custom-node-types",
+  "permalink": "/docs/jungle-nodes/advanced/custom-node-types",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/jungle-nodes/advanced/custom-node-types.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Custom Node Types",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Custom Node Inspectors",
+    "permalink": "/docs/jungle-nodes/advanced/custom-node-inspectors"
+  },
+  "next": {
+    "title": "Jungle Tree",
+    "permalink": "/docs/jungle-tree"
+  }
+}

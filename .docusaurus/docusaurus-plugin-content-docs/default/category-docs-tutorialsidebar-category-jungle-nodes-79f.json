@@ -1,0 +1,16 @@
+{
+  "title": "Jungle Nodes",
+  "description": "Jungle has multiple node types that each serve a different purpose.",
+  "slug": "/category/jungle-nodes",
+  "permalink": "/docs/category/jungle-nodes",
+  "navigation": {
+    "previous": {
+      "title": "Update Jungle",
+      "permalink": "/docs/get-started/update-jungle"
+    },
+    "next": {
+      "title": "Branch Node",
+      "permalink": "/docs/jungle-nodes/branch-node"
+    }
+  }
+}

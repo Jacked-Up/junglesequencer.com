@@ -1,0 +1,16 @@
+{
+  "title": "Tutorials",
+  "description": "Example implementations of Jungle.",
+  "slug": "/category/tutorials",
+  "permalink": "/docs/category/tutorials",
+  "navigation": {
+    "previous": {
+      "title": "Jungle Exception",
+      "permalink": "/docs/extras/jungle-exception"
+    },
+    "next": {
+      "title": "Dialog System",
+      "permalink": "/docs/category/dialog-system"
+    }
+  }
+}

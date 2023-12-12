@@ -1,0 +1,16 @@
+{
+  "title": "Nodes",
+  "description": "...",
+  "slug": "/category/nodes",
+  "permalink": "/docs/category/nodes",
+  "navigation": {
+    "previous": {
+      "title": "Installation",
+      "permalink": "/docs/installation"
+    },
+    "next": {
+      "title": "Branch Node",
+      "permalink": "/docs/Nodes/branch-node"
+    }
+  }
+}

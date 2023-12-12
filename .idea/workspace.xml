@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docusaurus-intro.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/docusaurus-intro.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/identity-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/identity-node.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +88,7 @@
       <workItem from="1700075587292" duration="5228000" />
       <workItem from="1701226652682" duration="39000" />
       <workItem from="1701226721170" duration="598000" />
+      <workItem from="1702415676768" duration="784000" />
     </task>
     <servers />
   </component>

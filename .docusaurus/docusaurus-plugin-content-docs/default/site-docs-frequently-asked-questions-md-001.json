@@ -1,0 +1,28 @@
+{
+  "id": "frequently-asked-questions",
+  "title": "Frequently Asked Questions",
+  "description": "",
+  "source": "@site/docs/frequently-asked-questions.md",
+  "sourceDirName": ".",
+  "slug": "/frequently-asked-questions",
+  "permalink": "/docs/frequently-asked-questions",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/frequently-asked-questions.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "title": "Frequently Asked Questions",
+    "sidebar_position": 7
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Dialog Choice Node",
+    "permalink": "/docs/tutorials/dialog-system/dialog-choice-node"
+  },
+  "next": {
+    "title": "Docusaurus Intro",
+    "permalink": "/docs/docusaurus-intro"
+  }
+}

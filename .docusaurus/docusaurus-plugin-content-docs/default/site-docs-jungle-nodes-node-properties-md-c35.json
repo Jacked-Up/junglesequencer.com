@@ -1,0 +1,28 @@
+{
+  "id": "jungle-nodes/node-properties",
+  "title": "Node Properties",
+  "description": "All Jungle Nodes require the class attribute NodeProperties to be defined.",
+  "source": "@site/docs/jungle-nodes/node-properties.md",
+  "sourceDirName": "jungle-nodes",
+  "slug": "/jungle-nodes/node-properties",
+  "permalink": "/docs/jungle-nodes/node-properties",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/jungle-nodes/node-properties.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "title": "Node Properties",
+    "sidebar_position": 0
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Update Jungle",
+    "permalink": "/docs/get-started/update-jungle"
+  },
+  "next": {
+    "title": "Branch Node",
+    "permalink": "/docs/jungle-nodes/branch-node"
+  }
+}
