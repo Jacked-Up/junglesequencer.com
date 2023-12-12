@@ -1,0 +1,28 @@
+{
+  "id": "extras/jungle-exception",
+  "title": "Jungle Exception",
+  "description": "Jungle has a builtin exception handler that will catch any exceptions thrown by your nodes. This is useful for debugging",
+  "source": "@site/docs/extras/jungle-exception.md",
+  "sourceDirName": "extras",
+  "slug": "/extras/jungle-exception",
+  "permalink": "/docs/extras/jungle-exception",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/extras/jungle-exception.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Jungle Exception",
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Jungle Cache",
+    "permalink": "/docs/extras/jungle-cache"
+  },
+  "next": {
+    "title": "Tutorials",
+    "permalink": "/docs/category/tutorials"
+  }
+}

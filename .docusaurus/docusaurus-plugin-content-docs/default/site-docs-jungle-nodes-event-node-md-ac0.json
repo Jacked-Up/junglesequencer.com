@@ -1,0 +1,28 @@
+{
+  "id": "jungle-nodes/event-node",
+  "title": "Event Node",
+  "description": "The Event Node is a powerful node type in Jungle. The Event Node has zero inputs and outputs to any number of outputs",
+  "source": "@site/docs/jungle-nodes/event-node.md",
+  "sourceDirName": "jungle-nodes",
+  "slug": "/jungle-nodes/event-node",
+  "permalink": "/docs/jungle-nodes/event-node",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/jungle-nodes/event-node.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Event Node",
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Generic Node",
+    "permalink": "/docs/jungle-nodes/identity-node"
+  },
+  "next": {
+    "title": "Custom Node Inspectors",
+    "permalink": "/docs/jungle-nodes/advanced/custom-node-inspectors"
+  }
+}

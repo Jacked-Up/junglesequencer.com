@@ -1,0 +1,28 @@
+{
+  "id": "jungle-tree",
+  "title": "Jungle Tree",
+  "description": "",
+  "source": "@site/docs/jungle-tree.md",
+  "sourceDirName": ".",
+  "slug": "/jungle-tree",
+  "permalink": "/docs/jungle-tree",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/jungle-tree.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "Jungle Tree",
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Custom Node Types",
+    "permalink": "/docs/jungle-nodes/advanced/custom-node-types"
+  },
+  "next": {
+    "title": "Jungle Runtime",
+    "permalink": "/docs/extras/jungle-runtime"
+  }
+}

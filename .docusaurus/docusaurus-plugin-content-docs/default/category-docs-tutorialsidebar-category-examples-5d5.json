@@ -1,0 +1,16 @@
+{
+  "title": "Examples",
+  "description": "Example implementations of Jungle.",
+  "slug": "/category/examples",
+  "permalink": "/docs/category/examples",
+  "navigation": {
+    "previous": {
+      "title": "Event Node",
+      "permalink": "/docs/jungle-nodes/event-node"
+    },
+    "next": {
+      "title": "Dialog System",
+      "permalink": "/docs/category/dialog-system"
+    }
+  }
+}

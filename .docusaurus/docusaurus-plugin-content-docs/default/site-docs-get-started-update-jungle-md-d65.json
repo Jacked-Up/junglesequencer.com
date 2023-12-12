@@ -1,0 +1,28 @@
+{
+  "id": "get-started/update-jungle",
+  "title": "Update Jungle",
+  "description": "",
+  "source": "@site/docs/get-started/update-jungle.md",
+  "sourceDirName": "get-started",
+  "slug": "/get-started/update-jungle",
+  "permalink": "/docs/get-started/update-jungle",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/get-started/update-jungle.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Update Jungle",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Install Jungle",
+    "permalink": "/docs/get-started/install-jungle"
+  },
+  "next": {
+    "title": "Node Properties",
+    "permalink": "/docs/jungle-nodes/node-properties"
+  }
+}

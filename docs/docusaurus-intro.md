@@ -37,7 +37,6 @@ The command also installs all necessary dependencies you need to run Docusaurus.
 Run the development server:
 
 ```bash
-
 npm run start
 ```
 

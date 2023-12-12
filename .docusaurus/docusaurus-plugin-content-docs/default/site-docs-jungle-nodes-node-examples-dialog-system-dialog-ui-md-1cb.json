@@ -1,0 +1,28 @@
+{
+  "id": "jungle-nodes/node-examples/dialog-system/dialog-ui",
+  "title": "Dialog UI",
+  "description": "Lets build our dialog systems UI!",
+  "source": "@site/docs/jungle-nodes/node-examples/dialog-system/dialog-ui.md",
+  "sourceDirName": "jungle-nodes/node-examples/dialog-system",
+  "slug": "/jungle-nodes/node-examples/dialog-system/dialog-ui",
+  "permalink": "/docs/jungle-nodes/node-examples/dialog-system/dialog-ui",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/jungle-nodes/node-examples/dialog-system/dialog-ui.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "title": "Dialog UI",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/docs/jungle-nodes/node-examples/dialog-system/getting-started"
+  },
+  "next": {
+    "title": "Dialog Branch Node",
+    "permalink": "/docs/jungle-nodes/node-examples/dialog-system/dialog-branch-node"
+  }
+}

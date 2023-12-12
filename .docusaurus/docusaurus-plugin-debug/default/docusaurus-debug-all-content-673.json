@@ -1,0 +1,1067 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "loadedVersions": [
+        {
+          "versionName": "current",
+          "label": "Next",
+          "banner": null,
+          "badge": false,
+          "noIndex": false,
+          "className": "docs-version-current",
+          "path": "/docs",
+          "tagsPath": "/docs/tags",
+          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs",
+          "editUrlLocalized": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/i18n/en/docusaurus-plugin-content-docs/current",
+          "isLast": true,
+          "routePriority": -1,
+          "sidebarFilePath": "C:\\Users\\zackj\\Documents\\GitHub\\jungle-website\\sidebars.js",
+          "contentPath": "C:\\Users\\zackj\\Documents\\GitHub\\jungle-website\\docs",
+          "contentPathLocalized": "C:\\Users\\zackj\\Documents\\GitHub\\jungle-website\\i18n\\en\\docusaurus-plugin-content-docs\\current",
+          "docs": [
+            {
+              "id": "docusaurus-intro",
+              "title": "Docusaurus Intro",
+              "description": "Let's discover Docusaurus in less than 5 minutes.",
+              "source": "@site/docs/docusaurus-intro.md",
+              "sourceDirName": ".",
+              "slug": "/docusaurus-intro",
+              "permalink": "/docs/docusaurus-intro",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/docusaurus-intro.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 99,
+              "frontMatter": {
+                "title": "Docusaurus Intro",
+                "sidebar_position": 99
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Frequently Asked Questions",
+                "permalink": "/docs/frequently-asked-questions"
+              }
+            },
+            {
+              "id": "extras/jungle-cache",
+              "title": "Jungle Cache",
+              "description": "The Jungle Cache has exposed API, but it is not recommended you call any methods on it directly.",
+              "source": "@site/docs/extras/jungle-cache.md",
+              "sourceDirName": "extras",
+              "slug": "/extras/jungle-cache",
+              "permalink": "/docs/extras/jungle-cache",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/extras/jungle-cache.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Jungle Cache",
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Jungle Runtime",
+                "permalink": "/docs/extras/jungle-runtime"
+              },
+              "next": {
+                "title": "Jungle Exception",
+                "permalink": "/docs/extras/jungle-exception"
+              }
+            },
+            {
+              "id": "extras/jungle-exception",
+              "title": "Jungle Exception",
+              "description": "Jungle has a builtin exception handler that will catch any exceptions thrown by your nodes. This is useful for debugging",
+              "source": "@site/docs/extras/jungle-exception.md",
+              "sourceDirName": "extras",
+              "slug": "/extras/jungle-exception",
+              "permalink": "/docs/extras/jungle-exception",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/extras/jungle-exception.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "title": "Jungle Exception",
+                "sidebar_position": 4
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Jungle Cache",
+                "permalink": "/docs/extras/jungle-cache"
+              },
+              "next": {
+                "title": "Tutorials",
+                "permalink": "/docs/category/tutorials"
+              }
+            },
+            {
+              "id": "extras/jungle-runtime",
+              "title": "Jungle Runtime",
+              "description": "The Jungle Runtime has no public API. It is automatically managed by Jungle and should never be interacted with directly.",
+              "source": "@site/docs/extras/jungle-runtime.md",
+              "sourceDirName": "extras",
+              "slug": "/extras/jungle-runtime",
+              "permalink": "/docs/extras/jungle-runtime",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/extras/jungle-runtime.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "title": "Jungle Runtime",
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Jungle Tree",
+                "permalink": "/docs/jungle-tree"
+              },
+              "next": {
+                "title": "Jungle Cache",
+                "permalink": "/docs/extras/jungle-cache"
+              }
+            },
+            {
+              "id": "frequently-asked-questions",
+              "title": "Frequently Asked Questions",
+              "description": "",
+              "source": "@site/docs/frequently-asked-questions.md",
+              "sourceDirName": ".",
+              "slug": "/frequently-asked-questions",
+              "permalink": "/docs/frequently-asked-questions",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/frequently-asked-questions.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 7,
+              "frontMatter": {
+                "title": "Frequently Asked Questions",
+                "sidebar_position": 7
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Dialog Choice Node",
+                "permalink": "/docs/tutorials/dialog-system/dialog-choice-node"
+              },
+              "next": {
+                "title": "Docusaurus Intro",
+                "permalink": "/docs/docusaurus-intro"
+              }
+            },
+            {
+              "id": "get-started/install-jungle",
+              "title": "Install Jungle",
+              "description": "Importing Jungle into your project is a breeze. Use this guide to help you get started.",
+              "source": "@site/docs/get-started/install-jungle.md",
+              "sourceDirName": "get-started",
+              "slug": "/get-started/install-jungle",
+              "permalink": "/docs/get-started/install-jungle",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/get-started/install-jungle.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Install Jungle",
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "next": {
+                "title": "Update Jungle",
+                "permalink": "/docs/get-started/update-jungle"
+              }
+            },
+            {
+              "id": "get-started/update-jungle",
+              "title": "Update Jungle",
+              "description": "",
+              "source": "@site/docs/get-started/update-jungle.md",
+              "sourceDirName": "get-started",
+              "slug": "/get-started/update-jungle",
+              "permalink": "/docs/get-started/update-jungle",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/get-started/update-jungle.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Update Jungle",
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Install Jungle",
+                "permalink": "/docs/get-started/install-jungle"
+              },
+              "next": {
+                "title": "Node Properties",
+                "permalink": "/docs/jungle-nodes/node-properties"
+              }
+            },
+            {
+              "id": "jungle-nodes/advanced/custom-node-inspectors",
+              "title": "Custom Node Inspectors",
+              "description": "Building custom node inspectors is a great way to add custom functionality to your nodes. Creating custom node",
+              "source": "@site/docs/jungle-nodes/advanced/custom-node-inspectors.md",
+              "sourceDirName": "jungle-nodes/advanced",
+              "slug": "/jungle-nodes/advanced/custom-node-inspectors",
+              "permalink": "/docs/jungle-nodes/advanced/custom-node-inspectors",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/jungle-nodes/advanced/custom-node-inspectors.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Custom Node Inspectors",
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Event Node",
+                "permalink": "/docs/jungle-nodes/event-node"
+              },
+              "next": {
+                "title": "Custom Node Types",
+                "permalink": "/docs/jungle-nodes/advanced/custom-node-types"
+              }
+            },
+            {
+              "id": "jungle-nodes/advanced/custom-node-types",
+              "title": "Custom Node Types",
+              "description": "",
+              "source": "@site/docs/jungle-nodes/advanced/custom-node-types.md",
+              "sourceDirName": "jungle-nodes/advanced",
+              "slug": "/jungle-nodes/advanced/custom-node-types",
+              "permalink": "/docs/jungle-nodes/advanced/custom-node-types",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/jungle-nodes/advanced/custom-node-types.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Custom Node Types",
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Custom Node Inspectors",
+                "permalink": "/docs/jungle-nodes/advanced/custom-node-inspectors"
+              },
+              "next": {
+                "title": "Jungle Tree",
+                "permalink": "/docs/jungle-tree"
+              }
+            },
+            {
+              "id": "jungle-nodes/branch-node",
+              "title": "Branch Node",
+              "description": "The Branch Node is the most powerful node type in Jungle. The Branch Node takes a single input of any type, and outputs",
+              "source": "@site/docs/jungle-nodes/branch-node.md",
+              "sourceDirName": "jungle-nodes",
+              "slug": "/jungle-nodes/branch-node",
+              "permalink": "/docs/jungle-nodes/branch-node",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/jungle-nodes/branch-node.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Branch Node",
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Node Properties",
+                "permalink": "/docs/jungle-nodes/node-properties"
+              },
+              "next": {
+                "title": "IO Node",
+                "permalink": "/docs/jungle-nodes/io-node"
+              }
+            },
+            {
+              "id": "jungle-nodes/event-node",
+              "title": "Event Node",
+              "description": "The Event Node is a powerful node type in Jungle. The Event Node has zero inputs and outputs to any number of outputs",
+              "source": "@site/docs/jungle-nodes/event-node.md",
+              "sourceDirName": "jungle-nodes",
+              "slug": "/jungle-nodes/event-node",
+              "permalink": "/docs/jungle-nodes/event-node",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/jungle-nodes/event-node.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "title": "Event Node",
+                "sidebar_position": 4
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Generic Node",
+                "permalink": "/docs/jungle-nodes/identity-node"
+              },
+              "next": {
+                "title": "Custom Node Inspectors",
+                "permalink": "/docs/jungle-nodes/advanced/custom-node-inspectors"
+              }
+            },
+            {
+              "id": "jungle-nodes/identity-node",
+              "title": "Generic Node",
+              "description": "The Generic Node is the simplest node in Jungle. It takes a single input of any type, and outputs the same value to a",
+              "source": "@site/docs/jungle-nodes/identity-node.md",
+              "sourceDirName": "jungle-nodes",
+              "slug": "/jungle-nodes/identity-node",
+              "permalink": "/docs/jungle-nodes/identity-node",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/jungle-nodes/identity-node.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Generic Node",
+                "sidebar_position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "IO Node",
+                "permalink": "/docs/jungle-nodes/io-node"
+              },
+              "next": {
+                "title": "Event Node",
+                "permalink": "/docs/jungle-nodes/event-node"
+              }
+            },
+            {
+              "id": "jungle-nodes/io-node",
+              "title": "IO Node",
+              "description": "The IO Node is a simpler version of the Branch Node. It takes a single input of any type, and outputs to a single output",
+              "source": "@site/docs/jungle-nodes/io-node.md",
+              "sourceDirName": "jungle-nodes",
+              "slug": "/jungle-nodes/io-node",
+              "permalink": "/docs/jungle-nodes/io-node",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/jungle-nodes/io-node.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "IO Node",
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Branch Node",
+                "permalink": "/docs/jungle-nodes/branch-node"
+              },
+              "next": {
+                "title": "Generic Node",
+                "permalink": "/docs/jungle-nodes/identity-node"
+              }
+            },
+            {
+              "id": "jungle-nodes/node-properties",
+              "title": "Node Properties",
+              "description": "All Jungle Nodes require the class attribute NodeProperties to be defined.",
+              "source": "@site/docs/jungle-nodes/node-properties.md",
+              "sourceDirName": "jungle-nodes",
+              "slug": "/jungle-nodes/node-properties",
+              "permalink": "/docs/jungle-nodes/node-properties",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/jungle-nodes/node-properties.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 0,
+              "frontMatter": {
+                "title": "Node Properties",
+                "sidebar_position": 0
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Update Jungle",
+                "permalink": "/docs/get-started/update-jungle"
+              },
+              "next": {
+                "title": "Branch Node",
+                "permalink": "/docs/jungle-nodes/branch-node"
+              }
+            },
+            {
+              "id": "jungle-tree",
+              "title": "Jungle Tree",
+              "description": "",
+              "source": "@site/docs/jungle-tree.md",
+              "sourceDirName": ".",
+              "slug": "/jungle-tree",
+              "permalink": "/docs/jungle-tree",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/jungle-tree.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Jungle Tree",
+                "sidebar_position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Custom Node Types",
+                "permalink": "/docs/jungle-nodes/advanced/custom-node-types"
+              },
+              "next": {
+                "title": "Jungle Runtime",
+                "permalink": "/docs/extras/jungle-runtime"
+              }
+            },
+            {
+              "id": "tutorials/dialog-system/dialog-branch-node",
+              "title": "Dialog Branch Node",
+              "description": "Lets build our first dialog node!",
+              "source": "@site/docs/tutorials/dialog-system/dialog-branch-node.md",
+              "sourceDirName": "tutorials/dialog-system",
+              "slug": "/tutorials/dialog-system/dialog-branch-node",
+              "permalink": "/docs/tutorials/dialog-system/dialog-branch-node",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/tutorials/dialog-system/dialog-branch-node.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "title": "Dialog Branch Node",
+                "sidebar_position": 3
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Dialog UI",
+                "permalink": "/docs/tutorials/dialog-system/dialog-ui"
+              },
+              "next": {
+                "title": "Dialog Choice Node",
+                "permalink": "/docs/tutorials/dialog-system/dialog-choice-node"
+              }
+            },
+            {
+              "id": "tutorials/dialog-system/dialog-choice-node",
+              "title": "Dialog Choice Node",
+              "description": "Lets build a node that listens for user input for dialog choices.",
+              "source": "@site/docs/tutorials/dialog-system/dialog-choice-node.md",
+              "sourceDirName": "tutorials/dialog-system",
+              "slug": "/tutorials/dialog-system/dialog-choice-node",
+              "permalink": "/docs/tutorials/dialog-system/dialog-choice-node",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/tutorials/dialog-system/dialog-choice-node.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "title": "Dialog Choice Node",
+                "sidebar_position": 4
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Dialog Branch Node",
+                "permalink": "/docs/tutorials/dialog-system/dialog-branch-node"
+              },
+              "next": {
+                "title": "Frequently Asked Questions",
+                "permalink": "/docs/frequently-asked-questions"
+              }
+            },
+            {
+              "id": "tutorials/dialog-system/dialog-ui",
+              "title": "Dialog UI",
+              "description": "Lets build our dialog systems UI!",
+              "source": "@site/docs/tutorials/dialog-system/dialog-ui.md",
+              "sourceDirName": "tutorials/dialog-system",
+              "slug": "/tutorials/dialog-system/dialog-ui",
+              "permalink": "/docs/tutorials/dialog-system/dialog-ui",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/tutorials/dialog-system/dialog-ui.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "title": "Dialog UI",
+                "sidebar_position": 2
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Getting Started",
+                "permalink": "/docs/tutorials/dialog-system/getting-started"
+              },
+              "next": {
+                "title": "Dialog Branch Node",
+                "permalink": "/docs/tutorials/dialog-system/dialog-branch-node"
+              }
+            },
+            {
+              "id": "tutorials/dialog-system/getting-started",
+              "title": "Getting Started",
+              "description": "Lets get our project setup!",
+              "source": "@site/docs/tutorials/dialog-system/getting-started.md",
+              "sourceDirName": "tutorials/dialog-system",
+              "slug": "/tutorials/dialog-system/getting-started",
+              "permalink": "/docs/tutorials/dialog-system/getting-started",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/tutorials/dialog-system/getting-started.md",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 1,
+              "frontMatter": {
+                "title": "Getting Started",
+                "sidebar_position": 1
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Dialog System",
+                "permalink": "/docs/category/dialog-system"
+              },
+              "next": {
+                "title": "Dialog UI",
+                "permalink": "/docs/tutorials/dialog-system/dialog-ui"
+              }
+            }
+          ],
+          "drafts": [],
+          "sidebars": {
+            "tutorialSidebar": [
+              {
+                "type": "category",
+                "label": "Get Started",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "get-started/install-jungle"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "get-started/update-jungle"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Jungle Nodes",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "jungle-nodes/node-properties"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "jungle-nodes/branch-node"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "jungle-nodes/io-node"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "jungle-nodes/identity-node"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "jungle-nodes/event-node"
+                  },
+                  {
+                    "type": "category",
+                    "label": "Advanced",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "jungle-nodes/advanced/custom-node-inspectors"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "jungle-nodes/advanced/custom-node-types"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "doc",
+                "id": "jungle-tree"
+              },
+              {
+                "type": "category",
+                "label": "Extras",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "extras/jungle-runtime"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "extras/jungle-cache"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "extras/jungle-exception"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Tutorials",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "category",
+                    "label": "Dialog System",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "tutorials/dialog-system/getting-started"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "tutorials/dialog-system/dialog-ui"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "tutorials/dialog-system/dialog-branch-node"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "tutorials/dialog-system/dialog-choice-node"
+                      }
+                    ],
+                    "link": {
+                      "type": "generated-index",
+                      "description": "Lets build a fully functional node-based dialog system using Jungle.",
+                      "slug": "/category/dialog-system",
+                      "permalink": "/docs/category/dialog-system"
+                    }
+                  }
+                ],
+                "link": {
+                  "type": "generated-index",
+                  "description": "Example implementations of Jungle.",
+                  "slug": "/category/tutorials",
+                  "permalink": "/docs/category/tutorials"
+                }
+              },
+              {
+                "type": "doc",
+                "id": "frequently-asked-questions"
+              },
+              {
+                "type": "doc",
+                "id": "docusaurus-intro"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "docusaurus-plugin-content-blog": {
+    "default": {
+      "blogSidebarTitle": "Recent posts",
+      "blogPosts": [
+        {
+          "id": "welcome",
+          "metadata": {
+            "permalink": "/blog/welcome",
+            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2021-08-26-welcome/index.md",
+            "source": "@site/blog/2021-08-26-welcome/index.md",
+            "title": "Welcome",
+            "description": "Docusaurus blogging features are powered by the blog plugin.",
+            "date": "2021-08-26T00:00:00.000Z",
+            "formattedDate": "August 26, 2021",
+            "tags": [
+              {
+                "label": "facebook",
+                "permalink": "/blog/tags/facebook"
+              },
+              {
+                "label": "hello",
+                "permalink": "/blog/tags/hello"
+              },
+              {
+                "label": "docusaurus",
+                "permalink": "/blog/tags/docusaurus"
+              }
+            ],
+            "readingTime": 0.405,
+            "hasTruncateMarker": false,
+            "authors": [
+              {
+                "name": "Sébastien Lorber",
+                "title": "Docusaurus maintainer",
+                "url": "https://sebastienlorber.com",
+                "imageURL": "https://github.com/slorber.png",
+                "key": "slorber"
+              },
+              {
+                "name": "Yangshun Tay",
+                "title": "Front End Engineer @ Facebook",
+                "url": "https://github.com/yangshun",
+                "imageURL": "https://github.com/yangshun.png",
+                "key": "yangshun"
+              }
+            ],
+            "frontMatter": {
+              "slug": "welcome",
+              "title": "Welcome",
+              "authors": [
+                "slorber",
+                "yangshun"
+              ],
+              "tags": [
+                "facebook",
+                "hello",
+                "docusaurus"
+              ]
+            },
+            "unlisted": false,
+            "nextItem": {
+              "title": "MDX Blog Post",
+              "permalink": "/blog/mdx-blog-post"
+            }
+          },
+          "content": "[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).\r\n\r\nSimply add Markdown files (or folders) to the `blog` directory.\r\n\r\nRegular blog authors can be added to `authors.yml`.\r\n\r\nThe blog post date can be extracted from filenames, such as:\r\n\r\n- `2019-05-30-welcome.md`\r\n- `2019-05-30-welcome/index.md`\r\n\r\nA blog post folder can be convenient to co-locate blog post images:\r\n\r\n![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)\r\n\r\nThe blog supports tags as well!\r\n\r\n**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config."
+        },
+        {
+          "id": "mdx-blog-post",
+          "metadata": {
+            "permalink": "/blog/mdx-blog-post",
+            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2021-08-01-mdx-blog-post.mdx",
+            "source": "@site/blog/2021-08-01-mdx-blog-post.mdx",
+            "title": "MDX Blog Post",
+            "description": "Blog posts support Docusaurus Markdown features, such as MDX.",
+            "date": "2021-08-01T00:00:00.000Z",
+            "formattedDate": "August 1, 2021",
+            "tags": [
+              {
+                "label": "docusaurus",
+                "permalink": "/blog/tags/docusaurus"
+              }
+            ],
+            "readingTime": 0.175,
+            "hasTruncateMarker": false,
+            "authors": [
+              {
+                "name": "Sébastien Lorber",
+                "title": "Docusaurus maintainer",
+                "url": "https://sebastienlorber.com",
+                "imageURL": "https://github.com/slorber.png",
+                "key": "slorber"
+              }
+            ],
+            "frontMatter": {
+              "slug": "mdx-blog-post",
+              "title": "MDX Blog Post",
+              "authors": [
+                "slorber"
+              ],
+              "tags": [
+                "docusaurus"
+              ]
+            },
+            "unlisted": false,
+            "prevItem": {
+              "title": "Welcome",
+              "permalink": "/blog/welcome"
+            },
+            "nextItem": {
+              "title": "Long Blog Post",
+              "permalink": "/blog/long-blog-post"
+            }
+          },
+          "content": "Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).\r\n\r\n:::tip\r\n\r\nUse the power of React to create interactive blog posts.\r\n\r\n```js\r\n<button onClick={() => alert('button clicked!')}>Click me!</button>\r\n```\r\n\r\n<button onClick={() => alert('button clicked!')}>Click me!</button>\r\n\r\n:::"
+        },
+        {
+          "id": "long-blog-post",
+          "metadata": {
+            "permalink": "/blog/long-blog-post",
+            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2019-05-29-long-blog-post.md",
+            "source": "@site/blog/2019-05-29-long-blog-post.md",
+            "title": "Long Blog Post",
+            "description": "This is the summary of a very long blog post,",
+            "date": "2019-05-29T00:00:00.000Z",
+            "formattedDate": "May 29, 2019",
+            "tags": [
+              {
+                "label": "hello",
+                "permalink": "/blog/tags/hello"
+              },
+              {
+                "label": "docusaurus",
+                "permalink": "/blog/tags/docusaurus"
+              }
+            ],
+            "readingTime": 2.05,
+            "hasTruncateMarker": true,
+            "authors": [
+              {
+                "name": "Endilie Yacop Sucipto",
+                "title": "Maintainer of Docusaurus",
+                "url": "https://github.com/endiliey",
+                "imageURL": "https://github.com/endiliey.png",
+                "key": "endi"
+              }
+            ],
+            "frontMatter": {
+              "slug": "long-blog-post",
+              "title": "Long Blog Post",
+              "authors": "endi",
+              "tags": [
+                "hello",
+                "docusaurus"
+              ]
+            },
+            "unlisted": false,
+            "prevItem": {
+              "title": "MDX Blog Post",
+              "permalink": "/blog/mdx-blog-post"
+            },
+            "nextItem": {
+              "title": "First Blog Post",
+              "permalink": "/blog/first-blog-post"
+            }
+          },
+          "content": "This is the summary of a very long blog post,\r\n\r\nUse a `<!--` `truncate` `-->` comment to limit blog post size in the list view.\r\n\r\n<!--truncate-->\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet"
+        },
+        {
+          "id": "first-blog-post",
+          "metadata": {
+            "permalink": "/blog/first-blog-post",
+            "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2019-05-28-first-blog-post.md",
+            "source": "@site/blog/2019-05-28-first-blog-post.md",
+            "title": "First Blog Post",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet",
+            "date": "2019-05-28T00:00:00.000Z",
+            "formattedDate": "May 28, 2019",
+            "tags": [
+              {
+                "label": "hola",
+                "permalink": "/blog/tags/hola"
+              },
+              {
+                "label": "docusaurus",
+                "permalink": "/blog/tags/docusaurus"
+              }
+            ],
+            "readingTime": 0.12,
+            "hasTruncateMarker": false,
+            "authors": [
+              {
+                "name": "Gao Wei",
+                "title": "Docusaurus Core Team",
+                "url": "https://github.com/wgao19",
+                "image_url": "https://github.com/wgao19.png",
+                "imageURL": "https://github.com/wgao19.png"
+              }
+            ],
+            "frontMatter": {
+              "slug": "first-blog-post",
+              "title": "First Blog Post",
+              "authors": {
+                "name": "Gao Wei",
+                "title": "Docusaurus Core Team",
+                "url": "https://github.com/wgao19",
+                "image_url": "https://github.com/wgao19.png",
+                "imageURL": "https://github.com/wgao19.png"
+              },
+              "tags": [
+                "hola",
+                "docusaurus"
+              ]
+            },
+            "unlisted": false,
+            "prevItem": {
+              "title": "Long Blog Post",
+              "permalink": "/blog/long-blog-post"
+            }
+          },
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet"
+        }
+      ],
+      "blogListPaginated": [
+        {
+          "items": [
+            "welcome",
+            "mdx-blog-post",
+            "long-blog-post",
+            "first-blog-post"
+          ],
+          "metadata": {
+            "permalink": "/blog",
+            "page": 1,
+            "postsPerPage": 10,
+            "totalPages": 1,
+            "totalCount": 4,
+            "blogDescription": "Blog",
+            "blogTitle": "Blog"
+          }
+        }
+      ],
+      "blogTags": {
+        "/blog/tags/facebook": {
+          "label": "facebook",
+          "items": [
+            "welcome"
+          ],
+          "permalink": "/blog/tags/facebook",
+          "pages": [
+            {
+              "items": [
+                "welcome"
+              ],
+              "metadata": {
+                "permalink": "/blog/tags/facebook",
+                "page": 1,
+                "postsPerPage": 10,
+                "totalPages": 1,
+                "totalCount": 1,
+                "blogDescription": "Blog",
+                "blogTitle": "Blog"
+              }
+            }
+          ],
+          "unlisted": false
+        },
+        "/blog/tags/hello": {
+          "label": "hello",
+          "items": [
+            "welcome",
+            "long-blog-post"
+          ],
+          "permalink": "/blog/tags/hello",
+          "pages": [
+            {
+              "items": [
+                "welcome",
+                "long-blog-post"
+              ],
+              "metadata": {
+                "permalink": "/blog/tags/hello",
+                "page": 1,
+                "postsPerPage": 10,
+                "totalPages": 1,
+                "totalCount": 2,
+                "blogDescription": "Blog",
+                "blogTitle": "Blog"
+              }
+            }
+          ],
+          "unlisted": false
+        },
+        "/blog/tags/docusaurus": {
+          "label": "docusaurus",
+          "items": [
+            "welcome",
+            "mdx-blog-post",
+            "long-blog-post",
+            "first-blog-post"
+          ],
+          "permalink": "/blog/tags/docusaurus",
+          "pages": [
+            {
+              "items": [
+                "welcome",
+                "mdx-blog-post",
+                "long-blog-post",
+                "first-blog-post"
+              ],
+              "metadata": {
+                "permalink": "/blog/tags/docusaurus",
+                "page": 1,
+                "postsPerPage": 10,
+                "totalPages": 1,
+                "totalCount": 4,
+                "blogDescription": "Blog",
+                "blogTitle": "Blog"
+              }
+            }
+          ],
+          "unlisted": false
+        },
+        "/blog/tags/hola": {
+          "label": "hola",
+          "items": [
+            "first-blog-post"
+          ],
+          "permalink": "/blog/tags/hola",
+          "pages": [
+            {
+              "items": [
+                "first-blog-post"
+              ],
+              "metadata": {
+                "permalink": "/blog/tags/hola",
+                "page": 1,
+                "postsPerPage": 10,
+                "totalPages": 1,
+                "totalCount": 1,
+                "blogDescription": "Blog",
+                "blogTitle": "Blog"
+              }
+            }
+          ],
+          "unlisted": false
+        }
+      },
+      "blogTagsListPath": "/blog/tags"
+    }
+  },
+  "docusaurus-plugin-content-pages": {
+    "default": [
+      {
+        "type": "jsx",
+        "permalink": "/",
+        "source": "@site/src/pages/index.js"
+      },
+      {
+        "type": "mdx",
+        "permalink": "/markdown-page",
+        "source": "@site/src/pages/markdown-page.md",
+        "title": "Markdown page example",
+        "description": "You don't need React to write simple standalone pages.",
+        "frontMatter": {
+          "title": "Markdown page example"
+        },
+        "unlisted": false
+      }
+    ]
+  },
+  "docusaurus-plugin-debug": {},
+  "docusaurus-theme-classic": {},
+  "docusaurus-bootstrap-plugin": {},
+  "docusaurus-mdx-fallback-plugin": {}
+}
