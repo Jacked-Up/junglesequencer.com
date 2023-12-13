@@ -25,7 +25,7 @@ export default {
       {
         "docs": {
           "sidebarPath": "./sidebars.js",
-          "editUrl": "https://github.com/Jacked-Up/junglesequencer.com"
+          "editUrl": "https://github.com/Jacked-Up/junglesequencer.com/tree/prod/"
         },
         "blog": {
           "showReadingTime": true
@@ -57,7 +57,7 @@ export default {
           "position": "left"
         },
         {
-          "href": "https://github.com/facebook/docusaurus",
+          "href": "https://github.com/Jacked-Up/junglesequencer.com",
           "label": "GitHub",
           "position": "right"
         }
@@ -114,7 +114,7 @@ export default {
           ]
         }
       ],
-      "copyright": "<br/> Copyright © 2023-2024 Jacked Up Software LLC. <br/> <strong>Built with Docusaurus.</strong>",
+      "copyright": "<br/> © 2023-2024 Jacked Up Software LLC. <br/> <strong>Built with Docusaurus.</strong>",
       "style": "light"
     },
     "prism": {

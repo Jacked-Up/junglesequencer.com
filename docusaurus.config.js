@@ -25,7 +25,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           editUrl:
-            'https://github.com/Jacked-Up/junglesequencer.com',
+            'https://github.com/Jacked-Up/junglesequencer.com/tree/prod/',
         },
         blog: {
           showReadingTime: true,
@@ -56,7 +56,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/Jacked-Up/junglesequencer.com',
             label: 'GitHub',
             position: 'right',
           },
@@ -112,7 +112,7 @@ const config = {
             ],
           },
         ],
-        copyright: `<br/> Copyright © 2023-2024 Jacked Up Software LLC. <br/> <strong>Built with Docusaurus.</strong>`,
+        copyright: `<br/> © 2023-2024 Jacked Up Software LLC. <br/> <strong>Built with Docusaurus.</strong>`,
       },
       prism: {
         theme: prismThemes.oneLight,

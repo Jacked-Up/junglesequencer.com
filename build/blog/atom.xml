@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://junglesequencer.com/blog</id>
+    <title>Jungle Sequencer Blog</title>
+    <updated>2023-12-12T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://junglesequencer.com/blog"/>
+    <subtitle>Jungle Sequencer Blog</subtitle>
+    <icon>https://junglesequencer.com/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Welcome]]></title>
+        <id>https://junglesequencer.com/blog/welcome</id>
+        <link href="https://junglesequencer.com/blog/welcome"/>
+        <updated>2023-12-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Hey 👋, I'm Jack Randolph, also known as JackaPacka. I'm the creator of Jungle.]]></summary>
+        <content type="html"><![CDATA[<p>Hey 👋, I'm Jack Randolph, also known as JackaPacka. I'm the creator of Jungle.</p>
+<p>This is my first time ever blogging. I figured I would use this place to share change logs, announcements, and updates
+regarding Jungle. If you're reading this, I can't thank you enough! Honestly, I've never followed another developer's
+blog myself, so knowing you're here reading mine is incredibly meaningful to me.</p>
+<p>I've been working on Jungle for the past three plus years. It has been a huge passion project for me. I'm so happy
+(and quite nervous) to finally get it out into the hands of developers. I cannot wait to see what you all create!</p>
+<p>Jungle originally started as a tiny little tool for a game I was working on. I needed a tool that could help me create
+dialog trees, missions, boss battles, and cinematics/animations more easily.</p>
+<p>I spent only about a week developing the first version of Jungle. It was very bare bones compared to what Jungle is
+today. Even being as bare bones as it was, the tool was still <strong>INCREDIBLY</strong> useful. I kept on developing it alongside
+my game, and it just got better and better.</p>
+<p>Then, I started working on my recreation of the hit game Iron Long inside virtual reality. I used Jungle to handle all
+the animations and cinematics in the game. You can check out my remake <a href="https://jackaapacka.itch.io/iron-lung-vr" target="_blank" rel="noopener noreferrer">here</a>.
+This proved to me that Jungle could work in a shipped product.</p>
+<p>Every aspect of Jungle has been meticulously designed to ensure it's the best tool possible. I truly hope you enjoy
+using Jungle as much as I loved creating it!</p>
+<p>So long for now,
+<br><strong>Jack Randolph</strong></p>]]></content>
+        <author>
+            <name>Jack Randolph</name>
+            <uri>https://github.com/JackaPacka</uri>
+        </author>
+    </entry>
+</feed>

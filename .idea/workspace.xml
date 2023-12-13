@@ -5,8 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.docusaurus/client-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/client-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/css/styles.5465b00f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/archive/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/blog/welcome/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/welcome/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/category/dialog-system/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/category/dialog-system/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/category/tutorials/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/category/tutorials/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/docusaurus-intro/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/docusaurus-intro/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/extras/jungle-cache/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/extras/jungle-cache/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/extras/jungle-exception/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/extras/jungle-exception/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/extras/jungle-runtime/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/extras/jungle-runtime/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/frequently-asked-questions/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/frequently-asked-questions/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/get-started/install-jungle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/get-started/install-jungle/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/get-started/update-jungle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/get-started/update-jungle/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/custom-node-inspectors/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/custom-node-inspectors/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/custom-node-types/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/custom-node-types/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/branch-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/branch-node/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/event-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/event-node/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/identity-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/identity-node/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/io-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/io-node/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/node-properties/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/node-properties/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-tree/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-tree/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/tutorials/dialog-system/dialog-branch-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/tutorials/dialog-system/dialog-branch-node/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/tutorials/dialog-system/dialog-choice-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/tutorials/dialog-system/dialog-choice-node/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/tutorials/dialog-system/dialog-ui/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/tutorials/dialog-system/dialog-ui/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/tutorials/dialog-system/getting-started/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/tutorials/dialog-system/getting-started/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/markdown-page/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/markdown-page/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/custom.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +120,8 @@
       <workItem from="1701226721170" duration="598000" />
       <workItem from="1702415676768" duration="2087000" />
       <workItem from="1702424937057" duration="9506000" />
-      <workItem from="1702437928171" duration="681000" />
+      <workItem from="1702437928171" duration="809000" />
+      <workItem from="1702496595234" duration="391000" />
     </task>
     <servers />
   </component>
