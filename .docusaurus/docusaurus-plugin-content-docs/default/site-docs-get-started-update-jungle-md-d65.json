@@ -1,7 +1,7 @@
 {
   "id": "get-started/update-jungle",
   "title": "Update Jungle",
-  "description": "",
+  "description": "Jungle updates should usually be backwards compatible.",
   "source": "@site/docs/get-started/update-jungle.md",
   "sourceDirName": "get-started",
   "slug": "/get-started/update-jungle",
@@ -22,7 +22,7 @@
     "permalink": "/docs/get-started/install-jungle"
   },
   "next": {
-    "title": "Node Properties",
-    "permalink": "/docs/jungle-nodes/node-properties"
+    "title": "JungleGPT",
+    "permalink": "/docs/get-started/jungle-gpt"
   }
 }

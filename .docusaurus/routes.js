@@ -3,6 +3,41 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
+    path: '/__docusaurus/debug',
+    component: ComponentCreator('/__docusaurus/debug', '83b'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/config',
+    component: ComponentCreator('/__docusaurus/debug/config', '182'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/content',
+    component: ComponentCreator('/__docusaurus/debug/content', 'ec9'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/globalData',
+    component: ComponentCreator('/__docusaurus/debug/globalData', 'f75'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/metadata',
+    component: ComponentCreator('/__docusaurus/debug/metadata', 'ce3'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/registry',
+    component: ComponentCreator('/__docusaurus/debug/registry', '52f'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/routes',
+    component: ComponentCreator('/__docusaurus/debug/routes', '5e9'),
+    exact: true
+  },
+  {
     path: '/blog',
     component: ComponentCreator('/blog', '47f'),
     exact: true
@@ -24,15 +59,15 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'ccb'),
+    component: ComponentCreator('/docs', '1ce'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', '1a3'),
+        component: ComponentCreator('/docs', '00b'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', '7b1'),
+            component: ComponentCreator('/docs', '0f3'),
             routes: [
               {
                 path: '/docs/category/dialog-system',
@@ -79,6 +114,12 @@ export default [
               {
                 path: '/docs/get-started/install-jungle',
                 component: ComponentCreator('/docs/get-started/install-jungle', '191'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/get-started/jungle-gpt',
+                component: ComponentCreator('/docs/get-started/jungle-gpt', '1cf'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

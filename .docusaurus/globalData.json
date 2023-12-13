@@ -41,6 +41,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "get-started/jungle-gpt",
+              "path": "/docs/get-started/jungle-gpt",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "get-started/update-jungle",
               "path": "/docs/get-started/update-jungle",
               "sidebar": "tutorialSidebar"

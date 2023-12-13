@@ -28,6 +28,13 @@
             "href": "/docs/get-started/update-jungle",
             "docId": "get-started/update-jungle",
             "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "JungleGPT",
+            "href": "/docs/get-started/jungle-gpt",
+            "docId": "get-started/jungle-gpt",
+            "unlisted": false
           }
         ]
       },
@@ -231,10 +238,16 @@
       "description": "Importing Jungle into your project is a breeze. Use this guide to help you get started.",
       "sidebar": "tutorialSidebar"
     },
+    "get-started/jungle-gpt": {
+      "id": "get-started/jungle-gpt",
+      "title": "JungleGPT",
+      "description": "What is JungleGPT",
+      "sidebar": "tutorialSidebar"
+    },
     "get-started/update-jungle": {
       "id": "get-started/update-jungle",
       "title": "Update Jungle",
-      "description": "",
+      "description": "Jungle updates should usually be backwards compatible.",
       "sidebar": "tutorialSidebar"
     },
     "jungle-nodes/advanced/custom-node-inspectors": {

@@ -18,8 +18,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Update Jungle",
-    "permalink": "/docs/get-started/update-jungle"
+    "title": "JungleGPT",
+    "permalink": "/docs/get-started/jungle-gpt"
   },
   "next": {
     "title": "Branch Node",

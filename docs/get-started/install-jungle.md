@@ -27,7 +27,7 @@ It's **heavily** recommend you use the IL2CPP scripting backend.
 - XR Platforms (Meta Quest, SteamVR, Windows Mixed Reality, etc)
 - Xbox, Playstation, Nintendo Switch, Steamdeck, and most other consoles
 
-:::tip NOTE
+:::NOTE NOTE
 Jungle is compatible with any platforms that Unity can build to. If you are curious of a certain platform not listed
 above, please feel free to reach out.
 :::
@@ -48,20 +48,17 @@ How to install and enable the new input system:
 - Inside the player settings, open the **Other Settings** tab
 - Under **Configuration**, change the **Active Input Handling** to **Both** or **Input System (New)**
 
-## Install With Unity Package Manager
+## Install Via Unity Package Manager
 
 - From the Unity Editor, select **Window > Package Manager**
 - Inside the package manager, select the packages dropdown menu. Select **My Assets**
 
-
-
-## Install With Git URL
+## Install With .unitypackage
 
 :::note NOTE
-Install with Git is only available to our enterprise and development partners. 
+.unitypackage Is only available for our development and enterprise partners. 
 :::
 
-- From the Unity Editor, select **Window > Package Manager**
-- Click the **+** button in the top left corner of the package manager
-- Select **Add package from git URL**
-- Enter the following URL: **https://github.com/Jacked-Up/Jungle.git**
+- Import the .unitypackage into your Unity project
+- Ensure all files are selected and click **Import**
+- Once imported, you should see a new folder called **Jungle** in your assets folder
