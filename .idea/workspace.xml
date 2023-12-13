@@ -5,36 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-blog/default/blog-archive-80c.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-blog/default/blog-archive-80c.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-blog/default/site-blog-2023-12-12-first-blog-post-md-f4c.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-blog/default/site-blog-2023-12-12-first-blog-post-md-f4c.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-docusaurus-intro-md-402.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-docusaurus-intro-md-402.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-extras-jungle-cache-md-b57.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-extras-jungle-cache-md-b57.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-extras-jungle-exception-md-99c.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-extras-jungle-exception-md-99c.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-extras-jungle-runtime-md-795.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-extras-jungle-runtime-md-795.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-frequently-asked-questions-md-001.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-frequently-asked-questions-md-001.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-get-started-install-jungle-md-229.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-get-started-install-jungle-md-229.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-get-started-update-jungle-md-d65.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-get-started-update-jungle-md-d65.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-nodes-advanced-custom-node-inspectors-md-c9f.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-nodes-advanced-custom-node-inspectors-md-c9f.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-nodes-advanced-custom-node-types-md-3e2.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-nodes-advanced-custom-node-types-md-3e2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-nodes-branch-node-md-63f.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-nodes-branch-node-md-63f.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-nodes-event-node-md-ac0.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-nodes-event-node-md-ac0.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-nodes-identity-node-md-618.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-nodes-identity-node-md-618.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-nodes-io-node-md-d1e.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-nodes-io-node-md-d1e.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-nodes-node-properties-md-c35.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-nodes-node-properties-md-c35.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-tree-md-13a.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-tree-md-13a.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-tutorials-dialog-system-dialog-branch-node-md-613.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-tutorials-dialog-system-dialog-branch-node-md-613.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-tutorials-dialog-system-dialog-choice-node-md-751.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-tutorials-dialog-system-dialog-choice-node-md-751.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-tutorials-dialog-system-dialog-ui-md-c07.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-tutorials-dialog-system-dialog-ui-md-c07.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-tutorials-dialog-system-getting-started-md-f59.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-tutorials-dialog-system-getting-started-md-f59.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-debug/default/docusaurus-debug-all-content-673.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-debug/default/docusaurus-debug-all-content-673.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/registry.js" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/registry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/routesChunkNames.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/routesChunkNames.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/site-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/site-metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +90,7 @@
       <workItem from="1701226721170" duration="598000" />
       <workItem from="1702415676768" duration="2087000" />
       <workItem from="1702424937057" duration="9506000" />
-      <workItem from="1702437928171" duration="229000" />
+      <workItem from="1702437928171" duration="681000" />
     </task>
     <servers />
   </component>
