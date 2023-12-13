@@ -1,0 +1,27 @@
+{
+  "permalink": "/blog/welcome",
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2023-12-12-first-blog-post.md",
+  "source": "@site/blog/2023-12-12-first-blog-post.md",
+  "title": "Welcome",
+  "description": "Hey 👋, I'm Jack Randolph, also known as JackaPacka. I'm the creator of Jungle.",
+  "date": "2023-12-12T00:00:00.000Z",
+  "formattedDate": "December 12, 2023",
+  "tags": [],
+  "readingTime": 1.39,
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Jack Randolph",
+      "title": "Creator",
+      "url": "https://github.com/JackaPacka",
+      "imageURL": "https://github.com/JackaPacka.png",
+      "key": "jackapacka"
+    }
+  ],
+  "frontMatter": {
+    "slug": "welcome",
+    "title": "Welcome",
+    "authors": "jackapacka"
+  },
+  "unlisted": false
+}
