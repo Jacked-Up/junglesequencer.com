@@ -5,9 +5,9 @@
  */
 export default {
   "title": "Jungle Sequencer",
-  "tagline": "A node-based visual sequencing system for Unity",
+  "tagline": "A node-based sequencing framework for Unity",
   "favicon": "img/favicon.ico",
-  "url": "https://jungle.jackedupsoftware.com",
+  "url": "https://junglesequencer.com",
   "baseUrl": "/",
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
@@ -25,11 +25,10 @@ export default {
       {
         "docs": {
           "sidebarPath": "./sidebars.js",
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "editUrl": "https://github.com/Jacked-Up/junglesequencer.com"
         },
         "blog": {
-          "showReadingTime": true,
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
+          "showReadingTime": true
         },
         "theme": {
           "customCss": "./src/css/custom.css"
@@ -40,7 +39,7 @@ export default {
   "themeConfig": {
     "image": "img/docusaurus-social-card.jpg",
     "navbar": {
-      "title": "Jungle Sequencer",
+      "title": "Jungle",
       "logo": {
         "alt": "Jungle Sequencer Logo",
         "src": "img/logo.png"
@@ -66,14 +65,38 @@ export default {
       "hideOnScroll": false
     },
     "footer": {
-      "style": "dark",
       "links": [
         {
-          "title": "Docs",
+          "title": "Documentation",
           "items": [
             {
-              "label": "Tutorial",
-              "to": "/docs/intro"
+              "label": "Installation",
+              "to": "/docs/get-started/install-jungle"
+            },
+            {
+              "label": "Tutorials",
+              "to": "/docs/category/tutorials"
+            },
+            {
+              "label": "Frequently Asked Questions",
+              "to": "/docs/frequently-asked-questions"
+            }
+          ]
+        },
+        {
+          "title": "Links",
+          "items": [
+            {
+              "label": "Unity Asset Store",
+              "href": "?"
+            },
+            {
+              "label": "JungleGPT",
+              "href": "https://chat.openai.com/g/g-OcQk2cjfh-junglegpt"
+            },
+            {
+              "label": "Jacked Up Software",
+              "href": "https://jackedupsoftware.com"
             }
           ]
         },
@@ -81,34 +104,18 @@ export default {
           "title": "Community",
           "items": [
             {
-              "label": "Stack Overflow",
-              "href": "https://stackoverflow.com/questions/tagged/docusaurus"
-            },
-            {
               "label": "Discord",
-              "href": "https://discordapp.com/invite/docusaurus"
-            },
-            {
-              "label": "Twitter",
-              "href": "https://twitter.com/docusaurus"
-            }
-          ]
-        },
-        {
-          "title": "More",
-          "items": [
-            {
-              "label": "Blog",
-              "to": "/blog"
+              "href": "?"
             },
             {
               "label": "GitHub",
-              "href": "https://github.com/facebook/docusaurus"
+              "href": "https://github.com/Jacked-Up/junglesequencer.com"
             }
           ]
         }
       ],
-      "copyright": "Copyright © 2023 My Project, Inc. Built with Docusaurus."
+      "copyright": "<br/> Copyright © 2023-2024 Jacked Up Software LLC. <br/> <strong>Built with Docusaurus.</strong>",
+      "style": "light"
     },
     "prism": {
       "theme": {

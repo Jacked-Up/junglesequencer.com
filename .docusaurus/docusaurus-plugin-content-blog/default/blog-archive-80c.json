@@ -4,7 +4,6 @@
       "id": "welcome",
       "metadata": {
         "permalink": "/blog/welcome",
-        "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/blog/2023-12-12-first-blog-post.md",
         "source": "@site/blog/2023-12-12-first-blog-post.md",
         "title": "Welcome",
         "description": "Hey 👋, I'm Jack Randolph, also known as JackaPacka. I'm the creator of Jungle.",

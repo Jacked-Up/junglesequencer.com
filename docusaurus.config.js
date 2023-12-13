@@ -1,29 +1,17 @@
-// @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Jungle Sequencer',
-  tagline: 'A node-based visual sequencing system for Unity',
+  tagline: 'A node-based sequencing framework for Unity',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
-  url: 'https://jungle.jackedupsoftware.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'https://junglesequencer.com',
   baseUrl: '/',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -36,17 +24,11 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Jacked-Up/junglesequencer.com',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -60,7 +42,7 @@ const config = {
     ({
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Jungle Sequencer',
+        title: 'Jungle',
         logo: {
           alt: 'Jungle Sequencer Logo',
           src: 'img/logo.png',
@@ -81,14 +63,38 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Documentation',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Installation',
+                to: '/docs/get-started/install-jungle',
+              },
+              {
+                label: 'Tutorials',
+                to: '/docs/category/tutorials',
+              },
+              {
+                label: 'Frequently Asked Questions',
+                to: '/docs/frequently-asked-questions',
+              },
+            ],
+          },
+          {
+            title: 'Links',
+            items: [
+              {
+                label: 'Unity Asset Store',
+                href: '?',
+              },
+              {
+                label: 'JungleGPT',
+                href: 'https://chat.openai.com/g/g-OcQk2cjfh-junglegpt',
+              },
+              {
+                label: 'Jacked Up Software',
+                href: 'https://jackedupsoftware.com',
               },
             ],
           },
@@ -96,34 +102,17 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
+                href: '?',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/Jacked-Up/junglesequencer.com',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `<br/> Copyright © 2023-2024 Jacked Up Software LLC. <br/> <strong>Built with Docusaurus.</strong>`,
       },
       prism: {
         theme: prismThemes.oneLight,
