@@ -416,13 +416,15 @@ export default {
       "maxHeadingLevel": 3
     }
   },
+  "plugins": [
+    "@easyops-cn/docusaurus-search-local"
+  ],
   "baseUrlIssueBanner": true,
   "onDuplicateRoutes": "warn",
   "staticDirectories": [
     "static"
   ],
   "customFields": {},
-  "plugins": [],
   "themes": [],
   "scripts": [],
   "headTags": [],

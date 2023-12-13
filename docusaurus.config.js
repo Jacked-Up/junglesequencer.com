@@ -115,6 +115,8 @@ const config = {
         additionalLanguages: ['csharp']
       },
     }),
+
+    plugins: ['@easyops-cn/docusaurus-search-local'],
 };
 
 export default config;

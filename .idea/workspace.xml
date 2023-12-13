@@ -5,22 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/get-started/jungle-gpt.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-get-started-update-jungle-md-d65.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-get-started-update-jungle-md-d65.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-nodes-node-properties-md-c35.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/site-docs-jungle-nodes-node-properties-md-c35.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/version-current-metadata-prop-751.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-content-docs/default/version-current-metadata-prop-751.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-debug/default/docusaurus-debug-all-content-673.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus-plugin-debug/default/docusaurus-debug-all-content-673.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.docusaurus/docusaurus.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/docusaurus.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.docusaurus/globalData.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/globalData.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.docusaurus/registry.js" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/registry.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.docusaurus/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.docusaurus/routesChunkNames.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/routesChunkNames.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.docusaurus/site-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/.docusaurus/site-metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/get-started/install-jungle.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/get-started/install-jungle.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/get-started/update-jungle.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/get-started/update-jungle.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +100,7 @@
       <workItem from="1702415676768" duration="2087000" />
       <workItem from="1702424937057" duration="9506000" />
       <workItem from="1702437928171" duration="809000" />
-      <workItem from="1702496595234" duration="4624000" />
+      <workItem from="1702496595234" duration="5003000" />
     </task>
     <servers />
   </component>
