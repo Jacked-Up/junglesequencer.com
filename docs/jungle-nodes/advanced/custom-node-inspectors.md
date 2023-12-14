@@ -4,14 +4,14 @@ sidebar_position: 1
 ---
 
 Building custom node inspectors is a great way to add custom functionality to your nodes. **Creating custom node
-inspectors works exactly like build custom inspectors for Mono Behaviours and Scriptable Objects.**
+inspectors works exactly like building custom inspectors for Mono Behaviours and Scriptable Objects.**
 
 ## Creating a Custom Inspector
 
 ### Introduction
 
-A custom inspector is a class that inherits from `UnityEditor.Editor`. This class is then attached to your node script
-using the `UnityEditor.CustomEditor` attribute.
+A custom inspector is a class that inherits from `UnityEditor.Editor`. This class is then attached to your Jungle Node
+script using the `UnityEditor.CustomEditor` attribute.
 
 ```csharp
 [UnityEditor.CustomEditor(typeof(MyClass))]
@@ -22,84 +22,55 @@ public class MyEditor : UnityEditor.Editor
 ```
 
 :::warning
-All editor classes should be placed between `#if UNITY_EDITOR` and `#endif` tags. This ensures that the editor code is
+All editor classes should be placed between `#if UNITY_EDITOR` and `#endif` tags to ensure that the editor code is
 stripped from the build. If you do not do this, your build will **fail**.
 :::
 
-### Displaying Properties
+### Tutorials
 
-To display a property in your custom inspector, you must first fetch the property using the 
-`UnityEditor.SerializedObject.FindProperty` method. This method takes the name of the property as a string.
+Here's a manual by Unity on how to create custom inspectors in Unity:
+<br />[Unity Custom Inspector Manual](https://docs.unity3d.com/Manual/UIE-HowTo-CreateCustomInspector.html)
 
-#### Example
+**OR**
 
-```csharp
-public class MyClass : MonoBehaviour
-{
-    [SerializeField] 
-    private float myProperty = 1f;
-    // ^^ This is the property ^^
-    //    we want to display in
-    //    the custom inspector
-}
+Check out this Brackeys tutorial on how to create custom inspectors in Unity.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RInUu1_8aGw?si=BumBO-eNUEd13JzZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-#if UNITY_EDITOR
-[UnityEditor.CustomEditor(typeof(MyClass))]
-public class MyEditor : UnityEditor.Editor
-{
-    private UnityEditor.SerializedProperty _myProperty;
+## Implementation
 
-    private void OnEnable()
-    {
-        // Fetch the property. This method takes the name of the property as a string
-        _myProperty = serializedObject.FindProperty("myProperty");
-    }
-    
-    public override void OnInspectorGUI()
-    {
-        serializedObject.Update();
-        
-        // Display the property
-        UnityEditor.EditorGUILayout.PropertyField(_myProperty);
-        
-        serializedObject.ApplyModifiedProperties();
-    }
-}
-#endif
-```
+Jungle will automatically detect and implement your custom inspector into the Jungle Editor.
 
-Jungle will automatically detect that you have a custom inspector and display it in the Jungle Editor.
+Custom inspectors are by no means required but can help boost your workflow and make your nodes more user-friendly. All
+built-in Jungle nodes have custom inspectors that make the nodes look cleaner and easier to use.
 
-:::info NOTE
-The custom inspector class does **not** need to be in the same file as the node script. You can throw it where ever you
-want.
-:::
-
-The Unity editor class is a great way to add custom functionality to your nodes. You can add buttons, sliders, and more
-to your custom inspector. **The sky is the limit!**
-
-[Unity Guide on Custom Inspectors](https://docs.unity3d.com/Manual/UIE-HowTo-CreateCustomInspector.html)
+No custom inspector **(Red)** _Vs._ custom inspector **(Green)**:
+![](img/custom-inspector-good-vs-bad.png)
 
 ### Example
 
-Here's an example of a custom inspector for a node that inherits from `IdentityNode`. This inspector displays a label
-and a property field for the `value` property.
+Here's an example of a custom inspector for a node that inherits from `GenericNode`. This inspector displays a property 
+field for the `value` property.
+
+The #if UNITY_EDITOR tag ensures that the editor code is stripped from the build.
 
 ```csharp
 using Jungle;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 [NodeProperties(
     Title = "My Node",
     Description = "You friendly neighborhood node.",
-    Category = "",
+    Category = "My Nodes",
     Color = Blue
 )]
-[IdentityNode(
+[GenericNode(
     InputPortName = "Start",
     OutputPortName = "Next"
 )]
-public class MyNode : IdentityNode
+public class MyNode : GenericNode
 {
     [SerializeField] 
     private float value = 1f;
@@ -112,18 +83,13 @@ public class MyNode : IdentityNode
     protected override void OnUpdate() { }
 }
 
-// ------------------------------------CUSTOM-NODE-INSPECTOR------------------------------------
-// The UNITY_EDITOR tag ensures that the editor code is stripped from the build
+// Use the UNITY_EDITOR tag ensures that the editor code is stripped from the build
 #if UNITY_EDITOR
-[UnityEditor.CustomEditor(typeof(MyNode))]
+[CustomEditor(typeof(MyNode))]
 public class MyNodeEditor : UnityEditor.Editor
 {
-    #region Variables
-
-    private UnityEditor.SerializedProperty _value;
-
-    #endregion
-
+    private SerializedProperty _value;
+    
     private void OnEnable()
     {
         _value = serializedObject.FindProperty("value");
@@ -132,11 +98,11 @@ public class MyNodeEditor : UnityEditor.Editor
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
-        UnityEditor.EditorGUILayout.Label("Hello, World!");
-        UnityEditor.EditorGUILayout.PropertyField(_value);
+        
+        EditorGUILayout.PropertyField(_value);
+        
         serializedObject.ApplyModifiedProperties();
     }
 }
 #endif
-// ------------------------------------CUSTOM-NODE-INSPECTOR------------------------------------
 ```

@@ -52,6 +52,8 @@ How to install and enable the new input system:
 
 - From the Unity Editor, select **Window > Package Manager**
 - Inside the package manager, select the packages dropdown menu. Select **My Assets**
+- Find **Jungle** and select **Install** to the right of the package name
+- Select **Import** to import Jungle into your project
 
 ## Install With .unitypackage
 

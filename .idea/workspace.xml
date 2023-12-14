@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/img/custom-inspector-good-vs-bad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/img/custom-inspector-ss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/img/no-custom-inspector-ss.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docusaurus-intro.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/get-started/install-jungle.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/get-started/install-jungle.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/advanced/custom-node-inspectors.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/custom-node-inspectors.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/advanced/custom-node-types.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,32 +36,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;prod&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/zackj/Documents/GitHub/jungle-website/docs&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "prod",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/zackj/Documents/GitHub/jungle-website/docs/jungle-nodes/advanced/img",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\jungle-nodes\advanced\img" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\extras" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\tutorials\logic-gates" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\jungle-nodes\advanced" />
-      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\getting-started" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\get-started" />
@@ -91,7 +98,7 @@
       <workItem from="1702424937057" duration="9506000" />
       <workItem from="1702437928171" duration="809000" />
       <workItem from="1702496595234" duration="6243000" />
-      <workItem from="1702561710881" duration="443000" />
+      <workItem from="1702561710881" duration="2557000" />
     </task>
     <servers />
   </component>
