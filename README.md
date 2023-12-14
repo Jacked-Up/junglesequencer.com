@@ -1,41 +1,15 @@
-# Website
+# Jungle Sequencer Documentation Source
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This repository contains the source code for the Jungle Sequencer documentation.
 
-### Installation
+## Contributing
 
-```
-$ yarn
-```
+When contributing to the Jungle documentation, please make sure of the following:
+- Your documentation is written in markdown
+- Your documentation is simple and easy to understand
+- Your documentation is free of spelling and grammar errors
+- Your documentation is free of profanity and inappropriate language
 
-### Local Development
+You're always welcome to make edits to the documentation.
 
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+**Built with Docusaurus v2.0.0**
