@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/img/custom-inspector-good-vs-bad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/img/custom-inspector-ss.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/img/no-custom-inspector-ss.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docusaurus-intro.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/get-started/install-jungle.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/get-started/install-jungle.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/advanced/custom-node-inspectors.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/custom-node-inspectors.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/advanced/custom-node-types.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +36,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "prod",
+    "git-widget-placeholder": "live",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/zackj/Documents/GitHub/jungle-website/docs/jungle-nodes/advanced/img",
     "node.js.detected.package.eslint": "true",
@@ -98,7 +92,7 @@
       <workItem from="1702424937057" duration="9506000" />
       <workItem from="1702437928171" duration="809000" />
       <workItem from="1702496595234" duration="6243000" />
-      <workItem from="1702561710881" duration="2557000" />
+      <workItem from="1702561710881" duration="3136000" />
     </task>
     <servers />
   </component>

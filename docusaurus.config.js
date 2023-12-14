@@ -110,8 +110,8 @@ const config = {
         copyright: `<br/> © 2023-2024 Jacked Up Software LLC. <br/> <strong>Built with Docusaurus.</strong>`,
       },
       prism: {
-        theme: prismThemes.oneLight,
-        darkTheme: prismThemes.oneDark,
+        theme: prismThemes.vsLight,
+        darkTheme: prismThemes.vsDark,
         additionalLanguages: ['csharp']
       },
     }),
