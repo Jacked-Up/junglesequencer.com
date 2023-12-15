@@ -117,17 +117,6 @@ Validator will mark all instances of the node within Jungle Trees as deprecated 
 You should **NEVER** delete a Jungle Node script from your project until it has been removed from all Jungle Trees.
 :::
 
-### LimitOnePerTree
-
-The limit one per tree property was implemented as a solution for limiting the max amount of node instances to one per
-Jungle Tree. This property is especially useful on Event Nodes where you only want a single instance within each Jungle
-Tree.
-
-:::warning WARNING
-If you already have multiple of a node instance in a Jungle Tree and proceed to set the limit one per tree property to
-true, the multiple instances will be marked in the Jungle Validator.
-:::
-
 ## Boilerplate
 
 ```csharp
@@ -136,8 +125,7 @@ true, the multiple instances will be marked in the Jungle Validator.
     Description = "This is the description of My Node",
     Category = "Nodes/My Node",
     Color = Blue,
-    Deprecated = false,     // Not required to be defined (defaults to false)
-    LimitOnePerTree = false // Not required to be defined (defaults to false)
+    Deprecated = false     // Not required to be defined (defaults to false)
 )]
 ```
 

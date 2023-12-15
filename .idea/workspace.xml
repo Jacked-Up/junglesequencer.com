@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/using-the-editor/_category_.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/using-the-editor/jungle-editor.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/using-the-editor/jungle-preferences.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/using-the-editor/jungle-validator.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/extras/jungle-manifest.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/img/branch-node-attribute-visual.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/img/branch-node-example-visual.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/img/node-properties-diagram.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/frequently-asked-questions.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/advanced/custom-node-inspectors.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/custom-node-inspectors.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/branch-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/branch-node.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/io-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/io-node.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/node-properties.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/node-properties.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/jungle-tree.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-tree.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/custom.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +47,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "live",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/zackj/Documents/GitHub/jungle-website/docs/using-the-editor",
+    "last_opened_file_path": "C:/Users/zackj/Documents/GitHub/jungle-website/docs/jungle-nodes/img/branch-node-attribute-visual.png",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,16 +60,16 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\using-the-editor" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\jungle-nodes\advanced\img" />
-      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\extras" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\tutorials\logic-gates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\extras" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\get-started" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website" />
-      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\extras" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\get-started\img" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs" />
     </key>
@@ -100,7 +102,8 @@
       <workItem from="1702437928171" duration="809000" />
       <workItem from="1702496595234" duration="6243000" />
       <workItem from="1702561710881" duration="5158000" />
-      <workItem from="1702591808339" duration="5706000" />
+      <workItem from="1702591808339" duration="6299000" />
+      <workItem from="1702664919937" duration="6437000" />
     </task>
     <servers />
   </component>

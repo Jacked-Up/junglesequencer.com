@@ -1,5 +1,5 @@
 ---
-title: IO Node
+title: IO Node<T>
 sidebar_position: 2
 ---
 

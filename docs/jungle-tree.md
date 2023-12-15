@@ -11,14 +11,20 @@ nodes and their connections.
 You can have as many trees running at once as you want. Each tree is independent of each other and can be started and
 stopped at any time. You cannot, however, have the same tree running multiple times at once.
 
-## Creating a Jungle Tree
+## Creating Jungle Trees
 
 To create a Jungle Tree, right click in your assets folder window and select `Create > Jungle Tree`. This will create a
 Jungle Tree that you can then open by double clicking on it.
 
 Check out the [Jungle Tree Editor](/docs/jungle-tree-editor) page for more information on how to edit your Jungle Tree.
 
-## Using the Jungle Tree
+## Using Jungle Trees
+
+It's super easy to start/stop a Jungle Tree. All you need to do is call the `Start()` and `Stop()` methods on the tree.
+All the runtime management is handled for you. 
+
+Jungle Trees can be referenced as serialized fields in your scripts. This allows you to easily reference your trees in
+the inspector.
 
 ```csharp
 using Jungle;
@@ -34,6 +40,8 @@ private void Start()
 
 ---
 ## Code Reference
+
+**Namespace: `Jungle`**
 
 ### Properties
 
@@ -55,7 +63,7 @@ private void Start()
 <br />`public bool IsRunning { get; }`
 <br />_True if the Jungle Tree is currently running._
 
-<span class="DocItemTitle">RunTime</span>
+<span class="DocItemTitle">Time</span>
 <br />`public float RunTime { get; }`
 <br />_The amount of time in seconds the Jungle Tree has been running._
 
@@ -72,6 +80,11 @@ private void Start()
 <span class="DocItemTitle">Manifest</span>
 <br />`public JungleManifest Manifest { get; }`
 <br />_The Jungle Trees persistent manifest._
+
+:::warning WARNING
+The manifest is used to internal purposes. It's not recommended to call any of its methods or change any of its
+properties. You can read more about the manifest **[here](/docs/extras/jungle-manifest)**.
+:::
 
 ---
 ### Events

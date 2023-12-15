@@ -44,7 +44,7 @@ Custom inspectors are by no means required but can help boost your workflow and 
 built-in Jungle nodes have custom inspectors that make the nodes look cleaner and easier to use.
 
 No custom inspector **(Red)** _Vs._ custom inspector **(Green)**:
-![](img/custom-inspector-good-vs-bad.png)
+![Custom inspector applied vs not](img/custom-inspector-good-vs-bad.png)
 
 ### Example
 
