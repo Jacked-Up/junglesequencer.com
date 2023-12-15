@@ -49,29 +49,6 @@ public class MyBranchNode : BranchNode<float>
 ```
 :::
 
-#### Attribute Example
-
-```csharp
-[NodeProperties(
-    ...
-)]
-[BranchNode(
-    InputPortName = "Value"
-    InputPortType = typeof(float),
-    OutputPortNames = new []{ "Square Root", "Greator than One" },
-    OutputPortTypes = new []{ typeof(float), typeof(bool) }
-)]
-public class FindSquareRootNode : BranchNode
-...
-```
-
-In this example, we defined **FindSquareRootNode**'s input port to be named **Value** and accept type **float**. We
-also defined two output ports named **Square Root** and **Greater than One** that output type **float** and **bool**
-respectively. With this setup, we could create the logic in this class so that if the input value is greater than one,
-it would call output port **Greater than One** with a value of **true**, and if the input value is less than one, it
-would call output port **Greater than One** with a value of **false**. We could also call output port **Square Root**
-with the square root of the input value.
-
 ---
 ## Code Reference
 
