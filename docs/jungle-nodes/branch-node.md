@@ -40,7 +40,7 @@ public class MyBranchNode : BranchNode<Port.None>
 #### Result in the Jungle Editor
 ![Branch node attribute visual](img/branch-node-attribute-visual.png)
 
-:::info HOW DO I DEFINE THE INPUT PORT TYPE?
+:::info WHERE IS THE INPUT TYPE DEFINED?
 The Branch Node is a generic class, so you define the input port type when you inherit from the class. 
 <br />**For example**, if you want the input port to accept a `float` value, you would set your script up like so:
 ```csharp
@@ -176,9 +176,7 @@ using Jungle;
 
 [NodeProperties(
     Title = "Branch Node",
-    Description = "One input, multiple outputs.",
-    Category = "Boilerplate",
-    Color = Blue
+    Description = "One input, multiple outputs."
 )]
 [BranchNode(
     InputPortName = "Input",
@@ -203,7 +201,7 @@ public class MyBranchNode : BranchNode<Port.None>
 ---
 ## Example
 
-Here's a simple example of a branch node that takes in a number and outputs weather the number is positive or negative.
+Here's a simple example of a Branch Node that takes in a number and outputs weather the number is positive or negative.
 
 ```csharp
 using Jungle;
@@ -237,14 +235,14 @@ public class PositiveNegativeNode : BranchNode<int>
 }
 ```
 
-As seen in the example above, the input port would be named **Number** and accept type **int**. Also defined is the two 
-output ports named **Positive** and **Negative** that output nothing.
+As shown in the example above, the input port is named **Number** and accepts the type **int**. Also defined are two 
+output ports named **Positive** and **Negative** that output **nothing**.
 
-With this setup, when a node calls this node, it will send a value of type **int** to the **Number** port. The node will
-then check if the number is greater than or equal to zero. If it is, it will call the **Positive** port. If it's not, 
-it will call the **Negative** port.
+With this setup, when a node calls this node, it inputs a value of type int to the Number port. The node then checks if
+the number is greater than or equal to zero. If it is, it calls the Positive port. If it's not, it calls the Negative 
+port.
 
-This gives us a node with branching logic that could run different sequences based on if the inputted number is positive
-or negative.
+This configuration allows us to create a node with branching logic that can run different sequences based on whether the
+inputted number is positive or negative.
 
 ![Branch node example visual](img/branch-node-example-visual.png)

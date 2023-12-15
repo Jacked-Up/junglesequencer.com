@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/img/io-node-attribute-visual.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/img/io-node-example-visual.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/branch-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/branch-node.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/io-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/io-node.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +97,7 @@
       <workItem from="1702496595234" duration="6243000" />
       <workItem from="1702561710881" duration="5158000" />
       <workItem from="1702591808339" duration="6299000" />
-      <workItem from="1702664919937" duration="6639000" />
+      <workItem from="1702664919937" duration="10604000" />
     </task>
     <servers />
   </component>
