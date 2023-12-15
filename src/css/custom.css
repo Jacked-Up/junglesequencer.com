@@ -26,6 +26,19 @@
   --ifm-navbar-background-color: black !important;
 }
 
+.DocItemTitle {
+  color: var(--ifm-color-primary-darker);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.DocItemParameter {
+  color: var(--ifm-color-primary-light);
+  font-size: 24px;
+  font-style: italic;
+  font-weight: normal;
+}
+
 /* Custom footer css ------------------------------------------------------------------------------------------------ */
 .footer {
   --ifm-footer-background-color: black;

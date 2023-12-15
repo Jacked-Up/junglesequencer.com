@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/using-the-editor/_category_.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/using-the-editor/jungle-editor.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/using-the-editor/jungle-preferences.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/using-the-editor/jungle-validator.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/frequently-asked-questions.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-tree.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-tree.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/custom.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +45,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "live",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/zackj/Documents/GitHub/jungle-website/docs/jungle-nodes/advanced/img",
+    "last_opened_file_path": "C:/Users/zackj/Documents/GitHub/jungle-website/docs/using-the-editor",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,11 +58,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\using-the-editor" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\jungle-nodes\advanced\img" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\extras" />
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\tutorials\logic-gates" />
-      <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\jungle-nodes\advanced" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\docs\get-started" />
@@ -92,7 +99,8 @@
       <workItem from="1702424937057" duration="9506000" />
       <workItem from="1702437928171" duration="809000" />
       <workItem from="1702496595234" duration="6243000" />
-      <workItem from="1702561710881" duration="3136000" />
+      <workItem from="1702561710881" duration="5158000" />
+      <workItem from="1702591808339" duration="5706000" />
     </task>
     <servers />
   </component>

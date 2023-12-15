@@ -54,7 +54,16 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            to: '/blog',
+            label: 'Blog',
+            position: 'left'
+          },
+          {
+            href: 'https://github.com/Jacked-Up/junglesequencer.com/discussions',
+            label: 'Buy Jungle',
+            position: 'right',
+          },
         ],
       },
       footer: {
@@ -98,11 +107,11 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: '?',
+                href: 'https://discord.gg/M3XwHzbuPc',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/Jacked-Up/junglesequencer.com',
+                label: 'GitHub Discussions',
+                href: 'https://github.com/Jacked-Up/junglesequencer.com/discussions',
               },
             ],
           },
