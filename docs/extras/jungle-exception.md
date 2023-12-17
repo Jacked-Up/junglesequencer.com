@@ -3,51 +3,71 @@ title: Jungle Exception
 sidebar_position: 4
 ---
 
-Jungle has a builtin exception handler that will catch any exceptions thrown by your nodes. This is useful for debugging
-your nodes, as it will prevent your game from crashing if an exception is thrown. This could also protect against soft
-locks.
+Handling errors in Jungle is made easy using the Jungle Tree's error handler. The error handler catches any exceptions
+thrown by nodes during runtime. This error handler will then shut the node down **safely** and display the error in the
+console.
 
-Jungle Exceptions can be thrown **anywhere** within a node, and will be caught by the Jungle Exception Handler. The exception
-handler will then log the exception and stop the Jungle Tree.
+This is useful for displaying when a critical error occurs in your tree. That would prevent subsequent nodes from 
+running, which could cause even more errors.
+
+## When to Throw Exceptions?
+
+You should only throw exceptions when a critical error that would break any subsequent nodes occurs.
+
+#### Example
+
+Let's say you have a node that searches for a game object in the scene and outputs it. This would mean any nodes 
+connected to the output of this node would now be expecting a game object.
+
+Now let's say that the node is ran and it cant find the game object in the scene. Well, now all connected nodes would be
+expecting a game object, except they would be getting `null` instead. This would cause a runtime error.
+
+To prevent this, you should throw an exception if the game object is not found. This will prevent any subsequent nodes
+from running and more causing errors.
 
 ## Throwing an Exception
 
-To throw an exception, simply create a new `JungleException` and pass in the exception message.
+Throwing exceptions is extremely easy.
+
+You should always throw a `JungleException` when an error occurs. This will ensure that the error is caught by the error
+handler. You can also pass a message to the exception to display in the console.
 
 ```csharp
-using Jungle;
-
-throw new JungleException("Ahhh! Something went wrong!");
+throw new JungleException("YOUR MESSAGE");
 ```
 
+You can throw Jungle exceptions inside any inherited Jungle Node method.
+
 ## Example
+
+Here's an example of a node that outputs the name of the inputted game object. 
 
 ```csharp
 using Jungle;
 
 [NodeProperties(
-    // Node properties
+    Title = "Get Game Object Name",
+    Description = "Gets the inputted game objects name."
 )]
 [IONode(
-    InputPortName = "Start",
-    InputPortType = typeof(float),
-    OutputPortName = "Next",
-    OutputPortType = typeof(Port.None)
+    InputPortName = "Object",
+    OutputPortName = "Object Name",
+    OutputPortType = typeof(string)
 )]
-public class MyNode : IONode
+public class GetGameObjectNameNode : IONode<GameObject>
 {
-    protected override void OnStart(in object inputValue)
+    protected override void OnStart(in GameObject gameObject)
     {
-        if (inputValue is float floatValue)
-        {
-            CallAndStop(floatValue * 2f);
-        }
-        else throw new JungleException("Input value is not a float!");
+        if (gameObject == null)
+            throw new JungleException("Inputted game object was null.");
+            
+        CallAndStop(gameObject.name);
     }
-
+    
     protected override void OnUpdate() { }
 }
 ```
 
-In the example above, we throw a `JungleException` if the input value is not a float. This will be caught by the Jungle
-Exception Handler, which will log the exception and stop the Jungle Tree.
+As you can see, the inputted game object is crucial to the nodes output. If the input is wrong, then the output would be
+wrong too. Of course, we could instead output a default value such as an empty string, but that would be a bad practice
+because it would be hiding the error. **Remember that Jungle Trees are sequences, not programs.**
