@@ -70,4 +70,4 @@ public class GetGameObjectNameNode : IONode<GameObject>
 
 As you can see, the inputted game object is crucial to the nodes output. If the input is wrong, then the output would be
 wrong too. Of course, we could instead output a default value such as an empty string, but that would be a bad practice
-because it would be hiding the error. **Remember that Jungle Trees are sequences, not programs.**
+because it would be hiding the error. **Remember that Jungle Trees are sequences, not code.**

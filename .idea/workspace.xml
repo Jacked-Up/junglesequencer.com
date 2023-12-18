@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/throwing-validation-issues.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/using-editor-context.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/editor-interface/img/jungle-editor-opening.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/editor-interface/img/sticky-note-colors.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/editor-interface/img/sticky-note-editing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/editor-interface/img/sticky-note-lock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/editor-interface/jungle-editor.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/img/jungle-validator-editor-node.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/img/jungle-validator-editor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/img/jungle-validator-node-example.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/extras/jungle-exception.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/extras/jungle-exception.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/welcome.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/welcome.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/advanced/throwing-validation-issues.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/advanced/declaring-validation-issues.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/using-the-editor/_category_.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/editor-interface/_category_.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/using-the-editor/jungle-editor.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/using-the-editor/jungle-preferences.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/editor-interface/jungle-preferences.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/using-the-editor/jungle-validator.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/editor-interface/jungle-validator.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,14 +51,14 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "live",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/zackj/Documents/GitHub/jungle-website/docs/jungle-nodes/advanced",
+    "last_opened_file_path": "C:/Users/zackj/Documents/GitHub/jungle-website/docs/using-the-editor/img/sticky-note-colors.png",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -100,7 +110,9 @@
       <workItem from="1702664919937" duration="10900000" />
       <workItem from="1702746587098" duration="499000" />
       <workItem from="1702758406023" duration="704000" />
-      <workItem from="1702824992988" duration="4078000" />
+      <workItem from="1702824992988" duration="7493000" />
+      <workItem from="1702854575721" duration="3510000" />
+      <workItem from="1702904896983" duration="2548000" />
     </task>
     <servers />
   </component>
