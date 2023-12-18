@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/editor-interface/jungle-editor/_category_.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/editor-interface/jungle-editor/img/jungle-editor-connecting-nodes.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/editor-interface/jungle-editor/img/adding-elements-video.gif" beforeDir="false" afterPath="$PROJECT_DIR$/docs/editor-interface/jungle-editor/img/jungle-editor-adding-nodes.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/editor-interface/jungle-editor/img/opening-editor-video.gif" beforeDir="false" afterPath="$PROJECT_DIR$/docs/editor-interface/jungle-editor/img/opening-jungle-editor.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/editor-interface/jungle-editor/img/selecting-elements-video.gif" beforeDir="false" afterPath="$PROJECT_DIR$/docs/editor-interface/jungle-editor/img/jungle-editor-selecting-nodes.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/editor-interface/jungle-editor/jungle-editor-node-graph.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/editor-interface/jungle-editor/jungle-editor-node-graph.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +99,7 @@
       <workItem from="1702758406023" duration="704000" />
       <workItem from="1702824992988" duration="7493000" />
       <workItem from="1702854575721" duration="3510000" />
-      <workItem from="1702904896983" duration="14085000" />
+      <workItem from="1702904896983" duration="15193000" />
     </task>
     <servers />
   </component>

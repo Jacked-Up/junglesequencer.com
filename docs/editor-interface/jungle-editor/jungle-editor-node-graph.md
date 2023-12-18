@@ -5,7 +5,7 @@ sidebar_position: 1
 
 The node graph is one of the three panels in the Jungle Editor. It is where you create and edit your Jungle Trees. 
 
-#### Opening the Editor
+## Opening the Editor
 
 **Double-click** on a Jungle Tree in your assets folder. This will open the Jungle Tree in the editor.
 
@@ -17,7 +17,11 @@ The editor is responsive and will automatically resize to fit the window it's in
 All elements within the editor are draggable. You can move nodes and sticky notes using your mouse by clicking and
 dragging them.
 
-## Adding Nodes
+## Nodes
+
+Nodes are the visual representation of your code. They are the building blocks of your trees. Literally.
+
+### Adding Nodes
 
 ![Selecting elements in the editor](img/jungle-editor-adding-nodes.gif)
 
@@ -27,7 +31,7 @@ To add a node to the graph, **left-click** and **drag** the node from the node e
 Read more about the node explorer **[here](jungle-editor-node-explorer)**.
 :::
 
-## Selecting Nodes
+### Selecting Nodes
 
 ![Selecting elements in the editor](img/jungle-editor-selecting-nodes.gif)
 
@@ -35,13 +39,13 @@ Selecting elements can be done two ways:
 - [Selecting them manually](#select-with-cursor)
 - [Drawing a selection box](#select-with-box)
 
-### Select With Cursor
+#### Select With Cursor
 
 You can select a node by **left-clicking** on it. 
 
 You can select multiple nodes by holding **Alt** and **left-click** on each additional node you want to select.
 
-### Select With Box
+#### Select With Box
 
 **Left-click** and **drag** to draw a selection box. All nodes within the box will be selected.
 
@@ -49,7 +53,7 @@ You can select multiple nodes by holding **Alt** and **left-click** on each addi
 You can append to your selections by holding **Alt** while drawing the selection box.
 :::
 
-## Connecting Nodes
+### Connecting Nodes
 
 ![Connecting nodes in the editor](img/jungle-editor-connecting-nodes.gif)
 
@@ -60,6 +64,46 @@ of one node to the port of another node.
 - You can only connect ports of the same type together
 - You can only connect inputs to outputs and vice versa
 :::
+
+## Sticky Notes
+
+Sticky notes are a great way to document and organize your trees.
+
+| Action   | Shortcut          | Context Menu                   |
+|----------|-------------------|--------------------------------|
+| Add Note | **Shift** + **S** | **Right Click** > **Add Note** |
+
+This will add a sticky note to your graph at your mouse cursor.
+
+:::tip NOTE GROUPS
+**Alternatively**, if you add a note while selecting one or more node(s), the note will be added around all the selected
+nodes. This is a great way to group nodes together.
+:::
+
+### Moving and Resizing Sticky Notes
+
+Sticky notes can be moved around the graph just like nodes. You can also resize them by dragging on the sides or 
+corners. 
+
+### Editing Sticky Notes
+
+To edit the text of a sticky note, double-click on it.
+
+![Sticky note colors](img\sticky-note-editing.png)
+
+### Sticky Note Themes
+
+You can change the color of a sticky note by right clicking on it, hovering over **Theme**, and selecting the color you
+want.
+
+![Sticky note colors](img\sticky-note-colors.png)
+
+### Locking/Unlocking Sticky Notes
+
+If you would like to lock the sticky note in place, you can right click on it and select **Lock**. This will prevent
+you from accidentally moving, resizing, or editing the note.
+
+![Sticky note colors](img\sticky-note-lock.png)
 
 ## Input
 
@@ -89,43 +133,3 @@ your _trackpad_, _stylus_, or _finger_.
 | Frame Origin   | O        | Right Click > Recenter View |
 | Frame Next     | ]        | _None_                      |
 | Frame Previous | [        | _None_                      |
-
-## Sticky Notes
-
-Sticky notes are a great way to document and organize your trees.
-
-| Action   | Shortcut          | Context Menu                   |
-|----------|-------------------|--------------------------------|
-| Add Note | **Shift** + **S** | **Right Click** > **Add Note** |
-
-This will add a sticky note to your graph at your mouse cursor.
-
-:::tip NOTE GROUPS
-**Alternatively**, if you add a note while selecting one or more node(s), the note will be added around all the selected
-nodes. This is a great way to group nodes together.
-:::
-
-### Moving and Resizing Sticky Notes
-
-Sticky notes can be moved around the graph just like nodes. You can also resize them by dragging on the sides or 
-corners. 
-
-### Editing Sticky Notes
-
-To edit the text of a sticky note, double-click on it.
-
-![Sticky note colors](img\sticky-note-editing.png)
-
-### Sticky Note Theme
-
-You can change the color of a sticky note by right clicking on it, hovering over **Theme**, and selecting the color you
-want.
-
-![Sticky note colors](img\sticky-note-colors.png)
-
-### Sticky Note Lock
-
-If you would like to lock the sticky note in place, you can right click on it and select **Lock**. This will prevent
-you from accidentally moving, resizing, or editing the note.
-
-![Sticky note colors](img\sticky-note-lock.png)
