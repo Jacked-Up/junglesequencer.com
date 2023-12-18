@@ -53,11 +53,11 @@ private void Start()
 <br />`public StateFlag State { get; }`
 <br />_The current state of the Jungle Tree._
 
-| Value | State    | Description                                                                      |
-|-------|----------|----------------------------------------------------------------------------------|
-| 0     | Ready    | Describes a Jungle Tree that has never been run and is not currently running.    |
-| 1     | Running  | Describes a Jungle Tree that is currently running.                               |
-| 0     | Finished | Describes a Jungle Tree that is not currently running but has run at some point. |
+| Flag | State    | Description                                                                      |
+|------|----------|----------------------------------------------------------------------------------|
+| 0    | Ready    | Describes a Jungle Tree that has never been run and is not currently running.    |
+| 1    | Running  | Describes a Jungle Tree that is currently running.                               |
+| 0    | Finished | Describes a Jungle Tree that is not currently running but has run at some point. |
 
 <span class="DocItemTitle">IsRunning</span>
 <br />`public bool IsRunning { get; }`

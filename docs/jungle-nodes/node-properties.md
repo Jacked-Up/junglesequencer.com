@@ -3,87 +3,107 @@ title: Node Properties
 sidebar_position: 0
 ---
 
-All Jungle Nodes require the class attribute **NodeProperties** to be defined.
+All Jungle Nodes require the class attribute `NodeProperties` to be defined.
 
-The **NodeProperties** attribute is used to define the Jungle Node script you created.
+The `NodeProperties` attribute is used to define the node script you created.
 
 ## Properties
-| Name            | Type    | Notes                                                           |
-|-----------------|---------|-----------------------------------------------------------------|
-| Title           | string  | Defines the title of the node                                   |
-| Description     | string  | Documents the purpose of the node (Also used as a tooltip)      |
-| Category        | string  | Defines the location in the node explorer to put this node      |
-| Color           | string  | Defines the accent color of the node. Is a **Hex Code**         |
-| Deprecated      | boolean | Set this to true to declare this node as deprecated             |
-| LimitOnePerTree | boolean | Set this to true if you want to limit this node to one per tree |
 
+| Name            | Type    | Notes                                                      |
+|-----------------|---------|------------------------------------------------------------|
+| Title           | string  | Defines the title of the node                              |
+| Description     | string  | Documents the purpose of the node (Also used as a tooltip) |
+| Category        | string  | Defines the location in the node explorer to put this node |
+| Color           | string  | Defines the accent color of the node. Is a **Hex Code**    |
+| Deprecated      | boolean | Set this to true to declare this node as deprecated        |
+
+---
 ### Title
 
-The title of the node is used for the The title of your node does not need to be unique.
+The title of the node is the name that will be displayed on the node in the Jungle Editor.
 
-_Here's a naming pattern we recommend:_
+:::info NOTE
+Your node's title doesn't need to be unique.
+:::
 
-**For example,** lets say you have a script in your game that controls a door named **DoorController.cs** that you would
-like to build nodes for. Here's how you could define the title for both an **Open Door** and **Close Door** node script.
+```csharp
+[NodeProperties(
+    Title = "Hello World"
+)]
+public class HelloWorldNode : GenericNode
+...
+```
+
+![Node title property highlighted](img/node-properties-title.png)
+
+**Here's the recommended naming pattern:**
+
+Lets say you have a script in your game that controls a door named **DoorController.cs** that you would
+like to build nodes for. Here's how you could define the title for an **Open Door** node.
 
 ```csharp
 [NodeProperties(
     Title = "Open Door"
 )]
-public class OpenDoorNode : IONode
-...
-```
-```csharp
-[NodeProperties(
-    Title = "Close Door"
-)]
-public class CloseDoorNode : IONode
+public class OpenDoorNode : IONode<Door>
 ...
 ```
 
-All scripts that inherit from type Jungle Node should have the word **Node** at the end of its class name. This is not
+:::tip TIP
+Scripts that inherit from any Jungle Node type should have the word **Node** at the end of its class name. This is not
 required but is a great naming pattern to follow.
+:::
 
+---
 ### Description
 
 The description of the node should be a brief explanation of what the node does. The description is also used as a 
 tooltip when you hover over the node in the Jungle Editor.
 
-**For example,** lets use our door example above, here's how you could define the description for both scripts:
 ```csharp
-// OpenDoorNode.cs
 [NodeProperties(
-    Description = "Opens the inputted door."
+    // Other properties...
+    Description = "This is a description!"
 )]
-```
-```csharp
-// CloseDoorNode.cs
-[NodeProperties(
-    Description = "Closes the inputted door."
-)]
+public class HelloWorldNode : GenericNode
+...
 ```
 
+![Node description property highlighted](img/node-properties-description.png)
+
+:::tip TIP
+Descriptions are also tooltips! You can hover over a node in the Jungle Editor to see its description.
+:::
+
+---
 ### Category
 
 The category of the node defines the location in the node explorer to put this node. The location is determined by the
 path you declare. The path can be as many folders deep as you'd like.
 
-**For example,** lets use our door example above, here's how you could define the category:
+---
+### Color
+
+The color property defines the nodes accent color. 
 
 ```csharp
 [NodeProperties(
-    Category = "Game/Door"
+    // Other properties...
+    Color = Red // Or any hex code
 )]
+public class HelloWorldNode : GenericNode
+...
 ```
 
-### Color
+![Node color property highlighted](img/node-properties-color.png)
 
-Color defines the accent color of the node. The color is a **hex code**. You can use any hex code you want.
+:::info INFO
+The color property takes a **hex code**. You can use any hex code you want.
+:::
 
-There are predefined colors in the Jungle Node class. These colors are just constant strings set to **hex codes**. The
-predefined colors were added as a shorthand for the hex codes. You can use either the predefined colors or simply define
-your own hex code.
-_<br /><br />Here is a list of all the predefined colors:_
+Since we know that nobody wants to remember hex codes, Jungle has a list of predefined colors that you can use.
+
+#### Colors
 
 *  **Red**     #dc1313  
 *  **Orange**  #ff5b00  
@@ -99,24 +119,42 @@ _<br /><br />Here is a list of all the predefined colors:_
 *  **Black**   #101010
 
 ```csharp
-// These are the exact same thing
-string predefinedColor = JungleNode.Blue;
-string definedColor = "#0069ff";
+var redHexCode = JungleNode.Red;
+Debug.Log(redHexCode); // Would print "#dc1313" to the console
 ```
 
+---
 ### Deprecated
 
-The deprecated property was implemented as a solution for safely removing Jungle Node scripts from your project. While 
-Jungle has built-in detection for missing nodes, deleting the node scripts while they exist inside a Jungle Tree can
-lead to unexpected behavior.
+The deprecated property provides a way to mark nodes that you no longer want to be add-able to trees.
 
-When you set the deprecated property to true, the node will no longer be available in the node explorer and the Jungle
-Validator will mark all instances of the node within Jungle Trees as deprecated so that you can safely remove them.
+```csharp
+[NodeProperties(
+    // Other properties...
+    Deprecated = true
+)]
+public class HelloWorldNode : GenericNode
+...
+```
 
-:::danger DANGER
-You should **NEVER** delete a Jungle Node script from your project until it has been removed from all Jungle Trees.
+![Node deprecated property highlighted](img/node-properties-deprecated.png)
+
+:::tip TIP
+You should only declare the deprecated property if you want to mark a node as deprecated. 
+<br />**The property defaults to false.**
 :::
 
+Setting the deprecated node property to true will do two things:
+- The node will throw a validation issue
+- The node will be hidden in the node explorer
+
+This makes it easy to identify and remove deprecated nodes from your trees.
+
+:::danger DANGER
+**NEVER** delete a node script from your project until it has been removed from all trees.
+:::
+
+---
 ## Boilerplate
 
 ```csharp
