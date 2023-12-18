@@ -9,7 +9,7 @@ The node graph is one of the three panels in the Jungle Editor. It is where you 
 
 **Double-click** on a Jungle Tree in your assets folder. This will open the Jungle Tree in the editor.
 
-![Opening the jungle editor video](img/opening-editor-video.gif)
+![Opening the jungle editor video](img/opening-jungle-editor.gif)
 
 The node graph is where you create and edit your Jungle Trees. The editor can be docked anywhere in the Unity editor.
 The editor is responsive and will automatically resize to fit the window it's in.
@@ -19,30 +19,51 @@ dragging them.
 
 ## Adding Nodes
 
-![Selecting elements in the editor video](img/adding-elements-video.gif)
+![Selecting elements in the editor](img/jungle-editor-adding-nodes.gif)
 
-To add a node to the graph, **right-click** and drag the node from the node explorer you want to add. 
+To add a node to the graph, **left-click** and **drag** the node from the node explorer you want to add. 
+
+:::info NODE EXPLORER
+Read more about the node explorer **[here](jungle-editor-node-explorer)**.
+:::
 
 ## Selecting Nodes
 
-![Selecting elements in the editor video](img/selecting-elements-video.gif)
+![Selecting elements in the editor](img/jungle-editor-selecting-nodes.gif)
 
 Selecting elements can be done two ways:
-- Clicking on them
-- Drawing a selection box
+- [Selecting them manually](#select-with-cursor)
+- [Drawing a selection box](#select-with-box)
 
-### Clicking on Nodes
+### Select With Cursor
 
-You can select a single element by clicking on it. If you want to select multiple elements, you can hold **Alt** and
-click on each element you want to select.
+You can select a node by **left-clicking** on it. 
 
-### Drawing a Selection Box
+You can select multiple nodes by holding **Alt** and **left-click** on each additional node you want to select.
 
-You can select multiple elements by drawing a selection box around them. To do this, click and drag. Any elements that
-are within the selection box will be selected. You can also hold **Alt** while drawing the selection box to not deselect
-any elements that are already selected.
+### Select With Box
 
-## Controls
+**Left-click** and **drag** to draw a selection box. All nodes within the box will be selected.
+
+:::tip TIP
+You can append to your selections by holding **Alt** while drawing the selection box.
+:::
+
+## Connecting Nodes
+
+![Connecting nodes in the editor](img/jungle-editor-connecting-nodes.gif)
+
+Connecting nodes together is how you create your sequences. To connect nodes, **left-click** and **drag** from the port
+of one node to the port of another node. 
+
+:::info RULES
+- You can only connect ports of the same type together
+- You can only connect inputs to outputs and vice versa
+:::
+
+## Input
+
+### Controls
 
 | Action        | Input             |
 |---------------|-------------------|
@@ -55,19 +76,19 @@ If you're using the Jungle Editor on your laptop/tablet, you can pan the graph b
 your _trackpad_, _stylus_, or _finger_.
 :::
 
-## Shortcuts
+### Shortcuts
 
-| Action         | Shortcut         | Context Menu                |
-|----------------|------------------|-----------------------------|
-| Select All     | Ctrl + A         | Right Click > Select All    |
-| Copy           | Ctrl + C         | Right Click > Copy          |
-| Paste          | Ctrl + V         | Right Click > Paste         |
-| Duplicate      | Ctrl + D         | Right Click > Duplicate     |
-| Delete         | Del              | Right Click > Delete        |
-| Frame All      | A                | _None_                      |
-| Frame Origin   | O                | Right Click > Recenter View |
-| Frame Next     | ]                | _None_                      |
-| Frame Previous | [                | _None_                      |
+| Action         | Shortcut | Context Menu                |
+|----------------|----------|-----------------------------|
+| Select All     | Ctrl + A | Right Click > Select All    |
+| Copy           | Ctrl + C | Right Click > Copy          |
+| Paste          | Ctrl + V | Right Click > Paste         |
+| Duplicate      | Ctrl + D | Right Click > Duplicate     |
+| Delete         | Del      | Right Click > Delete        |
+| Frame All      | A        | _None_                      |
+| Frame Origin   | O        | Right Click > Recenter View |
+| Frame Next     | ]        | _None_                      |
+| Frame Previous | [        | _None_                      |
 
 ## Sticky Notes
 
