@@ -5,6 +5,8 @@ sidebar_position: 2
 
 The node inspector is where you edit the properties of your nodes.
 
+![Renaming nodes in the inspector](img/jungle-editor-inspector-editing.gif)
+
 ---
 ## Opening a Node in the Inspector
 
@@ -31,6 +33,6 @@ The name of a node must be at least **one** character long.
 ## Custom Node Inspectors
 
 Custom node inspectors are a powerful way to extend the functionality of your nodes.
-Building inspectors for nodes works the same way as building inspectors for `MonoBehaviour`'s and `ScriptableObject`'s.
+Building inspectors for nodes works the same way as building `MonoBehaviour` and `ScriptableObject` custom inspectors.
 
 Read more about custom node inspectors **[here](../../../docs/jungle-nodes/advanced/custom-node-inspectors)**.

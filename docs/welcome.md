@@ -10,7 +10,7 @@ Welcome to the Jungle Sequencer documentation!
 Jungle can be a bit overwhelming at first. Just know that by the time you get the hang of everything, Jungle will be
 your best friend!
 
-:::note Jungle GPT
+:::info Jungle GPT
 Additionally, if you have a ChatGPT Plus subscription, you can use our **customized GPT**. 
 Read about it [here](/docs/get-started/jungle-gpt).
 :::
