@@ -3,26 +3,20 @@ title: Node Graph
 sidebar_position: 1
 ---
 
-The node graph is one of the three panels in the Jungle Editor. It is where you create and edit your Jungle Trees. 
+The node graph is where you assemble your sequences.
 
 ## Opening the Editor
 
-**Double-click** on a Jungle Tree in your assets folder. This will open the Jungle Tree in the editor.
-
 ![Opening the jungle editor video](img/opening-jungle-editor.gif)
 
-The node graph is where you create and edit your Jungle Trees. The editor can be docked anywhere in the Unity editor.
-The editor is responsive and will automatically resize to fit the window it's in.
-
-All elements within the editor are draggable. You can move nodes and sticky notes using your mouse by clicking and
-dragging them.
+**Double-click** on a Jungle Tree in your assets folder. This will open the Jungle Tree in the editor.
 
 ## Nodes
 
 Nodes are the visual representation of your code. They are the building blocks of your trees. Literally.
 
 ### Adding Nodes
-
+8
 ![Selecting elements in the editor](img/jungle-editor-adding-nodes.gif)
 
 To add a node to the graph, **left-click** and **drag** the node from the node explorer you want to add. 
@@ -69,15 +63,17 @@ of one node to the port of another node.
 
 Sticky notes are a great way to document and organize your trees.
 
+![Connecting nodes in the editor](img/jungle-editor-sticky-note.gif)
+
 | Action   | Shortcut          | Context Menu                   |
 |----------|-------------------|--------------------------------|
 | Add Note | **Shift** + **S** | **Right Click** > **Add Note** |
 
 This will add a sticky note to your graph at your mouse cursor.
 
-:::tip NOTE GROUPS
-**Alternatively**, if you add a note while selecting one or more node(s), the note will be added around all the selected
-nodes. This is a great way to group nodes together.
+:::tip USING STICKY NOTES AS GROUPS 
+If you add a note while selecting nodes, the note will surround all the selected nodes. 
+This is a great way to group nodes together.
 :::
 
 ### Moving and Resizing Sticky Notes
