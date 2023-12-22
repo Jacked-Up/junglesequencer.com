@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/img/generic-node-attribute-visual.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/img/generic-node-example.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/img/generic-node-input-definition-example.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/img/event-node-attribute-visual.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/jungle-nodes/img/event-node-example.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/branch-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/branch-node.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/identity-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/generic-node.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/img/branch-node-example-visual.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/img/branch-node-example.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/img/io-node-example-visual.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/img/io-node-example.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/io-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/io-node.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/markdown-page.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/jungle-nodes/event-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/jungle-nodes/event-node.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +105,7 @@
       <workItem from="1702904896983" duration="16035000" />
       <workItem from="1702953218107" duration="2110000" />
       <workItem from="1702993167098" duration="3704000" />
-      <workItem from="1703280826191" duration="4039000" />
+      <workItem from="1703280826191" duration="5097000" />
     </task>
     <servers />
   </component>

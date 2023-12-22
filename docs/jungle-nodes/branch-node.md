@@ -38,6 +38,7 @@ public class MyBranchNode : BranchNode<Port.None>
 ```
 
 #### Result in the Jungle Editor
+
 ![Branch node attribute visual](img/branch-node-attribute-visual.png)
 
 :::info WHERE IS THE INPUT TYPE DEFINED?
