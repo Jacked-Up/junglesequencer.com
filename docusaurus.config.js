@@ -1,11 +1,9 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 
-/** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Jungle Sequencer',
-  tagline: 'A node-based sequencing framework for Unity',
+  tagline: 'A conditional sequencing framework tool for Unity.',
   favicon: 'img/favicon.ico',
-
   url: 'https://junglesequencer.com',
   baseUrl: '/',
 
@@ -20,7 +18,6 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
           sidebarPath: './sidebars.js',
@@ -38,7 +35,6 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
@@ -116,7 +112,7 @@ const config = {
             ],
           },
         ],
-        copyright: `<br/> © 2023-2024 Jacked Up Software LLC. <br/> <strong>Built with Docusaurus.</strong>`,
+        copyright: `<br/> © 2023-2024 Jacked Up Software LLC`,
       },
       prism: {
         theme: prismThemes.vsLight,

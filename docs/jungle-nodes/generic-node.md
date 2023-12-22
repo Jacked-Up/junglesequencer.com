@@ -1,44 +1,51 @@
 ---
-title: IO Node<T>
-sidebar_position: 2
+title: Generic Node
+sidebar_position: 3
 ---
 
-The IO Node is a simpler version of the Branch Node. It takes a single input of any type, and outputs to a single output
-of any type.
+The Generic Node is the simplest node type in Jungle. It takes a single input of any type, and outputs the inputted
+value without changing or mutating it. 
+
+This node type is useful for nodes that do not require an input to function. 
+**For instance**, a node that waits for a set amount of time before continuing.
+
+:::tip TIP
+The inputted value is stored internally and **cannot** be modified or changed.
+:::
 
 ---
 
-All IO Nodes are required to have an `IONode` class attribute defined. This attribute defines the input port and
-output port on the node.
+All Generic Nodes are required to have a `GenericNode` class attribute defined. 
+This attribute defines the input port and output port on the node.
 
-Here's a list of all the properties you can define in the `IONode` attribute:
+Here's a list of all the properties you can define in the `GenericNode` attribute:
 
-| Property         | Type     | Description                          |
-|------------------|----------|--------------------------------------|
-| `InputPortName`  | `string` | Defines the name of the input port.  |
-| `OutputPortName` | `string` | Defines the name of the output port. |
-| `OutputPortType` | `Type`   | Defines the ports outputted type.    |
+| Property          | Type     | Description                         |
+|-------------------|----------|-------------------------------------|
+| `InputPortName`   | `string` | Defines the name of the input port  |
+| `OutputPortName`  | `string` | Defines the name of the output port |
 
 ```csharp
-[IONode(
+[GenericNode(
     InputPortName = "My Input",
-    OutputPortName = "My Output",
-    OutputPortType = typeof(Port.None)
+    OutputPortName = "My Output"
 )]
-public class MyIONode : IONode<Port.None>
+public class MyGenericNode : GenericNode
 ...
 ```
 
 #### Result in the Jungle Editor
-![IO node attribute visual](img/io-node-attribute-visual.png)
+
+![Generic node attribute visual](img/generic-node-attribute-visual.png)
 
 :::info WHERE IS THE INPUT TYPE DEFINED?
-The IO Node is a generic class, so you define the input port type when you inherit from the class.
-<br />**For example**, if you want the input port to accept a `float` value, you would set your script up like so:
-```csharp
-public class MyIONode : IONode<float>
-...
-```
+The input port type is defined by any connected nodes output type.
+
+![Generic node input definition example](img/generic-node-input-definition-example.png)
+
+The **Wait For Seconds** node seen above is a generic node. 
+<br />As you can see, both the **Find Game Object** node and the **Get Main Camera** node can be connected to the input 
+of the **Wait For Seconds** node.
 :::
 
 ---
@@ -116,10 +123,9 @@ Fetching the Jungle Nodes icon only works in the Unity editor. In a build, this 
 ---
 ### Methods
 
-<span class="DocItemTitle">OnStart(<span class="DocItemParameter">in T</span>)</span>
-<br />`protected abstract void OnStart(in T inputValue)`
-<br />_Called immediately when the node is called by another node. The input value is the value sent by the calling
-node._
+<span class="DocItemTitle">OnStart()</span>
+<br />`protected abstract void OnStart()`
+<br />_Called immediately when the node is called by another node._
 
 <span class="DocItemTitle">OnUpdate()</span>
 <br />`protected abstract void OnUpdate()`
@@ -144,17 +150,17 @@ them inside the [Jungle Validator](/docs/using-the-editor/jungle-validator)._
 
 ---
 
-<span class="DocItemTitle">CallAndStop(<span class="DocItemParameter">object</span>)</span>
-<br />`protected void CallAndStop(object outputValue)`
-<br />_Both sends the output value to all nodes connected to the node and stops the node._
+<span class="DocItemTitle">CallAndStop()</span>
+<br />`protected void CallAndStop()`
+<br />_Both sends out a port call and stops the node._
 
-<span class="DocItemTitle">Call(<span class="DocItemParameter">object</span>)</span>
-<br />`protected void Call(object outputValue)`
-<br />_Sends the output value to all nodes connected to this node's output._
+<span class="DocItemTitle">Call()</span>
+<br />`protected void Call()`
+<br />_Sends out a port call to the requested ports on this node._
 
 <span class="DocItemTitle">Stop()</span>
 <br />`protected void Stop()`
-<br />_Stops the node without sending a port call._
+<br />_Stops the node without sending out a port call._
 
 ---
 ## Boilerplate
@@ -163,19 +169,18 @@ them inside the [Jungle Validator](/docs/using-the-editor/jungle-validator)._
 using Jungle;
 
 [NodeProperties(
-    Title = "IO Node",
+    Title = "Generic Node",
     Description = "One input, one output."
 )]
-[IONode(
+[GenericNode(
     InputPortName = "Input",
-    OutputPortName = "Output",
-    OutputPortType = typeof(Port.None)
+    OutputPortName = "Output"
 )]
-public class MyIONode : IONode<Port.None>
+public class MyGenericNode : GenericNode
 {
-    protected override void OnStart(in Port.None _)
+    protected override void OnStart()
     {
-        CallAndStop(Nothing);
+        CallAndStop();
     }
     
     protected override void OnUpdate() { }
@@ -185,35 +190,48 @@ public class MyIONode : IONode<Port.None>
 ---
 ## Example
 
-Here's a simple example of an IO Node that squares the inputted number.
+Here's a simple example of a Generic Node that waits for some time before continuing.
 
 ```csharp
 using Jungle;
 
 [NodeProperties(
-    Title = "Square Number",
-    Description = "Squares a the inputted number.",
-    Color = Green
+    Title = "Wait For Time",
+    Description = "One input, one output.",
+    Color = Yellow
 )]
-[IONode(
-    InputPortName = "Number",
-    OutputPortName = "Square",
-    OutputPortType = typeof(int)
+[GenericNode(
+    InputPortName = "Start",
+    OutputPortName = "Elapsed"
 )]
-public class SquareNumberNode : IONode<int>
+public class WaitForTimeNode : GenericNode
 {
-    protected override void OnStart(in int number)
+    [SerializeField]
+    private float waitTime = 1f;
+
+    private float _startTime;
+
+    protected override void OnStart()
     {
-        CallAndStop(number * number);
+        _startTime = Time.time;
     }
     
-    protected override void OnUpdate() { }
+    protected override void OnUpdate() 
+    { 
+        if (Time.time - _startTime < waitTime)
+            return;
+        
+        CallAndStop();
+    }
 }
 ```
 
-As shown in the example above, the input port is named **Number** and accepts the type **int**. Also defined is the 
-output named **squared** which outputs type **int**.
+As shown in the example above, the input port is named **Start** and accepts any type, and the output port is named
+**Elapsed** and outputs the inputted type.
 
-With this setup, what a node calls this node, the inputted value is squared and outputted to the **Squared** port.
+With this setup, when a node calls this node, the inputted value will be stored in the `WaitForTimeNode` internally and
+outputted after the set amount of time has elapsed.
 
-![IO node example visual](img/io-node-example.png)
+This configuration allows us to create a node that waits for a set amount of time before continuing.
+
+![Generic node example](img/generic-node-example.png)

@@ -235,8 +235,8 @@ public class PositiveNegativeNode : BranchNode<int>
 }
 ```
 
-As shown in the example above, the input port is named **Number** and accepts the type **int**. Also defined are two 
-output ports named **Positive** and **Negative** that output **nothing**.
+As shown in the example above, the input port is named **Number** and accepts the type **int**. 
+Also defined are two output ports named **Positive** and **Negative** that output **nothing**.
 
 With this setup, when a node calls this node, it inputs a value of type int to the Number port. The node then checks if
 the number is greater than or equal to zero. If it is, it calls the Positive port. If it's not, it calls the Negative 
@@ -245,4 +245,4 @@ port.
 This configuration allows us to create a node with branching logic that can run different sequences based on whether the
 inputted number is positive or negative.
 
-![Branch node example visual](img/branch-node-example-visual.png)
+![Branch node example visual](img/branch-node-example.png)
