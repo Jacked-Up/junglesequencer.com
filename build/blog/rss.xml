@@ -4,10 +4,32 @@
         <title>Jungle Sequencer Blog</title>
         <link>https://junglesequencer.com/blog</link>
         <description>Jungle Sequencer Blog</description>
-        <lastBuildDate>Tue, 12 Dec 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 31 Dec 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Text Tie - GPT Knowledge File Builder]]></title>
+            <link>https://junglesequencer.com/blog/text-tie</link>
+            <guid>https://junglesequencer.com/blog/text-tie</guid>
+            <pubDate>Sun, 31 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Waddup 👋]]></description>
+            <content:encoded><![CDATA[<p><strong>Waddup</strong> 👋</p>
+<p>This is a little post I wanted to make about a tool I created...</p>
+<p>I've been working on a CustomGPT model for Jungle to help developers with any questions they may have. CustomGPT's allow
+you to upload knowledge files that help give the model context for the questions developers may ask.</p>
+<p>All the docs used to build this site are markdown files, and the CustomGPT can't read from markdown files. This meant I
+had to manually convert <strong>EACH AND EVERY</strong> markdown file into a text file. This was a very tedious process and I wanted
+to automate it.</p>
+<p><strong>My solution:</strong> I created a tool called Text Tie to help me append all my docs together into a single text file that I
+can easily upload. It allows me to append files are specific extensions into a single text file. This makes an hour long
+process take two minutes.</p>
+<p>Feel free to use it if you need, <strong>it's open source and free to use</strong>.</p>
+<ul>
+<li>Download it <a href="https://github.com/JackaPacka/Text-Tie/releases/tag/Release" target="_blank" rel="noopener noreferrer">here</a>.</li>
+</ul>
+<p><img loading="lazy" src="https://i.imgur.com/6JtGLyQ.png" alt="Text Tie app" class="img_ev3q"></p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Welcome]]></title>
             <link>https://junglesequencer.com/blog/welcome</link>
