@@ -37,6 +37,10 @@
   height: 90px;
 }
 
+.navbar-sidebar__brand {
+  height: 90px;
+}
+
 .navbar__logo {
     height: 70px;
     width: auto;
