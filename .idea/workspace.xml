@@ -5,107 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build/assets/css/styles.968e90f0.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/fonts/Rubik-3a4acc0356c6ea73f2c363d86501e1f4.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/042d12fb.42e03994.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/056a4b71.1d449d4c.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/130.d775b97f.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/172.c6c70935.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/17896441.09e6d489.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/1a4e3797.be4ea35f.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/220c35c3.cc9e1760.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/5e95c892.7a97840b.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/63f4d4be.d1d2a162.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/6a4210eb.32c2caf5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/772.461ff145.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/7ebda52f.ca18c64b.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/9e4087bc.85b1d716.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/a6aa9e1f.fb0b9604.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/a94703ab.f59bd8c0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/ac01e9cb.e2483460.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/c359ecd2.c05f6f3c.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/c4f5d8e4.6b781da3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/c77c9968.8629ab44.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/c854057d.7f8ffc70.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/c9f5cf45.33eb10c0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/ccc49370.ad9a721f.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/d1e71780.2c8bd26e.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/d5dceea1.1fd96825.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/e15bafff.678e228b.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/e9ab6cd9.5a5929b6.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/f6d7a951.7e3f666b.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/main.60a921ec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/main.60a921ec.js.LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/assets/js/runtime~main.705b8086.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Rubik.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/css/styles.8a696e7d.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/042d12fb.de534a49.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/056a4b71.2a00d754.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/130.676171c8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/17896441.9f912f5c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/1a4e3797.17555818.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/220c35c3.ec032d17.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/443.a736f6a2.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/assets/js/443.a736f6a2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/443.a736f6a2.js.LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/assets/js/443.a736f6a2.js.LICENSE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/448998f2.51006536.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/528.c4e51974.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/5e95c892.ddab921e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/63f4d4be.7bf0bd34.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/772.97c383f5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/7ebda52f.ffd06b4b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/836e4c55.139e24c6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/9e4087bc.c36f2b14.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/a6aa9e1f.0cd9ef10.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/a94703ab.5d8124c2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/ac01e9cb.521374dd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/ad39fb97.183b9b33.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/c359ecd2.f3778d1f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/c4f5d8e4.1221d744.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/c9f5cf45.d74a0eb9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/ccc49370.ca598e07.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/d1e71780.5861c095.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/d5dceea1.45bb88e1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/df46cb3a.69f4412f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/e15bafff.da3f05de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/f6d7a951.d5f9ee43.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/main.a6d9a742.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/main.a6d9a742.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/assets/js/runtime~main.dace373f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/archive/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/blog/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/atom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/blog/rss.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/rss.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/blog/text-tie/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/text-tie/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/blog/welcome/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/welcome/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/editor-interface/jungle-editor/jungle-editor-node-explorer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/editor-interface/jungle-editor/jungle-editor-node-explorer/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/editor-interface/jungle-editor/jungle-editor-node-graph/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/editor-interface/jungle-editor/jungle-editor-node-graph/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/editor-interface/jungle-editor/jungle-editor-node-inspector/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/editor-interface/jungle-editor/jungle-editor-node-inspector/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/editor-interface/jungle-preferences/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/editor-interface/jungle-preferences/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/editor-interface/jungle-validator/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/editor-interface/jungle-validator/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/get-started/install-jungle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/get-started/install-jungle/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/get-started/jungle-gpt/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/get-started/jungle-gpt/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/get-started/update-jungle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/get-started/update-jungle/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/custom-node-inspectors/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/custom-node-inspectors/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/declaring-validation-issues/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/declaring-validation-issues/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/jungle-exception/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/jungle-exception/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/node-editor-context/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/node-editor-context/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/branch-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/branch-node/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/event-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/event-node/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/generic-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/generic-node/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/io-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/io-node/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/node-properties/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/node-properties/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/jungle-tree/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-tree/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docs/welcome/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/welcome/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/search-index.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/search-index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/search/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/search/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,25 +32,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "live",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/zackj/Documents/GitHub/junglesequencer.com",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;live&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zackj/Documents/GitHub/junglesequencer.com&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\zackj\Documents\GitHub\jungle-website\blog" />
@@ -206,7 +109,9 @@
       <workItem from="1703436154367" duration="76000" />
       <workItem from="1704029059085" duration="2132000" />
       <workItem from="1704302485173" duration="2000" />
-      <workItem from="1704737533172" duration="1094000" />
+      <workItem from="1704737533172" duration="1736000" />
+      <workItem from="1704754201791" duration="186000" />
+      <workItem from="1704827435764" duration="575000" />
     </task>
     <servers />
   </component>

@@ -33,6 +33,22 @@
   --ifm-navbar-background-color: black !important;
 }
 
+.navbar {
+  height: 90px;
+}
+
+.navbar__logo {
+    height: 70px;
+    width: auto;
+    transform: translateY(-7px);
+}
+
+.navbar__title {
+  font-size: 35px;
+  font-weight: bold;
+  transform: translateX(-20px) translateY(6px);
+}
+
 .DocItemTitle {
   color: var(--ifm-color-primary-darker);
   font-size: 24px;
