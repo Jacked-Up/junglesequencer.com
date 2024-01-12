@@ -5,19 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/img/jungle-thumbnail-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/jungle-thumbnail-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/jungle-thumbnail-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/jungle-thumbnail-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/jungle-thumbnail-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/jungle-thumbnail-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/jungle-thumbnail-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/jungle-thumbnail-4.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/docusaurus-social-card.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/docusaurus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/undraw_docusaurus_mountain.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/undraw_docusaurus_react.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/undraw_docusaurus_tree.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/jungle-thumbnail-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/jungle-thumbnail-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/jungle-thumbnail-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/jungle-thumbnail-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/jungle-thumbnail-5.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +121,7 @@
       <workItem from="1704737533172" duration="1736000" />
       <workItem from="1704754201791" duration="186000" />
       <workItem from="1704827435764" duration="2014000" />
-      <workItem from="1705067665530" duration="619000" />
+      <workItem from="1705067665530" duration="3920000" />
     </task>
     <servers />
   </component>

@@ -112,3 +112,62 @@ h6 {
 p {
   font-family: Rubik, sans-serif;
 }
+
+/* Custom css for the home page ------------------------------------------------------------------------------------- */
+
+.homepage {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.homepage h1 {
+  font-size: 80px;
+  text-align: center;
+}
+
+.homepage p {
+  font-size: 20px;
+  text-align: center;
+
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.homepage img {
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.75);
+}
+
+.image-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container img {
+  margin: 0 10px;
+  width: 30%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .homepage {
+    margin-bottom: 20px;
+  }
+
+  .image-container {
+    flex-wrap: wrap;
+  }
+
+  .image-container img {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .homepage p {
+    font-size: 17px;
+    text-align: center;
+
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}

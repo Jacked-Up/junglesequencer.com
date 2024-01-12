@@ -112,7 +112,7 @@ const config = {
             ],
           },
         ],
-        copyright: `<br/> © 2023-2024 Jacked Up Software LLC`,
+        copyright: `<br/> © 2024 Jacked Up Software LLC`,
       },
       prism: {
         theme: prismThemes.vsLight,
