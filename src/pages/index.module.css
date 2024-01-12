@@ -21,3 +21,44 @@
   align-items: center;
   justify-content: center;
 }
+
+.image-container {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px; /* Adjust spacing */
+}
+
+.row img {
+  margin: 0 5px; /* Spacing between images */
+  width: 150px; /* Adjust image size */
+  height: auto;
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .top-row {
+    flex-wrap: wrap;
+  }
+
+  .top-row img:nth-child(3),
+  .bottom-row img:last-child {
+    order: 1;
+    width: 100%; /* Full width for the single image in the row */
+    margin-top: 10px; /* Spacing from the above images */
+  }
+}
+
+@media (max-width: 480px) { /* Adjust breakpoint as needed */
+  .top-row, .bottom-row {
+    flex-direction: column;
+  }
+
+  .row img {
+    width: 100%;
+    margin: 10px 0; /* Spacing between stacked images */
+  }
+}
+
