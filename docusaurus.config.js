@@ -56,7 +56,7 @@ const config = {
             position: 'left'
           },
           {
-            href: 'https://github.com/Jacked-Up/junglesequencer.com/discussions',
+            href: 'https://assetstore.unity.com/packages/slug/258407',
             label: 'Buy Jungle',
             position: 'right',
           },
@@ -86,7 +86,7 @@ const config = {
             items: [
               {
                 label: 'Unity Asset Store',
-                href: '?',
+                href: 'https://assetstore.unity.com/packages/slug/258407',
               },
               {
                 label: 'JungleGPT',
@@ -103,7 +103,7 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discord.gg/M3XwHzbuPc',
+                href: 'https://discord.gg/vJ4AXsExfE',
               },
               {
                 label: 'GitHub Discussions',
