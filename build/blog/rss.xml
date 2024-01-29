@@ -4,10 +4,36 @@
         <title>Jungle Sequencer Blog</title>
         <link>https://junglesequencer.com/blog</link>
         <description>Jungle Sequencer Blog</description>
-        <lastBuildDate>Sun, 31 Dec 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 29 Jan 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Beta Program]]></title>
+            <link>https://junglesequencer.com/blog/beta-program</link>
+            <guid>https://junglesequencer.com/blog/beta-program</guid>
+            <pubDate>Mon, 29 Jan 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Hey Everyone 👋, I'm so excited to announce that you can now sign up for the Jungle Sequencer Beta Program.]]></description>
+            <content:encoded><![CDATA[<p>Hey Everyone 👋, I'm so excited to announce that you can now sign up for the Jungle Sequencer Beta Program.</p>
+<p>Jungle has been in the works for almost three years now. I've worked so hard to make it the best tool it can be. With
+the official release around the corner, I want to get an edge on any bugs or issues I didn't catch.</p>
+<p>A tool of this size and complexity is bound to have some bugs. I've done my best to catch them all, but I'm sure there
+are some that have slipped through the cracks.</p>
+<p>That's where you come in. I need your help to make Jungle the best it can be. If you're interested in joining the beta
+program, please fill out <strong><a href="https://forms.gle/55ZSyBrhH8iDoGKK8" target="_blank" rel="noopener noreferrer">this form</a></strong>.</p>
+<p>I'm looking for developers of all skill levels. Whether you're a beginner or an expert, I want to hear from you. I'm
+looking for feedback on:</p>
+<ul>
+<li>The user interface</li>
+<li>The functionality</li>
+<li>The documentation</li>
+<li>And the overall experience.</li>
+</ul>
+<p>The beta is a great opportunity to get a sneak peek at Jungle before anyone else. You'll also get to keep the version
+you test for <strong>free</strong>.</p>
+<p>I'm so excited to see what you all think. I can't wait to hear from you.</p>
+<p>Happy coding! 🌴</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Text Tie - GPT Knowledge File Builder]]></title>
             <link>https://junglesequencer.com/blog/text-tie</link>

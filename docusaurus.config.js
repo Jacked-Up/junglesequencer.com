@@ -56,6 +56,11 @@ const config = {
             position: 'left'
           },
           {
+            href: 'https://forms.gle/55ZSyBrhH8iDoGKK8',
+            label: 'Beta Program',
+            position: 'left'
+          },
+          {
             href: 'https://assetstore.unity.com/packages/slug/258407',
             label: 'Buy Jungle',
             position: 'right',
