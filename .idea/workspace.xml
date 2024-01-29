@@ -6,7 +6,56 @@
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/blog/2024-1-29-beta-program.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/assets/js/1bc75584.3584eb6a.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/assets/js/3f043369.7860c075.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/assets/js/814f3328.985e0e48.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/assets/js/b2b675dd.17eb2247.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/assets/js/b2f554cd.e59bd2c0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/assets/js/b90be4f2.1b8b4498.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/assets/js/c595476f.1abf21da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/assets/js/main.6349495e.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/assets/js/main.6349495e.js.LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/assets/js/runtime~main.e8b23fb6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/blog/beta-program/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/js/3f043369.cf6a626a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/js/814f3328.e793fc48.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/js/b2b675dd.dd5bcd0f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/js/b2f554cd.7785b2d8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/js/b90be4f2.7377d9c2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/js/main.573fb563.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/js/main.573fb563.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/js/runtime~main.029a5cfa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/archive/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/blog/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/blog/rss.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/rss.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/blog/text-tie/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/text-tie/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/blog/welcome/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/welcome/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/editor-interface/jungle-editor/jungle-editor-node-explorer/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/editor-interface/jungle-editor/jungle-editor-node-explorer/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/editor-interface/jungle-editor/jungle-editor-node-graph/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/editor-interface/jungle-editor/jungle-editor-node-graph/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/editor-interface/jungle-editor/jungle-editor-node-inspector/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/editor-interface/jungle-editor/jungle-editor-node-inspector/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/editor-interface/jungle-preferences/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/editor-interface/jungle-preferences/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/editor-interface/jungle-validator/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/editor-interface/jungle-validator/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/get-started/install-jungle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/get-started/install-jungle/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/get-started/jungle-gpt/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/get-started/jungle-gpt/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/get-started/update-jungle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/get-started/update-jungle/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/custom-node-inspectors/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/custom-node-inspectors/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/declaring-validation-issues/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/declaring-validation-issues/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/jungle-exception/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/jungle-exception/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/node-editor-context/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/advanced/node-editor-context/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/branch-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/branch-node/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/event-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/event-node/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/generic-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/generic-node/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/io-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/io-node/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/node-properties/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/node-properties/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-tree/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-tree/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/welcome/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/welcome/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/search-index.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/search-index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/search/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/search/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/sitemap.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docusaurus.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docusaurus.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +163,7 @@
       <workItem from="1705067665530" duration="4099000" />
       <workItem from="1705081810236" duration="117000" />
       <workItem from="1706220565629" duration="342000" />
-      <workItem from="1706563773533" duration="861000" />
+      <workItem from="1706563773533" duration="960000" />
     </task>
     <servers />
   </component>
