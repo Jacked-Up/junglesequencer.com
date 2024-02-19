@@ -1,0 +1,8 @@
+---
+title: Drawing Gizmos from Nodes
+sidebar_position: 8
+
+slug: /guides/drawing-gizmos-from-nodes
+---
+
+
