@@ -1,1 +1,0 @@
-(self.webpackChunkjungle_website=self.webpackChunkjungle_website||[]).push([[525],{5525:()=>{}}]);

@@ -1,0 +1,46 @@
+---
+title: Creating a Node
+sidebar_position: 5
+
+slug: /guides/creating-a-node
+---
+
+import VideoPlayer from '@site/src/components/VideoPlayer';
+
+<VideoPlayer url="https://youtu.be/3gN3DpWn6cs"/>
+
+Creating your own nodes in Jungle is a breeze. This guide will walk you through the process of creating a new node in
+each variant. Before beginning, it's important to make sure you have a good understanding of why you should create nodes
+in the first place.
+
+#### LEGO Analogy
+
+Think of nodes as LEGO blocks. Each block is a small piece of a larger set. Each block should be able to be used in as
+many different sets as possible. This is the same for nodes. Each node should be able to be used in as many trees as 
+possible.
+
+If a LEGO block was too specific and only made sense in one set, it wouldn't be very useful. The same goes for nodes.
+Always make sure to split your tasks into separate, modular nodes.
+
+## Node Variants
+
+Jungle has four node variants to choose from. Each variant has its own unique use case, but they all work the same way.
+
+Choosing the right variant for your node is important. Here's a quick overview of each variant:
+- **Branch Node:** A node with one input and multiple outputs.
+- **IO Node:** A node with one input and one output.
+- **Generic Node:** A node with one input and one output, but the input and output type can be anything.
+- **Event Node:** A node with no inputs and multiple outputs.
+
+#### But What if I Want More Than One Input?
+
+If your node needs multiple inputs, more than likely, you're likely using Jungle in the wrong way. Due to how the Jungle
+runtime works, as soon as a node is started, all port call data should be available.
+
+While it would be totally possible to implement another parameter to the `OnStart` method that could explicitly mark the
+inputted data and mark which input it came from, this would make Jungle more of a visual scripter than a sequencer.
+
+:::tip PASSING MULTIPLE VALUES THROUGH A SINGLE PORT
+If you just want to pass multiple values through the same port, you can always just use a
+**[Tuple](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-tuples)**
+:::

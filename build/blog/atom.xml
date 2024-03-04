@@ -2,41 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://junglesequencer.com/blog</id>
     <title>Jungle Sequencer Blog</title>
-    <updated>2024-01-29T00:00:00.000Z</updated>
+    <updated>2023-12-31T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://junglesequencer.com/blog"/>
     <subtitle>Jungle Sequencer Blog</subtitle>
     <icon>https://junglesequencer.com/img/favicon.ico</icon>
-    <entry>
-        <title type="html"><![CDATA[Beta Program]]></title>
-        <id>https://junglesequencer.com/blog/beta-program</id>
-        <link href="https://junglesequencer.com/blog/beta-program"/>
-        <updated>2024-01-29T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Hey Everyone 👋, I'm so excited to announce that you can now sign up for the Jungle Sequencer Beta Program.]]></summary>
-        <content type="html"><![CDATA[<p>Hey Everyone 👋, I'm so excited to announce that you can now sign up for the Jungle Sequencer Beta Program.</p>
-<p>Jungle has been in the works for almost three years now. I've worked so hard to make it the best tool it can be. With
-the official release around the corner, I want to get an edge on any bugs or issues I didn't catch.</p>
-<p>A tool of this size and complexity is bound to have some bugs. I've done my best to catch them all, but I'm sure there
-are some that have slipped through the cracks.</p>
-<p>That's where you come in. I need your help to make Jungle the best it can be. If you're interested in joining the beta
-program, please fill out <strong><a href="https://forms.gle/55ZSyBrhH8iDoGKK8" target="_blank" rel="noopener noreferrer">this form</a></strong>.</p>
-<p>I'm looking for developers of all skill levels. Whether you're a beginner or an expert, I want to hear from you. I'm
-looking for feedback on:</p>
-<ul>
-<li>The user interface</li>
-<li>The functionality</li>
-<li>The documentation</li>
-<li>And the overall experience.</li>
-</ul>
-<p>The beta is a great opportunity to get a sneak peek at Jungle before anyone else. You'll also get to keep the version
-you test for <strong>free</strong>.</p>
-<p>I'm so excited to see what you all think. I can't wait to hear from you.</p>
-<p>Happy coding! 🌴</p>]]></content>
-        <author>
-            <name>Jack Randolph</name>
-            <uri>https://github.com/JackaPacka</uri>
-        </author>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Text Tie - GPT Knowledge File Builder]]></title>
         <id>https://junglesequencer.com/blog/text-tie</id>

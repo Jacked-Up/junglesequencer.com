@@ -36,6 +36,7 @@ const sidebars = {
       'guides/node-editor-context',
       'guides/drawing-gizmos-from-nodes',
       'guides/custom-node-inspectors',
+      'guides/over-time-helper',
       'guides/deleting-node-scripts',
   ],
 };
