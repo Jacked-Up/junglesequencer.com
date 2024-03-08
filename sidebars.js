@@ -9,7 +9,7 @@ const sidebars = {
           link: {
               type: 'generated-index',
           },
-          collapsed: true,
+          collapsed: false,
           items: [
               'documentation/jungle-nodes/node-properties',
               'documentation/jungle-nodes/branch-node',

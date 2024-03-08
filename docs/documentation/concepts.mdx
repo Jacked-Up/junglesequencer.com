@@ -17,13 +17,13 @@ This page will help you understand core concepts and ideas that are essential to
 
 ## Tree and Node Lifecycle
 
-Both trees and nodes follow a lifecycle that is managed by the Jungle Runtime. 
+Both trees and nodes follow a lifecycle that is managed by the runtime.
 Understanding this lifecycle is essential to creating and managing trees and nodes.
 
 ### Tree Lifecycle
 
 #### When a tree is started:
-- The tree registers itself with the Jungle Runtime.
+- The tree registers itself with the runtime.
 - The tree starts all **event** nodes.
 
 #### While the tree is running:
@@ -31,30 +31,28 @@ Understanding this lifecycle is essential to creating and managing trees and nod
 - If there are no more actively running nodes, the tree stops automatically.
 
 #### When a tree is stopped:
-- The tree unregisters itself with the Jungle Runtime.
+- The tree unregisters itself with the runtime.
 - The tree calls all revert actions on all nodes (if any)
 
 ### Node Lifecycle
 
 #### When a node is started:
-- The Jungle Runtime first calls the `OnStart` method on the node.
-- The Jungle Runtime then immediately calls the `OnUpdate` method on the node.
+- The runtime first calls the `OnStart` method on the node.
+- The runtime then immediately calls the `OnUpdate` method on the node.
 
 :::tip NOTE
-If the `Stop` or `CallAndStop` method is called from the `OnStart` method, the `OnUpdate` method will not be called.
+If the `Stop` or `CallAndStop` method is called from the `OnStart` method, the `OnUpdate` and `OnFixedUpdate` method
+will not be called.
 :::
 
 #### While a node is running:
-- The Jungle Runtime calls the `OnUpdate` method on the node.
+- The runtime calls the `OnUpdate` and `OnFixedUpdate` methods on the node.
 
 #### When a node is stopped:
-- The Jungle Runtime calls the `OnStop` method on the node.
+- The runtime calls the `OnStop` method on the node.
 
-Nodes can be stopped anywhere at anytime by invoking nodes `Stop` or `CallAndStop` methods.
-
-:::tip NOTE
-The `Call`, `Stop`, and `CallAndStop` methods must be called from within the node's script itself.
-:::
+Nodes can be stopped anywhere at anytime by invoking nodes `Stop` or `CallAndStop` methods. The `Call`, `Stop`, and
+`CallAndStop` methods must be called from within the node's script itself.
 
 :::warning WARNING
 If you never call `Stop` or `CallAndStop` from within a node, the node will run indefinitely.
@@ -65,5 +63,49 @@ If you never call `Stop` or `CallAndStop` from within a node, the node will run 
 Port calls are how nodes talk to each other. Nodes can call other nodes from their output ports. When either the
 `Call` or `CallAndStop` method is invoked, a port call is made.
 
-The `IONode` and `BranchNode` are the only node variations where the `OnStart` method has a `inputValue` parameter.
+The `IONode` and `BranchNode` are the only node variations where the `OnStart` method has an `inputValue` parameter.
 This input value is the data from the port call.
+
+Each node performs port calls slightly differently.
+Below is a brief overview of how each node variation handles port calls.
+
+### IO Node
+
+The IONode is just a simpler version of the BranchNode. Since the IONode only has a single output port, forcing
+developers to create port calls was unnecessary.
+
+For simplicity, the IONode's `Call` and `CallAndStop` functions automatically create the calls for you, only requiring
+the developer to provide the data to send.
+
+```csharp
+using Jungle;
+
+[IONode(
+    OutputPortType = typeof(int)
+)]
+public class SquareRootNode : IONode<int>
+{
+    protected override void OnStart(int number)
+    {
+        // Calculate the square root of the inputted number.
+        int squareRoot = number * number;
+
+        // Call any connected nodes and output the square root.
+        CallAndStop(squareRoot);
+    }
+
+    protected override void OnUpdate() { }
+}
+```
+
+### Branch Node
+
+
+
+### Event Node
+
+
+
+### Generic Node
+
+

@@ -5,3 +5,31 @@ sidebar_position: 7
 slug: /jungle-runtime
 ---
 
+The Jungle runtime is a multi-script system. It's essentially every part of the framework that is built directly into
+the application. The runtime is designed in a way where the entire editor system could be stripped from the project and
+the framework would still function.
+
+You should **NEVER** need to interact with the runtime directly. Jungle is designed to manage the runtime systems all
+automatically.
+
+## Systems
+
+The runtime systems start at the `JungleTree` class. This class acts as the container for sequences and is responsible
+for not only playing the sequence but also managing the creation, deletion, and execution of nodes.
+
+The `JungleNode` class is an extendable container for functions and behaviors. Nodes also manage their connections and
+disconnections.
+
+The `JungleRuntime` class itself is simply a `MonoBehaviour` that listens for Unity events and passes them to the trees.
+
+## Lifecycle
+
+The runtime will always automatically create the game object named "[Jungle Runtime]" and throw it into the
+"DontDestroyOnLoad" scene.
+
+The game object contains a script named `JungleRuntime` that is used to listen for Unity MonoBehaviour event actions
+such as the `Update` and `FixedUpdate` events.
+
+:::warning WARNING
+Do not delete the "[Jungle Runtime]" game object from the scene. It is required for the framework to function.
+:::

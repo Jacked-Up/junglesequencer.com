@@ -11,18 +11,19 @@ The `NodeProperties` attribute is used to define the node script you created.
 
 ## Properties
 
-| Name            | Type    | Notes                                                      |
-|-----------------|---------|------------------------------------------------------------|
-| Title           | string  | Defines the title of the node                              |
-| Description     | string  | Documents the purpose of the node (Also used as a tooltip) |
-| Category        | string  | Defines the location in the node explorer to put this node |
-| Color           | string  | Defines the accent color of the node. Is a **Hex Code**    |
-| Deprecated      | boolean | Set this to true to declare this node as deprecated        |
+| Name                              | Type    | Notes                                                                  |
+|-----------------------------------|---------|------------------------------------------------------------------------|
+| Title                             | string  | Defines the title of the node                                          |
+| Description                       | string  | Documents the purpose of the node (Also used as a tooltip)             |
+| Category                          | string  | Defines the location in the node explorer to put this node             |
+| Color                             | string  | Defines the accent color of the node. Is a **Hex Code**                |
+| Deprecated                        | boolean | Set this to true to declare this node as deprecated                    |
+| ShouldRestartIfCalledWhileRunning | boolean | Determines whether the node should restart if called while its running |
 
 ---
 ### Title
 
-The title of the node is the name that will be displayed on the node in the Jungle Editor.
+The `Title` of the node is the name that will be displayed on the node in the Jungle Editor.
 
 :::info NOTE
 Your node's title doesn't need to be unique.
@@ -59,7 +60,7 @@ required but is a great naming pattern to follow.
 ---
 ### Description
 
-The description of the node should be a brief explanation of what the node does. The description is also used as a
+The `Description` of the node should be a brief explanation of what the node does. The description is also used as a
 tooltip when you hover over the node in the Jungle Editor.
 
 ```csharp
@@ -74,19 +75,18 @@ public class HelloWorldNode : GenericNode
 ![Node description property highlighted](img/node-properties-description.png)
 
 :::tip TIP
-Descriptions are also tooltips! You can hover over a node in the Jungle Editor to see its description.
+Node descriptions will also appear as tooltips when you hover over a node in the Jungle Editor.
 :::
 
 ---
 ### Category
 
-The category of the node defines the location in the node explorer to put this node. The location is determined by the
-path you declare. The path can be as many folders deep as you'd like.
+The `Category` property defines the location in the node explorer to put the node.
 
 ---
 ### Color
 
-The color property defines the nodes accent color.
+The `Color` property defines the nodes accent color.
 
 ```csharp
 [NodeProperties(
@@ -107,18 +107,18 @@ Since we know that nobody wants to remember hex codes, Jungle has a list of pred
 
 #### Colors
 
-*  **Red**     #dc1313
-*  **Orange**  #ff5b00
-*  **Yellow**  #f29e06
-*  **Green**   #38ca42
-*  **Teal**    #15deab
-*  **Cyan**    #00eaff
-*  **Blue**    #0069ff
-*  **Purple**  #b300ff
-*  **Pink**    #ff00ea
-*  **Violet**  #85034c
-*  **White**   #ffffff
-*  **Black**   #101010
+- **Red**    #dc1313
+- **Orange** #ff5b00
+- **Yellow** #f29e06
+- **Green**  #38ca42
+- **Teal**   #15deab
+- **Cyan**   #00eaff
+- **Blue**   #0069ff
+- **Purple** #b300ff
+- **Pink**   #ff00ea
+- **Violet** #85034c
+- **White**  #ffffff
+- **Black**  #101010
 
 ```csharp
 var redHexCode = JungleNode.Red;
@@ -128,7 +128,7 @@ Debug.Log(redHexCode); // Would print "#dc1313" to the console
 ---
 ### Deprecated
 
-The deprecated property provides a way to mark nodes that you no longer want to be add-able to trees.
+The `Deprecated` property provides a way to mark nodes that you no longer want to be add-able to trees.
 
 ```csharp
 [NodeProperties(
@@ -142,7 +142,7 @@ public class HelloWorldNode : GenericNode
 ![Node deprecated property highlighted](img/node-properties-deprecated.png)
 
 :::tip TIP
-You should only declare the deprecated property if you want to mark a node as deprecated.
+You should only declare the `Deprecated` property if you want to mark a node as deprecated.
 <br />**The property defaults to false.**
 :::
 
@@ -154,6 +154,19 @@ This makes it easy to identify and remove deprecated nodes from your trees.
 
 :::danger DANGER
 **NEVER** delete a node script from your project until it has been removed from all trees.
+:::
+
+---
+### ShouldRestartIfCalledWhileRunning
+
+The `ShouldRestartIfCalledWhileRunning` property determines whether the node should restart if called while its running.
+
+- **True**: The node will restart if called while its running
+- **False**: The node will ignore the call and continue running
+
+:::tip TIP
+You should only declare the `ShouldRestartIfCalledWhileRunning` property if you want the restart behavior.
+<br />**The property defaults to false.**
 :::
 
 ---

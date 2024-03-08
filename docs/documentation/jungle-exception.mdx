@@ -7,18 +7,46 @@ slug: /jungle-exception
 
 Jungle handles exceptions very strictly. If a node throws an exception, the node will be immediately stopped.
 Exceptions should be thrown whenever a node encounters a problem that would prevent it from continuing.
+This is useful for displaying when a critical error occurs in your tree and prevent subsequent nodes from
+running, which could cause even more errors.
 
 You can throw an exception of any type, but it is recommended to use the `JungleException` class.
 
 An exception can be thrown anywhere at any time within a node.
 
-## Code Reference
+## When to Throw Exceptions?
 
-**Namespace: `Jungle`**
+You should throw exceptions when a critical error occurs in your nodes that prevents the node from performing its task.
+
+#### Example
+
+Let's say you have a node named `FindGameObject` that finds a game object in the scene and outputs it.
+Any nodes connected to the output of the `FindGameObject` node will expect a game object.
+
+Let's say that the `FindGameObject` node is run and it can't find the game object in the scene.
+If the node just continues anyways, then all connected nodes would be expecting a game object,
+except they would be getting `null` instead.
+
+To prevent this, you should throw an exception if the game object is not found.
+This will prevent any subsequent nodes from running and more causing errors.
+
+## Throwing an Exception
+
+Throwing exceptions is extremely easy.
+
+You should always throw a `JungleException` when an error occurs. This will ensure that the error is caught by the error
+handler. You can also pass a message to the exception to display in the console.
+
+```csharp
+throw new JungleException("YOUR MESSAGE");
+```
+
+You can throw Jungle exceptions inside any inherited Jungle Node method.
 
 ## Example
 
-
+Here's an example of a node that sets the position of a transform to the origin.
+If the inputted transform is null, then an exception is thrown.
 
 ```csharp
 using Jungle;
@@ -30,7 +58,7 @@ public class ExceptionNode : IONode<Transform>
     {
         if (transform == null)
             throw new JungleException("Inputted transform is null.");
-        
+
         transform.position = Vector3.zero;
         CallAndStop(transform);
     }
