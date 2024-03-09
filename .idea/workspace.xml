@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/documentation/img/jungle-player-component.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/concepts.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/concepts.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-nodes/generic-node.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-nodes/identity-node.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-player.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-player.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sidebars.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidebars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-manifest.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-manifest.mdx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +129,7 @@
       <workItem from="1709569762254" duration="5145000" />
       <workItem from="1709580442167" duration="1599000" />
       <workItem from="1710006706414" duration="105000" />
-      <workItem from="1710006870786" duration="5046000" />
+      <workItem from="1710006870786" duration="6601000" />
     </task>
     <servers />
   </component>
