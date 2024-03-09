@@ -14,7 +14,7 @@ const sidebars = {
               'documentation/jungle-nodes/node-properties',
               'documentation/jungle-nodes/branch-node',
               'documentation/jungle-nodes/io-node',
-              'documentation/jungle-nodes/generic-node',
+              'documentation/jungle-nodes/identity-node',
               'documentation/jungle-nodes/event-node',
           ],
       },

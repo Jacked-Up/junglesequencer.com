@@ -5,32 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/documentation/img/jungle-player-component.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/concepts.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/concepts.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-exception.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-exception.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-gizmos.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-gizmos.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-manifest.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-manifest.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-nodes/branch-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-nodes/branch-node.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-nodes/event-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-nodes/event-node.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-nodes/generic-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-nodes/generic-node.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-nodes/io-node.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-nodes/io-node.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-nodes/node-properties.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-nodes/node-properties.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-player.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-player.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-runtime.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-runtime.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-tree.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-tree.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/welcome.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/welcome.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/creating-a-tree.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/creating-a-tree.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/custom-node-inspectors.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/custom-node-inspectors.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/deleting-node-scripts.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/deleting-node-scripts.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/drawing-gizmos-from-nodes.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/drawing-gizmos-from-nodes.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/installing-jungle.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/installing-jungle.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/node-editor-context.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/node-editor-context.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/over-time-helper.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/over-time-helper.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/updating-jungle.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/updating-jungle.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/using-sticky-notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/using-sticky-notes.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/using-the-jungle-editor.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/using-the-jungle-editor.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/using-the-jungle-validator.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/using-the-jungle-validator.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/concepts.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/concepts.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-nodes/generic-node.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-nodes/identity-node.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-player.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-player.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sidebars.js" beforeDir="false" afterPath="$PROJECT_DIR$/sidebars.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +51,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;adding-guides&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/zackj/Documents/GitHub/junglesequencer.com/docs/documentation/img/jungle-enable-gizmos-in-game-view.jpg&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zackj/Documents/GitHub/junglesequencer.com&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -150,6 +132,8 @@
       <workItem from="1708713001369" duration="4867000" />
       <workItem from="1709569762254" duration="5145000" />
       <workItem from="1709580442167" duration="1599000" />
+      <workItem from="1710006706414" duration="105000" />
+      <workItem from="1710006870786" duration="5046000" />
     </task>
     <servers />
   </component>
