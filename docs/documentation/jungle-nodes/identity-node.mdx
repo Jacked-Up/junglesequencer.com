@@ -1,12 +1,12 @@
 ---
-title: Generic Node
+title: Identity Node
 sidebar_position: 3
 
-slug: /jungle-nodes/generic-node
+slug: /jungle-nodes/identity-node
 ---
 
-The Generic Node is the simplest node type in Jungle. It takes a single input of any type, and outputs the inputted
-value without changing or mutating it.
+The identity node is the simplest node type in Jungle.
+It takes a single input of any type, and outputs the inputted value without changing or mutating it.
 
 This node type is useful for nodes that do not require an input to function.
 **For instance**, a node that waits for a set amount of time before continuing.
@@ -17,10 +17,10 @@ The inputted value is stored internally and **cannot** be modified or changed.
 
 ---
 
-All Generic Nodes are required to have a `GenericNode` class attribute defined.
+All identity nodes are required to have a `IdentityNode` class attribute defined.
 This attribute defines the input port and output port on the node.
 
-Here's a list of all the properties you can define in the `GenericNode` attribute:
+Here's a list of all the properties you can define in the `IdentityNode` attribute:
 
 | Property          | Type     | Description                         |
 |-------------------|----------|-------------------------------------|
@@ -28,24 +28,24 @@ Here's a list of all the properties you can define in the `GenericNode` attribut
 | `OutputPortName`  | `string` | Defines the name of the output port |
 
 ```csharp
-[GenericNode(
+[IdentityNode(
     InputPortName = "My Input",
     OutputPortName = "My Output"
 )]
-public class MyGenericNode : GenericNode
+public class MyIdentityNode : IdentityNode
 ...
 ```
 
 #### Result in the Jungle Editor
 
-![Generic node attribute visual](img/generic-node-attribute-visual.png)
+![Identity node attribute visual](img/identity-node-attribute-visual.png)
 
 :::info WHERE IS THE INPUT TYPE DEFINED?
 The input port type is defined by any connected nodes output type.
 
-![Generic node input definition example](img/generic-node-input-definition-example.png)
+![Identity node input definition example](img/identity-node-input-definition-example.png)
 
-The **Wait For Seconds** node seen above is a generic node.
+The **Wait For Seconds** node seen above is an identity node.
 <br />As you can see, both the **Find Game Object** node and the **Get Main Camera** node can be connected to the input
 of the **Wait For Seconds** node.
 :::
@@ -171,14 +171,14 @@ them inside the [Jungle Validator](/docs/using-the-editor/jungle-validator)._
 using Jungle;
 
 [NodeProperties(
-    Title = "Generic Node",
+    Title = "Identity Node",
     Description = "One input, one output."
 )]
-[GenericNode(
+[IdentityNode(
     InputPortName = "Input",
     OutputPortName = "Output"
 )]
-public class MyGenericNode : GenericNode
+public class MyIdentityNode : IdentityNode
 {
     protected override void OnStart()
     {
@@ -192,7 +192,7 @@ public class MyGenericNode : GenericNode
 ---
 ## Example
 
-Here's a simple example of a Generic Node that waits for some time before continuing.
+Here's a simple example of a identity node that waits for some time before continuing.
 
 ```csharp
 using Jungle;
@@ -202,11 +202,11 @@ using Jungle;
     Description = "One input, one output.",
     Color = Yellow
 )]
-[GenericNode(
+[IdentityNode(
     InputPortName = "Start",
     OutputPortName = "Elapsed"
 )]
-public class WaitForTimeNode : GenericNode
+public class WaitForTimeNode : IdentityNode
 {
     [SerializeField]
     private float waitTime = 1f;
@@ -236,4 +236,4 @@ outputted after the set amount of time has elapsed.
 
 This configuration allows us to create a node that waits for a set amount of time before continuing.
 
-![Generic node example](img/generic-node-example.png)
+![Identity node example](img/identity-node-example.png)

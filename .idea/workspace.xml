@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/guides/img/identity-node-without-an-output-port.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-manifest.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-manifest.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-nodes/identity-node.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-nodes/identity-node.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-nodes/img/generic-node-attribute-visual.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-nodes/img/identity-node-attribute-visual.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-nodes/img/generic-node-example.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-nodes/img/identity-node-example.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-nodes/img/generic-node-input-definition-example.png" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-nodes/img/identity-node-input-definition-example.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-nodes/img/node-properties-deprecated.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-nodes/node-properties.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-nodes/node-properties.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/guides/creating-a-node.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/creating-a-node.mdx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +136,7 @@
       <workItem from="1709580442167" duration="1599000" />
       <workItem from="1710006706414" duration="105000" />
       <workItem from="1710006870786" duration="6601000" />
+      <workItem from="1710087540960" duration="8836000" />
     </task>
     <servers />
   </component>
