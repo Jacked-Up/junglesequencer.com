@@ -46,18 +46,19 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'documentationSidebar',
             position: 'left',
             label: 'Documentation',
           },
           {
-            to: '/blog',
-            label: 'Blog',
-            position: 'left'
+            type: 'docSidebar',
+            sidebarId: 'guidesSidebar',
+            position: 'left',
+            label: 'Guides',
           },
           {
-            href: 'https://forms.gle/55ZSyBrhH8iDoGKK8',
-            label: 'Beta Program',
+            to: '/blog',
+            label: 'Blog',
             position: 'left'
           },
           {

@@ -1,0 +1,190 @@
+---
+title: Concepts
+sidebar_position: 1
+
+slug: /concepts
+---
+
+Jungle is a one-of-a-kind tool. There are many concepts and ideas that are unique to Jungle.
+This page will help you understand core concepts and ideas that are essential to using Jungle.
+
+## Terms
+
+- **Tree**: A container that manages a collection of nodes and their connections.
+- **Node**: A unit of behavior that can be added to a tree.
+- **Port**: A point on a node that connects to other nodes to form a sequence.
+- **Call**: A payload that is sent from the output port of a node to the input port of another node.
+
+## Tree and Node Lifecycle
+
+Both trees and nodes follow a lifecycle that is managed by the runtime.
+Understanding this lifecycle is essential to creating and managing trees and nodes.
+
+### Tree Lifecycle
+
+#### When a tree is started:
+- The tree registers itself with the runtime.
+- The tree starts all **event** nodes.
+
+#### While the tree is running:
+- The tree updates all actively running nodes.
+- If there are no more actively running nodes, the tree stops automatically.
+
+#### When a tree is stopped:
+- The tree unregisters itself with the runtime.
+- The tree calls all revert actions on all nodes (if any)
+
+### Node Lifecycle
+
+#### When a node is started:
+- The runtime first calls the `OnStart` method on the node.
+- The runtime then immediately calls the `OnUpdate` method on the node.
+
+:::tip NOTE
+If the `Stop` or `CallAndStop` method is called from the `OnStart` method, the `OnUpdate` and `OnFixedUpdate` method
+will not be called.
+:::
+
+#### While a node is running:
+- The runtime calls the `OnUpdate` and `OnFixedUpdate` methods on the node.
+
+#### When a node is stopped:
+- The runtime calls the `OnStop` method on the node.
+
+Nodes can be stopped anywhere at anytime by invoking nodes `Stop` or `CallAndStop` methods. The `Call`, `Stop`, and
+`CallAndStop` methods must be called from within the node's script itself.
+
+:::warning WARNING
+If you never call `Stop` or `CallAndStop` from within a node, the node will run indefinitely.
+:::
+
+## Port Calls
+
+Port calls are how nodes talk to each other. Nodes can call other nodes from their output ports. When either the
+`Call` or `CallAndStop` method is invoked, a port call is made.
+
+The `IONode` and `BranchNode` are the only node variations where the `OnStart` method has an `inputValue` parameter.
+This input value is the data from the port call.
+
+Each node performs port calls slightly differently.
+Below is a brief overview of how each node variation handles port calls.
+
+### IO Node
+
+The IONode is just a simpler version of the BranchNode. Since the IONode only has a single output port, making developers
+create a port call every time was redundant. The IONode's `Call` and `CallAndStop` methods automatically create the port
+calls for you, only requiring the developer to provide the data to send.
+
+For simplicity, the IONode's `Call` and `CallAndStop` methods only require the value/data to send to the next node.
+
+```csharp
+using Jungle;
+
+[IONode(
+    OutputPortType = typeof(int)
+)]
+public class SquareRootNode : IONode<int>
+{
+    protected override void OnStart(int number)
+    {
+        // Calculate the square root of the inputted number.
+        int squareRoot = number * number;
+
+        // Call any connected nodes and output the square root.
+        CallAndStop(squareRoot);
+    }
+
+    protected override void OnUpdate() { }
+}
+```
+
+The example above shows an IONode that calculates the square root of the inputted number and then calls the square root.
+Any node connected to the output port of the `SquareRootNode` will receive the square root value.
+
+As you can see, the `CallAndStop` method only requires the value to send to the next node.
+
+### Branch Node
+
+The BranchNode is slightly more complex than the IONode. The BranchNode has the ability to have multiple output ports.
+This means that the developer must specify which port to call when invoking the `Call` or `CallAndStop` method.
+
+Unlike the IONode, the BranchNode's `Call` and `CallAndStop` methods require the port index and the value/data to send.
+The port index is the index of the output port to call.
+The first output port has an index of 0, the second output port has an index of 1, and so on.
+
+```csharp
+using Jungle;
+
+[BranchNode(
+    OutputPortNames = new []{ "Even",            "Odd" },
+    OutputPortTypes = new []{ typeof(Port.None), typeof(Port.None) }
+)]
+public class IsEvenOrOddNode : BranchNode<int>
+{
+    protected override void OnStart(int number)
+    {
+        // Check if the inputted number is even.
+        var isEven = number % 2 == 0;
+
+        if (isEven)
+        {
+            // If the number is even, call the first output port.
+            CallAndStop(new Port.Call(0, Nothing));
+        }
+        else
+        {
+            // If the number is odd, call the second output port.
+            CallAndStop(new Port.Call(1, Nothing));
+        }
+    }
+
+    protected override void OnUpdate() { }
+}
+```
+
+The example above shows a BranchNode that checks if the inputted number is even or odd and then calls the appropriate
+output port. The `IsEvenOrOddNode` has two output ports, one for even numbers and one for odd numbers.
+
+The output ports themselves are declared within the `BranchNode` attribute.
+The `OutputPortNames` and `OutputPortTypes` properties are arrays that define the names and types of the output ports.
+You can define as many output ports as you need.
+
+### Event Node
+
+
+
+```csharp
+
+```
+
+### Identity Node
+
+
+
+```csharp
+using Jungle;
+using UnityEngine;
+
+public class WaitForTimeNode : IdentityNode
+{
+    [SerializeField]
+    private float duration = 2f;
+
+    private float _startTime;
+
+    protected override void OnStart()
+    {
+        _startTime = Time.time;
+    }
+
+    protected override void OnUpdate()
+    {
+        // Bail if the duration hasn't passed yet.
+        if (Time.time - _startTime < duration)
+            return;
+
+        // When the duration has passed, call the output port.
+        CallAndStop();
+    }
+}
+```

@@ -1,0 +1,114 @@
+---
+title: Jungle Manifest
+sidebar_position: 4
+
+slug: /jungle-manifest
+---
+
+The Jungle Manifest is a file used to store metadata about the tree.
+
+The manifest is automatically created when a new tree is added to the project.
+The manifest is not built to the application and is only available in the Unity Editor.
+
+---
+## Code Reference
+
+:::warning WARNING
+The manifest is not built to the application and is only available in the Unity Editor.
+Ensure you are only calling these methods from an editor script.
+:::
+
+**Namespace: `Jungle`**
+
+### Properties
+
+<span class="DocItemTitle">JungleTree</span>
+<br />`public JungleTree JungleTree { get; }`
+<br />_The Jungle Tree this manifest belongs to._
+
+<span class="DocItemTitle">ViewPosition</span>
+<br />`public Vector3 ViewPosition { get; }`
+<br />_The view port position in the Jungle Editor._
+
+<span class="DocItemTitle">ViewScale</span>
+<br />`public Vector3 ViewScale { get; }`
+<br />_The view port zoom scale in the Jungle Editor._
+
+<span class="DocItemTitle">NodeManifest</span>
+<br />`public JungleNodeData[] NodeManifest { get; }`
+<br />_List of node meta data for nodes that are currently in the tree._
+
+<span class="DocItemTitle">NodeArchive</span>
+<br />`public JungleNodeData[] NodeArchive { get; }`
+<br />_List of saved node meta data for nodes that mysteriously disappeared._
+
+<span class="DocItemTitle">StickyNoteManifest</span>
+<br />`public JungleStickyNoteData[] StickyNoteManifest { get; }`
+<br />_List of sticky note meta data for sticky notes that are currently in the tree._
+
+---
+### Methods
+
+#### Editor View Port
+
+<span class="DocItemTitle">SetViewPosition(<span class="DocItemParameter">Vector2, bool</span>)</span>
+<br />`public void SetViewPosition(Vector2 position, bool recordUndo = true)`
+<br />_Sets the view position of the Jungle Editor._
+
+<span class="DocItemTitle">SetViewScale(<span class="DocItemParameter">Vector2, bool</span>)</span>
+<br />`public void SetViewScale(Vector2 scale, bool recordUndo = true)`
+<br />_Sets the view scale of the Jungle Editor._
+
+---
+#### Nodes
+
+<span class="DocItemTitle">AddNodeData(<span class="DocItemParameter">JungleNode</span>)</span>
+<br />`public JungleNodeData AddNodeData(JungleNode jungleNode)`
+<br />_Adds a node to the manifest._
+
+<span class="DocItemTitle">RemoveNodeMeta(<span class="DocItemParameter">string</span>)</span>
+<br />`public void RemoveNodeMeta(string uid)`
+<br />_Removes a node from the manifest._
+
+<span class="DocItemTitle">UpdateNodeGraphPosition(<span class="DocItemParameter">string, Vector2, bool</span>)</span>
+<br />`public JungleNodeData UpdateNodeGraphPosition(string uid, Vector2 graphPosition, bool recordUndo = true)`
+<br />_Updates a node's graph position._
+
+<span class="DocItemTitle">GetNodeData(<span class="DocItemParameter">string</span>)</span>
+<br />`public JungleNodeData GetNodeData(string uid)`
+<br />_Gets a node's meta data._
+
+---
+#### Sticky Notes
+
+<span class="DocItemTitle">AddStickyNoteData(<span class="DocItemParameter">bool</span>)</span>
+<br />`public JungleStickyNoteData AddStickyNoteData(bool recordUndo = true)`
+<br />_Adds a new sticky note to the manifest._
+
+<span class="DocItemTitle">RemoveStickyNoteData(<span class="DocItemParameter">string, bool</span>)</span>
+<br />`public JungleStickyNoteData AddStickyNoteData(bool recordUndo = true)`
+<br />_Adds a new sticky note to the manifest._
+
+<span class="DocItemTitle">UpdateStickyNoteGraphPosition(<span class="DocItemParameter">string, Vector2, bool</span>)</span>
+<br />`public JungleStickyNoteData UpdateStickyNoteGraphPosition(string uid, Vector2 graphPosition, bool recordUndo = true)`
+<br />_Updates a sticky note's graph position._
+
+<span class="DocItemTitle">UpdateStickyNoteGraphSize(<span class="DocItemParameter">string, Vector2, bool</span>)</span>
+<br />`public JungleStickyNoteData UpdateStickyNoteGraphPosition(string uid, Vector2 graphSize, bool recordUndo = true)`
+<br />_Updates a sticky note's graph size._
+
+<span class="DocItemTitle">UpdateStickyNoteContent(<span class="DocItemParameter">string, string, bool</span>)</span>
+<br />`public JungleStickyNoteData UpdateStickyNoteGraphPosition(string uid, string content, bool recordUndo = true)`
+<br />_Updates a sticky note's content._
+
+<span class="DocItemTitle">UpdateStickyNoteTheme(<span class="DocItemParameter">string, JungleStickyNoteData.Themes, bool</span>)</span>
+<br />`public JungleStickyNoteData UpdateStickyNoteGraphPosition(string uid, JungleStickyNoteData.Themes theme, bool recordUndo = true)`
+<br />_Updates a sticky note's theme._
+
+<span class="DocItemTitle">UpdateStickyNoteIsLocked(<span class="DocItemParameter">string, bool, bool</span>)</span>
+<br />`public JungleStickyNoteData UpdateStickyNoteGraphPosition(string uid, bool isLocked, bool recordUndo = true)`
+<br />_Updates a sticky note's lock state._
+
+<span class="DocItemTitle">GetStickyNoteData(<span class="DocItemParameter">string</span>)</span>
+<br />`public JungleStickyNoteData GetStickyNoteData(string uid)`
+<br />_Gets a sticky note's meta data._
