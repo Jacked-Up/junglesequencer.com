@@ -5,9 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9d1dafd-bb9c-428a-af00-a98baecda493" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/build/assets/js/6391efa3.2166a030.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/assets/js/runtime~main.540b1b83.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/js/6391efa3.330e3f5b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/js/runtime~main.c2bae15b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/archive/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/blog/text-tie/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/text-tie/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/blog/welcome/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/blog/welcome/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/category/jungle-nodes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/category/jungle-nodes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/concepts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/concepts/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/guides/creating-a-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/guides/creating-a-node/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/guides/creating-a-tree/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/guides/creating-a-tree/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/guides/custom-node-inspectors/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/guides/custom-node-inspectors/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/guides/deleting-node-scripts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/guides/deleting-node-scripts/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/guides/drawing-gizmos-from-nodes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/guides/drawing-gizmos-from-nodes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/guides/installing-jungle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/guides/installing-jungle/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/guides/node-editor-context/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/guides/node-editor-context/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/guides/over-time-helper/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/guides/over-time-helper/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/guides/updating-jungle/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/guides/updating-jungle/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/guides/using-sticky-notes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/guides/using-sticky-notes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/guides/using-the-jungle-editor/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/guides/using-the-jungle-editor/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/guides/using-the-jungle-validator/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/guides/using-the-jungle-validator/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-exception/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-exception/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-gizmos/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-gizmos/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-manifest/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-manifest/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/branch-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/branch-node/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/event-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/event-node/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/identity-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/identity-node/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/io-node/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/io-node/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-nodes/node-properties/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-nodes/node-properties/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-player/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-player/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-runtime/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-runtime/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/docs/jungle-tree/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/docs/jungle-tree/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/search-index.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/search-index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/search/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/search/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-tree.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-tree.mdx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +170,7 @@
       <workItem from="1710006870786" duration="6601000" />
       <workItem from="1710087540960" duration="8836000" />
       <workItem from="1710880789624" duration="106000" />
-      <workItem from="1710937238290" duration="2207000" />
+      <workItem from="1710937238290" duration="2333000" />
     </task>
     <servers />
   </component>
