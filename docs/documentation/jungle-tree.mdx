@@ -13,6 +13,7 @@ nodes and their connections.
 You can have as many trees running at once as you want. Each tree is independent of each other and can be started and
 stopped at any time. You cannot, however, have the same tree running multiple times at once.
 
+---
 ## Creating Jungle Trees
 
 To create a Jungle Tree, right click in your assets folder window and select `Create > Jungle Tree`. This will create a
@@ -20,6 +21,7 @@ Jungle Tree that you can then open by double clicking on it.
 
 Check out the [Jungle Tree Editor](/docs/jungle-tree-editor) page for more information on how to edit your Jungle Tree.
 
+---
 ## Using Jungle Trees
 
 It's super easy to start/stop a Jungle Tree. All you need to do is call the `Start()` and `Stop()` methods on the tree.
@@ -29,14 +31,18 @@ Jungle Trees can be referenced as serialized fields in your scripts. This allows
 the inspector.
 
 ```csharp
+using UnityEngine;
 using Jungle;
 
-[SerializeField]
-private JungleTree myJungleTree;
-
-private void Start()
+public class PlayJungleTree : MonoBehaviour
 {
-    myJungleTree.Start();
+    [SerializeField]
+    private JungleTree jungleTree;
+
+    private void Start()
+    {
+        jungleTree.Start();
+    }
 }
 ```
 
@@ -55,106 +61,107 @@ private void Start()
 <br />`public StateFlag State { get; }`
 <br />_The current state of the Jungle Tree._
 
-| Flag | State    | Description                                                                      |
-|------|----------|----------------------------------------------------------------------------------|
-| 0    | Ready    | Describes a Jungle Tree that has never been run and is not currently running.    |
-| 1    | Running  | Describes a Jungle Tree that is currently running.                               |
-| 0    | Finished | Describes a Jungle Tree that is not currently running but has run at some point. |
+| Flag | State    | Description                                                               |
+|------|----------|---------------------------------------------------------------------------|
+| 0    | Ready    | Describes a tree that has never been run and is not currently running.    |
+| 1    | Running  | Describes a tree that is currently running.                               |
+| 0    | Finished | Describes a tree that is not currently running but has run at some point. |
 
 <span class="DocItemTitle">IsRunning</span>
 <br />`public bool IsRunning { get; }`
-<br />_True if the Jungle Tree is currently running._
+<br />_True if the tree is currently running._
 
 <span class="DocItemTitle">Time</span>
-<br />`public float RunTime { get; }`
-<br />_The amount of time in seconds the Jungle Tree has been running._
+<br />`public float Time { get; }`
+<br />_The amount of time in seconds the tree has been running._
 
 <span class="DocItemTitle">IsNodeRunning(<span class="DocItemParameter">JungleNode</span>)</span>
-<br />`public bool IsNodeRunning(JungleNode jungleNode)`
-<br />_Returns true if the Jungle Tree is currently running the specified Jungle Node._
+<br />`public bool IsNodeRunning(JungleNode node)`
+<br />_Returns true if the tree is currently running the specified node._
 
 <span class="DocItemTitle">GetNodeByName(<span class="DocItemParameter">string</span>)</span>
-<br />`public JungleNode GetNodeByName(string jungleNodeName)`
-<br />_Returns a reference to the Jungle Node with the specified name._
+<br />`public JungleNode GetNodeByName(string nodeName)`
+<br />_Returns a reference to a node with the specified name. Returns null if no node was found._
 
-#### Editor Only
-
-<span class="DocItemTitle">Manifest</span>
-<br />`public JungleManifest Manifest { get; }`
-<br />_The Jungle Trees persistent manifest._
-
-:::warning WARNING
-The manifest is used to internal purposes. It's not recommended to call any of its methods or change any of its
-properties. You can read more about the manifest **[here](/docs/extras/jungle-manifest)**.
-:::
+<span class="DocItemTitle">GetNodeByUid(<span class="DocItemParameter">string</span>)</span>
+<br />`public JungleNode GetNodeByUid(string nodeUid)`
+<br />_Returns a reference to the node with the specified uid. Returns null if no node was found._
 
 ---
 ### Events
 
+<span class="DocItemTitle">OnTreeStarted</span>
+<br />`public static event Action<JungleTree> OnTreeStarted`
+<br />_Invoked when a tree is started._
+
+<span class="DocItemTitle">OnTreeStopped</span>
+<br />`public static event Action<JungleTree> OnTreeStopped`
+<br />_Invoked when a tree is stopped._
+
 <span class="DocItemTitle">OnStart</span>
-<br />`public event Action OnStart;`
-<br />_Invoked whenever this Jungle Tree is started._
+<br />`public event Action OnStart`
+<br />_Invoked when the tree is started._
 
 <span class="DocItemTitle">OnStop</span>
-<br />`public event Action OnStop;`
-<br />_Invoked whenever this Jungle Tree is stopped._
+<br />`public event Action OnStop`
+<br />_Invoked when the tree is stopped._
 
-<span class="DocItemTitle">OnError</span>
-<br />`public event Action<ErrorFlags> OnError;`
-    <br />_Invoked whenever this Jungle Tree encounters an error._
+<span class="DocItemTitle">OnNodeStarted</span>
+<br />`public event Action<JungleNode> OnNodeStarted`
+<br />_Invoked when a node is started._
 
-    | Error Flag           | Description                                                                                           |
-    |----------------------|-------------------------------------------------------------------------------------------------------|
-    | NotInPlayMode        | This error is thrown when the Jungle Tree is requested to start while the editor is not in play-mode. |
-    | AlreadyRunning       | This error is thrown when a request to start the Jungle Tree is made but the tree is already running. |
-    | NoNodes              | This error is thrown when the Jungle Tree has no nodes to execute.                                    |
-    | NoRuntimeInstance    | This error is thrown when Jungle fails to find a Jungle Runtime instance in the scene.                |
-    | NodeRuntimeException | This error is thrown when a node declares an exception during runtime.                                |
+<span class="DocItemTitle">OnNodeStopped</span>
+<br />`public event Action<JungleNode> OnNodeStopped`
+<br />_Invoked when a node is stopped._
 
-    ---
-    ### Methods
+---
+### Methods
 
-    <span class="DocItemTitle">Start()</span>
-    <br />`public void Start()`
-    <br />_Starts running the Jungle Tree._
+<span class="DocItemTitle">Start()</span>
+<br />`public void Start()`
+<br />_Starts running the Jungle Tree._
 
-    <span class="DocItemTitle">Stop()</span>
-    <br />`public void Stop()`
-    <br />_Stops running the Jungle Tree._
+<span class="DocItemTitle">Stop()</span>
+<br />`public void Stop()`
+<br />_Stops running the Jungle Tree._
 
-    <span class="DocItemTitle">AddRevertAction(<span class="DocItemParameter">Action</span>)</span>
-    <br />`public void AddRevertAction(Action action)`
-    <br />_Adds an action to be invoked when the Jungle Tree stops._
+<span class="DocItemTitle">AddRevertAction(<span class="DocItemParameter">Action</span>)</span>
+<br />`public string AddRevertAction(Action action)`
+<br />_Adds an action to be invoked when the tree stops. The returned string is a unique identifier for the action._
 
-    <span class="DocItemTitle">RemoveRevertAction(<span class="DocItemParameter">Action</span>)</span>
-    <br />`public void RemoveRevertAction(Action action)`
-    <br />_Removes an action from the revert list._
+<span class="DocItemTitle">RemoveRevertAction(<span class="DocItemParameter">string</span>)</span>
+<br />`public void RemoveRevertAction(string actionUid)`
+<br />_Removes an action from the revert list._
 
-    #### Editor Only
-    :::warning WARNING
-    All methods below are designed for internal use only. It's not recommended to call any of these methods.
-    :::
+:::warning EDITOR ONLY
+These methods are primarily for internal use only.
+You should **NOT** call these methods unless you know what you're doing.
 
-    <span class="DocItemTitle">AddNode(<span class="DocItemParameter">Type, Vector2</span>)</span>
-    <br />`public JungleNode AddNode(Type nodeType, Vector2 graphPosition)`
-    <br />_Adds a Jungle Node to the Jungle Tree._
+<span class="DocItemTitle">GetManifest()</span>
+<br />`public ref JungleManifest GetManifest()`
+<br />_Returns a reference to the trees persistent manifest._
 
-    <span class="DocItemTitle">AddNodes(<span class="DocItemParameter">JungleNode[], Vector2[]</span>)</span>
-    <br />`public JungleNode[] AddNodes(JungleNode[] jungleNodes, Vector2[] graphPositions)`
-    <br />_Adds multiple Jungle Nodes to the Jungle Tree._
+<span class="DocItemTitle">AddNode(<span class="DocItemParameter">Type, Vector2</span>)</span>
+<br />`public JungleNode AddNode(Type nodeType, Vector2 graphPosition)`
+<br />_Adds a Jungle Node to the Jungle Tree._
 
-    <span class="DocItemTitle">RemoveNode(<span class="DocItemParameter">JungleNode</span>)</span>
-    <br />`public void RemoveNode(JungleNode jungleNode)`
-    <br />_Removes a node from the Jungle Tree._
+<span class="DocItemTitle">AddNodes(<span class="DocItemParameter">JungleNode[], Vector2[]</span>)</span>
+<br />`public JungleNode[] AddNodes(JungleNode[] jungleNodes, Vector2[] graphPositions)`
+<br />_Adds multiple Jungle Nodes to the Jungle Tree._
 
-    <span class="DocItemTitle">RemoveNodes(<span class="DocItemParameter">JungleNode[]</span>)</span>
-    <br />`public void RemoveNodes(JungleNode[] jungleNodes)`
-    <br />_Removes these nodes from the Jungle Tree._
+<span class="DocItemTitle">RemoveNode(<span class="DocItemParameter">JungleNode</span>)</span>
+<br />`public void RemoveNode(JungleNode jungleNode)`
+<br />_Removes a node from the Jungle Tree._
 
-    <span class="DocItemTitle">ConnectNodes(<span class="DocItemParameter">JungleNode, JungleNode, byte</span>)</span>
-    <br />`public bool ConnectNodes(JungleNode nodeA, JungleNode nodeB, byte portIndex)`
-    <br />_Connects two Jungle Nodes together._
+<span class="DocItemTitle">RemoveNodes(<span class="DocItemParameter">JungleNode[]</span>)</span>
+<br />`public void RemoveNodes(JungleNode[] jungleNodes)`
+<br />_Removes these nodes from the Jungle Tree._
 
-    <span class="DocItemTitle">DisconnectNodes(<span class="DocItemParameter">JungleNode, JungleNode, byte</span>)</span>
-    <br />`public bool DisconnectNodes(JungleNode nodeA, JungleNode nodeB, byte portIndex)`
-    <br />_Disconnects two Jungle Nodes from each other._
+<span class="DocItemTitle">ConnectNodes(<span class="DocItemParameter">JungleNode, JungleNode, byte</span>)</span>
+<br />`public bool ConnectNodes(JungleNode nodeA, JungleNode nodeB, byte portIndex)`
+<br />_Connects two Jungle Nodes together._
+
+<span class="DocItemTitle">DisconnectNodes(<span class="DocItemParameter">JungleNode, JungleNode, byte</span>)</span>
+<br />`public bool DisconnectNodes(JungleNode nodeA, JungleNode nodeB, byte portIndex)`
+<br />_Disconnects two Jungle Nodes from each other._
+:::

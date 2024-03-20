@@ -5,7 +5,7 @@
 <meta name="generator" content="Docusaurus v3.1.0">
 <title data-rh="true">Jungle Tree | Jungle Sequencer</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://junglesequencer.com/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://junglesequencer.com/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://junglesequencer.com/docs/jungle-tree"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Jungle Tree | Jungle Sequencer"><meta data-rh="true" name="description" content="Introduction"><meta data-rh="true" property="og:description" content="Introduction"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://junglesequencer.com/docs/jungle-tree"><link data-rh="true" rel="alternate" href="https://junglesequencer.com/docs/jungle-tree" hreflang="en"><link data-rh="true" rel="alternate" href="https://junglesequencer.com/docs/jungle-tree" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Jungle Sequencer RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Jungle Sequencer Atom Feed"><link rel="stylesheet" href="/assets/css/styles.a3979977.css">
-<script src="/assets/js/runtime~main.c2bae15b.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.540b1b83.js" defer="defer"></script>
 <script src="/assets/js/main.09efd8f2.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -14,16 +14,18 @@
 nodes and their connections.</p>
 <p>You can have as many trees running at once as you want. Each tree is independent of each other and can be started and
 stopped at any time. You cannot, however, have the same tree running multiple times at once.</p>
+<hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="creating-jungle-trees">Creating Jungle Trees<a href="#creating-jungle-trees" class="hash-link" aria-label="Direct link to Creating Jungle Trees" title="Direct link to Creating Jungle Trees">​</a></h2>
 <p>To create a Jungle Tree, right click in your assets folder window and select <code>Create &gt; Jungle Tree</code>. This will create a
 Jungle Tree that you can then open by double clicking on it.</p>
 <p>Check out the <a href="/docs/jungle-tree-editor">Jungle Tree Editor</a> page for more information on how to edit your Jungle Tree.</p>
+<hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="using-jungle-trees">Using Jungle Trees<a href="#using-jungle-trees" class="hash-link" aria-label="Direct link to Using Jungle Trees" title="Direct link to Using Jungle Trees">​</a></h2>
 <p>It&#x27;s super easy to start/stop a Jungle Tree. All you need to do is call the <code>Start()</code> and <code>Stop()</code> methods on the tree.
 All the runtime management is handled for you.</p>
 <p>Jungle Trees can be referenced as serialized fields in your scripts. This allows you to easily reference your trees in
 the inspector.</p>
-<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#000000;--prism-background-color:#ffffff"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#000000;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#000000"><span class="token keyword" style="color:rgb(0, 0, 255)">using</span><span class="token plain"> </span><span class="token namespace">Jungle</span><span class="token punctuation" style="color:rgb(4, 81, 165)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain"></span><span class="token punctuation" style="color:rgb(4, 81, 165)">[</span><span class="token attribute class-name" style="color:rgb(38, 127, 153)">SerializeField</span><span class="token punctuation" style="color:rgb(4, 81, 165)">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain"></span><span class="token keyword" style="color:rgb(0, 0, 255)">private</span><span class="token plain"> </span><span class="token class-name" style="color:rgb(38, 127, 153)">JungleTree</span><span class="token plain"> myJungleTree</span><span class="token punctuation" style="color:rgb(4, 81, 165)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain"></span><span class="token keyword" style="color:rgb(0, 0, 255)">private</span><span class="token plain"> </span><span class="token return-type class-name keyword" style="color:rgb(0, 0, 255)">void</span><span class="token plain"> </span><span class="token function" style="color:rgb(0, 0, 255)">Start</span><span class="token punctuation" style="color:rgb(4, 81, 165)">(</span><span class="token punctuation" style="color:rgb(4, 81, 165)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain"></span><span class="token punctuation" style="color:rgb(4, 81, 165)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain">    myJungleTree</span><span class="token punctuation" style="color:rgb(4, 81, 165)">.</span><span class="token function" style="color:rgb(0, 0, 255)">Start</span><span class="token punctuation" style="color:rgb(4, 81, 165)">(</span><span class="token punctuation" style="color:rgb(4, 81, 165)">)</span><span class="token punctuation" style="color:rgb(4, 81, 165)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain"></span><span class="token punctuation" style="color:rgb(4, 81, 165)">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<div class="language-csharp codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#000000;--prism-background-color:#ffffff"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-csharp codeBlock_bY9V thin-scrollbar" style="color:#000000;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#000000"><span class="token keyword" style="color:rgb(0, 0, 255)">using</span><span class="token plain"> </span><span class="token namespace">UnityEngine</span><span class="token punctuation" style="color:rgb(4, 81, 165)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain"></span><span class="token keyword" style="color:rgb(0, 0, 255)">using</span><span class="token plain"> </span><span class="token namespace">Jungle</span><span class="token punctuation" style="color:rgb(4, 81, 165)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain"></span><span class="token keyword" style="color:rgb(0, 0, 255)">public</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(0, 0, 255)">class</span><span class="token plain"> </span><span class="token class-name" style="color:rgb(38, 127, 153)">PlayJungleTree</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(4, 81, 165)">:</span><span class="token plain"> </span><span class="token type-list class-name" style="color:rgb(38, 127, 153)">MonoBehaviour</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain"></span><span class="token punctuation" style="color:rgb(4, 81, 165)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(4, 81, 165)">[</span><span class="token attribute class-name" style="color:rgb(38, 127, 153)">SerializeField</span><span class="token punctuation" style="color:rgb(4, 81, 165)">]</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain">    </span><span class="token keyword" style="color:rgb(0, 0, 255)">private</span><span class="token plain"> </span><span class="token class-name" style="color:rgb(38, 127, 153)">JungleTree</span><span class="token plain"> jungleTree</span><span class="token punctuation" style="color:rgb(4, 81, 165)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain">    </span><span class="token keyword" style="color:rgb(0, 0, 255)">private</span><span class="token plain"> </span><span class="token return-type class-name keyword" style="color:rgb(0, 0, 255)">void</span><span class="token plain"> </span><span class="token function" style="color:rgb(0, 0, 255)">Start</span><span class="token punctuation" style="color:rgb(4, 81, 165)">(</span><span class="token punctuation" style="color:rgb(4, 81, 165)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(4, 81, 165)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain">        jungleTree</span><span class="token punctuation" style="color:rgb(4, 81, 165)">.</span><span class="token function" style="color:rgb(0, 0, 255)">Start</span><span class="token punctuation" style="color:rgb(4, 81, 165)">(</span><span class="token punctuation" style="color:rgb(4, 81, 165)">)</span><span class="token punctuation" style="color:rgb(4, 81, 165)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain">    </span><span class="token punctuation" style="color:rgb(4, 81, 165)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#000000"><span class="token plain"></span><span class="token punctuation" style="color:rgb(4, 81, 165)">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="code-reference">Code Reference<a href="#code-reference" class="hash-link" aria-label="Direct link to Code Reference" title="Direct link to Code Reference">​</a></h2>
 <p><strong>Namespace: <code>Jungle</code></strong></p>
@@ -34,37 +36,42 @@ the inspector.</p>
 <p><span class="DocItemTitle">State</span>
 <br><code>public StateFlag State { get; }</code>
 <br><em>The current state of the Jungle Tree.</em></p>
-<table><thead><tr><th>Flag</th><th>State</th><th>Description</th></tr></thead><tbody><tr><td>0</td><td>Ready</td><td>Describes a Jungle Tree that has never been run and is not currently running.</td></tr><tr><td>1</td><td>Running</td><td>Describes a Jungle Tree that is currently running.</td></tr><tr><td>0</td><td>Finished</td><td>Describes a Jungle Tree that is not currently running but has run at some point.</td></tr></tbody></table>
+<table><thead><tr><th>Flag</th><th>State</th><th>Description</th></tr></thead><tbody><tr><td>0</td><td>Ready</td><td>Describes a tree that has never been run and is not currently running.</td></tr><tr><td>1</td><td>Running</td><td>Describes a tree that is currently running.</td></tr><tr><td>0</td><td>Finished</td><td>Describes a tree that is not currently running but has run at some point.</td></tr></tbody></table>
 <p><span class="DocItemTitle">IsRunning</span>
 <br><code>public bool IsRunning { get; }</code>
-<br><em>True if the Jungle Tree is currently running.</em></p>
+<br><em>True if the tree is currently running.</em></p>
 <p><span class="DocItemTitle">Time</span>
-<br><code>public float RunTime { get; }</code>
-<br><em>The amount of time in seconds the Jungle Tree has been running.</em></p>
+<br><code>public float Time { get; }</code>
+<br><em>The amount of time in seconds the tree has been running.</em></p>
 <p><span class="DocItemTitle">IsNodeRunning(<span class="DocItemParameter">JungleNode</span>)</span>
-<br><code>public bool IsNodeRunning(JungleNode jungleNode)</code>
-<br><em>Returns true if the Jungle Tree is currently running the specified Jungle Node.</em></p>
+<br><code>public bool IsNodeRunning(JungleNode node)</code>
+<br><em>Returns true if the tree is currently running the specified node.</em></p>
 <p><span class="DocItemTitle">GetNodeByName(<span class="DocItemParameter">string</span>)</span>
-<br><code>public JungleNode GetNodeByName(string jungleNodeName)</code>
-<br><em>Returns a reference to the Jungle Node with the specified name.</em></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="editor-only">Editor Only<a href="#editor-only" class="hash-link" aria-label="Direct link to Editor Only" title="Direct link to Editor Only">​</a></h4>
-<p><span class="DocItemTitle">Manifest</span>
-<br><code>public JungleManifest Manifest { get; }</code>
-<br><em>The Jungle Trees persistent manifest.</em></p>
-<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>WARNING</div><div class="admonitionContent_BuS1"><p>The manifest is used to internal purposes. It&#x27;s not recommended to call any of its methods or change any of its
-properties. You can read more about the manifest <strong><a href="/docs/extras/jungle-manifest">here</a></strong>.</p></div></div>
+<br><code>public JungleNode GetNodeByName(string nodeName)</code>
+<br><em>Returns a reference to a node with the specified name. Returns null if no node was found.</em></p>
+<p><span class="DocItemTitle">GetNodeByUid(<span class="DocItemParameter">string</span>)</span>
+<br><code>public JungleNode GetNodeByUid(string nodeUid)</code>
+<br><em>Returns a reference to the node with the specified uid. Returns null if no node was found.</em></p>
 <hr>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="events">Events<a href="#events" class="hash-link" aria-label="Direct link to Events" title="Direct link to Events">​</a></h3>
+<p><span class="DocItemTitle">OnTreeStarted</span>
+<br><code>public static event Action&lt;JungleTree&gt; OnTreeStarted</code>
+<br><em>Invoked when a tree is started.</em></p>
+<p><span class="DocItemTitle">OnTreeStopped</span>
+<br><code>public static event Action&lt;JungleTree&gt; OnTreeStopped</code>
+<br><em>Invoked when a tree is stopped.</em></p>
 <p><span class="DocItemTitle">OnStart</span>
-<br><code>public event Action OnStart;</code>
-<br><em>Invoked whenever this Jungle Tree is started.</em></p>
+<br><code>public event Action OnStart</code>
+<br><em>Invoked when the tree is started.</em></p>
 <p><span class="DocItemTitle">OnStop</span>
-<br><code>public event Action OnStop;</code>
-<br><em>Invoked whenever this Jungle Tree is stopped.</em></p>
-<p><span class="DocItemTitle">OnError</span>
-<br><code>public event Action&lt;ErrorFlags&gt; OnError;</code>
-<br><em>Invoked whenever this Jungle Tree encounters an error.</em></p>
-<table><thead><tr><th>Error Flag</th><th>Description</th></tr></thead><tbody><tr><td>NotInPlayMode</td><td>This error is thrown when the Jungle Tree is requested to start while the editor is not in play-mode.</td></tr><tr><td>AlreadyRunning</td><td>This error is thrown when a request to start the Jungle Tree is made but the tree is already running.</td></tr><tr><td>NoNodes</td><td>This error is thrown when the Jungle Tree has no nodes to execute.</td></tr><tr><td>NoRuntimeInstance</td><td>This error is thrown when Jungle fails to find a Jungle Runtime instance in the scene.</td></tr><tr><td>NodeRuntimeException</td><td>This error is thrown when a node declares an exception during runtime.</td></tr></tbody></table>
+<br><code>public event Action OnStop</code>
+<br><em>Invoked when the tree is stopped.</em></p>
+<p><span class="DocItemTitle">OnNodeStarted</span>
+<br><code>public event Action&lt;JungleNode&gt; OnNodeStarted</code>
+<br><em>Invoked when a node is started.</em></p>
+<p><span class="DocItemTitle">OnNodeStopped</span>
+<br><code>public event Action&lt;JungleNode&gt; OnNodeStopped</code>
+<br><em>Invoked when a node is stopped.</em></p>
 <hr>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="methods">Methods<a href="#methods" class="hash-link" aria-label="Direct link to Methods" title="Direct link to Methods">​</a></h3>
 <p><span class="DocItemTitle">Start()</span>
@@ -74,14 +81,15 @@ properties. You can read more about the manifest <strong><a href="/docs/extras/j
 <br><code>public void Stop()</code>
 <br><em>Stops running the Jungle Tree.</em></p>
 <p><span class="DocItemTitle">AddRevertAction(<span class="DocItemParameter">Action</span>)</span>
-<br><code>public void AddRevertAction(Action action)</code>
-<br><em>Adds an action to be invoked when the Jungle Tree stops.</em></p>
-<p><span class="DocItemTitle">RemoveRevertAction(<span class="DocItemParameter">Action</span>)</span>
-<br><code>public void RemoveRevertAction(Action action)</code>
+<br><code>public string AddRevertAction(Action action)</code>
+<br><em>Adds an action to be invoked when the tree stops. The returned string is a unique identifier for the action.</em></p>
+<p><span class="DocItemTitle">RemoveRevertAction(<span class="DocItemParameter">string</span>)</span>
+<br><code>public void RemoveRevertAction(string actionUid)</code>
 <br><em>Removes an action from the revert list.</em></p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="editor-only-1">Editor Only<a href="#editor-only-1" class="hash-link" aria-label="Direct link to Editor Only" title="Direct link to Editor Only">​</a></h4>
-<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>WARNING</div><div class="admonitionContent_BuS1"><p>All methods below are designed for internal use only. It&#x27;s not recommended to call any of these methods.
-:::</p><p><span class="DocItemTitle">AddNode(<span class="DocItemParameter">Type, Vector2</span>)</span>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>EDITOR ONLY</div><div class="admonitionContent_BuS1"><p>These methods are primarily for internal use only.
+You should <strong>NOT</strong> call these methods unless you know what you&#x27;re doing.</p><p><span class="DocItemTitle">GetManifest()</span>
+<br><code>public ref JungleManifest GetManifest()</code>
+<br><em>Returns a reference to the trees persistent manifest.</em></p><p><span class="DocItemTitle">AddNode(<span class="DocItemParameter">Type, Vector2</span>)</span>
 <br><code>public JungleNode AddNode(Type nodeType, Vector2 graphPosition)</code>
 <br><em>Adds a Jungle Node to the Jungle Tree.</em></p><p><span class="DocItemTitle">AddNodes(<span class="DocItemParameter">JungleNode[], Vector2[]</span>)</span>
 <br><code>public JungleNode[] AddNodes(JungleNode[] jungleNodes, Vector2[] graphPositions)</code>

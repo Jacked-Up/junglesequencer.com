@@ -8,15 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/creating-a-tree.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/creating-a-tree.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/drawing-gizmos-from-nodes.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/drawing-gizmos-from-nodes.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/installing-jungle.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/installing-jungle.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/node-editor-context.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/node-editor-context.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/over-time-helper.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/over-time-helper.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/updating-jungle.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/updating-jungle.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/using-sticky-notes.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/using-sticky-notes.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/using-the-jungle-editor.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/using-the-jungle-editor.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/guides/using-the-jungle-validator.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/guides/using-the-jungle-validator.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/documentation/jungle-tree.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/documentation/jungle-tree.mdx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +132,7 @@
       <workItem from="1710006870786" duration="6601000" />
       <workItem from="1710087540960" duration="8836000" />
       <workItem from="1710880789624" duration="106000" />
+      <workItem from="1710937238290" duration="2207000" />
     </task>
     <servers />
   </component>
