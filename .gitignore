@@ -1,8 +1,8 @@
 # Dependencies
-/.idea
-/.docusaurus
-/node_modules
-/build
+.idea/
+.docusaurus/
+node_modules/
+build/
 
 # Misc
 .DS_Store
