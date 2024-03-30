@@ -13,10 +13,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/.docusaurus/
-.idea/copilot/chatSessions/00000000000.xd
-.idea/copilot/chatSessions/xd.lck
+/.docusaurus
 /.idea
-.idea/copilot/chatSessions/xd.lck
-.idea/copilot/chatSessions/00000000000.xd
-.idea/copilot/chatSessions/xd.lck
+/build
