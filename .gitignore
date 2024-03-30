@@ -17,3 +17,4 @@ yarn-error.log*
 .idea/copilot/chatSessions/00000000000.xd
 .idea/copilot/chatSessions/xd.lck
 /.idea
+.idea/copilot/chatSessions/xd.lck

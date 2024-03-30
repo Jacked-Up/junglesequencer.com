@@ -70,6 +70,7 @@ const config = {
       },
       footer: {
         links: [
+          /*
           {
             title: 'Documentation',
             items: [
@@ -87,6 +88,7 @@ const config = {
               },
             ],
           },
+          */
           {
             title: 'Links',
             items: [
