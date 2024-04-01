@@ -34,6 +34,7 @@ const sidebars = {
       'guides/creating-a-node',
       'guides/using-the-jungle-validator',
       'guides/node-editor-context',
+      'guides/revert-actions',
       'guides/drawing-gizmos-from-nodes',
       'guides/custom-node-inspectors',
       'guides/over-time-helper',
