@@ -1,4 +1,3 @@
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 
 import image2 from '../../static/img/jungle-thumbnail-2.png';
@@ -6,17 +5,12 @@ import image3 from '../../static/img/jungle-thumbnail-3.png';
 import image4 from '../../static/img/jungle-thumbnail-4.png';
 
 export default function Home() {
-    const { siteConfig } = useDocusaurusContext();
     return (
-        <Layout
-            title={ `Home` }
-            description="A conditional sequencing framework tool for Unity.">
+        <Layout description="A conditional sequencing framework tool for Unity.">
             <main>
                 <div className="homepage">
                     <h1>Jungle</h1>
-                    <p>
-                        A conditional sequencing framework for the <strong>Unity Editor</strong>.
-                    </p>
+                    <p>A visual node-based framework for creating sequences in Unity.</p>
 
                     <div className="image-container">
                         <img src={image2} alt="Image 2"/>
