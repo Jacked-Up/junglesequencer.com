@@ -1,6 +1,6 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
-  documentationSidebar: [
+    documentationSidebar: [
       'documentation/welcome',
       'documentation/concepts',
       {

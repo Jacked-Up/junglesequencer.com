@@ -5,22 +5,24 @@ sidebar_position: 4
 slug: /jungle-manifest
 ---
 
-The Jungle Manifest is a file used to store metadata about the tree.
+The Jungle Manifest is a self-managed container used to store metadata about a tree.
+Every Jungle Tree has its own manifest.
 
-The manifest is automatically created when a new tree is added to the project.
-The manifest is not built to the application and is only available in the Unity Editor.
+:::tip NOTE
+The manifest is never included in your build.
+All sticky notes, tree author name, tree description, and tree creation date are not accessible from the build.
+:::
 
 ---
 ## Code Reference
 
-:::warning WARNING
-The manifest is not built to the application and is only available in the Unity Editor.
-Ensure you are only calling these methods from an editor script.
-:::
-
 **Namespace: `Jungle`**
 
 ### Properties
+
+:::warning EDITOR ONLY
+These methods are primarily for internal use only.
+You should **NOT** call these methods unless you know exactly what you're doing.
 
 <span class="DocItemTitle">JungleTree</span>
 <br />`public JungleTree JungleTree { get; }`
@@ -45,9 +47,14 @@ Ensure you are only calling these methods from an editor script.
 <span class="DocItemTitle">StickyNoteManifest</span>
 <br />`public JungleStickyNoteData[] StickyNoteManifest { get; }`
 <br />_List of sticky note meta data for sticky notes that are currently in the tree._
+:::
 
 ---
 ### Methods
+
+:::warning EDITOR ONLY
+These methods are primarily for internal use only.
+You should **NOT** call these methods unless you know exactly what you're doing.
 
 #### Editor View Port
 
@@ -112,3 +119,4 @@ Ensure you are only calling these methods from an editor script.
 <span class="DocItemTitle">GetStickyNoteData(<span class="DocItemParameter">string</span>)</span>
 <br />`public JungleStickyNoteData GetStickyNoteData(string uid)`
 <br />_Gets a sticky note's meta data._
+:::

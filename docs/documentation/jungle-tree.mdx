@@ -5,28 +5,23 @@ sidebar_position: 3
 slug: /jungle-tree
 ---
 
-## Introduction
-
-Jungle Trees are the containers for your sequences. The Jungle Tree is responsible for managing the execution of your
-nodes and their connections.
-
-You can have as many trees running at once as you want. Each tree is independent of each other and can be started and
-stopped at any time. You cannot, however, have the same tree running multiple times at once.
+Trees act as a containers for your nodes and is responsible for managing the execution of the nodes.
+Each tree should represent a sequence of actions that you want to execute.
 
 ---
 ## Creating Jungle Trees
 
-To create a Jungle Tree, right click in your assets folder window and select `Create > Jungle Tree`. This will create a
-Jungle Tree that you can then open by double-clicking on it.
+To create a tree in your project, right-click in the Assets window and select `Create > Jungle Tree`.
+
+This will create a new Jungle Tree asset in your project. Double-clicking the tree will open it in the editor.
 
 ---
 ## Using Jungle Trees
 
-It's super easy to start/stop a Jungle Tree. All you need to do is call the `Start()` and `Stop()` methods on the tree.
-All the runtime management is handled for you.
+Starting and stopping a tree is as easy as calling the `Start()` and `Stop()` functions on the tree instance.
 
-Jungle Trees can be referenced as serialized fields in your scripts. This allows you to easily reference your trees in
-the inspector.
+Jungle Trees can be referenced as serialized fields in your scripts.
+This allows you to easily reference your trees in the inspector.
 
 ```csharp
 using UnityEngine;
@@ -133,7 +128,7 @@ public class PlayJungleTree : MonoBehaviour
 
 :::warning EDITOR ONLY
 These methods are primarily for internal use only.
-You should **NOT** call these methods unless you know what you're doing.
+You should **NOT** call these methods unless you know exactly what you're doing.
 
 <span class="DocItemTitle">GetManifest()</span>
 <br />`public ref JungleManifest GetManifest()`

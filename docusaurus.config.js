@@ -70,25 +70,6 @@ const config = {
       },
       footer: {
         links: [
-          /*
-          {
-            title: 'Documentation',
-            items: [
-              {
-                label: 'Installation',
-                to: '/docs/get-started/install-jungle',
-              },
-              {
-                label: 'Tutorials',
-                to: '/docs/category/tutorials',
-              },
-              {
-                label: 'Frequently Asked Questions',
-                to: '/docs/frequently-asked-questions',
-              },
-            ],
-          },
-          */
           {
             title: 'Links',
             items: [
@@ -116,6 +97,23 @@ const config = {
               {
                 label: 'GitHub Discussions',
                 href: 'https://github.com/Jacked-Up/junglesequencer.com/discussions',
+              },
+            ],
+          },
+          {
+            title: 'Legal',
+            items: [
+              {
+                label: 'License',
+                to: '/license',
+              },
+              {
+                label: 'Terms & Conditions',
+                href: 'https://jackedupsoftware.com/legal/terms-and-conditions',
+              },
+              {
+                label: 'Privacy Policy',
+                href: 'https://jackedupsoftware.com/legal/privacy-policy',
               },
             ],
           },

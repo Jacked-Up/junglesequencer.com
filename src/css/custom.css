@@ -149,6 +149,13 @@ p {
   height: auto;
 }
 
+/* Custom css for the license page ---------------------------------------------------------------------------------- */
+
+.license {
+  margin: 40px;
+  max-width: 65%;
+}
+
 @media (max-width: 768px) {
   .homepage {
     margin-bottom: 20px;
@@ -169,5 +176,10 @@ p {
 
     max-width: 60%;
     margin: 0 auto;
+  }
+
+  .license {
+    margin: 20px;
+    max-width: 90%;
   }
 }
