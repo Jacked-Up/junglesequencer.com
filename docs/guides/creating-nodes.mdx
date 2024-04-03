@@ -196,13 +196,16 @@ public class MyIONode : IONode<INPUT_TYPE>
 ```csharp
 using Jungle;
 
+//                             ↓↓↓↓↓↓↓↓↓↓
 public class MyIONode : IONode<INPUT_TYPE>
 {
+    //                      ↓↓↓↓↓↓↓ ↓↓↓↓↓↓↓↓↓↓
     protected override void OnStart(INPUT_TYPE inputValue)
     {
 
     }
 
+    //                      ↓↓↓↓↓↓↓↓
     protected override void OnUpdate()
     {
 
@@ -211,8 +214,6 @@ public class MyIONode : IONode<INPUT_TYPE>
 ```
 
 - **Step 5:** Add the `IONode` attribute to the class.
-    - This attribute is used to define the input and output port names.
-    - The `InputPortName` and `OutputPortName` properties are optional.
     - :::tip
         If you don't want an output port, set the `OutputPortName` and `OutputPortType` property null.
         <br />(`OutputPortName = null` and `OutputPortType = null`)
@@ -273,9 +274,214 @@ public class MyIONode : IONode<INPUT_TYPE>
 ---
 ### Branch Node
 
+- **Step 1:** Create a new C# script.
 
+- **Step 2:** Inherit the new class from the `BranchNode` class.
+```csharp
+using Jungle;
+
+//                          ↓↓↓↓↓↓↓↓↓↓
+public class MyBranchNode : BranchNode<...>
+{
+
+}
+```
+
+- **Step 3:** Implement the `OnStart` and `OnUpdate` method.
+    - Ensure you include the input parameter in the `OnStart` method.
+```csharp
+using Jungle;
+
+//                                     ↓↓↓↓↓↓↓↓↓↓
+public class MyBranchNode : BranchNode<INPUT_TYPE>
+{
+    //                      ↓↓↓↓↓↓↓ ↓↓↓↓↓↓↓↓↓↓
+    protected override void OnStart(INPUT_TYPE inputValue)
+    {
+
+    }
+
+    //                      ↓↓↓↓↓↓↓↓
+    protected override void OnUpdate()
+    {
+
+    }
+}
+```
+
+- **Step 4:** Add the `BranchNode` attribute to the class.
+    - :::tip
+        If you don't want an output port, set the `OutputPortName` property null. (`OutputPortName = null`)
+      :::
+```csharp
+using Jungle;
+
+// ↓↓↓↓↓↓↓↓
+[BranchNode(
+    InputPortName = "My Input",
+    OutputPortNames = new []
+    {
+        "My Output 1",
+        "My Output 2"
+    },
+    OutputPortTypes = new []
+    {
+        typeof(OUTPUT_TYPE),
+        typeof(OUTPUT_TYPE)
+    }
+)]
+public class MyBranchNode : BranchNode<INPUT_TYPE>
+{
+    protected override void OnStart(INPUT_TYPE inputValue)
+    {
+
+    }
+
+    protected override void OnUpdate()
+    {
+
+    }
+}
+```
+
+- **Step 5:** Add the `NodeProperties` attribute to the class.
+```csharp
+using Jungle;
+
+// ↓↓↓↓↓↓↓↓↓↓↓↓
+[NodeProperties(
+    Title = "My Branch Node",
+    Description = "This is a Branch node.",
+    Category = "My Nodes/Branch",
+    Color = Green
+)]
+[BranchNode(
+    InputPortName = "My Input",
+    OutputPortNames = new []
+    {
+        "My Output 1",
+        "My Output 2"
+    },
+    OutputPortTypes = new []
+    {
+        typeof(OUTPUT_TYPE),
+        typeof(OUTPUT_TYPE)
+    }
+)]
+public class MyBranchNode : BranchNode<INPUT_TYPE>
+{
+    protected override void OnStart(INPUT_TYPE inputValue)
+    {
+
+    }
+
+    protected override void OnUpdate()
+    {
+
+    }
+}
+```
 
 ---
 ### Event Node
 
+- **Step 1:** Create a new C# script.
 
+- **Step 2:** Inherit the new class from the `EventNode` class.
+```csharp
+using Jungle;
+
+//                         ↓↓↓↓↓↓↓↓↓
+public class MyEventNode : EventNode
+{
+
+}
+```
+
+- **Step 3:** Implement the `OnStart` and `OnUpdate` method.
+```csharp
+using Jungle;
+
+public class MyEventNode : EventNode
+{
+    //                      ↓↓↓↓↓↓↓
+    protected override void OnStart()
+    {
+
+    }
+
+    //                      ↓↓↓↓↓↓↓↓
+    protected override void OnUpdate()
+    {
+
+    }
+}
+```
+
+- **Step 4:** Add the `EventNode` attribute to the class.
+```csharp
+using Jungle;
+
+// ↓↓↓↓↓↓↓
+[EventNode(
+    OutputPortNames = new []
+    {
+        "My Output 1",
+        "My Output 2"
+    },
+    OutputPortTypes = new []
+    {
+        typeof(OUTPUT_TYPE),
+        typeof(OUTPUT_TYPE)
+    }
+)]
+public class MyEventNode : EventNode
+{
+    protected override void OnStart()
+    {
+
+    }
+
+    protected override void OnUpdate()
+    {
+
+    }
+}
+```
+
+- **Step 5:** Add the `NodeProperties` attribute to the class.
+```csharp
+using Jungle;
+
+// ↓↓↓↓↓↓↓↓↓↓↓↓
+[NodeProperties(
+    Title = "My Event Node",
+    Description = "This is an Event node.",
+    Category = "My Nodes/Event",
+    Color = Green
+)]
+[EventNode(
+    OutputPortNames = new []
+    {
+        "My Output 1",
+        "My Output 2"
+    },
+    OutputPortTypes = new []
+    {
+        typeof(OUTPUT_TYPE),
+        typeof(OUTPUT_TYPE)
+    }
+)]
+public class MyEventNode : EventNode
+{
+    protected override void OnStart()
+    {
+
+    }
+
+    protected override void OnUpdate()
+    {
+
+    }
+}
+```
