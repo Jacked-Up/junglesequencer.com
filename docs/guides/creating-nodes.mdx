@@ -167,17 +167,115 @@ public class MyIdentityNode : IdentityNode
 ---
 ### IO Node
 
-- **Step 1:** Create a new C# script and name it whatever you want.
-  - It's recommended to add a "Node" suffix to the script name. (Ex: `BlahBlahNode.cs`).
+- **Step 1:** Create a new C# script.
+
+- **Step 2:** Inherit the new class from the `IONode<T>` class.
+```csharp
+using Jungle;
+
+//                      ↓↓↓↓↓↓
+public class MyIONode : IONode<...>
+{
+
+}
+```
+
+- **Step 3:** Set the accepted input port type in the angle brackets. (Ex: `IONode<int>`)
+```csharp
+using Jungle;
+
+//                             ↓↓↓↓↓↓↓↓↓↓
+public class MyIONode : IONode<INPUT_TYPE>
+{
+
+}
+```
+
+- **Step 4:** Implement the `OnStart` and `OnUpdate` method.
+    - Ensure you include the input parameter in the `OnStart` method.
+```csharp
+using Jungle;
+
+public class MyIONode : IONode<INPUT_TYPE>
+{
+    protected override void OnStart(INPUT_TYPE inputValue)
+    {
+
+    }
+
+    protected override void OnUpdate()
+    {
+
+    }
+}
+```
+
+- **Step 5:** Add the `IONode` attribute to the class.
+    - This attribute is used to define the input and output port names.
+    - The `InputPortName` and `OutputPortName` properties are optional.
+    - :::tip
+        If you don't want an output port, set the `OutputPortName` and `OutputPortType` property null.
+        <br />(`OutputPortName = null` and `OutputPortType = null`)
+      :::
+```csharp
+using Jungle;
+
+// ↓↓↓↓↓↓↓↓↓
+[IONode(
+    InputPortName = "My Input",
+    OutputPortName = "My Output",
+    OutputPortType = typeof(OUTPUT_TYPE)
+)]
+public class MyIONode : IONode<INPUT_TYPE>
+{
+    protected override void OnStart(INPUT_TYPE inputValue)
+    {
+
+    }
+
+    protected override void OnUpdate()
+    {
+
+    }
+}
+```
+
+- **Step 6:** Add the `NodeProperties` attribute to the class.
+```csharp
+using Jungle;
+
+// ↓↓↓↓↓↓↓↓↓↓↓↓
+[NodeProperties(
+    Title = "My IO Node",
+    Description = "This is an IO node.",
+    Category = "My Nodes/IO",
+    Color = Green
+)]
+[IONode(
+    InputPortName = "My Input",
+    OutputPortName = "My Output",
+    OutputPortType = typeof(OUTPUT_TYPE)
+)]
+public class MyIONode : IONode<INPUT_TYPE>
+{
+    protected override void OnStart(INPUT_TYPE inputValue)
+    {
+
+    }
+
+    protected override void OnUpdate()
+    {
+
+    }
+}
+```
 
 ---
 ### Branch Node
 
-- **Step 1:** Create a new C# script and name it whatever you want.
-  - It's recommended to add a "Node" suffix to the script name. (Ex: `BlahBlahNode.cs`).
+
 
 ---
 ### Event Node
 
-- **Step 1:** Create a new C# script and name it whatever you want.
-  - It's recommended to add a "Node" suffix to the script name. (Ex: `BlahBlahNode.cs`).
+
