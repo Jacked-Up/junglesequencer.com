@@ -27,15 +27,27 @@ const sidebars = {
   ],
   guidesSidebar: [
       'guides/installing-jungle',
-      'guides/using-the-jungle-editor',
-      'guides/using-sticky-notes',
       'guides/creating-nodes',
-      'guides/using-the-jungle-validator',
+      {
+          type: 'category',
+          label: 'Jungle Editor',
+          link: {
+              type: 'generated-index',
+          },
+          collapsed: true,
+          items: [
+              'guides/jungle-editor/node-graph',
+              'guides/jungle-editor/node-inspector',
+              'guides/jungle-editor/node-explorer',
+              'guides/jungle-editor/sticky-notes'
+          ],
+      },
+      'guides/jungle-validator',
+      'guides/custom-node-inspectors',
       'guides/node-editor-context',
       'guides/revert-actions',
-      'guides/custom-node-inspectors',
       'guides/over-time-helper',
-      'guides/deleting-node-scripts',
+      'guides/deleting-node-scripts'
   ],
 };
 
