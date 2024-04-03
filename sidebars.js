@@ -27,7 +27,6 @@ const sidebars = {
   ],
   guidesSidebar: [
       'guides/installing-jungle',
-      'guides/updating-jungle',
       'guides/using-the-jungle-editor',
       'guides/using-sticky-notes',
       'guides/creating-nodes',
