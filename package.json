@@ -1,6 +1,6 @@
 {
-  "name": "jungle-website",
-  "version": "0.0.0",
+  "name": "jungle-sequencer-website",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
