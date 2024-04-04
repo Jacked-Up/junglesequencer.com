@@ -28,6 +28,7 @@ const sidebars = {
   guidesSidebar: [
       'guides/installing-jungle',
       'guides/creating-nodes',
+      'guides/deleting-nodes',
       {
           type: 'category',
           label: 'Jungle Editor',
@@ -46,8 +47,7 @@ const sidebars = {
       'guides/custom-node-inspectors',
       'guides/node-editor-context',
       'guides/revert-actions',
-      'guides/over-time-helper',
-      'guides/deleting-node-scripts'
+      'guides/over-time-helper'
   ],
 };
 
