@@ -161,9 +161,7 @@ You should only declare the `RestartIfCalledWhileRunning` property if you want t
     Title = "My Node",
     Description = "Your friendly neighborhood node.",
     Category = "Nodes/My Node",
-    Color = Blue,
-    Deprecated = false,                 // (OPTIONAL)
-    RestartIfCalledWhileRunning = false // (OPTIONAL)
+    Color = Blue
 )]
 ```
 
@@ -173,6 +171,8 @@ You should only declare the `RestartIfCalledWhileRunning` property if you want t
 Here's an example of how you could define the `NodeProperties` for two nodes that control a door in your game.
 
 ```csharp
+using Jungle;
+
 [NodeProperties(
     Title = "Open Door",
     Description = "Opens the inputted door.",
@@ -184,6 +184,8 @@ public class OpenDoorNode : IONode<Door>
 ```
 
 ```csharp
+using Jungle;
+
 [NodeProperties(
     Title = "Close Door",
     Description = "Closes the inputted door.",
