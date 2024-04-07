@@ -66,6 +66,7 @@ Branch nodes have multiple output ports, so you must specify the output port ind
 The output port index is the index of the output port you want to call, starting from 0.
 
 The Branch node `Call` and `CallAndStop` methods can take an array of `Port.Call` or a single `Port.Call`.
+Make sure the type of the payload matches the type of the output port.
 
 ```csharp
 using Jungle;
@@ -147,6 +148,7 @@ Because requiring a developer to always specify the first output port index woul
 the `Port.Call` object is not used.
 
 The IO node `Call` and `CallAndStop` methods take a payload and do not require an output port index.
+Make sure the type of the payload matches the type of the output port.
 
 ```csharp
 using Jungle;
@@ -207,6 +209,7 @@ Event nodes have one or multiple output ports, so you must specify the output po
 The output port index is the index of the output port you want to call, starting from 0.
 
 The Event node `Call` and `CallAndStop` methods can take an array of `Port.Call` or a single `Port.Call`.
+Make sure the type of the payload matches the type of the output port.
 
 ```csharp
 using Jungle;
