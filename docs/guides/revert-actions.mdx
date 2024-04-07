@@ -27,7 +27,7 @@ These methods are children of the `JungleTree` class and can be accessed from an
 
 <span class="DocItemTitle">AddRevertAction(<span class="DocItemParameter">Action</span>)</span>
 <br />`public string AddRevertAction(Action action)`
-<br />_Adds an action to be invoked when the tree stops. The returned string is a unique identifier for the action._
+<br />_Adds an action to be invoked when the tree stops. The returned string is a unique identifier for the action that can be used to remove it._
 
 <span class="DocItemTitle">RemoveRevertAction(<span class="DocItemParameter">string</span>)</span>
 <br />`public void RemoveRevertAction(string actionUid)`
@@ -37,17 +37,6 @@ These methods are children of the `JungleTree` class and can be accessed from an
 ## Adding Revert Actions
 
 Adding a revert action is as simple as defining a method and subscribing it to the tree's revert actions.
-
-:::info USING LAMBDA EXPRESSIONS
-You can also use lambda expressions to define revert actions.
-
-```csharp
-JungleTree.AddRevertAction(() =>
-{
-    Debug.Log("Revert Action Called!");
-});
-```
-:::
 
 ### From a Jungle Node
 
@@ -73,6 +62,17 @@ public class MyNode : IdentityNode
     protected override void OnUpdate() { }
 }
 ```
+
+:::info USING LAMBDA EXPRESSIONS
+You can also use lambda expressions to define revert actions.
+
+```csharp
+JungleTree.AddRevertAction(() =>
+{
+    Debug.Log("Revert Action Called!");
+});
+```
+:::
 
 ### From a Script
 

@@ -8,9 +8,7 @@ slug: /guides/custom-node-inspectors
 Creating custom node inspectors is a great way to add custom functionality to your nodes.
 Custom node inspectors work exactly like building custom inspectors for Unity MonoBehaviours.
 
-## Creating a Custom Inspector
-
-### Introduction
+## Introduction
 
 A custom inspector is a class that inherits from `UnityEditor.Editor`. This class is then attached to your Jungle Node
 script using the `UnityEditor.CustomEditor` attribute.
@@ -28,7 +26,7 @@ All editor classes should be placed between `#if UNITY_EDITOR` and `#endif` tags
 stripped from the build. If you do not do this, your build will **fail**.
 :::
 
-### Tutorials
+## Tutorials
 
 Here's a manual by Unity on how to create custom inspectors in Unity:
 <br />[Unity Custom Inspector Manual](https://docs.unity3d.com/Manual/UIE-HowTo-CreateCustomInspector.html)
