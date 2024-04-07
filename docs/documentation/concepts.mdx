@@ -154,7 +154,9 @@ Make sure the type of the payload matches the type of the output port.
 using Jungle;
 
 [IONode(
-//                          ↓↓↓ The payload type.
+    //                ↓↓↓↓↓↓ Output port name
+    OutputPortName = "Output",
+    //                      ↓↓↓ Output port type
     OutputPortType = typeof(int)
 )]
 public class MyIONode : IONode<int>
