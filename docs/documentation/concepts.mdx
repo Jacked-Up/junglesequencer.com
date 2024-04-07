@@ -57,21 +57,220 @@ To make a port call, you can call the nodes `Call` or `CallAndStop` method.
 The `Call` method will send a port call to the connected node and continue to run.
 The `CallAndStop` method will send a port call to the connected node and stop the current node.
 
+Below are examples for making port calls for each node variant.
+
+---
 #### Branch Node
 
-Coming soon...
+Branch nodes have multiple output ports, so you must specify the output port index when making a port call.
+The output port index is the index of the output port you want to call, starting from 0.
 
+The Branch node `Call` and `CallAndStop` methods can take an array of `Port.Call` or a single `Port.Call`.
+
+```csharp
+using Jungle;
+
+[BranchNode(
+    OutputPortNames = new[]
+    {
+//       ↓↓↓↓↓↓↓↓ Output port 1 name
+        "Output 1",
+//       ↓↓↓↓↓↓↓↓ Output port 2 name
+        "Output 2"
+    },
+    OutputPortTypes = new[]
+    {
+//             ↓↓↓ Output port 1 type
+        typeof(int),
+//             ↓↓↓↓↓↓ Output port 2 type
+        typeof(string)
+    }
+)]
+public class MyBranchNode : BranchNode<int>
+{
+    protected override void OnStart(int inputValue)
+    {
+        // ======================================================================
+        // 1. Make port call(s) and continue running this node.
+        // ----------------------------------------------------------------------
+        // a. Call both output ports.
+        Call(new []
+        {
+            // Port Index ↓  ↓ Payload
+            new Port.Call(0, 1),
+            // Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
+            new Port.Call(1, "Hello, World!")
+        });
+
+        // ----------------------------------------------------------------------
+        // b. Only call the first output port.
+        //      Port Index ↓  ↓ Payload
+        Call(new Port.Call(0, 1));
+
+        // ----------------------------------------------------------------------
+        // c. Only call the second output port.
+        //      Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
+        Call(new Port.Call(1, "Hello, World!"));
+
+        // ======================================================================
+        // 2. Make port call(s) and stop this node.
+        // ----------------------------------------------------------------------
+        // a. Call both output ports.
+        CallAndStop(new []
+        {
+            // Port Index ↓  ↓ Payload
+            new Port.Call(0, 1),
+            // Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
+            new Port.Call(1, "Hello, World!")
+        });
+
+        // ----------------------------------------------------------------------
+        // b. Only call the first output port.
+        //             Port Index ↓  ↓ Payload
+        CallAndStop(new Port.Call(0, 1));
+
+        // ----------------------------------------------------------------------
+        // c. Only call the second output port.
+        //             Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
+        CallAndStop(new Port.Call(1, "Hello, World!"));
+    }
+
+    protected override void OnUpdate() { }
+}
+```
+
+---
 #### IO Node
 
-Coming soon...
+IO nodes have only one output port, so you do not need to specify the output port index when making a port call.
+Because requiring a developer to always specify the first output port index would be redundant,
+the `Port.Call` object is not used.
 
+The IO node `Call` and `CallAndStop` methods take a payload and do not require an output port index.
+
+```csharp
+using Jungle;
+
+[IONode(
+//                          ↓↓↓ The payload type.
+    OutputPortType = typeof(int)
+)]
+public class MyIONode : IONode<int>
+{
+    protected override void OnStart(int inputValue)
+    {
+        // ======================================================================
+        // 1. Make a port call and continue running this node.
+        //   ↓ Payload
+        Call(1);
+
+        // ======================================================================
+        // 2. Make a port call and stop this node.
+        //          ↓ Payload
+        CallAndStop(1);
+    }
+
+    protected override void OnUpdate() { }
+}
+```
+
+---
 #### Identity Node
 
-Coming soon...
+Identity nodes do not allow you to directly interact with the inputted and outputted payload.
+Port calls are made by calling the `Call` and `CallAndStop` methods without any arguments.
 
+```csharp
+using Jungle;
+
+public class MyIdentityNode : IdentityNode
+{
+    protected override void OnStart()
+    {
+        // ======================================================================
+        // 1. Make a port call and continue running this node.
+        Call();
+
+        // ======================================================================
+        // 2. Make a port call and stop this node.
+        CallAndStop();
+    }
+
+    protected override void OnUpdate() { }
+}
+```
+
+---
 #### Event Node
 
-Coming soon...
+Event nodes have one or multiple output ports, so you must specify the output port index when making a port call.
+The output port index is the index of the output port you want to call, starting from 0.
+
+The Event node `Call` and `CallAndStop` methods can take an array of `Port.Call` or a single `Port.Call`.
+
+```csharp
+using Jungle;
+
+[EventNode(
+    OutputPortNames = new[]
+    {
+//       ↓↓↓↓↓↓↓↓ Output port 1 name
+        "Output 1",
+//       ↓↓↓↓↓↓↓↓ Output port 2 name
+        "Output 2"
+    },
+    OutputPortTypes = new[]
+    {
+//             ↓↓↓ Output port 1 type
+        typeof(int),
+//             ↓↓↓↓↓↓ Output port 2 type
+        typeof(string)
+    }
+)]
+public class MyEventNode : EventNode
+{
+    protected override void OnStart()
+    {
+        // ======================================================================
+        // 1. Make port call(s) and continue running this node.
+        // ----------------------------------------------------------------------
+        // a. Call both output ports.
+        Call(new []
+        {
+            new Port.Call(0, 1),
+            new Port.Call(1, "Hello, World!")
+        });
+
+        // ----------------------------------------------------------------------
+        // b. Only call the first output port.
+        Call(new Port.Call(0, 1));
+
+        // ----------------------------------------------------------------------
+        // c. Only call the second output port.
+        Call(new Port.Call(1, "Hello, World!"));
+
+        // ======================================================================
+        // 2. Make port call(s) and stop this node.
+        // ----------------------------------------------------------------------
+        // a. Call both output ports.
+        CallAndStop(new []
+        {
+            new Port.Call(0, 1),
+            new Port.Call(1, "Hello, World!")
+        });
+
+        // ----------------------------------------------------------------------
+        // b. Only call the first output port.
+        CallAndStop(new Port.Call(0, 1));
+
+        // ----------------------------------------------------------------------
+        // c. Only call the second output port.
+        CallAndStop(new Port.Call(1, "Hello, World!"));
+    }
+
+    protected override void OnUpdate() { }
+}
+```
 
 ---
 ## Lifecycle
