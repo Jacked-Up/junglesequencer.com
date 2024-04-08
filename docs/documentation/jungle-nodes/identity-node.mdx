@@ -17,15 +17,13 @@ The inputted value is stored internally and **cannot** be modified or changed.
 
 ---
 
-All identity nodes are required to have a `IdentityNode` class attribute defined.
-This attribute defines the input port and output port on the node.
+The input port and output port name can be defined by adding the `IdentityNode` attribute to your node script.
 
-Here's a list of all the properties you can define in the `IdentityNode` attribute:
-
-| Property          | Type     | Description                         |
-|-------------------|----------|-------------------------------------|
-| `InputPortName`   | `string` | Defines the name of the input port  |
-| `OutputPortName`  | `string` | Defines the name of the output port |
+`IdentityNode` attribute properties:
+| Property         | Type     | Description                          |
+|------------------|----------|--------------------------------------|
+| `InputPortName`  | `string` | Defines the name of the input port.  |
+| `OutputPortName` | `string` | Defines the name of the output port. |
 
 ```csharp
 [IdentityNode(
@@ -40,14 +38,14 @@ public class MyIdentityNode : IdentityNode
 
 ![Identity node attribute visual](img/identity-node-attribute-visual.png)
 
-:::info WHERE IS THE INPUT TYPE DEFINED?
-The input port type is defined by any connected nodes output type.
+:::info HOW IS THE INPUT PORT TYPE DEFINED?
+What makes the identity node unique is that the input port type and output port type is defined by the node connected to
+its input.
 
-![Identity node input definition example](img/identity-node-input-definition-example.png)
+![Identity node input type example](img/identity-node-input-type-example.gif)
 
-The **Wait For Seconds** node seen above is an identity node.
-<br />As you can see, both the **Find Game Object** node and the **Get Main Camera** node can be connected to the input
-of the **Wait For Seconds** node.
+The `WaitForSecondsNode` above is an Identity node. The `GetTransformNode` and `GetRigidbodyNode` are IO nodes.
+Since the `WaitForSecondsNode`'s input port type is defined by the connected node, it can accept either type.
 :::
 
 ---

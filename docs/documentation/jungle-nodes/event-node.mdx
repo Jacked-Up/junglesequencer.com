@@ -8,7 +8,7 @@ slug: /jungle-nodes/event-node
 The Event Node is a powerful node type in Jungle. The Event Node has zero inputs and outputs to any number of outputs
 that all can output any types.
 
-Event Nodes are called when the Jungle Tree is started.
+Event nodes are started automatically when the tree is started.
 
 ---
 
@@ -17,10 +17,11 @@ the node.
 
 Here's a list of all the properties you can define in the `EventNode` attribute:
 
-| Property          | Type       | Description                              |
-|-------------------|------------|------------------------------------------|
-| `OutputPortNames` | `string[]` | Defines the names for each output port   |
-| `OutputPortTypes` | `Type[]`   | Defines the outputted type for each port |
+| Property                     | Type       | Description                                                             |
+|------------------------------|------------|-------------------------------------------------------------------------|
+| `OutputPortNames`            | `string[]` | Defines the names for each output port.                                 |
+| `OutputPortTypes`            | `Type[]`   | Defines the outputted type for each output port.                        |
+| `PreventAutoStopWhileActive` | `bool`     | Prevents the tree from automatically stopping when this node is active. |
 
 The output port names and types should be defined in the same order and should always be the same length. You are
 limited to 256 output ports per node.
@@ -28,8 +29,16 @@ limited to 256 output ports per node.
 Here's an example of a `EventNode` attribute:
 ```csharp
 [EventNode(
-    OutputPortNames = new string[] { "My Output A",     "My Output B" },
-    OutputPortTypes = new Type[]   { typeof(Port.None), typeof(Port.None) }
+    OutputPortNames = new []
+    {
+        "My Output A",
+        "My Output B"
+    },
+    OutputPortTypes = new []
+    {
+        typeof(Port.None),
+        typeof(Port.None)
+    }
 )]
 public class MyEventNode : EventNode
 ...
@@ -38,10 +47,6 @@ public class MyEventNode : EventNode
 #### Result in the Jungle Editor
 
 ![Event node attribute visual](img/event-node-attribute-visual.png)
-
-:::info WHERE IS THE INPUT TYPE DEFINED?
-Simply put, **it's not**. The Event Node has no input ports, so an input type doesn't ever need to be defined.
-:::
 
 ---
 ## Code Reference
@@ -112,9 +117,9 @@ In a build, this method will return a blank white texture.
 ---
 ### Events
 
-<span class="DocItemTitle">OnValidated</span>
-<br />`public Action<bool> OnValidated`
-<br />_Called when the node is validated. Callback is true if issues were detected._
+<span class="DocItemTitle">OnNodeValidated</span>
+<br />`public event Action<bool> OnNodeValidated`
+<br />_Invoked whenever a validation pass is perform on this node. Argument is true if any issues are reported._
 
 ---
 ### Methods
@@ -173,8 +178,16 @@ using Jungle;
     Description = "No inputs, multiple outputs."
 )]
 [EventNode(
-    OutputPortNames = new []{ "Output A",        "Output B"        },
-    OutputPortTypes = new []{ typeof(Port.None), typeof(Port.None) }
+    OutputPortNames = new []
+    {
+        "Output A",
+        "Output B"
+    },
+    OutputPortTypes = new []
+    {
+        typeof(Port.None),
+        typeof(Port.None)
+    }
 )]
 public class MyEventNode : EventNode
 {
@@ -194,7 +207,9 @@ public class MyEventNode : EventNode
 ---
 ## Example
 
-Here's a simple example of an Event Node that calls different outputs at 5, 10, and 15 seconds intervals.
+Here's an example of a Event Node that calls different output ports at 5, 10, and 15 seconds intervals.
+
+![Timed intervals node visual](img/event-node-example.png)
 
 ```csharp
 using Jungle;
@@ -206,8 +221,18 @@ using UnityEngine;
     Color = Yellow
 )]
 [EventNode(
-    OutputPortNames = new string[] { "After 5 Seconds", "After 10 Seconds", "After 15 Seconds" },
-    OutputPortTypes = new Type[]   { typeof(Port.None), typeof(Port.None),  typeof(Port.None)  }
+    OutputPortNames = new []
+    {
+        "After 5 Seconds",
+        "After 10 Seconds",
+        "After 15 Seconds"
+    },
+    OutputPortTypes = new []
+    {
+        typeof(Port.None),
+        typeof(Port.None),
+        typeof(Port.None)
+    }
 )]
 public class TimedIntervalsNode : EventNode
 {
@@ -232,33 +257,23 @@ public class TimedIntervalsNode : EventNode
         // After 5 seconds
         if (!_called5Seconds && elapsedTime >= 5)
         {
-            Call(new Port.Call(0, new Port.None()));
+            Call(new Port.Call(0, Nothing));
             _called5Seconds = true;
         }
         
         // After 10 seconds
         if (!_called10Seconds && elapsedTime >= 10)
         {
-            Call(new Port.Call(1, new Port.None()));
+            Call(new Port.Call(1, Nothing));
             _called10Seconds = true;
         }
         
         // After 15 seconds
         if (!_called15Seconds && elapsedTime >= 15)
         {
-            CallAndStop(new Port.Call(2, new Port.None()));
+            CallAndStop(new Port.Call(2, Nothing));
             _called15Seconds = true;
         }
     }
 }
 ```
-
-As shown in the example above, the output ports are named **After 5 Seconds**, **After 10 Seconds**, and **After 15
-Seconds** and all output **nothing**.
-
-With this setup, the node will call the first output after 5 seconds, the second output after 10 seconds, and the third
-output after 15 seconds.
-
-This configuration is useful for creating timed events in your Jungle Tree.
-
-![Timed intervals node visual](img/event-node-example.png)
