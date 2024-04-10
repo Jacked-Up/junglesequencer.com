@@ -5,22 +5,22 @@ sidebar_position: 3
 slug: /jungle-tree
 ---
 
-Trees act as a containers for your nodes and is responsible for managing the execution of the nodes.
-Each tree should represent a sequence of actions that you want to execute.
+Trees act as the containers for your nodes.
+Each tree should represent a sequence of actions that you want to execute in your game.
 
 ---
-## Creating Jungle Trees
+## Creating Trees
 
 To create a tree in your project, right-click in the Assets window and select `Create > Jungle Tree`.
 
-This will create a new Jungle Tree asset in your project. Double-clicking the tree will open it in the editor.
+This will create a new tree asset in your project. Double-clicking the tree will open it in the editor.
 
 ---
-## Using Jungle Trees
+## Starting Trees
 
 Starting and stopping a tree is as easy as calling the `Start()` and `Stop()` functions on the tree instance.
 
-Jungle Trees can be referenced as serialized fields in your scripts.
+Trees can be referenced as serialized fields in your scripts.
 This allows you to easily reference your trees in the inspector.
 
 ```csharp
@@ -48,11 +48,11 @@ public class PlayJungleTree : MonoBehaviour
 
 <span class="DocItemTitle">Nodes</span>
 <br />`public JungleNode[] Nodes { get; }`
-<br />_List of all nodes associated with this Jungle Tree._
+<br />_List of all nodes associated with this tree._
 
 <span class="DocItemTitle">State</span>
 <br />`public StateFlag State { get; }`
-<br />_The current state of the Jungle Tree._
+<br />_The current state of the tree._
 
 | Flag | State    | Description                                                               |
 |------|----------|---------------------------------------------------------------------------|
@@ -101,22 +101,22 @@ public class PlayJungleTree : MonoBehaviour
 
 <span class="DocItemTitle">OnNodeStarted</span>
 <br />`public event Action<JungleNode> OnNodeStarted`
-<br />_Invoked when a node is started._
+<br />_Invoked when a node is started in the tree._
 
 <span class="DocItemTitle">OnNodeStopped</span>
 <br />`public event Action<JungleNode> OnNodeStopped`
-<br />_Invoked when a node is stopped._
+<br />_Invoked when a node is stopped in the tree._
 
 ---
 ### Methods
 
 <span class="DocItemTitle">Start()</span>
 <br />`public void Start()`
-<br />_Starts running the Jungle Tree._
+<br />_Starts running the tree._
 
 <span class="DocItemTitle">Stop()</span>
 <br />`public void Stop()`
-<br />_Stops running the Jungle Tree._
+<br />_Stops running the tree._
 
 <span class="DocItemTitle">AddRevertAction(<span class="DocItemParameter">Action</span>)</span>
 <br />`public string AddRevertAction(Action action)`
@@ -136,19 +136,19 @@ You should **NOT** call these methods unless you know exactly what you're doing.
 
 <span class="DocItemTitle">AddNode(<span class="DocItemParameter">Type, Vector2</span>)</span>
 <br />`public JungleNode AddNode(Type nodeType, Vector2 graphPosition)`
-<br />_Adds a Jungle Node to the Jungle Tree._
+<br />_Adds a Jungle Node to the tree._
 
 <span class="DocItemTitle">AddNodes(<span class="DocItemParameter">JungleNode[], Vector2[]</span>)</span>
 <br />`public JungleNode[] AddNodes(JungleNode[] jungleNodes, Vector2[] graphPositions)`
-<br />_Adds multiple Jungle Nodes to the Jungle Tree._
+<br />_Adds multiple Jungle Nodes to the tree._
 
 <span class="DocItemTitle">RemoveNode(<span class="DocItemParameter">JungleNode</span>)</span>
 <br />`public void RemoveNode(JungleNode jungleNode)`
-<br />_Removes a node from the Jungle Tree._
+<br />_Removes a node from the tree._
 
 <span class="DocItemTitle">RemoveNodes(<span class="DocItemParameter">JungleNode[]</span>)</span>
 <br />`public void RemoveNodes(JungleNode[] jungleNodes)`
-<br />_Removes these nodes from the Jungle Tree._
+<br />_Removes these nodes from the tree._
 
 <span class="DocItemTitle">ConnectNodes(<span class="DocItemParameter">JungleNode, JungleNode, byte</span>)</span>
 <br />`public bool ConnectNodes(JungleNode nodeA, JungleNode nodeB, byte portIndex)`

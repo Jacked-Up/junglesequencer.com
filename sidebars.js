@@ -15,10 +15,11 @@ const sidebars = {
               'documentation/jungle-nodes/branch-node',
               'documentation/jungle-nodes/io-node',
               'documentation/jungle-nodes/identity-node',
-              'documentation/jungle-nodes/event-node',
+              'documentation/jungle-nodes/event-node'
           ],
       },
       'documentation/jungle-tree',
+      'documentation/jungle-port',
       'documentation/jungle-manifest',
       'documentation/jungle-player',
       'documentation/jungle-gizmos',
