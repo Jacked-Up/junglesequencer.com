@@ -91,7 +91,7 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Discord',
+                label: 'Discord Server',
                 href: 'https://discord.gg/vJ4AXsExfE',
               },
               {

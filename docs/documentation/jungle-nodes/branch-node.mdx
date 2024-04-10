@@ -32,8 +32,16 @@ Here's an example of a `BranchNode` attribute:
 ```csharp
 [BranchNode(
     InputPortName = "My Input",
-    OutputPortNames = new []{ "My Output A",     "My Output B"     },
-    OutputPortTypes = new []{ typeof(Port.None), typeof(Port.None) }
+    OutputPortNames = new []
+    {
+        "My Output A",
+        "My Output B"
+    },
+    OutputPortTypes = new []
+    {
+        typeof(Port.None),
+        typeof(Port.None)
+    }
 )]
 public class MyBranchNode : BranchNode<Port.None>
 ...
@@ -116,14 +124,14 @@ In a build, this method will return a blank white texture.
 
 <span class="DocItemTitle">GetOutputPortsInfo()</span>
 <br />`public override Port.Info[] GetOutputPortsInfo()`
-<br />_Returns info about the nodes output ports._
+<br />_Returns info about the nodes output port(s)._
 
 ---
 ### Events
 
 <span class="DocItemTitle">OnValidated</span>
-<br />`public Action<bool> OnValidated`
-<br />_Called when the node is validated. Callback is true if issues were detected._
+<br />`public event Action<bool> OnNodeValidated`
+<br />_Invoked whenever a validation pass is perform on this node. Argument is true if any issues are reported._
 
 ---
 ### Methods
@@ -184,8 +192,16 @@ using Jungle;
 )]
 [BranchNode(
     InputPortName = "Input",
-    OutputPortNames = new []{ "Output A",        "Output B"        },
-    OutputPortTypes = new []{ typeof(Port.None), typeof(Port.None) }
+    OutputPortNames = new []
+    {
+        "Output A",
+        "Output B"
+    },
+    OutputPortTypes = new []
+    {
+        typeof(Port.None),
+        typeof(Port.None)
+    }
 )]
 public class MyBranchNode : BranchNode<Port.None>
 {
@@ -216,8 +232,16 @@ using Jungle;
 )]
 [BranchNode(
     InputPortName = "Number",
-    OutputPortNames = new []{ "Positive",        "Negative" },
-    OutputPortTypes = new []{ typeof(Port.None), typeof(Port.None) }
+    OutputPortNames = new []
+    {
+        "Positive",
+        "Negative"
+    },
+    OutputPortTypes = new []
+    {
+        typeof(Port.None),
+        typeof(Port.None)
+    }
 )]
 public class PositiveNegativeNode : BranchNode<int>
 {
