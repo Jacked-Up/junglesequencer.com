@@ -5,4 +5,75 @@ sidebar_position: 6
 slug: /guides/jungle-validator
 ---
 
-## Coming Soon
+The validator helps you to more easily catch and diagnose issues within your nodes.
+As your project grows, it becomes increasingly more difficult to check for possible issues in all your nodes.
+
+The validator solves this problem by providing your nodes with a callback that can check for issues and report them.
+
+---
+## Implementation
+
+```csharp
+using System;
+using Jungle;
+using UnityEngine;
+
+public class HelloWorldNode : IdentityNode
+{
+    protected override void OnStart() { }
+
+    protected override void OnUpdate() { }
+
+    // ---------------------------------------
+    protected override string[] OnValidation()
+    {
+        return Array.Empty<string>();
+    }
+    // ---------------------------------------
+}
+```
+
+### Example
+
+Below is an example of a node that logs a message to the console.
+The node uses the `OnValidation` method to check if the message is empty.
+If the message is empty, the issue is reported.
+
+```csharp
+using Jungle;
+using UnityEngine;
+using System.Collections.Generic;
+
+public class LogMessageNode : IdentityNode
+{
+    [SerializeField]
+    private string message = "Hello, World!";
+
+    protected override void OnStart()
+    {
+        Debug.Log(message);
+        CallAndStop();
+    }
+
+    protected override void OnUpdate() { }
+
+    // ---------------------------------------
+    protected override string[] OnValidation()
+    {
+        var issues = new List<string>();
+
+        if (string.IsNullOrWhiteSpace(message))
+        {
+            issues.Add("The message is empty.");
+        }
+
+        return issues.ToArray();
+    }
+    // ---------------------------------------
+}
+```
+
+---
+## Editor Interface
+
+Coming soon...
