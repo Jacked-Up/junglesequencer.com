@@ -14,6 +14,7 @@ You can throw an exception of any type, but it is recommended to use the `Jungle
 
 An exception can be thrown anywhere at any time within a node.
 
+---
 ## When to Throw Exceptions?
 
 You should throw exceptions when a critical error occurs in your nodes that prevents the node from performing its task.
@@ -30,6 +31,7 @@ except they would be getting `null` instead.
 To prevent this, you should throw an exception if the game object is not found.
 This will prevent any subsequent nodes from running and more causing errors.
 
+---
 ## Throwing an Exception
 
 Throwing exceptions is extremely easy.
@@ -43,6 +45,7 @@ throw new JungleException("YOUR MESSAGE");
 
 You can throw Jungle exceptions inside any inherited Jungle Node method.
 
+---
 ## Example
 
 Here's an example of a node that sets the position of a transform to the origin.

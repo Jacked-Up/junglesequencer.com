@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import Layout from '@theme/Layout';
 
@@ -147,3 +148,4 @@ function LicensePage() {
 }
 
 export default LicensePage;
+*/

@@ -104,10 +104,6 @@ const config = {
             title: 'Legal',
             items: [
               {
-                label: 'License',
-                to: '/license',
-              },
-              {
                 label: 'Terms & Conditions',
                 href: 'https://jackedupsoftware.com/legal/terms-and-conditions',
               },
