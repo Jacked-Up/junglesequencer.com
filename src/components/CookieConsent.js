@@ -1,30 +1,33 @@
-import React, { useState } from 'react';
-import "../css/CookieConsent.css"
+import React, { useState, useEffect } from 'react';
+import "../css/CookieConsent.css";
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 const CookieConsent = () => {
-    const [show, setShow] = useState(localStorage.getItem('cookiesAccepted') !== 'true');
-    const [hide, setHide] = useState(false);
+    const [show, setShow] = useState(false);
+
+    useEffect(() => {
+        const isAccepted = localStorage.getItem('cookiesAccepted') === 'true';
+        setShow(!isAccepted);
+    }, []);
 
     const handleAccept = () => {
         console.log('Cookies accepted.');
         localStorage.setItem('cookiesAccepted', 'true');
-        setHide(true);
-        setTimeout(() => setShow(false), 500);
+        setShow(false);
     };
 
     if (!show) return null;
 
     return (
-        <div className={`cookie-consent ${hide ? 'hide' : ''}`}>
-            <p>
-                We use cookies to enhance your experience.
-                By continuing to visit this site you agree to our use of cookies.
-            </p>
-            <button className="understood-button" onClick={handleAccept}>
-                <strong>I Understand</strong>
-            </button>
+        <div className={`cookie-consent`}>
+            <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+            <button className="understood-button" onClick={handleAccept}>I Understand</button>
         </div>
     );
 };
 
-export default CookieConsent;
+export default () => (
+    <BrowserOnly>
+        {() => <CookieConsent />}
+    </BrowserOnly>
+);
