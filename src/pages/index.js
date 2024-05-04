@@ -10,7 +10,9 @@ export default function Home() {
             <main>
                 <div className="homepage">
                     <h1>Jungle</h1>
-                    <p>A visual node-based framework for creating sequences in Unity.</p>
+                    <p>
+                        A visual node-based framework designed to help developers more easily interact with their code.
+                    </p>
 
                     <div className="image-container">
                         <img src={image2} alt="Image 2"/>

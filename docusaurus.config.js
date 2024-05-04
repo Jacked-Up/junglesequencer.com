@@ -62,6 +62,11 @@ const config = {
             position: 'left'
           },
           {
+            to: '/community',
+            label: 'Community',
+            position: 'right'
+          },
+          {
             href: 'https://assetstore.unity.com/packages/slug/258407',
             label: 'Buy Jungle',
             position: 'right',
