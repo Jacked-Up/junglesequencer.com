@@ -12,13 +12,12 @@
     justify-content: center;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 100%;
-    box-sizing: border-box;
+    width: 250px;
 }
 
 .discord-button:hover, .github-button:hover {
     background-color: #7289DA;
-    transform: scale(1.025);
+    transform: scale(1.05);
 }
 
 .github-button {
@@ -26,8 +25,8 @@
 }
 
 .github-button:hover {
-    background-color: #2C313A;
-    transform: scale(1.025);
+    background-color: #373e48;
+    transform: scale(1.05);
 }
 
 .discord-button img, .github-button img {

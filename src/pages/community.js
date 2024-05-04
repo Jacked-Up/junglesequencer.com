@@ -19,14 +19,13 @@ function CommunityPage() {
                     <p>
                         Chat with the community, ask questions, and get help with your projects.
                     </p>
-                    <p style={{textAlign: 'center'}}>
-                        <a href="https://discord.gg/vJ4AXsExfE" target="_blank" rel="noopener noreferrer" className="discord-button">
-                            <img
-                                src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/653714c1f22aef3b6921d63d_636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg"
-                                alt="Discord" height="20"/>
-                            <strong>Join Server</strong>
-                        </a>
-                    </p>
+                    <a href="https://discord.gg/vJ4AXsExfE" target="_blank" rel="noopener noreferrer"
+                       className="discord-button">
+                        <img
+                            src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/653714c1f22aef3b6921d63d_636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg"
+                            alt="Discord" height="20"/>
+                        <strong>Join Server</strong>
+                    </a>
                 </div>
 
                 <br/>
@@ -36,14 +35,13 @@ function CommunityPage() {
                     <p>
                         Join the discussions on GitHub to explore more topics and engage with the community.
                     </p>
-                    <p style={{textAlign: 'center'}}>
-                        <a href="https://github.com/Jacked-Up/junglesequencer.com/discussions" target="_blank" rel="noopener noreferrer" className="github-button">
-                            <img
-                                src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-github-1.png&r=255&g=255&b=255"
-                                alt="GitHub" height="24"/>
-                            <strong>Join Discussions</strong>
-                        </a>
-                    </p>
+                    <a href="https://github.com/Jacked-Up/junglesequencer.com/discussions" target="_blank"
+                       rel="noopener noreferrer" className="github-button">
+                    <img
+                            src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-github-1.png&r=255&g=255&b=255"
+                            alt="GitHub" height="24"/>
+                        <strong>Join Discussions</strong>
+                    </a>
                 </div>
             </div>
         </Layout>

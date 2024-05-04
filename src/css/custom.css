@@ -4,7 +4,7 @@
 }
 
 :root {
-  font-family: Rubik, sans-serif;
+  font-family: Rubik, sans-serif !important;
 
   --ifm-color-primary:          #298631;
   --ifm-color-primary-dark:     #3b5e19;
@@ -21,7 +21,7 @@
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary:          #38CA42;
+  --ifm-color-primary:          #2e9836;
   --ifm-color-primary-dark:     #588824;
   --ifm-color-primary-darker:   #458a23;
   --ifm-color-primary-darkest:  #1b6521;
@@ -34,7 +34,6 @@
   --ifm-navbar-background-color: black !important;
 }
 
-/* Custom footer css ------------------------------------------------------------------------------------------------ */
 .footer {
   --ifm-footer-background-color: black;
   color: white !important;
@@ -47,70 +46,33 @@
 .footer .footer__copyright{
   color: #b9b9b9;
 }
-/* Custom footer css ------------------------------------------------------------------------------------------------ */
 
 h1 {
-  font-family: Rubik, sans-serif;
+  font-family: Rubik, sans-serif !important;
 }
 
 h2 {
-  font-family: Rubik, sans-serif;
+  font-family: Rubik, sans-serif !important;
 }
 
 h3 {
-  font-family: Rubik, sans-serif;
+  font-family: Rubik, sans-serif !important;
 }
 
 h4 {
-  font-family: Rubik, sans-serif;
+  font-family: Rubik, sans-serif !important;
 }
 
 h5 {
-  font-family: Rubik, sans-serif;
+  font-family: Rubik, sans-serif !important;
 }
 
 h6 {
-  font-family: Rubik, sans-serif;
+  font-family: Rubik, sans-serif !important;
 }
 
 p {
-  font-family: Rubik, sans-serif;
-}
-
-/* Custom css for the home page ------------------------------------------------------------------------------------- */
-
-.homepage {
-  margin-top: 40px;
-  margin-bottom: 60px;
-}
-
-.homepage h1 {
-  font-size: 80px;
-  text-align: center;
-}
-
-.homepage p {
-  font-size: 20px;
-  text-align: center;
-
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.homepage img {
-  box-shadow: 0 0 20px 0 rgba(0,0,0,0.75);
-}
-
-.image-container {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-}
-
-.image-container img {
-  margin: 0 10px;
-  width: 30%;
-  height: auto;
+  font-family: Rubik, sans-serif !important;
 }
 
 .DocItemTitle {
@@ -123,37 +85,4 @@ p {
   color: var(--ifm-color-primary-light);
   font-size: 18px;
   font-weight: bold;
-}
-
-.license {
-  margin: 40px;
-  max-width: 65%;
-}
-
-@media (max-width: 768px) {
-  .homepage {
-    margin-bottom: 20px;
-  }
-
-  .image-container {
-    flex-wrap: wrap;
-  }
-
-  .image-container img {
-    width: 90%;
-    margin: 10px 0;
-  }
-
-  .homepage p {
-    font-size: 17px;
-    text-align: center;
-
-    max-width: 60%;
-    margin: 0 auto;
-  }
-
-  .license {
-    margin: 20px;
-    max-width: 90%;
-  }
 }

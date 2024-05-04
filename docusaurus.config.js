@@ -21,8 +21,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          editUrl:
-            'https://github.com/Jacked-Up/junglesequencer.com/tree/prod/',
+          editUrl: 'https://github.com/Jacked-Up/junglesequencer.com/tree/prod/',
         },
         blog: {
           showReadingTime: true,
