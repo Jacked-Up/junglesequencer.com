@@ -3,13 +3,13 @@ import "../css/CookieConsent.css"
 
 const CookieConsent = () => {
     const [show, setShow] = useState(localStorage.getItem('cookiesAccepted') !== 'true');
-    const [hide, setHide] = useState(false); // State to handle hide animation
+    const [hide, setHide] = useState(false);
 
     const handleAccept = () => {
         console.log('Cookies accepted.');
         localStorage.setItem('cookiesAccepted', 'true');
-        setHide(true); // Trigger the hide animation
-        setTimeout(() => setShow(false), 500); // Wait for animation to complete before removing from DOM
+        setHide(true);
+        setTimeout(() => setShow(false), 500);
     };
 
     if (!show) return null;
