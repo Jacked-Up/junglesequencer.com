@@ -34,19 +34,9 @@
     margin-right: 8px;
 }
 
-/* Media Query for smaller screens */
 @media (max-width: 768px) {
     .discord-button, .github-button {
         justify-content: center;
-        width: 100%; /* Full width on smaller screens */
+        width: 100%;
     }
-    /* Centering paragraph containers only on smaller screens */
-    p {
-        text-align: center;
-    }
-}
-
-/* Ensure paragraphs containing buttons align left by default on larger screens */
-p {
-    text-align: left; /* Default alignment for paragraphs on larger screens */
 }
