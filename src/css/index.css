@@ -1,9 +1,9 @@
 :root {
-    --community-section-background: #e1e1e1;
+    --community-section-background: #eaeaea;
 }
 
 [data-theme='dark'] {
-    --community-section-background: #262626;
+    --community-section-background: #222d1e;
 }
 
 .cta-button, .discord-button, .github-button {
@@ -80,15 +80,14 @@
 /* FEATURES SECTION ------------------------------------------------------------------------------------------------- */
 
 .features-section {
-    background: linear-gradient(to bottom, var(--ifm-background-color) 25%, var(--community-section-background) 100%);
+    background: var(--ifm-background-color);
 }
 
 .features-section-unity {
     position: relative;
     display: inline-flex;
-    height: 300px;
+    height: auto;
     width: 100%;
-    margin: 24px 0;
 }
 
 .features-section-unity div {
@@ -96,10 +95,9 @@
 }
 
 .features-section-unity h2 {
-    font-size: 60px;
+    font-size: 55px;
     font-weight: bold;
     margin-bottom: 0;
-
     width: 65%;
 }
 
@@ -118,18 +116,38 @@
     filter: invert(1);
 }
 
-.features-section-content {
+.features-section-cards {
     display: flex;
-    margin-bottom: 50px;
+    flex-direction: column;
+    width: 100%;
+
+    margin-bottom: 100px;
 }
 
-.features-section-content img {
+.features-section-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
-    border-radius: 4px;
+.features-section-card .text, .features-section-card .image {
+    flex: 1 1 50%;
+    padding-right: 2vw;
+    padding-left: 2vw;
+}
 
-    margin: 0 20px;
+.features-section-card .image img {
+    width: 100%; /* Fill the container */
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.35);
+}
 
-    height: 350px;
+/* Reverse the order for alternate features */
+.features-section-card.reverse {
+    flex-direction: row-reverse;
 }
 
 /* FEATURES SECTION ------------------------------------------------------------------------------------------------- */
@@ -193,8 +211,6 @@
 
     .features-section-unity {
         display: inline-block;
-        height: auto;
-
         margin-bottom: 8vw;
     }
 
@@ -223,6 +239,18 @@
         height: auto;
 
         padding: 0 20vw;
+    }
+
+    .features-section-cards {
+        margin-bottom: 50px;
+    }
+
+    .features-section-card {
+        flex-direction: column;
+    }
+
+    .features-section-card .text, .features-section-card .image {
+        flex: 1 1 100%;
     }
 
     .community-section h1 {
