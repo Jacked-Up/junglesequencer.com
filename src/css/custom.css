@@ -6,41 +6,51 @@
 :root {
   font-family: Rubik, sans-serif !important;
 
-  --ifm-color-primary:          #298631;
-  --ifm-color-primary-dark:     #3b5e19;
-  --ifm-color-primary-darker:   #285015;
-  --ifm-color-primary-darkest:  #103d14;
-  --ifm-color-primary-light:    #828a38;
-  --ifm-color-primary-lighter:  #579637;
-  --ifm-color-primary-lightest: #1fff31;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary:          #3aca44;
+  --ifm-color-primary-dark:     #184d1b;
+  --ifm-color-primary-darker:   #0d2a0e;
+  --ifm-color-primary-darkest:  #071508;
+  --ifm-color-primary-light:    #2a9b35;
+  --ifm-color-primary-lighter:  #30b03d;
+  --ifm-color-primary-lightest: #36cc46;
+  --ifm-color-secondary:        #8c9100;
 
+  --ifm-navbar-background-color: var(--ifm-color-primary-darker);
   --ifm-navbar-sidebar-width: 100%;
-  --ifm-background-color: #f9fff9 !important;
+  --ifm-navbar-height: 4rem;
+
+  --ifm-navbar-link-color: white;
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+  --ifm-navbar-link-active-color: var(--ifm-color-primary-lightest);
+  --ifm-navbar-shadow: rgba(0, 0, 0, 0.25) 0 0 10px 0;
+
+  --ifm-navbar-search-input-background-color: white !important;
+  --ifm-navbar-search-input-color: black;
+  --ifm-navbar-search-input-placeholder-color: rgba(0, 0, 0, 0.2);
+
+  --ifm-footer-background-color: var(--ifm-color-primary-darker);
+
+  --ifm-background-color: white;
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary:          #2e9836;
-  --ifm-color-primary-dark:     #588824;
-  --ifm-color-primary-darker:   #458a23;
-  --ifm-color-primary-darkest:  #1b6521;
-  --ifm-color-primary-light:    #828a38;
-  --ifm-color-primary-lighter:  #579637;
-  --ifm-color-primary-lightest: #1fff31;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-background-color: #141a13 !important;
+}
 
-  --ifm-background-color: #091107 !important;
-  --ifm-navbar-background-color: black !important;
+.navbar {
+  color: white;
+}
+
+.navbar a {
+  color: white;
 }
 
 .footer {
-  --ifm-footer-background-color: black;
-  color: white !important;
+  color: white;
 }
 
 .footer a {
-  color: white !important;
+  color: white;
 }
 
 .footer .footer__copyright{
@@ -76,13 +86,13 @@ p {
 }
 
 .DocItemTitle {
-  color: var(--ifm-color-primary-darker);
-  font-size: 24px;
+  color: var(--ifm-color-primary);
+  font-size: 28px;
   font-weight: bold;
 }
 
 .DocItemParameter {
-  color: var(--ifm-color-primary-light);
+  color: var(--ifm-color-secondary);
   font-size: 18px;
   font-weight: bold;
 }

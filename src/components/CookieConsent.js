@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import "../css/CookieConsent.css";
-
 import BrowserOnly from '@docusaurus/BrowserOnly';
 
 const CookieConsent = () => {
@@ -13,7 +12,7 @@ const CookieConsent = () => {
         setHide(true);
         setTimeout(() => setShow(false), 500);
     };
-    
+
     if (!show) return null;
 
     return (
@@ -23,7 +22,7 @@ const CookieConsent = () => {
                 By continuing to visit this site you agree to our use of cookies.
             </p>
             <button className="understood-button" onClick={handleAccept}>
-                I Understand
+                <strong>I Understand</strong>
             </button>
         </div>
     );

@@ -1,3 +1,4 @@
+import React from "react";
 import '../css/index.css';
 import Layout from '@theme/Layout';
 
@@ -5,19 +6,87 @@ import image2 from "./img/jungle-thumbnail-2.png";
 import image3 from "./img/jungle-thumbnail-3.png";
 import image4 from "./img/jungle-thumbnail-4.png";
 
+import unityLogoBlack from "../../static/img/brands/unity/unity-logo-black.png";
+import unityLogoWhite from "../../static/img/brands/unity/unity-logo-white.png";
+
 function IndexPage() {
     return (
         <Layout>
-            <div className="homepage">
-                <h1>Jungle</h1>
-                <p>
-                    A visual node-based framework designed to help developers more easily interact with their code.
-                </p>
 
-                <div className="image-container">
-                    <img src={image2} alt="Image 2"/>
-                    <img src={image4} alt="Image 4"/>
-                    <img src={image3} alt="Image 3"/>
+            <div className="hero-section">
+                <div className="container margin-vert--xl">
+
+                    <h1>Jungle Sequencer</h1>
+                    <p>
+                        A visual node-based tool designed to help developers interact with their game code in a more
+                        intuitive way.
+                    </p>
+
+                    <a href="/docs/" rel="noopener noreferrer" className="cta-button">
+                        <strong>Learn More</strong>
+                    </a>
+
+                </div>
+            </div>
+
+            <div className="features-section">
+                <div className="container margin-vert--xl">
+
+                    <div className="features-section-unity">
+
+                        <div>
+                            <h2>
+                                Built for the Engine You Love
+                            </h2>
+                            <p>
+                                Supported on Unity versions <span className="text-glow"><strong>2021.3 +</strong></span>
+                            </p>
+                        </div>
+                        <img src={unityLogoBlack} alt="Unity Logo (black)" />
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div className="community-section">
+                <div className="container margin-vert--xl">
+                    <h1>Community</h1>
+                    <p>
+                        Connect with other developers, share your projects, and get help with Jungle Sequencer.
+                    </p>
+
+                    <br/>
+
+                    <div>
+                    <h2>Discord Server</h2>
+                        <p>
+                            Chat with the community, ask questions, and get help with your projects.
+                        </p>
+                        <a href="https://discord.gg/vJ4AXsExfE" target="_blank" rel="noopener noreferrer"
+                           className="discord-button">
+                            <img
+                                src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/653714c1f22aef3b6921d63d_636e0a6ca814282eca7172c6_icon_clyde_white_RGB.svg"
+                                alt="Discord" height="20"/>
+                            <strong>Join Server</strong>
+                        </a>
+                    </div>
+
+                    <br/>
+
+                    <div>
+                        <h2>GitHub Discussions</h2>
+                        <p>
+                            Join the discussions on GitHub to explore more topics and engage with the community.
+                        </p>
+                        <a href="https://github.com/Jacked-Up/junglesequencer.com/discussions" target="_blank"
+                           rel="noopener noreferrer" className="github-button">
+                            <img
+                                src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-github-1.png&r=255&g=255&b=255"
+                                alt="GitHub" height="24"/>
+                            <strong>Join Discussions</strong>
+                        </a>
+                    </div>
                 </div>
             </div>
         </Layout>

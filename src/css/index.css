@@ -1,56 +1,249 @@
-.homepage {
-    margin-top: 40px;
-    margin-bottom: 60px;
+:root {
+    --community-section-background: #e1e1e1;
 }
 
-.homepage h1 {
-    font-size: 80px;
-    text-align: center;
+[data-theme='dark'] {
+    --community-section-background: #262626;
 }
 
-.homepage p {
-    font-size: 20px;
-    text-align: center;
-
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.homepage img {
-    box-shadow: 0 0 20px 0 rgba(0,0,0,0.75);
-}
-
-.image-container {
-    margin-top: 40px;
+.cta-button, .discord-button, .github-button {
+    font-family: Rubik, sans-serif;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
     display: flex;
+    align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 250px;
+    box-shadow: 0 0 20px 2px rgba(0,0,0,0.25);
 }
 
-.image-container img {
-    margin: 0 10px;
-    width: 30%;
-    height: auto;
+.cta-button img, .discord-button img, .github-button img {
+    margin-right: 8px;
 }
+
+.cta-button:hover, .discord-button:hover, .github-button:hover {
+    color: white;
+    transform: scale(1.05);
+}
+
+.text-glow {
+    color: var(--ifm-color-primary);
+    text-shadow: 0 0 25px rgba(159, 234, 55, 0.5);
+}
+
+/* HERO SECTION ----------------------------------------------------------------------------------------------------- */
+
+.hero-section {
+    background:
+        url("../../src/pages/img/jungle-hero-background.png") no-repeat bottom center,
+        linear-gradient(to right, var(--ifm-color-primary-darker) 0%, var(--ifm-color-primary-dark) 60%);
+    box-shadow: 0 0 20px 2px rgba(0,0,0,0.25);
+
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    padding: 24px 24px;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    color: white;
+    font-size: 100px;
+}
+
+.hero-section p {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-section a {
+    margin-top: 64px;
+}
+
+.cta-button {
+    background-color: var(--ifm-color-primary-dark);
+}
+
+.cta-button:hover {
+    background-color: var(--ifm-color-primary);
+    box-shadow: 0 0 50px 5px rgba(120, 255, 34, 0.25);
+}
+
+/* HERO SECTION ----------------------------------------------------------------------------------------------------- */
+
+/* FEATURES SECTION ------------------------------------------------------------------------------------------------- */
+
+.features-section {
+    background: linear-gradient(to bottom, var(--ifm-background-color) 25%, var(--community-section-background) 100%);
+}
+
+.features-section-unity {
+    position: relative;
+    display: inline-flex;
+    height: 300px;
+    width: 100%;
+    margin: 24px 0;
+}
+
+.features-section-unity div {
+    margin-right: 24px;
+}
+
+.features-section-unity h2 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 0;
+
+    width: 65%;
+}
+
+.features-section-unity p {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.features-section-unity img {
+    position: absolute;
+    right: 0;
+    height: 11vw;
+}
+
+[data-theme='dark'] .features-section-unity img {
+    filter: invert(1);
+}
+
+.features-section-content {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.features-section-content img {
+
+    border-radius: 4px;
+
+    margin: 0 20px;
+
+    height: 350px;
+}
+
+/* FEATURES SECTION ------------------------------------------------------------------------------------------------- */
+
+/* COMMUNITY SECTION ------------------------------------------------------------------------------------------------ */
+
+.community-section {
+    background-color: var(--community-section-background);
+    color: black;
+}
+
+[data-theme='dark'] .community-section {
+    color: white;
+}
+
+.community-section h1 {
+    font-size: 50px;
+}
+
+.discord-button {
+    background-color: #5865F2;
+}
+
+.discord-button:hover {
+    background-color: #7289DA;
+    box-shadow: 0 0 50px 5px rgba(114, 137, 218, 0.5);
+}
+
+.github-button {
+    background-color: #0f1113;
+}
+
+.github-button:hover {
+    background-color: #292f36;
+    box-shadow: 0 0 50px 5px rgba(15, 17, 19, 0.5);
+}
+
+/* COMMUNITY SECTION ------------------------------------------------------------------------------------------------ */
 
 @media (max-width: 768px) {
-    .homepage {
-        margin-bottom: 20px;
+    .hero-section {
+        background:
+                url("../../src/pages/img/jungle-hero-background.png") no-repeat bottom center,
+                linear-gradient(to right, var(--ifm-color-primary-darker) 0%, var(--ifm-color-primary-dark) 60%);
+        padding: 12px 0;
     }
 
-    .homepage p {
-        font-size: 17px;
-        text-align: center;
+    .hero-section h1 {
+        color: white;
 
-        max-width: 60%;
+        font-size: 9vw;
+        text-align: center;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+        text-align: center;
+        max-width: 90%;
         margin: 0 auto;
     }
 
-    .image-container {
-        flex-wrap: wrap;
+    .features-section-unity {
+        display: inline-block;
+        height: auto;
+
+        margin-bottom: 8vw;
     }
 
-    .image-container img {
+    .features-section-unity div {
+        margin-right: 0;
+    }
+
+    .features-section-unity h2 {
+        font-size: 10vw;
+        font-weight: bold;
+        text-align: center;
+
+        width: 100%;
+    }
+
+    .features-section-unity p {
+        font-size: 4vw;
+        margin-top: 12px;
+        text-align: center;
+
+        width: 100%;
+    }
+
+    .features-section-unity img {
+        width: 100%;
+        height: auto;
+
+        padding: 0 20vw;
+    }
+
+    .community-section h1 {
+        font-size: 10vw;
+        text-align: center;
+    }
+
+    .community-section h2 {
+        font-size: 8vw;
+        text-align: center;
+    }
+
+    .community-section p {
+        font-size: 3vw;
+        text-align: center;
+        max-width: 90%;
+        margin: 12px auto;
+    }
+
+    .cta-button, .discord-button, .github-button {
         width: 90%;
-        margin: 10px 0;
+        margin: 0 auto;
     }
 }
