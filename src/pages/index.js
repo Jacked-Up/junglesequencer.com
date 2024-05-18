@@ -18,7 +18,6 @@ function IndexPage() {
 
             <div className="hero-section">
                 <div className="container margin-vert--xl">
-
                     <h1>Jungle Sequencer</h1>
                     <p>
                         A visual node-based tool designed to help developers interact with their game code in a more
@@ -28,7 +27,6 @@ function IndexPage() {
                     <a href="/docs/" rel="noopener noreferrer" className="cta-button">
                         <strong>Learn More</strong>
                     </a>
-
                 </div>
             </div>
 
@@ -41,7 +39,7 @@ function IndexPage() {
                             <div className="text">
                                 <h2>Creating and Editing Sequences</h2>
                                 <p>
-                                    Drag and drop nodes from the node explorer into the graph view to form a sequence,
+                                Drag and drop nodes from the node explorer into the graph view to form a sequence,
                                     and edit node properties using the inspector.
                                 </p>
                             </div>

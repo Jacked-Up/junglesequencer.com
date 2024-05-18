@@ -6,3 +6,33 @@ slug: /guides/jungle-editor/node-inspector
 ---
 
 The inspector is a section of the interface where you can view and edit the properties of a selected node.
+
+---
+## Opening a Node in the Inspector
+
+The node inspector automatically displays the properties of the most recently selected node.
+
+:::info NO MULTIPLE SELECTION EDITING SUPPORT
+**Currently**, the node inspector does not support editing multiple nodes at once.
+:::
+
+---
+## Renaming Nodes
+
+You can rename nodes using the text input at the top of the inspector. The name does not need to be unique.
+
+![Renaming nodes in the inspector](img/jungle-editor-inspector-rename.png)
+
+All nodes automatically are given a unique name when they are created.
+
+:::info NAME REQUIREMENTS
+The name of a node must be at least **one** character long.
+:::
+
+---
+## Custom Node Inspectors
+
+Custom node inspectors are a powerful way to extend the functionality of your nodes.
+Building inspectors for nodes works the same way as building `MonoBehaviour` and `ScriptableObject` custom inspectors.
+
+Read more about custom node inspectors **[here](../../guides/custom-node-inspectors)**.

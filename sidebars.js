@@ -27,7 +27,6 @@ const sidebars = {
       'documentation/jungle-exception'
   ],
   guidesSidebar: [
-      'guides/installing-jungle',
       'guides/creating-nodes',
       'guides/deleting-nodes',
       {
@@ -47,8 +46,7 @@ const sidebars = {
       'guides/jungle-validator',
       'guides/custom-node-inspectors',
       'guides/node-editor-context',
-      'guides/revert-actions',
-      'guides/over-time-helper'
+      'guides/revert-actions'
   ],
 };
 
