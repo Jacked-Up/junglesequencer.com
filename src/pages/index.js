@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import '../css/index.css';
 import Layout from '@theme/Layout';
 
@@ -15,7 +15,6 @@ import feature6 from "../../static/img/feature-cards/feature-card-6.png";
 function IndexPage() {
     return (
         <Layout>
-
             <div className="hero-section">
                 <div className="container margin-vert--xl">
                     <h1>Jungle Sequencer</h1>
@@ -23,7 +22,6 @@ function IndexPage() {
                         A visual node-based tool designed to help developers interact with their game code in a more
                         intuitive way.
                     </p>
-
                     <a href="/docs/" rel="noopener noreferrer" className="cta-button">
                         <strong>Learn More</strong>
                     </a>
@@ -32,14 +30,20 @@ function IndexPage() {
 
             <div className="features-section">
                 <div className="container margin-vert--xl">
+                    <div className="features-video">
+                        <h2>Welcome to the Jungle!</h2>
+                        <p>Watch this video to see Jungle Sequencer in action and learn how it can enhance your development workflow.</p>
+                        <div className="video-wrapper">
+                            <iframe width="700" height="394" src="https://www.youtube.com/embed/mX08Ofr6Fcc?enablejsapi=1" frameBorder="0" allowFullScreen></iframe>
+                        </div>
+                    </div>
 
                     <div className="features-section-cards">
-
                         <div className="features-section-card">
                             <div className="text">
                                 <h2>Creating and Editing Sequences</h2>
                                 <p>
-                                Drag and drop nodes from the node explorer into the graph view to form a sequence,
+                                    Drag and drop nodes from the node explorer into the graph view to form a sequence,
                                     and edit node properties using the inspector.
                                 </p>
                             </div>
@@ -110,11 +114,9 @@ function IndexPage() {
                                 <img src={feature6} alt="Feature 6"/>
                             </div>
                         </div>
-
                     </div>
 
                     <div className="features-section-unity">
-
                         <div>
                             <h2>
                                 Built for the Engine You Love
@@ -124,9 +126,7 @@ function IndexPage() {
                             </p>
                         </div>
                         <img src={unityLogoBlack} alt="Unity Logo (black)"/>
-
                     </div>
-
                 </div>
             </div>
 

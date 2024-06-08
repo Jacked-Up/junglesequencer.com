@@ -40,8 +40,8 @@
 
 .hero-section {
     background:
-        url("../../src/pages/img/jungle-hero-background.png") no-repeat bottom center,
-        linear-gradient(to right, var(--ifm-color-primary-darker) 0%, var(--ifm-color-primary-dark) 60%);
+            url("../../src/pages/img/jungle-hero-background.png") no-repeat bottom center,
+            linear-gradient(to right, var(--ifm-color-primary-darker) 0%, var(--ifm-color-primary-dark) 60%);
     box-shadow: 0 0 20px 2px rgba(0,0,0,0.25);
 
     position: relative;
@@ -83,6 +83,41 @@
     background: var(--ifm-background-color);
 }
 
+.features-video {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.features-video h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.features-video p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 39.375%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 70%;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 8px;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.2);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .features-section-unity {
     position: relative;
     display: inline-flex;
@@ -120,7 +155,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-
     margin-bottom: 100px;
 }
 
@@ -197,7 +231,6 @@
 
     .hero-section h1 {
         color: white;
-
         font-size: 9vw;
         text-align: center;
     }
@@ -222,7 +255,6 @@
         font-size: 10vw;
         font-weight: bold;
         text-align: center;
-
         width: 100%;
     }
 
@@ -230,14 +262,12 @@
         font-size: 4vw;
         margin-top: 12px;
         text-align: center;
-
         width: 100%;
     }
 
     .features-section-unity img {
         width: 100%;
         height: auto;
-
         padding: 0 20vw;
     }
 
