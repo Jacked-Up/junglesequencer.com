@@ -100,7 +100,7 @@
 
 .video-wrapper {
     position: relative;
-    padding-bottom: 39.375%; /* 16:9 ratio */
+    padding-bottom: 39.375%;
     height: 0;
     overflow: hidden;
     max-width: 70%;
@@ -242,6 +242,11 @@
         margin: 0 auto;
     }
 
+    .video-wrapper {
+        padding-bottom: 56.25%;
+        max-width: 100%;
+    }
+
     .features-section-unity {
         display: inline-block;
         margin-bottom: 8vw;
@@ -282,6 +287,7 @@
     .features-section-card .text, .features-section-card .image {
         flex: 1 1 100%;
     }
+
 
     .community-section {
         background: linear-gradient(to top, var(--ifm-color-primary-darker) 0%, var(--ifm-color-primary-dark) 60%);
