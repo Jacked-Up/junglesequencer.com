@@ -87,7 +87,7 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: 'Socials',
             items: [
               {
                 label: 'Discord Server',
@@ -97,6 +97,10 @@ const config = {
                 label: 'GitHub Discussions',
                 href: 'https://github.com/Jacked-Up/junglesequencer.com/discussions',
               },
+              {
+                label: 'Trello Board',
+                href: 'https://trello.com/b/hSJvNBCh/jungle-sequencer',
+              }
             ],
           },
           {
