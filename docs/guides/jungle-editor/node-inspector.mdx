@@ -5,7 +5,7 @@ sidebar_position: 2
 slug: /guides/jungle-editor/node-inspector
 ---
 
-The inspector is a section of the interface where you can view and edit the properties of a selected node.
+The node inspector is the section of the interface where you edit the properties of a node.
 
 import VideoPlayer from '@site/src/components/VideoPlayer';
 
@@ -15,32 +15,31 @@ import VideoPlayer from '@site/src/components/VideoPlayer';
     description="Here's a video style guide on how to use the Jungle Editor. Watch this if you prefer to watch rather than read!"
 />
 
+<br />
 ---
-## Opening a Node in the Inspector
+## Editing Nodes
 
-The node inspector automatically displays the properties of the most recently selected node.
+To edit a node's properties, simply left-click on the node within the graph.
 
-:::info NO MULTIPLE SELECTION EDITING SUPPORT
-**Currently**, the node inspector does not support editing multiple nodes at once.
-:::
+![Opening nodes in the inspector](img/node-inspector-opening-nodes.gif)
+
+This will open the node's inspector where you can modify its properties.
+
+![Editing nodes in the inspector](img/node-inspector-editing-nodes.gif)
 
 ---
 ## Renaming Nodes
 
-You can rename nodes using the text input at the top of the inspector. The name does not need to be unique.
+You can rename a node using the text input field located at the top of the inspector interface.
+The node's name does not need to be unique.
 
-![Renaming nodes in the inspector](img/jungle-editor-inspector-rename.png)
-
-All nodes automatically are given a unique name when they are created.
-
-:::info NAME REQUIREMENTS
-The name of a node must be at least **one** character long.
-:::
+![Renaming nodes in the inspector](img/node-inspector-renaming-nodes.gif)
 
 ---
-## Custom Node Inspectors
+## Custom Inspectors
 
-Custom node inspectors are a powerful way to extend the functionality of your nodes.
-Building inspectors for nodes works the same way as building `MonoBehaviour` and `ScriptableObject` custom inspectors.
+The node inspector supports custom inspectors, offering a powerful way to extend the functionality of your nodes.
+Creating custom inspectors for nodes is similar to creating them for `MonoBehaviour` and `ScriptableObject`.
+This allows for tailored interfaces that suit the specific needs of your nodes.
 
-Read more about custom node inspectors **[here](../../guides/custom-node-inspectors)**.
+For a detailed guide on creating custom node inspectors, read more **[here](../../guides/custom-node-inspectors)**.
