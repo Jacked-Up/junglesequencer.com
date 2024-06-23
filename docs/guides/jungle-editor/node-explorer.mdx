@@ -5,7 +5,7 @@ sidebar_position: 3
 slug: /guides/jungle-editor/node-explorer
 ---
 
-The explorer is a section of the interface where you can drag and drop nodes into the graph.
+The node explorer is an organized list of every node in the project.
 
 import VideoPlayer from '@site/src/components/VideoPlayer';
 
@@ -15,38 +15,30 @@ import VideoPlayer from '@site/src/components/VideoPlayer';
     description="Here's a video style guide on how to use the Jungle Editor. Watch this if you prefer to watch rather than read!"
 />
 
+<br />
 ---
 
-![Jungle editor explorer](img/jungle-editor-explorer.gif)
+The node explorer is a structured and organized list of every node in your project.
+Nodes are added automatically and can be categorized for better organization.
 
----
-## Explorer Categories
+![Browsing the node explorer categories](img/node-explorer-browsing-the-categories.gif)
 
-The node explorer is organized into defined categories.
+To organize nodes into custom categories, set the `Category` property of the `NodeProperties` attribute on your nodes.
+This allows you to create a customized and easily navigable hierarchy within the node explorer.
 
-![Jungle editor explorer game object](img/jungle-editor-explorer-gameobject.png)
-
-You should organize your nodes into categories that make sense for your project. Categories can be as many folders deep
-as you want.
-
-Your node's category is defined in the `NodeProperties` attribute.
-Read more about that **[here](../../jungle-nodes/node-properties#category)**.
-
----
-## Adding My Nodes to the Explorer
-
-Any nodes you create will automatically be added to the node explorer.
-
-The second your node compiles, it will be **search-able** and **add-able** from the node explorer.
-
----
-## Searching for Nodes
-
-The search bar at the top of the node explorer allows you to search for nodes by name.
-The searches are not case-sensitive.
-
-:::tip TIP
-If you would like to display all nodes in the explorer on one page, type a space into the search bar.
-
-![Jungle editor explorer space trick](img/jungle-editor-explorer-space-trick.png)
+:::info NODE PROPERTIES DOCUMENTATION
+Read more about setting the `Category` property of the `NodeProperties` attribute **[here](../../../docs/jungle-nodes/node-properties#category)**.
 :::
+
+---
+## Adding Nodes
+
+The node explorer allows you to drag and drop a node into the graph.
+
+![Jungle editor explorer](img/node-graph-adding-nodes-via-node-explorer.gif)
+
+**To add a node via the Node Explorer:**
+- Scroll through the Node Explorer to find the node you want to add.
+You can also use the search bar at the top to quickly locate the desired node.
+- Click and hold on the node you wish to add. Drag it from the Node Explorer into the graph view.
+- Move the node to the desired position on the graph and release the mouse button.
