@@ -1,0 +1,48 @@
+---
+slug: release-v1-0-3
+title: Release v1.0.3
+authors: jackapacka
+---
+
+Hey all 👋, Jungle **v1.0.3** has FINALLY been released.
+
+After 114 commits, 90 hours of work, and a month of intense development,
+I'm pleased to announce the release of Jungle v1.0.3. This update brings a host of new features, critical improvements,
+and a few notable changes that should enhance your workflow.
+
+---
+
+**New Features:**
+- **New Jungle Tree Inspector Look:** The inspector now has a fresh appearance, including an added error handler section.
+- **Gizmos System Multi-Scene Workflow Support:** Expanded capabilities for multi-scene support in the Gizmos system.
+- **"OnLateUpdate" Callback to Nodes:** Introducing the "OnLateUpdate" callback for improved node handling.
+- **Helper Utility Classes:** New "JungleUtils" and "JungleEditorUtils" classes to streamline your development process.
+
+**Improvements:**
+- **Complete Runtime System Refactor:**
+    - Tree runtime operations are now managed by the new "JunglePlayback" system, resulting in improved performance.
+- **Gizmos System Refactor:** The entire system has been overhauled for better efficiency.
+- **Editor Window Refactor:** The Jungle Editor window has been completely revamped.
+- **Inspector Panel Refactor:** The Jungle Editor inspector panel has been improved for better usability.
+- **Cache System Enhancements:** Significant performance improvements for both Jungle Node type and icon cache systems.
+    - The default icon cache max allocation size is now 100.
+    - Disabling the icon cache is no longer an option.
+
+Additionally, numerous bug fixes have been implemented to ensure a smoother experience.
+
+---
+
+This update goes beyond adding features and fixing bugs.
+It involved a major overhaul of the core runtime system.
+Think of it like adding a basement to an already constructed house.
+This refactor was necessary to move runtime logic off Jungle Trees, making them operate as instances of the original.
+
+The outcome is a significantly faster and more memory-efficient runtime system.
+With fewer GC allocations and data caching in dictionaries instead of lists, performance has notably improved.
+This groundwork also paves the way for the forthcoming **Multiton Trees** in v1.1.0. Soon,
+you'll be able to run the same tree multiple times simultaneously, enhancing capabilities such as NPC behavior.
+
+**Hope you enjoy Jungle v1.0.3!**
+
+Happy developing,
+<br/>**Jack Randolph**
