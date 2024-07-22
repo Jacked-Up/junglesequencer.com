@@ -1,37 +1,148 @@
 ---
 title: Jungle Runtime
-sidebar_position: 7
-
 slug: /jungle-runtime
 ---
 
-The Jungle runtime is a multi-script system. It's essentially every part of the framework that is built directly into
-the application. The runtime is designed in a way where the entire editor system could be stripped from the project and
-the framework would still function.
+The `JungleRuntime` class manages the playback of `JungleTree` instances.
+It handles starting, stopping, and updating the playbacks, and provides events for monitoring the lifecycle of the trees.
 
-You should **NEVER** need to interact with the runtime directly. Jungle is designed to manage the runtime systems all
-automatically.
+## Overview
 
----
-## Systems
-
-The runtime systems start at the `JungleTree` class. This class acts as the container for sequences and is responsible
-for not only playing the sequence but also managing the creation, deletion, and execution of nodes.
-
-The `JungleNode` class is an extendable container for functions and behaviors. Nodes also manage their connections and
-disconnections.
-
-The `JungleRuntime` class itself is simply a `MonoBehaviour` that listens for Unity events and passes them to the trees.
+The `JungleRuntime` class provides the following functionalities:
+- Managing the playback lifecycle of `JungleTree` instances.
+- Providing events for tree start and stop.
+- Ensuring that playbacks are properly cleaned up.
 
 ---
-## Lifecycle
+## Methods
 
-The runtime will always automatically create the game object named "[Jungle Runtime]" and throw it into the
-"DontDestroyOnLoad" scene.
+### `TryGetPlayback`
 
-The game object contains a script named `JungleRuntime` that is used to listen for Unity MonoBehaviour event actions
-such as the `Update` and `FixedUpdate` events.
+`public static bool TryGetPlayback(JungleTree tree, out JunglePlayback playback)`
 
-:::warning
-Do not delete the "[Jungle Runtime]" game object from the scene. It is required for the framework to function.
-:::
+Attempts to get the `JunglePlayback` associated with the specified `JungleTree`.
+
+**Returns:**
+- `true` if the playback is found; otherwise, `false`.
+
+### `IsPlaying`
+
+`public static bool IsPlaying(JungleTree tree)`
+
+Checks if the specified `JungleTree` instance is currently running.
+
+**Returns:**
+- `true` if the tree is running; otherwise, `false`.
+
+### `Play`
+
+`public static string Play(JungleTree tree)`
+
+Starts playing the specified `JungleTree` instance.
+
+**Returns:**
+- A string representing the unique identifier of the playback, or `null` if the tree cannot be played.
+
+### `Play`
+
+`public static string Play(JungleTree tree, out JunglePlayback playback)`
+
+Starts playing the specified `JungleTree` instance and returns the associated `JunglePlayback`.
+
+**Returns:**
+- A string representing the unique identifier of the playback, or `null` if the tree cannot be played.
+
+### `Stop`
+
+`public static void Stop(JungleTree tree)`
+
+Stops the specified `JungleTree` instance if it is currently running.
+
+### `Stop`
+
+`public static void Stop(JunglePlayback playback)`
+
+Stops the specified `JunglePlayback` instance if it is currently registered and running.
+
+---
+## Events
+
+### `OnTreePlay`
+
+`public static event Action<JungleTree> OnTreePlay`
+
+Called when a `JungleTree` has begun playing.
+
+**Values:**
+- `JungleTree`: The tree that has started playing.
+
+### `OnTreeStop`
+
+`public static event Action<JungleTree> OnTreeStop`
+
+Called when a `JungleTree` has finished playing or was stopped.
+
+**Values:**
+- `JungleTree`: The tree that has stopped playing.
+
+---
+## Examples
+
+### Playing a `JungleTree`
+
+To start playing a `JungleTree` instance, use the `Play` method:
+
+```csharp
+using Jungle;
+using UnityEngine;
+
+public class JungleExample : MonoBehaviour
+{
+    [SerializeField]
+    private JungleTree jungleTree;
+
+    private string _playbackUid;
+
+    private void Start()
+    {
+        // Option 1:
+        _playbackUid = JungleRuntime.Play(jungleTree);
+
+        // Option 2:
+        _playbackUid = JungleRuntime.Play(jungleTree, out JunglePlayback playback);
+    }
+}
+```
+
+### Stopping a `JungleTree`
+
+To stop a running `JungleTree` instance, use the `Stop` method:
+
+```csharp
+using Jungle;
+using UnityEngine;
+
+public class JungleExample : MonoBehaviour
+{
+    [SerializeField]
+    private JungleTree jungleTree;
+
+    private string _playbackUid;
+    private JunglePlayback _playback;
+
+    private void Start()
+    {
+        _playbackUid = JungleRuntime.Play(jungleTree, out _playback);
+        Invoke(nameof(StopJungleTree), 5f);
+    }
+
+    private void StopJungleTree()
+    {
+        // Option 1: Stop via a playback uid
+        JungleRuntime.Stop(_playbackUid);
+
+        // Option 2: Stop via a playback reference
+        JungleRuntime.Stop(_playback);
+    }
+}
+```

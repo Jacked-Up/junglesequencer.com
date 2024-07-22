@@ -11,7 +11,9 @@ const sidebars = {
           },
           collapsed: false,
           items: [
+              'documentation/jungle-nodes/jungle-node',
               'documentation/jungle-nodes/node-properties',
+              'documentation/jungle-nodes/jungle-port',
               'documentation/jungle-nodes/branch-node',
               'documentation/jungle-nodes/io-node',
               'documentation/jungle-nodes/identity-node',
@@ -19,11 +21,11 @@ const sidebars = {
           ],
       },
       'documentation/jungle-tree',
-      'documentation/jungle-port',
+      'documentation/jungle-runtime',
+      'documentation/jungle-playback',
       'documentation/jungle-manifest',
       'documentation/jungle-player',
       'documentation/jungle-gizmos',
-      'documentation/jungle-runtime',
       'documentation/jungle-exception'
   ],
   guidesSidebar: [

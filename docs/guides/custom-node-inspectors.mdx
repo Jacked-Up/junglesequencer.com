@@ -60,23 +60,14 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-[NodeProperties(
-    Title = "My Node",
-    Description = "You friendly neighborhood node.",
-    Category = "My Nodes",
-    Color = Blue
-)]
-[GenericNode(
-    InputPortName = "Start",
-    OutputPortName = "Next"
-)]
-public class MyNode : GenericNode
+public class MyNode : IdentityNode
 {
     [SerializeField]
     private float value = 1f;
 
     protected override void OnStart()
     {
+        Debug.Log(value.ToString());
         CallAndStop();
     }
 

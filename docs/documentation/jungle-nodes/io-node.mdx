@@ -1,9 +1,10 @@
 ---
 title: IO Node<T>
-sidebar_position: 2
-
 slug: /jungle-nodes/io-node
 ---
+
+The IO Node is a simpler version of the Branch Node.
+It takes a single input of any type, and outputs to a single outputof any type.
 
 import VideoPlayer from '@site/src/components/VideoPlayer';
 
@@ -14,10 +15,7 @@ import VideoPlayer from '@site/src/components/VideoPlayer';
 />
 
 ---
-The IO Node is a simpler version of the Branch Node. It takes a single input of any type, and outputs to a single output
-of any type.
-
----
+## Overview
 
 All IO Nodes are required to have an `IONode` class attribute defined. This attribute defines the input port and
 output port on the node.
@@ -53,119 +51,125 @@ public class MyIONode : IONode<float>
 :::
 
 ---
-## Code Reference
+:::tip
+The `IONode<T>` class inherits from the `JungleNode` class.
+This means all public and protected members of `JungleNode` are accessible within `IONode<T>`.
 
-**Namespace: `Jungle`**
-
-### Properties
-
-<span class="DocItemTitle">JungleTree</span>
-<br />`public JungleTree JungleTree { get; }`
-<br />_Reference to the nodes Jungle Tree._
-
-<span class="DocItemTitle">OutputPorts</span>
-<br />`public Port[] OutputPorts { get; }`
-<br />_List of the nodes output ports._
-
-<span class="DocItemTitle">IsRunning</span>
-<br />`public bool IsRunning { get; }`
-<br />_True if the node is currently running._
-
-<span class="DocItemTitle">Nothing</span>
-<br />`public static readonly Port.None Nothing`
-<br />_Equivalent to new Port.None()._
-
----
-
-<span class="DocItemTitle">GetTitle()</span>
-<br />`public string GetTitle()`
-<br />_Returns the nodes title._
-
-<span class="DocItemTitle">GetDescription()</span>
-<br />`public string GetDescription()`
-<br />_Returns a brief description of the nodes function._
-
-<span class="DocItemTitle">GetCategory()</span>
-<br />`public string GetCategory()`
-<br />_Returns the nodes category._
-
-<span class="DocItemTitle">GetColor()</span>
-<br />`public Color GetColor()`
-<br />_Returns the nodes accent color._
-
-:::warning EDITOR ONLY
-Fetching the Jungle Nodes icon only works in the Unity editor.
-In a build, this method will return a blank white texture.
-
-<span class="DocItemTitle">GetIcon()</span>
-<br />`public Texture GetIcon()`
-<br />_Returns the nodes icon._
+Read about the base `JungleNode` class **[here](../jungle-nodes/jungle-node)**.
 :::
 
-<span class="DocItemTitle">GetUid()</span>
-<br />`public string GetUid()`
-<br />_Returns the nodes unique id._
+## Properties
 
-<span class="DocItemTitle">IsDeprecated()</span>
-<br />`public bool IsDeprecated()`
-<br />_Returns true if the node is declared deprecated._
+### `Uid`
 
-<span class="DocItemTitle">GetInputPortInfo()</span>
-<br />`public override Port.Info GetInputPortInfo()`
-<br />_Returns info about the nodes input port._
+`public string Uid { get; }`
 
-<span class="DocItemTitle">GetOutputPortsInfo()</span>
-<br />`public override Port.Info[] GetOutputPortsInfo()`
-<br />_Returns info about the nodes output port(s)._
+Gets the unique identifier for this node.
 
----
-### Events
+### `JungleTree`
 
-<span class="DocItemTitle">OnValidated</span>
-<br />`public event Action<bool> OnNodeValidated`
-<br />_Invoked whenever a validation pass is perform on this node. Argument is true if any issues are reported._
+`public JungleTree JungleTree { get; }`
 
----
-### Methods
+Gets a reference to the original tree this node is part of.
 
-<span class="DocItemTitle">OnStart(<span class="DocItemParameter">T</span>)</span>
-<br />`protected abstract void OnStart(in T inputValue)`
-<br />_Called immediately when the node is called by another node. The input value is the value sent by the calling node._
+### `OutputPorts`
 
-<span class="DocItemTitle">OnUpdate()</span>
-<br />`protected abstract void OnUpdate()`
-<br />_Called every frame while the node is running. Always called after **OnStart**._
+`public Port[] OutputPorts { get; }`
 
-:::info REQUIRED METHODS
-Both **OnStart** and **OnUpdate** are required methods in all Jungle Nodes.
-Your node script will **NOT** compile without them.
-:::
+Gets the list of output ports for this node.
 
-<span class="DocItemTitle">OnStop()</span>
-<br />`protected virtual void OnStop()`
-<br />_Called immediately after this node is stopped._
+### `Nothing`
 
-<span class="DocItemTitle">GetDetails()</span>
-<br />`public override string GetDetails()`
-<br />_Override this and return the information you would like to display in the Jungle Editor._
+`public static readonly Port.None Nothing`
 
-<span class="DocItemTitle">OnValidation()</span>
-<br />`protected virtual Issue[] OnValidation()`
-<br />_Called whenever a validation pass is performed on this node. Return any issues in your script here to display them inside the [Jungle Validator](/docs/guides/jungle-validator)._
+Gets the shorthand equivalent of `new Port.None()`.
+
+### `IsPlayback`
+
+`public bool IsPlayback { get; }`
+
+Indicates whether this node is an instance of a playback.
+
+### `Playback`
+
+`public JunglePlayback Playback`
+
+Gets the playback instance associated with this node.
 
 ---
+## Methods
 
-<span class="DocItemTitle">CallAndStop(<span class="DocItemParameter">object</span>)</span>
-<br />`protected void CallAndStop(object outputValue)`
-<br />_Both sends the output value to all nodes connected to the node and stops the node._
+### `GetInputPortInfo`
 
-<span class="DocItemTitle">Call(<span class="DocItemParameter">object</span>)</span>
-<br />`protected void Call(object outputValue)`
-<br />_Sends the output value to all nodes connected to this node's output._
+`public override Port.Info GetInputPortInfo()`
 
-<span class="DocItemTitle">Stop()</span>
-<br />`protected void Stop()`
-<br />_Stops the node without sending a port call._
+Returns information about the node's input port.
+
+### `GetOutputPortsInfo`
+
+`public override Port.Info[] GetOutputPortsInfo()`
+
+Returns information about the node's output ports.
+
+### `AddRevertAction`
+
+`public string AddRevertAction(Action action)`
+
+Adds a revert action to be executed when the playback stops.
+
+### `Call`
+
+`protected void Call(object outputValue)`
+
+Sends out a port call without stopping the node.
+
+### `Stop`
+
+`protected void Stop()`
+
+Stops the node without sending out a port call.
+
+### `CallAndStop`
+
+`protected void CallAndStop(object outputValue)`
+
+Sends out a port call and stops the node.
+
+### `OnStart`
+
+`protected abstract void OnStart(T inputValue)`
+
+Invoked immediately when this node is started.
+
+### `OnStop`
+
+`protected virtual void OnStop()`
+
+Invoked immediately when this node is stopped.
+
+### `OnUpdate`
+
+`protected abstract void OnUpdate()`
+
+Invoked every frame while this node is running.
+
+### `OnLateUpdate`
+
+`protected virtual void OnLateUpdate()`
+
+Invoked every frame after every update function has been called.
+
+### `OnFixedUpdate`
+
+`protected virtual void OnFixedUpdate()`
+
+Invoked every fixed frame while this node is running.
+
+### `OnValidation`
+
+`protected virtual string[] OnValidation()`
+
+Called whenever the tree performs a validation pass. Should return a list of issues with the node if any.
 
 ---
 ## Boilerplate

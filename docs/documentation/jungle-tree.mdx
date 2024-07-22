@@ -1,169 +1,93 @@
 ---
 title: Jungle Tree
-sidebar_position: 3
-
 slug: /jungle-tree
 ---
 
-Trees act as the containers for your nodes.
-Each tree should represent a sequence of actions that you want to execute in your game.
+The `JungleTree` class is a container for storing and managing sequences of `JungleNode`s.
+It includes helper methods for adding, removing, connecting, and disconnecting `JungleNode`s.
+
+## Overview
+
+The `JungleTree` class provides the following functionalities:
+- Managing a list of nodes in the tree.
+- Adding, removing, and updating nodes.
+- Connecting and disconnecting nodes.
+- Handling editor-specific functionalities.
 
 ---
-## Creating Trees
+## Properties
 
-To create a tree in your project, right-click in the Assets window and select `Create > Jungle Tree`.
+### `Nodes`
 
-This will create a new tree asset in your project. Double-clicking the tree will open it in the editor.
+`public JungleNode[] Nodes { get; }`
 
----
-## Starting Trees
+List of all nodes in the tree.
 
-Starting and stopping a tree is as easy as calling the `Start()` and `Stop()` functions on the tree instance.
+### `Uid`
 
-import VideoPlayer from '@site/src/components/VideoPlayer';
+`public string Uid { get; }`
 
-<VideoPlayer
-    videoUrl="https://youtu.be/OsJylOYYcfk"
-    title="Starting Jungle Trees"
-    description="Here's a video that goes over starting Jungle Trees via the Jungle Player and via script."
-/>
-
-<br />
-Trees can be referenced as serialized fields in your scripts.
-This allows you to easily reference your trees in the inspector.
-
-```csharp
-using UnityEngine;
-using Jungle;
-
-public class PlayJungleTree : MonoBehaviour
-{
-    [SerializeField]
-    private JungleTree jungleTree;
-
-    private void Start()
-    {
-        jungleTree.Start();
-    }
-}
-```
+A unique instance identifier for the tree.
 
 ---
-## Code Reference
+## Methods
 
-**Namespace: `Jungle`**
+### `GetManifest`
 
-### Properties
+`public ref JungleManifest GetManifest()`
 
-<span class="DocItemTitle">Nodes</span>
-<br />`public JungleNode[] Nodes { get; }`
-<br />_List of all nodes associated with this tree._
+Returns a reference to the tree's persistent manifest.
 
-<span class="DocItemTitle">State</span>
-<br />`public StateFlag State { get; }`
-<br />_The current state of the tree._
+### `TryGetNodeByName`
 
-| Flag | State    | Description                                                               |
-|------|----------|---------------------------------------------------------------------------|
-| 0    | Ready    | Describes a tree that has never been run and is not currently running.    |
-| 1    | Running  | Describes a tree that is currently running.                               |
-| 0    | Finished | Describes a tree that is not currently running but has run at some point. |
+`public bool TryGetNodeByName(string nodeName, out JungleNode node)`
 
-<span class="DocItemTitle">IsRunning</span>
-<br />`public bool IsRunning { get; }`
-<br />_True if the tree is currently running._
+Attempts to retrieve a reference to a node with the specified name.
 
-<span class="DocItemTitle">Time</span>
-<br />`public float Time { get; }`
-<br />_The amount of time in seconds the tree has been running._
+**Returns:**
+- `true` if a node with the specified name is found; otherwise, `false`.
 
-<span class="DocItemTitle">IsNodeRunning(<span class="DocItemParameter">JungleNode</span>)</span>
-<br />`public bool IsNodeRunning(JungleNode node)`
-<br />_Returns true if the tree is currently running the specified node._
+### `TryGetNodeByUid`
 
-<span class="DocItemTitle">GetNodeByName(<span class="DocItemParameter">string</span>)</span>
-<br />`public JungleNode GetNodeByName(string nodeName)`
-<br />_Returns a reference to a node with the specified name. Returns null if no node was found._
+`public bool TryGetNodeByUid(string nodeUid, out JungleNode node)`
 
-<span class="DocItemTitle">GetNodeByUid(<span class="DocItemParameter">string</span>)</span>
-<br />`public JungleNode GetNodeByUid(string nodeUid)`
-<br />_Returns a reference to the node with the specified uid. Returns null if no node was found._
+Attempts to retrieve a reference to the node with the specified UID.
 
----
-### Events
+**Returns:**
+- `true` if a node with the specified UID is found; otherwise, `false`.
 
-<span class="DocItemTitle">OnTreeStarted</span>
-<br />`public static event Action<JungleTree> OnTreeStarted`
-<br />_Invoked when a tree is started._
+### `AddNode`
 
-<span class="DocItemTitle">OnTreeStopped</span>
-<br />`public static event Action<JungleTree> OnTreeStopped`
-<br />_Invoked when a tree is stopped._
+`public JungleNode AddNode(JungleNode jungleNode, Vector2 position, bool recordUndo = true)`
 
-<span class="DocItemTitle">OnStart</span>
-<br />`public event Action OnStart`
-<br />_Invoked when the tree is started._
+Adds a `JungleNode` to the graph at the specified position.
 
-<span class="DocItemTitle">OnStop</span>
-<br />`public event Action OnStop`
-<br />_Invoked when the tree is stopped._
+### `AddNodes`
 
-<span class="DocItemTitle">OnNodeStarted</span>
-<br />`public event Action<JungleNode> OnNodeStarted`
-<br />_Invoked when a node is started in the tree._
+`public JungleNode[] AddNodes(JungleNode[] jungleNodes, Vector2[] positions, bool recordUndo = true)`
 
-<span class="DocItemTitle">OnNodeStopped</span>
-<br />`public event Action<JungleNode> OnNodeStopped`
-<br />_Invoked when a node is stopped in the tree._
+Adds multiple `JungleNode`s to the graph at the specified positions.
 
----
-### Methods
+### `RemoveNode`
 
-<span class="DocItemTitle">Start()</span>
-<br />`public void Start()`
-<br />_Starts running the tree._
+`public void RemoveNode(JungleNode jungleNode, bool recordUndo = true)`
 
-<span class="DocItemTitle">Stop()</span>
-<br />`public void Stop()`
-<br />_Stops running the tree._
+Removes a `JungleNode` from the graph.
 
-<span class="DocItemTitle">AddRevertAction(<span class="DocItemParameter">Action</span>)</span>
-<br />`public string AddRevertAction(Action action)`
-<br />_Adds an action to be invoked when the tree stops. The returned string is a unique identifier for the action._
+### `RemoveNodes`
 
-<span class="DocItemTitle">RemoveRevertAction(<span class="DocItemParameter">string</span>)</span>
-<br />`public void RemoveRevertAction(string actionUid)`
-<br />_Removes an action from the revert list._
+`public void RemoveNodes(JungleNode[] jungleNodes, bool recordUndo = true)`
 
-:::warning EDITOR ONLY
-These methods are primarily for internal use only.
-You should **NOT** call these methods unless you know exactly what you're doing.
+Removes multiple `JungleNode`s from the graph.
 
-<span class="DocItemTitle">GetManifest()</span>
-<br />`public ref JungleManifest GetManifest()`
-<br />_Returns a reference to the trees persistent manifest._
+### `ConnectNodes`
 
-<span class="DocItemTitle">AddNode(<span class="DocItemParameter">Type, Vector2</span>)</span>
-<br />`public JungleNode AddNode(Type nodeType, Vector2 graphPosition)`
-<br />_Adds a Jungle Node to the tree._
+`public bool ConnectNodes(JungleNode nodeA, JungleNode nodeB, byte portIndex, bool recordUndo = true)`
 
-<span class="DocItemTitle">AddNodes(<span class="DocItemParameter">JungleNode[], Vector2[]</span>)</span>
-<br />`public JungleNode[] AddNodes(JungleNode[] jungleNodes, Vector2[] graphPositions)`
-<br />_Adds multiple Jungle Nodes to the tree._
+Connects two `JungleNode`s at the specified port index.
 
-<span class="DocItemTitle">RemoveNode(<span class="DocItemParameter">JungleNode</span>)</span>
-<br />`public void RemoveNode(JungleNode jungleNode)`
-<br />_Removes a node from the tree._
+### `DisconnectNodes`
 
-<span class="DocItemTitle">RemoveNodes(<span class="DocItemParameter">JungleNode[]</span>)</span>
-<br />`public void RemoveNodes(JungleNode[] jungleNodes)`
-<br />_Removes these nodes from the tree._
+`public bool DisconnectNodes(JungleNode nodeA, JungleNode nodeB, byte portIndex, bool recordUndo = true)`
 
-<span class="DocItemTitle">ConnectNodes(<span class="DocItemParameter">JungleNode, JungleNode, byte</span>)</span>
-<br />`public bool ConnectNodes(JungleNode nodeA, JungleNode nodeB, byte portIndex)`
-<br />_Connects two Jungle Nodes together._
-
-<span class="DocItemTitle">DisconnectNodes(<span class="DocItemParameter">JungleNode, JungleNode, byte</span>)</span>
-<br />`public bool DisconnectNodes(JungleNode nodeA, JungleNode nodeB, byte portIndex)`
-<br />_Disconnects two Jungle Nodes from each other._
-:::
+Disconnects two `JungleNode`s at the specified port index.

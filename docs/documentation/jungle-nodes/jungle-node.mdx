@@ -1,0 +1,140 @@
+---
+title: Jungle Node
+slug: /jungle-nodes/jungle-node
+---
+
+The `JungleNode` class represents the base class for all nodes in the Jungle Sequencer.
+It serves as the foundation for creating various types of nodes with specific functionalities and properties.
+
+## Overview
+
+The `JungleNode` class provides the following functionalities:
+- Defining unique identifiers and properties for each node.
+- Managing node connections and playback instances.
+- Providing editor-specific functionalities for managing nodes within the Jungle Editor.
+
+---
+## Properties
+
+### `Uid`
+
+`public string Uid { get; }`
+
+Gets the unique identifier for this node.
+
+### `JungleTree`
+
+`public JungleTree JungleTree { get; }`
+
+Gets a reference to the original tree this node is part of.
+
+### `OutputPorts`
+
+`public Port[] OutputPorts { get; }`
+
+Gets the list of output ports for this node.
+
+### `Nothing`
+
+`public static readonly Port.None Nothing`
+
+Gets the shorthand equivalent of `new Port.None()`.
+
+### `IsPlayback`
+
+`public bool IsPlayback { get; }`
+
+Indicates whether this node is an instance of a playback.
+
+### `Playback`
+
+`public JunglePlayback Playback`
+
+Gets the playback instance associated with this node.
+
+---
+## Methods
+
+### `AddRevertAction`
+
+`public string AddRevertAction(Action action)`
+
+Adds a revert action to be executed when the playback stops.
+
+### `GetTitle`
+
+`public string GetTitle()`
+
+Returns the title of the node.
+
+### `GetDescription`
+
+`public string GetDescription()`
+
+Returns a brief description of the node's function.
+
+### `GetCategory`
+
+`public string GetCategory()`
+
+Returns the category of the node.
+
+### `GetColor`
+
+`public Color GetColor()`
+
+Returns the accent color of the node.
+
+### `IsDeprecated`
+
+`public bool IsDeprecated()`
+
+Indicates whether the node is declared deprecated.
+
+### `RestartIfCalledWhileRunning`
+
+`public bool RestartIfCalledWhileRunning()`
+
+Indicates whether the node should restart if it is called while running.
+
+### `GetInputPortInfo`
+
+`public virtual Port.Info GetInputPortInfo()`
+
+Returns information about the node's input port.
+
+### `GetOutputPortsInfo`
+
+`public virtual Port.Info[] GetOutputPortsInfo()`
+
+Returns information about the node's output ports.
+
+### `GetDetails`
+
+`public virtual string GetDetails()`
+
+Override this method to add context in the Jungle Editor.
+
+### `GetProgress`
+
+`public virtual float GetProgress()`
+
+Override this method to return a value between 0 and 1 to display the node's progress in the Jungle Editor.
+
+### `DrawGizmos`
+
+`public virtual void DrawGizmos()`
+
+Override this method to draw gizmos in the scene.
+
+### `DrawGizmosSelected`
+
+`public virtual void DrawGizmosSelected()`
+
+Override this method to draw gizmos in the scene while the node is selected in the Jungle Editor.
+
+### `Validate`
+
+`public string[] Validate()`
+
+Performs a validation pass on this Jungle Node.
