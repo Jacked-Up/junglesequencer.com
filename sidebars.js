@@ -9,7 +9,7 @@ const sidebars = {
           link: {
               type: 'generated-index',
           },
-          collapsed: false,
+          collapsed: true,
           items: [
               'documentation/jungle-nodes/jungle-node',
               'documentation/jungle-nodes/node-properties',
@@ -28,7 +28,8 @@ const sidebars = {
       'documentation/jungle-gizmos',
       'documentation/jungle-utils',
       'documentation/jungle-editor-utils',
-      'documentation/jungle-exception'
+      'documentation/jungle-exception',
+      'documentation/overtime-helper'
   ],
   guidesSidebar: [
       'guides/creating-nodes',
