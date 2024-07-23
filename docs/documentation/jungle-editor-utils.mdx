@@ -1,0 +1,68 @@
+---
+title: Jungle Editor Utils
+slug: /jungle-editor-utils
+---
+
+The `JungleEditorUtils` class provides a collection of utility functions and events.
+
+## Overview
+
+The `JungleEditorUtils` class includes functionalities for:
+- Accessing lists of Jungle Tree assets and node types in the project
+- Handling tree asset import and removal events
+
+---
+
+## Properties
+
+### `TreesInProject`
+
+`public static IReadOnlyList<JungleTree> TreesInProject { get; }`
+
+Gets the list of all the Jungle Tree assets in the project. (Editor Only)
+
+### `AllNodeTypes`
+
+`public static IReadOnlyList<Type> AllNodeTypes { get; }`
+
+Gets the list of every node type in the project. (Editor Only)
+
+### `BranchNodeTypes`
+
+`public static IReadOnlyList<Type> BranchNodeTypes { get; }`
+
+Gets the list of every branch node type in the project. (Editor Only)
+
+### `IONodeTypes`
+
+`public static IReadOnlyList<Type> IONodeTypes { get; }`
+
+Gets the list of every IO node type in the project. (Editor Only)
+
+### `IdentityNodeTypes`
+
+`public static IReadOnlyList<Type> IdentityNodeTypes { get; }`
+
+Gets the list of every identity node type in the project. (Editor Only)
+
+### `EventNodeTypes`
+
+`public static IReadOnlyList<Type> EventNodeTypes { get; }`
+
+Gets the list of every event node type in the project. (Editor Only)
+
+---
+
+## Events
+
+### `OnTreeImported`
+
+`public static event Action<string> OnTreeImported`
+
+Invoked when a tree asset is imported or created in the project. The string argument is the tree's asset path. (Editor Only)
+
+### `OnTreeRemoved`
+
+`public static event Action<string> OnTreeRemoved`
+
+Invoked when a tree asset is removed or deleted from the project. The string argument was the tree's asset path. (Editor Only)

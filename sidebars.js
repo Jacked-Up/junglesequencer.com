@@ -26,6 +26,8 @@ const sidebars = {
       'documentation/jungle-manifest',
       'documentation/jungle-player',
       'documentation/jungle-gizmos',
+      'documentation/jungle-utils',
+      'documentation/jungle-editor-utils',
       'documentation/jungle-exception'
   ],
   guidesSidebar: [
