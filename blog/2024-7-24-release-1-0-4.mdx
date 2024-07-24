@@ -1,0 +1,32 @@
+---
+slug: release-v1-0-4
+title: Release v1.0.4
+authors: jackapacka
+---
+
+Hey all 👋, Jungle **v1.0.4** has been released!
+
+This update is a quick patch to address key bugs and introduce some useful improvements.
+
+---
+
+**Improvements:**
+- **Stop Nodes:** Introducing the "Stop Nodes" node. Now you can easily stop nodes when you need to.
+- **Over Time Helper System Overhaul:**
+  - Now with set and get methods that actually do what they're supposed to.
+  - Renamed from `OverTime` to `OverTimeHelper`.
+  - Moved to the new `Jungle.Extensions` namespace.
+- **Light Up Your Nodes:** Added a color bar to the "Set Light Color" node for better visual feedback.
+
+**Fixes:**
+- **Implemented Missing "RemoveRevertAction" Method:** Ensuring correct action removal in the `JungleNode` class.
+- **Fixed Event Nodes Start Bug:** Addressed the issue where the `JunglePlayback` event `OnNodeStart` wouldn’t trigger for nodes that start immediately.
+- **Revert Actions Now Properly Called:** Fixed the bug where revert actions weren't executed when the tree was manually stopped.
+- **Exposed "StopNode" Method:** Enhancing control over node operations with the `JunglePlayback` method `StopNode`.
+
+---
+
+**Hope you enjoy Jungle v1.0.4!**
+
+Happy developing,
+<br/>**Jack Randolph**
