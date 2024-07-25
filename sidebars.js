@@ -29,7 +29,7 @@ const sidebars = {
       'documentation/jungle-utils',
       'documentation/jungle-editor-utils',
       'documentation/jungle-exception',
-      'documentation/overtime-helper'
+      'documentation/over-time-helper'
   ],
   guidesSidebar: [
       'guides/creating-nodes',
