@@ -2,7 +2,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 const config = {
   title: 'Jungle Sequencer',
-  tagline: 'A conditional sequencing framework tool for Unity.',
+  tagline: 'A visual node-based tool designed to help developers interact with their game code in a more intuitive way.',
   favicon: 'img/favicon.ico',
   url: 'https://junglesequencer.com',
   baseUrl: '/',
@@ -75,10 +75,6 @@ const config = {
               {
                 label: 'Unity Asset Store',
                 href: 'https://assetstore.unity.com/packages/slug/258407',
-              },
-              {
-                label: 'JungleGPT',
-                href: 'https://chat.openai.com/g/g-OcQk2cjfh-junglegpt',
               },
               {
                 label: 'Jacked Up Software',
