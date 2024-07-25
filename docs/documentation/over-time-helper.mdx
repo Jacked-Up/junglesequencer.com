@@ -281,8 +281,10 @@ Here is an example of how to use the `OverTimeHelper` class to smoothly transiti
 ```csharp
 using System;
 using Jungle;
-using Jungle.Extensions;
 using UnityEngine;
+
+// Over Time Helper namespace
+using Jungle.Extensions;
 
 [NodeProperties(
     Title = "Set Position",
@@ -295,9 +297,11 @@ using UnityEngine;
 )]
 public class SetPositionNode : IONode<Transform>
 {
+    // The target position to set the transform to
     [SerializeField]
     private Vector3 position;
 
+    // The `OverTimeHelper` instance
     [SerializeField]
     private OverTimeHelper overTime = OverTimeHelper.Default;
 
@@ -307,13 +311,17 @@ public class SetPositionNode : IONode<Transform>
     protected override void OnStart(Transform transform)
     {
         _transform = transform;
+
+        // Save the original position to a variable for the "GetProgress" method call
         _originalPosition = _transform.position;
     }
-
+    
     protected override void OnUpdate()
     {
+        // Gradually updates the transform's position towards the target position
         _transform.position = overTime.SetVector3OverTime(_transform.position, position);
 
+        // Sets `IsDone` to true when the current position matches the target position
         if (overTime.IsDone)
         {
             CallAndStop(_transform);
@@ -322,6 +330,7 @@ public class SetPositionNode : IONode<Transform>
 
     public override float GetProgress()
     {
+        // This will return a value between 0 (no progress) and 1 (complete progress)
         return OverTimeHelper.GetVector3Progress(_transform.position, position, _originalPosition);
     }
 }
