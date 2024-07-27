@@ -19,49 +19,37 @@ The `OverTimeHelper` class includes functionalities for:
 
 ### `enabled`
 
-```csharp
-public bool enabled
-```
+`public bool enabled`
 
 True if this Over Time Helper is enabled. Used only for the inspector.
 
 ### `scaledTime`
 
-```csharp
-public bool scaledTime
-```
+`public bool scaledTime`
 
 Set true if the calculation should use scaled delta time.
 
 ### `rate`
 
-```csharp
-public float rate
-```
+`public float rate`
 
 Time scale rate.
 
 ### `method`
 
-```csharp
-public OverTimeHelper.Motion method
-```
+`public OverTimeHelper.Motion method`
 
 Motion calculation method.
 
 ### `IsDone`
 
-```csharp
-public bool IsDone { get; }
-```
+`public bool IsDone { get; }`
 
 Returns true if the calculation is done or if the transition is not enabled.
 
 ### `Default`
 
-```csharp
-public static OverTimeHelper Default { get; }
-```
+`public static OverTimeHelper Default { get; }`
 
 Gets the default `OverTimeHelper` instance with Lerp motion and a rate of 1.
 
@@ -71,9 +59,7 @@ Gets the default `OverTimeHelper` instance with Lerp motion and a rate of 1.
 
 ### `OverTimeHelper`
 
-```csharp
-public OverTimeHelper(bool enabled, bool scaledTime, float rate, Motion method, float precision = 0.01f)
-```
+`public OverTimeHelper(bool enabled, bool scaledTime, float rate, Motion method, float precision = 0.01f)`
 
 Initializes a new instance of the `OverTimeHelper` class.
 
@@ -87,9 +73,7 @@ Initializes a new instance of the `OverTimeHelper` class.
 
 ### `SetFloatOverTime`
 
-```csharp
-public float SetFloatOverTime(float currentValue, float targetValue)
-```
+`public float SetFloatOverTime(float currentValue, float targetValue)`
 
 Smoothly transitions the current float value towards the target float value over time using the specified motion method.
 
@@ -104,9 +88,7 @@ The new float value after applying the transition for the current frame.
 
 ### `SetVector2OverTime`
 
-```csharp
-public Vector2 SetVector2OverTime(Vector2 currentValue, Vector2 targetValue)
-```
+`public Vector2 SetVector2OverTime(Vector2 currentValue, Vector2 targetValue)`
 
 Smoothly transitions the current Vector2 value towards the target Vector2 value over time using the specified motion method.
 
@@ -121,9 +103,7 @@ The new Vector2 value after applying the transition for the current frame.
 
 ### `SetVector3OverTime`
 
-```csharp
-public Vector3 SetVector3OverTime(Vector3 currentValue, Vector3 targetValue)
-```
+`public Vector3 SetVector3OverTime(Vector3 currentValue, Vector3 targetValue)`
 
 Smoothly transitions the current Vector3 value towards the target Vector3 value over time using the specified motion method.
 
@@ -138,9 +118,7 @@ The new Vector3 value after applying the transition for the current frame.
 
 ### `SetQuaternionOverTime`
 
-```csharp
-public Quaternion SetQuaternionOverTime(Quaternion currentValue, Quaternion targetValue)
-```
+`public Quaternion SetQuaternionOverTime(Quaternion currentValue, Quaternion targetValue)`
 
 Smoothly transitions the current Quaternion value towards the target Quaternion value over time using the specified motion method.
 
@@ -155,9 +133,7 @@ The new Quaternion value after applying the transition for the current frame.
 
 ### `SetColorOverTime`
 
-```csharp
-public Color SetColorOverTime(Color currentValue, Color targetValue)
-```
+`public Color SetColorOverTime(Color currentValue, Color targetValue)`
 
 Smoothly transitions the current color value towards the target color value over time using the specified motion method.
 
@@ -172,9 +148,7 @@ The new color value after applying the transition for the current frame.
 
 ### `GetFloatProgress`
 
-```csharp
-public static float GetFloatProgress(float current, float target, float original)
-```
+`public static float GetFloatProgress(float current, float target, float original)`
 
 Returns the progress of a float value over time (0 - 1).
 
@@ -190,9 +164,7 @@ The progress as a float between 0 and 1.
 
 ### `GetVector2Progress`
 
-```csharp
-public static float GetVector2Progress(Vector2 current, Vector2 target, Vector2 original)
-```
+`public static float GetVector2Progress(Vector2 current, Vector2 target, Vector2 original)`
 
 Returns the progress of a Vector2 value over time (0 - 1).
 
@@ -208,9 +180,7 @@ The progress as a float between 0 and 1.
 
 ### `GetVector3Progress`
 
-```csharp
-public static float GetVector3Progress(Vector3 current, Vector3 target, Vector3 original)
-```
+`public static float GetVector3Progress(Vector3 current, Vector3 target, Vector3 original)`
 
 Returns the progress of a Vector3 value over time (0 - 1).
 
@@ -226,9 +196,7 @@ The progress as a float between 0 and 1.
 
 ### `GetQuaternionProgress`
 
-```csharp
-public static float GetQuaternionProgress(Quaternion current, Quaternion target, Quaternion original)
-```
+`public static float GetQuaternionProgress(Quaternion current, Quaternion target, Quaternion original)`
 
 Returns the progress of a Quaternion value over time (0 - 1).
 
@@ -244,9 +212,7 @@ The progress as a float between 0 and 1.
 
 ### `GetColorProgress`
 
-```csharp
-public static float GetColorProgress(Color current, Color target, Color original)
-```
+`public static float GetColorProgress(Color current, Color target, Color original)`
 
 Returns the progress of a Color value over time (0 - 1).
 

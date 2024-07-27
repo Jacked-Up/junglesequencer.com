@@ -57,7 +57,7 @@ const config = {
           },
           {
             to: '/blog',
-            label: 'Blog',
+            label: 'Blog/Changelog',
             position: 'left'
           },
           {
