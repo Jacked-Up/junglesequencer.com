@@ -96,3 +96,19 @@ p {
   font-size: 18px;
   font-weight: bold;
 }
+
+.menu__link {
+  border-left-width: 0;
+  border-left-style: solid;
+  border-left-color: transparent;
+  transition: border-left-width 0.5s ease, border-left-color 0.5s ease;
+}
+
+.menu__link--active {
+  border-left-width: 5px;
+  border-left-color: var(--ifm-color-primary-lightest);
+}
+
+.menu.thin-scrollbar {
+  padding: 8px;
+}

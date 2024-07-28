@@ -32,7 +32,21 @@ const sidebars = {
       'documentation/over-time-helper'
   ],
   guidesSidebar: [
-      'guides/creating-nodes',
+      {
+          type: 'category',
+          label: 'Creating Nodes',
+          link: {
+              type: 'generated-index',
+          },
+          collapsed: true,
+          items: [
+              'guides/creating-nodes/using-the-node-fabricator',
+              'guides/creating-nodes/creating-branch-nodes',
+              'guides/creating-nodes/creating-io-nodes',
+              'guides/creating-nodes/creating-identity-nodes',
+              'guides/creating-nodes/creating-event-nodes'
+          ],
+      },
       'guides/deleting-nodes',
       {
           type: 'category',
