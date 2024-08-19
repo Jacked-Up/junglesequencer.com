@@ -1,10 +1,9 @@
 ---
-title: Jungle Tree
+title: Jungle Tree  
 slug: /jungle-tree
 ---
 
-The `JungleTree` class is a container for storing and managing sequences of `JungleNode`s.
-It includes helper methods for adding, removing, connecting, and disconnecting `JungleNode`s.
+The `JungleTree` class is a container for storing and managing sequences of `JungleNode`s. It includes helper methods for adding, removing, connecting, and disconnecting `JungleNode`s.
 
 ## Overview
 
@@ -13,8 +12,10 @@ The `JungleTree` class provides the following functionalities:
 - Adding, removing, and updating nodes.
 - Connecting and disconnecting nodes.
 - Handling editor-specific functionalities.
+- Managing error reports related to nodes.
 
 ---
+
 ## Properties
 
 ### `Nodes`
@@ -29,14 +30,27 @@ List of all nodes in the tree.
 
 A unique instance identifier for the tree.
 
+### `ErrorReports`
+
+`public IReadOnlyList<JungleErrorReport> ErrorReports { get; }`
+
+Gets the list of error reports. (Editor Only)
+
+### `Description`
+
+`public string Description { get; set; }`
+
+Gets or sets the description of the tree. (Editor Only)
+
+### `AuthorInfo`
+
+`public string AuthorInfo { get; }`
+
+Gets the author information of the tree. (Editor Only)
+
 ---
+
 ## Methods
-
-### `GetManifest`
-
-`public ref JungleManifest GetManifest()`
-
-Returns a reference to the tree's persistent manifest.
 
 ### `TryGetNodeByName`
 
@@ -60,34 +74,92 @@ Attempts to retrieve a reference to the node with the specified UID.
 
 `public JungleNode AddNode(JungleNode jungleNode, Vector2 position, bool recordUndo = true)`
 
-Adds a `JungleNode` to the graph at the specified position.
+Adds a `JungleNode` to the graph at the specified position. (Editor Only)
 
 ### `AddNodes`
 
 `public JungleNode[] AddNodes(JungleNode[] jungleNodes, Vector2[] positions, bool recordUndo = true)`
 
-Adds multiple `JungleNode`s to the graph at the specified positions.
+Adds multiple `JungleNode`s to the graph at the specified positions. (Editor Only)
 
 ### `RemoveNode`
 
 `public void RemoveNode(JungleNode jungleNode, bool recordUndo = true)`
 
-Removes a `JungleNode` from the graph.
+Removes a `JungleNode` from the graph. (Editor Only)
 
 ### `RemoveNodes`
 
 `public void RemoveNodes(JungleNode[] jungleNodes, bool recordUndo = true)`
 
-Removes multiple `JungleNode`s from the graph.
+Removes multiple `JungleNode`s from the graph. (Editor Only)
 
 ### `ConnectNodes`
 
 `public bool ConnectNodes(JungleNode nodeA, JungleNode nodeB, byte portIndex, bool recordUndo = true)`
 
-Connects two `JungleNode`s at the specified port index.
+Connects two `JungleNode`s at the specified port index. (Editor Only)
 
 ### `DisconnectNodes`
 
 `public bool DisconnectNodes(JungleNode nodeA, JungleNode nodeB, byte portIndex, bool recordUndo = true)`
 
-Disconnects two `JungleNode`s at the specified port index.
+Disconnects two `JungleNode`s at the specified port index. (Editor Only)
+
+### `ClearErrorReports`
+
+`public void ClearErrorReports()`
+
+Clears all error reports. (Editor Only)
+
+### `DidNodeReportError`
+
+`public bool DidNodeReportError(string nodeUid)`
+
+Checks if any error report contains an error for the specified node. (Editor Only)
+
+**Returns:**
+- `true` if the node has reported an error; otherwise, `false`.
+
+### `TryGetManifest`
+
+`public bool TryGetManifest(out JungleManifest manifest)`
+
+Tries to get the `JungleManifest` associated with this `JungleTree`. (Editor Only)
+
+**Returns:**
+- `true` if the `JungleManifest` is successfully retrieved or created; otherwise, `false`.
+
+---
+
+## Events
+
+### `OnNodeAdded`
+
+`public event Action<string> OnNodeAdded`
+
+Invoked when a node is added to the tree. (Editor Only)
+
+### `OnNodeRemoved`
+
+`public event Action<string> OnNodeRemoved`
+
+Invoked when a node is removed from the tree. (Editor Only)
+
+### `OnErrorReportUpdated`
+
+`public event Action<JungleErrorReport> OnErrorReportUpdated`
+
+Occurs when a `JungleErrorReport` has been updated. (Editor Only)
+
+### `OnErrorReportsCleared`
+
+`public event Action OnErrorReportsCleared`
+
+Occurs when all error reports are cleared. (Editor Only)
+
+### `OnTreeAssetUpdate`
+
+`public static event Action<JungleTree> OnTreeAssetUpdate`
+
+Invoked when a `JungleTree` asset has been reset by the asset database. (Editor Only)

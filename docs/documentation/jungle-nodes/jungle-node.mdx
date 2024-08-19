@@ -1,5 +1,5 @@
 ---
-title: Jungle Node
+title: Jungle Node  
 slug: /jungle-nodes/jungle-node
 ---
 
@@ -14,6 +14,7 @@ The `JungleNode` class provides the following functionalities:
 - Providing editor-specific functionalities for managing nodes within the Jungle Editor.
 
 ---
+
 ## Properties
 
 ### `Uid`
@@ -22,9 +23,9 @@ The `JungleNode` class provides the following functionalities:
 
 Gets the unique identifier for this node.
 
-### `JungleTree`
+### `Tree`
 
-`public JungleTree JungleTree { get; }`
+`public JungleTree Tree { get; }`
 
 Gets a reference to the original tree this node is part of.
 
@@ -50,9 +51,10 @@ Indicates whether this node is an instance of a playback.
 
 `public JunglePlayback Playback`
 
-Gets the playback instance associated with this node.
+Gets the playback instance associated with this node. Throws an `InvalidOperationException` if the node is not an instance of a playback.
 
 ---
+
 ## Methods
 
 ### `AddRevertAction`
@@ -61,11 +63,37 @@ Gets the playback instance associated with this node.
 
 Adds a revert action to be executed when the playback stops.
 
+#### Parameters
+
+- `action`: The action to be added for revert during playback.
+
+#### Returns
+
+A unique identifier for the added revert action.
+
+#### Exceptions
+
+- `InvalidOperationException`: Thrown when attempting to add a revert action to a non-playback node instance.
+
+### `RemoveRevertAction`
+
+`public void RemoveRevertAction(string revertActionUid)`
+
+Removes a revert action from the playback node instance.
+
+#### Parameters
+
+- `revertActionUid`: The unique identifier of the revert action to be removed.
+
+#### Exceptions
+
+- `InvalidOperationException`: Thrown when attempting to remove a revert action from a non-playback node instance.
+
 ### `GetTitle`
 
 `public string GetTitle()`
 
-Returns the title of the node.
+Returns the title of the node. If the title is not set, it returns the node's type name.
 
 ### `GetDescription`
 
@@ -83,43 +111,51 @@ Returns the category of the node.
 
 `public Color GetColor()`
 
-Returns the accent color of the node.
+Returns the accent color of the node. If the color is not set or invalid, returns `Color.clear`.
 
-### `IsDeprecated`
+### `GetOptions`
 
-`public bool IsDeprecated()`
+`public NodeOptions GetOptions()`
 
-Indicates whether the node is declared deprecated.
-
-### `RestartIfCalledWhileRunning`
-
-`public bool RestartIfCalledWhileRunning()`
-
-Indicates whether the node should restart if it is called while running.
+Returns the options set for the node.
 
 ### `GetInputPortInfo`
 
 `public virtual Port.Info GetInputPortInfo()`
 
-Returns information about the node's input port.
+Returns information about the node's input port. By default, it returns an unnamed port of type `Port.None`.
 
 ### `GetOutputPortsInfo`
 
 `public virtual Port.Info[] GetOutputPortsInfo()`
 
-Returns information about the node's output ports.
+Returns information about the node's output ports. By default, it returns an array with a single unnamed port of type `Port.None`.
+
+### `Validate`
+
+`public string[] Validate(bool quietly = false)`
+
+Performs a validation pass on this `JungleNode`.
+
+#### Parameters
+
+- `quietly`: If `true`, suppresses validation events.
+
+#### Returns
+
+An array of `string` containing all reported issues found on this `JungleNode`.
 
 ### `GetDetails`
 
 `public virtual string GetDetails()`
 
-Override this method to add context in the Jungle Editor.
+Override this method to add context in the Jungle Editor. Returns a `string` containing additional context for the node, or `null` if no context is provided.
 
 ### `GetProgress`
 
 `public virtual float GetProgress()`
 
-Override this method to return a value between 0 and 1 to display the node's progress in the Jungle Editor.
+Override this method to return a value between 0 and 1 to display the node's progress in the Jungle Editor. The default value is 1.
 
 ### `DrawGizmos`
 
@@ -132,9 +168,3 @@ Override this method to draw gizmos in the scene.
 `public virtual void DrawGizmosSelected()`
 
 Override this method to draw gizmos in the scene while the node is selected in the Jungle Editor.
-
-### `Validate`
-
-`public string[] Validate()`
-
-Performs a validation pass on this Jungle Node.

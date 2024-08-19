@@ -1,0 +1,83 @@
+---
+title: Jungle Validator  
+slug: /jungle-validator
+---
+
+The `JungleValidator` class is a system designed to automatically manage Jungle validation operations in the Unity editor.
+
+## Overview
+
+The `JungleValidator` class includes functionalities for:
+- Opening and closing the Jungle Validator editor window
+- Focusing issues related to specific Jungle trees or nodes
+- Refreshing issues for all Jungle trees in the project
+- Managing validation preferences and handling editor state changes
+
+---
+
+## Properties
+
+### `IssuesReports`
+
+`public static IReadOnlyList<JungleIssuesReport> IssuesReports { get; }`
+
+Gets a read-only list of generated issue reports for all Jungle trees in the project. (Editor Only)
+
+---
+
+## Methods
+
+### `OpenEditor`
+
+`public static void OpenEditor()`
+
+Opens the Jungle Validator editor window. (Editor Only)
+
+### `CloseEditor`
+
+`public static void CloseEditor()`
+
+Closes the Jungle Validator editor window. Prevents breaking the editor state when Unity quits. (Editor Only)
+
+### `FocusIssue`
+
+`public static void FocusIssue(JungleTree tree)`
+
+Sets focus to the issues related to the specified Jungle tree. (Editor Only)
+
+#### Parameters
+
+- `tree`: The Jungle tree to focus on.
+
+### `FocusIssue`
+
+`public static void FocusIssue(JungleNode node)`
+
+Sets focus to the issues related to the specified Jungle node. (Editor Only)
+
+#### Parameters
+
+- `node`: The Jungle node to focus on.
+
+### `RefreshReports`
+
+`public static void RefreshReports()`
+
+Refreshes the issues for all Jungle trees in the project. (Editor Only)
+
+### `RefreshReport`
+
+`public static void RefreshReport(JungleTree tree)`
+
+Refreshes the issues for a specific Jungle tree. (Editor Only)
+
+#### Parameters
+
+- `tree`: The Jungle tree to refresh issues for.
+
+---
+
+## Remarks
+
+- The `JungleValidator` class operates in the Unity Editor only and is not included in builds.
+- The class is designed to respond to editor state changes, such as play mode transitions and tree asset updates, ensuring up-to-date validation reports.

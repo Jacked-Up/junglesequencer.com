@@ -3,6 +3,7 @@ const sidebars = {
     documentationSidebar: [
       'documentation/welcome',
       'documentation/concepts',
+      'documentation/node-properties',
       {
           type: 'category',
           label: 'Jungle Nodes',
@@ -12,14 +13,13 @@ const sidebars = {
           collapsed: true,
           items: [
               'documentation/jungle-nodes/jungle-node',
-              'documentation/jungle-nodes/node-properties',
-              'documentation/jungle-nodes/jungle-port',
               'documentation/jungle-nodes/branch-node',
               'documentation/jungle-nodes/io-node',
               'documentation/jungle-nodes/identity-node',
               'documentation/jungle-nodes/event-node'
           ],
       },
+      'documentation/jungle-port',
       'documentation/jungle-tree',
       'documentation/jungle-runtime',
       'documentation/jungle-playback',
@@ -28,7 +28,9 @@ const sidebars = {
       'documentation/jungle-gizmos',
       'documentation/jungle-utils',
       'documentation/jungle-editor-utils',
+      'documentation/jungle-validator',
       'documentation/jungle-exception',
+      'documentation/jungle-preferences',
       'documentation/over-time-helper'
   ],
   guidesSidebar: [

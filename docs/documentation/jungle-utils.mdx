@@ -1,5 +1,5 @@
 ---
-title: Jungle Utils
+title: Jungle Utils  
 slug: /jungle-utils
 ---
 
@@ -43,7 +43,11 @@ Performs a cleanup pass on the inputted Jungle Tree. (Editor Only)
 
 #### Parameters
 
-- `tree`: The Jungle Tree to clean up.
+- `tree`: The Jungle Tree to clean up. Must not be null.
+
+#### Exceptions
+
+- `ArgumentNullException`: Thrown if the `tree` parameter is null.
 
 ### `UpdateTreeUids`
 
@@ -53,7 +57,11 @@ Regenerates every unique identifier in the tree, including those for nodes and s
 
 #### Parameters
 
-- `tree`: The Jungle Tree to update UIDs.
+- `tree`: The Jungle Tree to update UIDs. Must not be null.
+
+#### Exceptions
+
+- `ArgumentNullException`: Thrown if the `tree` parameter is null.
 
 ### `UpdateTreeAuthorInfo`
 
@@ -63,7 +71,12 @@ Updates all author information to display the current user and timestamp, includ
 
 #### Parameters
 
-- `tree`: The Jungle Tree to update author information.
+- `tree`: The Jungle Tree to update author information. Must not be null.
+
+#### Exceptions
+
+- `ArgumentNullException`: Thrown if the `tree` parameter is null.
+- `InvalidOperationException`: Thrown if the JungleTree's JungleManifest is invalid or unavailable, possibly due to the asset database still refreshing or the tree being newly created or imported.
 
 ### `FindUniqueNodeName`
 

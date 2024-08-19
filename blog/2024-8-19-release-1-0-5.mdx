@@ -1,0 +1,34 @@
+---
+slug: release-v1-0-5
+title: Release v1.0.5
+authors: jackapacka
+---
+
+Hey all 👋, Jungle **v1.0.5** has been released!
+
+This update comes with a big update to the validator and a few improvements.
+
+---
+
+**Improvements:**
+- Refactored and rebuilt Jungle Validator system.
+    - Improved performance.
+    - The validator now optionally works in play mode.
+- New "Offset Position", "Offset Rotation", and "Offset Scale" nodes.
+- New node properties attribute `Option`  property with four options:
+    - Restart If Called While Running.
+    - Only Allow One Instance Per Tree.
+    - Hide In Node Explorer and Connection Lookup.
+    - Deprecated.
+- Improved preferences system backend.
+- Replaced `JungleTree.GetManifest` method with new `JungleTree.TryGetManifest` method.
+- Renamed node Jungle Tree reference property from `JungleTree` to `Tree`.
+- Added new `JungleUtils.TryGetTreeByUid` method.
+
+**Fixes:**
+- Runtime playbacks now check for null tree references and stop automatically.
+
+---
+
+Happy developing,
+<br/>**Jack Randolph**
