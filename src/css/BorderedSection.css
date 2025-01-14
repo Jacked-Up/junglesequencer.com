@@ -1,0 +1,6 @@
+.borderedSection {
+    border: 2px solid var(--ifm-color-primary);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+}

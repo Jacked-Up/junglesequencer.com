@@ -278,31 +278,39 @@ public class MyEventNode : EventNode
 ```
 
 ---
-## Lifecycle
+## Lifecycles
 
-Both trees and nodes follow a lifecycle that is managed by the runtime.
-Understanding this lifecycle is essential to creating and managing trees and nodes.
+Both trees and nodes follow a lifecycle managed by Jungle's runtime.
+Understanding the lifecycle will help you to better understand the process of creating and managing trees and nodes.
 
-### Jungle Tree
+import BorderedSection from '@site/src/components/BorderedSection';
 
-#### Started:
-- The tree starts all event nodes.
+<BorderedSection>
 
-#### Running:
+### Tree
+
+#### On Played:
+- All event nodes in the tree are started.
+- For example, the start node is an event node started when the tree is played.
+
+#### While Running:
 - The tree updates all running nodes.
 - If there are no more running nodes, the tree stops automatically.
 
-#### Stopped:
+#### On Stopped:
 - The tree calls all revert actions (if any).
 
-### Jungle Node
+</BorderedSection>
+
+<BorderedSection>
+### Node
 
 #### Started:
 - The `OnStart` method is called on the node.
 - Then the `OnUpdate` and `OnFixedUpdate` methods are called on the node.
 
 :::info
-If the `Stop` or `CallAndStop` method is called from the `OnStart` method, the `OnUpdate` and `OnFixedUpdate` method
+If the `Stop` or `CallAndStop` method is called from the `OnStart` method, the `OnUpdate` and `OnFixedUpdate` methods
 will not be called.
 :::
 
@@ -313,3 +321,5 @@ will not be called.
 - The `OnStop` method is called on the node.
 
 Nodes can be stopped anywhere at anytime by invoking nodes `Stop` or `CallAndStop` methods.
+
+</BorderedSection>
