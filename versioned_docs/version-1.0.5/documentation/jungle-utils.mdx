@@ -1,0 +1,124 @@
+---
+title: Jungle Utils  
+slug: /jungle-utils
+---
+
+The `JungleUtils` class provides a collection of utility functions.
+
+## Overview
+
+The `JungleUtils` class includes functionalities for:
+- Managing editor inspector size
+- Performing cleanup operations on Jungle trees
+- Regenerating unique identifiers for tree elements
+- Updating author information for tree elements
+- Generating unique names for nodes
+- Shortening strings for display purposes
+
+---
+
+## Properties
+
+### `JUNGLE_VERSION`
+
+`public const string JUNGLE_VERSION`
+
+The installed package version of Jungle.
+
+### `EditorInspectorSize`
+
+`public static Vector2 EditorInspectorSize { get; }`
+
+Gets the height and width of the Jungle Editor inspector window.
+
+---
+
+## Methods
+
+### `CleanupTree`
+
+`public static void CleanupTree(JungleTree tree)`
+
+Performs a cleanup pass on the inputted Jungle Tree. (Editor Only)
+
+#### Parameters
+
+- `tree`: The Jungle Tree to clean up. Must not be null.
+
+#### Exceptions
+
+- `ArgumentNullException`: Thrown if the `tree` parameter is null.
+
+### `UpdateTreeUids`
+
+`public static void UpdateTreeUids(JungleTree tree)`
+
+Regenerates every unique identifier in the tree, including those for nodes and sticky notes. (Editor Only)
+
+#### Parameters
+
+- `tree`: The Jungle Tree to update UIDs. Must not be null.
+
+#### Exceptions
+
+- `ArgumentNullException`: Thrown if the `tree` parameter is null.
+
+### `UpdateTreeAuthorInfo`
+
+`public static void UpdateTreeAuthorInfo(JungleTree tree)`
+
+Updates all author information to display the current user and timestamp, including for nodes and sticky notes. (Editor Only)
+
+#### Parameters
+
+- `tree`: The Jungle Tree to update author information. Must not be null.
+
+#### Exceptions
+
+- `ArgumentNullException`: Thrown if the `tree` parameter is null.
+- `InvalidOperationException`: Thrown if the JungleTree's JungleManifest is invalid or unavailable, possibly due to the asset database still refreshing or the tree being newly created or imported.
+
+### `FindUniqueNodeName`
+
+`public static string FindUniqueNodeName(JungleNode nodeToName, IEnumerable<JungleNode> existingNodes)`
+
+Generates a unique name for the specified node by comparing it against the names of other existing nodes.
+
+#### Parameters
+
+- `nodeToName`: The node asset that needs a unique name.
+- `existingNodes`: A collection of existing nodes to compare against for uniqueness.
+
+#### Returns
+
+A unique name for the specified node.
+
+### `ShortenStringEnd`
+
+`public static string ShortenStringEnd(string input, int maxLength)`
+
+Shortens the inputted string if it exceeds the max length. (Format: HelloW...)
+
+#### Parameters
+
+- `input`: The string to shorten.
+- `maxLength`: The maximum length of the shortened string.
+
+#### Returns
+
+A shortened string if it exceeds the max length, otherwise the original string.
+
+### `ShortenStringMiddle`
+
+`public static string ShortenStringMiddle(string input, int maxLength)`
+
+Shortens the inputted string if it exceeds the max length. (Format: Hel...rld)
+
+#### Parameters
+
+- `input`: The string to shorten.
+- `maxLength`: The maximum length of the shortened string.
+
+#### Returns
+
+A shortened string if it exceeds the max length, otherwise the original string.

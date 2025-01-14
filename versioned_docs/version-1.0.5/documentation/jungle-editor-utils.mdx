@@ -1,0 +1,101 @@
+---
+title: Jungle Editor Utils
+slug: /jungle-editor-utils
+---
+
+The `JungleEditorUtils` class provides a collection of utility functions and events.
+
+## Overview
+
+The `JungleEditorUtils` class includes functionalities for:
+- Accessing lists of Jungle Tree assets and node types in the project
+- Handling tree asset import and removal events
+- Managing node addition and removal events within Jungle Trees
+- Retrieving Jungle Trees by their unique identifiers
+
+---
+
+## Properties
+
+### `TreesInProject`
+
+`public static IReadOnlyList<JungleTree> TreesInProject { get; }`
+
+Gets the list of all the Jungle Tree assets in the project. (Editor Only)
+
+### `AllNodeTypes`
+
+`public static IReadOnlyList<Type> AllNodeTypes { get; }`
+
+Gets the list of every node type in the project. (Editor Only)
+
+### `BranchNodeTypes`
+
+`public static IReadOnlyList<Type> BranchNodeTypes { get; }`
+
+Gets the list of every branch node type in the project. (Editor Only)
+
+### `IONodeTypes`
+
+`public static IReadOnlyList<Type> IONodeTypes { get; }`
+
+Gets the list of every IO node type in the project. (Editor Only)
+
+### `IdentityNodeTypes`
+
+`public static IReadOnlyList<Type> IdentityNodeTypes { get; }`
+
+Gets the list of every identity node type in the project. (Editor Only)
+
+### `EventNodeTypes`
+
+`public static IReadOnlyList<Type> EventNodeTypes { get; }`
+
+Gets the list of every event node type in the project. (Editor Only)
+
+---
+
+## Methods
+
+### `TryGetTreeByUid`
+
+`public static bool TryGetTreeByUid(string treeUid, out JungleTree tree)`
+
+Tries to get a Jungle Tree by its unique identifier.
+
+#### Parameters
+
+- `treeUid`: The unique identifier of the tree.
+- `tree`: The Jungle Tree with the specified unique identifier, or null if not found.
+
+#### Returns
+
+True if the tree is found; otherwise, false.
+
+---
+
+## Events
+
+### `OnTreeImported`
+
+`public static event Action<JungleTree> OnTreeImported`
+
+Invoked when a tree asset is imported or created in the project. The argument is a reference to the imported/created tree. (Editor Only)
+
+### `OnTreeRemoved`
+
+`public static event Action<string> OnTreeRemoved`
+
+Invoked when a tree asset is removed or deleted from the project. The string argument is the tree's asset path. (Editor Only)
+
+### `OnNodeAdded`
+
+`public static event Action<JungleTree, string> OnNodeAdded`
+
+Invoked when a tree gets a new node. The arguments are the Jungle Tree and the unique identifier of the added node. (Editor Only)
+
+### `OnNodeRemoved`
+
+`public static event Action<JungleTree, string> OnNodeRemoved`
+
+Invoked when a tree loses a node. The arguments are the Jungle Tree and the unique identifier of the removed node. (Editor Only)

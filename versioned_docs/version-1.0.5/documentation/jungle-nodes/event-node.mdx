@@ -1,0 +1,304 @@
+---
+title: Event Node
+slug: /jungle-nodes/event-node
+---
+
+The Event Node has zero inputs and outputs to any number of outputs that all can output any types.
+Event Nodes are started automatically when the tree is started.
+
+import VideoPlayer from '@site/src/components/VideoPlayer';
+
+<VideoPlayer
+    videoUrl="https://www.youtube.com/watch?v=DAyAZErFx7A"
+    title="Creating Nodes"
+    description="Here's a video tutorial on creating all node variants in Jungle."
+/>
+
+---
+## Overview
+
+All Event Nodes are required to have a `EventNode` class attribute defined.
+This attribute defines the output ports on the node.
+
+Here's a list of all the properties you can define in the `EventNode` attribute:
+
+| Property                     | Type       | Description                                                             |
+|------------------------------|------------|-------------------------------------------------------------------------|
+| `OutputPortNames`            | `string[]` | Defines the names for each output port.                                 |
+| `OutputPortTypes`            | `Type[]`   | Defines the outputted type for each output port.                        |
+| `PreventAutoStopWhileActive` | `bool`     | Prevents the tree from automatically stopping when this node is active. |
+
+The output port names and types should be defined in the same order and should always be the same length. You are
+limited to 256 output ports per node.
+
+Here's an example of a `EventNode` attribute:
+```csharp
+[EventNode(
+    OutputPortNames = new []
+    {
+        "My Output A",
+        "My Output B"
+    },
+    OutputPortTypes = new []
+    {
+        typeof(Port.None),
+        typeof(Port.None)
+    }
+)]
+public class MyEventNode : EventNode
+...
+```
+
+#### Result in the Jungle Editor
+
+![Event node attribute visual](img/event-node-attribute-visual.png)
+
+---
+:::tip
+The `EventNode` class inherits from the `JungleNode` class.
+This means all public and protected members of `JungleNode` are accessible within `EventNode`.
+
+Read about the base `JungleNode` class **[here](../jungle-nodes/jungle-node)**.
+:::
+
+## Properties
+
+### `Uid`
+
+`public string Uid { get; }`
+
+Gets the unique identifier for this node.
+
+### `JungleTree`
+
+`public JungleTree JungleTree { get; }`
+
+Gets a reference to the original tree this node is part of.
+
+### `OutputPorts`
+
+`public Port[] OutputPorts { get; }`
+
+Gets the list of output ports for this node.
+
+### `Nothing`
+
+`public static readonly Port.None Nothing`
+
+Gets the shorthand equivalent of `new Port.None()`.
+
+### `IsPlayback`
+
+`public bool IsPlayback { get; }`
+
+Indicates whether this node is an instance of a playback.
+
+### `Playback`
+
+`public JunglePlayback Playback`
+
+Gets the playback instance associated with this node.
+
+### `PreventAutoStopWhileActive`
+
+`public bool PreventAutoStopWhileActive { get; }`
+
+Prevents the tree from automatically stopping while this node is running.
+
+---
+## Methods
+
+### `GetInputPortInfo`
+
+`public override Port.Info GetInputPortInfo()`
+
+Returns information about the node's input port. This method returns an empty port information as EventNode takes no input.
+
+### `GetOutputPortsInfo`
+
+`public override Port.Info[] GetOutputPortsInfo()`
+
+Returns information about the node's output ports.
+
+### `AddRevertAction`
+
+`public string AddRevertAction(Action action)`
+
+Adds a revert action to be executed when the playback stops.
+
+### `Call`
+
+`protected void Call(Port.Call call)`
+
+Sends out a port call without stopping the node.
+
+### `Call`
+
+`protected void Call(Port.Call[] calls)`
+
+Sends out multiple port calls without stopping the node.
+
+### `Stop`
+
+`protected void Stop()`
+
+Stops the node without sending out a port call.
+
+### `CallAndStop`
+
+`protected void CallAndStop(Port.Call call)`
+
+Sends out a port call and stops the node.
+
+### `CallAndStop`
+
+`protected void CallAndStop(Port.Call[] calls)`
+
+Sends out multiple port calls and stops the node.
+
+### `OnStart`
+
+`protected abstract void OnStart()`
+
+Invoked immediately when this node is started.
+
+### `OnStop`
+
+`protected virtual void OnStop()`
+
+Invoked immediately when this node is stopped.
+
+### `OnUpdate`
+
+`protected abstract void OnUpdate()`
+
+Invoked every frame while this node is running.
+
+### `OnLateUpdate`
+
+`protected virtual void OnLateUpdate()`
+
+Invoked every frame after every update function has been called.
+
+### `OnFixedUpdate`
+
+`protected virtual void OnFixedUpdate()`
+
+Invoked every fixed frame while this node is running.
+
+### `OnValidation`
+
+`protected virtual string[] OnValidation()`
+
+Called whenever the tree performs a validation pass. Should return a list of issues with the node if any.
+
+---
+## Boilerplate
+
+```csharp
+using Jungle;
+
+[NodeProperties(
+    Title = "Event Node",
+    Description = "No inputs, multiple outputs."
+)]
+[EventNode(
+    OutputPortNames = new []
+    {
+        "Output A",
+        "Output B"
+    },
+    OutputPortTypes = new []
+    {
+        typeof(Port.None),
+        typeof(Port.None)
+    }
+)]
+public class MyEventNode : EventNode
+{
+    protected override void OnStart()
+    {
+        CallAndStop(new []
+        {
+            new Port.Call(0, Nothing),
+            new Port.Call(1, Nothing)
+        });
+    }
+    
+    protected override void OnUpdate() { }
+}
+```
+
+---
+## Example
+
+Here's an example of a Event Node that calls different output ports at 5, 10, and 15 seconds intervals.
+
+![Timed intervals node visual](img/event-node-example.png)
+
+```csharp
+using Jungle;
+using UnityEngine;
+
+[NodeProperties(
+    Title = "Timed Intervals",
+    Description = "Calls different outputs at 5, 10, and 15 seconds intervals.",
+    Color = Yellow
+)]
+[EventNode(
+    OutputPortNames = new []
+    {
+        "After 5 Seconds",
+        "After 10 Seconds",
+        "After 15 Seconds"
+    },
+    OutputPortTypes = new []
+    {
+        typeof(Port.None),
+        typeof(Port.None),
+        typeof(Port.None)
+    }
+)]
+public class TimedIntervalsNode : EventNode
+{
+    private float _startTime;
+    private bool _called5Seconds;
+    private bool _called10Seconds;
+    private bool _called15Seconds;
+    
+    protected override void OnStart()
+    {
+        _startTime = Time.time;
+        
+        _called5Seconds = false;
+        _called10Seconds = false;
+        _called15Seconds = false;
+    }
+
+    protected override void OnUpdate()
+    {
+        float elapsedTime = Time.time - _startTime;
+
+        // After 5 seconds
+        if (!_called5Seconds && elapsedTime >= 5)
+        {
+            Call(new Port.Call(0, Nothing));
+            _called5Seconds = true;
+        }
+        
+        // After 10 seconds
+        if (!_called10Seconds && elapsedTime >= 10)
+        {
+            Call(new Port.Call(1, Nothing));
+            _called10Seconds = true;
+        }
+        
+        // After 15 seconds
+        if (!_called15Seconds && elapsedTime >= 15)
+        {
+            CallAndStop(new Port.Call(2, Nothing));
+            _called15Seconds = true;
+        }
+    }
+}
+```

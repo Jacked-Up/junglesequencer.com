@@ -1,4 +1,4 @@
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 const config = {
   title: 'Jungle Sequencer',
@@ -22,6 +22,11 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           editUrl: 'https://github.com/Jacked-Up/junglesequencer.com/tree/prod/',
+          versions: {
+            current: {
+              label: '1.0.6 (Unreleased)',
+            },
+          },
         },
         blog: {
           showReadingTime: true,
@@ -32,7 +37,7 @@ const config = {
       }),
     ],
   ],
-
+  
   themeConfig:
     ({
       image: 'img/docusaurus-social-card.jpg',
@@ -43,6 +48,11 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownActiveClassDisabled: true,
+          },
           {
             type: 'docSidebar',
             sidebarId: 'documentationSidebar',

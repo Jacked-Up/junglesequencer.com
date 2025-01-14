@@ -1,0 +1,140 @@
+---
+title: Jungle Manifest
+slug: /jungle-manifest
+---
+
+The `JungleManifest` class is a container for saving data about a `JungleTree` inside a sub-object. It stores various metadata related to nodes and sticky notes within the tree, allowing for persistent data management and editor functionality.
+
+## Overview
+
+The `JungleManifest` class provides the following functionalities:
+- Storing metadata about nodes and sticky notes.
+- Managing view position and scale in the Jungle Editor.
+- Adding, updating, and removing node and sticky note data.
+- Providing methods to manipulate and retrieve metadata.
+
+---
+## Properties
+
+### `JungleTree`
+
+`public JungleTree JungleTree { get; }`
+
+The Jungle Tree this manifest belongs to.
+
+### `ViewPosition`
+
+`public Vector2 ViewPosition { get; }`
+
+The view port position in the Jungle Editor.
+
+### `ViewScale`
+
+`public Vector2 ViewScale { get; }`
+
+The view port zoom scale in the Jungle Editor.
+
+### `NodeManifest`
+
+`public JungleNodeData[] NodeManifest { get; }`
+
+List of node metadata for nodes that are currently in the tree.
+
+### `NodeArchive`
+
+`public JungleNodeData[] NodeArchive { get; }`
+
+List of saved node metadata for nodes that mysteriously disappeared.
+
+### `StickyNoteManifest`
+
+`public JungleStickyNoteData[] StickyNoteManifest { get; }`
+
+List of sticky note metadata for sticky notes that are currently in the tree.
+
+---
+## Methods
+
+### `SetViewPosition`
+
+`public void SetViewPosition(Vector2 position, bool recordUndo = true)`
+
+Sets the view position of the Jungle Editor.
+
+### `SetViewScale`
+
+`public void SetViewScale(Vector2 scale, bool recordUndo = true)`
+
+Sets the view scale of the Jungle Editor.
+
+### `AddNodeData`
+
+`public JungleNodeData AddNodeData(JungleNode jungleNode)`
+
+Adds a node to the manifest.
+
+### `RemoveNodeData`
+
+`public void RemoveNodeData(string uid)`
+
+Removes a node from the manifest.
+
+### `UpdateNodeGraphPosition`
+
+`public JungleNodeData UpdateNodeGraphPosition(string uid, Vector2 graphPosition, bool recordUndo = true)`
+
+Updates a node's graph position.
+
+### `GetNodeData`
+
+`public JungleNodeData GetNodeData(string uid)`
+
+Gets a node's metadata.
+
+### `AddStickyNoteData`
+
+`public JungleStickyNoteData AddStickyNoteData(bool recordUndo = true)`
+
+Adds a new sticky note to the manifest.
+
+### `RemoveStickyNoteData`
+
+`public void RemoveStickyNoteData(string uid, bool recordUndo = true)`
+
+Removes a sticky note from the manifest.
+
+### `UpdateStickyNoteGraphPosition`
+
+`public JungleStickyNoteData UpdateStickyNoteGraphPosition(string uid, Vector2 graphPosition, bool recordUndo = true)`
+
+Updates a sticky note's graph position.
+
+### `UpdateStickyNoteGraphSize`
+
+`public JungleStickyNoteData UpdateStickyNoteGraphSize(string uid, Vector2 graphSize, bool recordUndo = true)`
+
+Updates a sticky note's graph size.
+
+### `UpdateStickyNoteContent`
+
+`public JungleStickyNoteData UpdateStickyNoteContent(string uid, string content, bool recordUndo = true)`
+
+Updates a sticky note's content.
+
+### `UpdateStickyNoteTheme`
+
+`public JungleStickyNoteData UpdateStickyNoteTheme(string uid, JungleStickyNoteData.Themes theme, bool recordUndo = true)`
+
+Updates a sticky note's theme.
+
+### `UpdateStickyNoteIsLocked`
+
+`public JungleStickyNoteData UpdateStickyNoteIsLocked(string uid, bool isLocked, bool recordUndo = true)`
+
+Updates a sticky note's lock state.
+
+### `GetStickyNoteData`
+
+`public JungleStickyNoteData GetStickyNoteData(string uid)`
+
+Gets a sticky note's metadata.

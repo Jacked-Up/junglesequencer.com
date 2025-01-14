@@ -1,0 +1,92 @@
+---
+title: Jungle Port
+slug: /jungle-port
+---
+
+The `Port` class is a container that stores properties and information about a node's port.
+
+## Overview
+
+The `Port` class provides the following functionalities:
+- Managing connections between nodes.
+- Storing metadata about ports, including their type and connected nodes.
+- Handling port calls and their payloads.
+
+---
+## Properties
+
+### `Connections`
+
+`public JungleNode[] Connections { get; }`
+
+Gets the list of nodes that are connected to this port.
+
+### `ConnectionsByUid`
+
+`public string[] ConnectionsByUid { get; }`
+
+Gets the list of node Uids that are connected to this port.
+
+### `NodeUid`
+
+`public string NodeUid { get; }`
+
+Gets the Uid of the node this port belongs to.
+
+---
+## Methods
+
+### `Port`
+
+`public Port(JungleNode node, byte outputPortIndex, List<JungleNode> connections)`
+
+Initializes a new instance of the `Port` class.
+
+#### Parameters
+
+- `node`: The node to which this port belongs.
+- `outputPortIndex`: The index of the output port.
+- `connections`: The list of nodes connected to this port.
+
+---
+## Structs
+
+### `Call`
+
+Represents a container for the payload of a port call.
+
+#### Properties
+
+- `OutputPortIndex`: The index of the output port from the calling node where this call originates.
+- `Value`: The data associated with this call.
+
+#### Methods
+
+- `Call(byte outputPortIndex, object value)`: Initializes a new instance of the `Call` struct.
+- `ToString()`: Returns a string that represents the current `Call` object.
+
+### `Info`
+
+Represents information about a port.
+
+#### Properties
+
+- `Name`: The name of this Jungle Port.
+- `Type`: The data type of this Jungle Port.
+
+#### Methods
+
+- `Info(string name, Type type)`: Initializes a new instance of the `Info` struct.
+
+### `None`
+
+Defines a port type that sends and receives no data.
+
+### `Error`
+
+Defines a port type that represents a broken or malfunctioning port.
+
+### `NA`
+
+Defines a port type that is "Not Assigned".
+This struct indicates a port that has not been assigned a valid type. Avoid using this type in your implementation.
