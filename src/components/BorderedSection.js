@@ -14,14 +14,12 @@ export default function BorderedSection({ children }) {
         const deltaX = (x - centerX) / centerX;
         const deltaY = (y - centerY) / centerY;
 
-        // Clamp delta values to prevent excessive tilting
         const clampedDeltaX = Math.max(-1, Math.min(deltaX, 1));
         const clampedDeltaY = Math.max(-1, Math.min(deltaY, 1));
 
         const rotateX = clampedDeltaY * 5; // Tilt forward/backward
         const rotateY = clampedDeltaX * -5; // Tilt left/right
 
-        // Set CSS variables for transform
         section.style.setProperty('--rotateX', `${rotateX}deg`);
         section.style.setProperty('--rotateY', `${rotateY}deg`);
         section.style.transform = `perspective(1000px) rotateX(var(--rotateX)) rotateY(var(--rotateY)) scale(1.025)`;
@@ -31,7 +29,7 @@ export default function BorderedSection({ children }) {
         const section = sectionRef.current;
         section.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
     };
-
+    
     return (
         <div
             className='borderedSection'
