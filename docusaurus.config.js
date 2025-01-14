@@ -25,6 +25,7 @@ const config = {
           versions: {
             current: {
               label: '1.0.6 (Unreleased)',
+              path: 'unreleased',
             },
           },
         },
