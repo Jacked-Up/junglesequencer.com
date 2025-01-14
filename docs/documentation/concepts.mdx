@@ -5,6 +5,8 @@ sidebar_position: 1
 slug: /concepts
 ---
 
+import BorderedSection from '@site/src/components/BorderedSection';
+
 There are many unique concepts and ideas that are essential to understanding Jungle.
 This page will help you understand the core concepts and ideas that are essential to using Jungle.
 
@@ -19,31 +21,40 @@ This page will help you understand the core concepts and ideas that are essentia
 ---
 ## Node Variants
 
-There are four different node variants in Jungle. Each node variant has a unique purpose and use case.
+Jungle has four node variants builtin.
+Each node variant has a unique purpose and use case.
 Understanding the differences between each node variant is essential to creating custom nodes.
 
+<BorderedSection>
 #### Branch Node
 
 Branch nodes have one input port, and multiple output ports.
 Designed to be used in conditional logic and branching behavior.
+</BorderedSection>
 
+<BorderedSection>
 #### IO Node
 
 IO nodes have one input port, and one output port.
 Designed to be used in simple logic and behavior.
 "IO" stands for Input/Output.
+</BorderedSection>
 
+<BorderedSection>
 #### Identity Node
 
 Identity nodes have one input port, and one output port.
 The only difference between an IO node and an Identity node is that the Identity nodes input and output port types
 are defined by the node connected to its input port.
+</BorderedSection>
 
+<BorderedSection>
 #### Event Node
 
 Event nodes have no input ports, and one or more output ports.
 Designed to be used in event-driven logic and behavior.
 All event nodes are automatically started when the tree is started.
+</BorderedSection>
 
 ---
 ## Port Calls
@@ -283,8 +294,6 @@ public class MyEventNode : EventNode
 Both trees and nodes follow a lifecycle managed by Jungle's runtime.
 Understanding the lifecycle will help you to better understand the process of creating and managing trees and nodes.
 
-import BorderedSection from '@site/src/components/BorderedSection';
-
 <BorderedSection>
 
 ### Tree
@@ -305,21 +314,20 @@ import BorderedSection from '@site/src/components/BorderedSection';
 <BorderedSection>
 ### Node
 
-#### Started:
+#### On Started:
 - The `OnStart` method is called on the node.
-- Then the `OnUpdate` and `OnFixedUpdate` methods are called on the node.
 
 :::info
-If the `Stop` or `CallAndStop` method is called from the `OnStart` method, the `OnUpdate` and `OnFixedUpdate` methods
-will not be called.
+If the `Stop` or `CallAndStop` method is called from the `OnStart` method,
+the `OnUpdate`, `OnLateUpdate`, and `OnFixedUpdate` methods will not be called.
 :::
 
-#### Running:
-- The `OnUpdate` and `OnFixedUpdate` methods are called on the node.
+#### While Running:
+- The `OnUpdate`, `OnLateUpdate`, and `OnFixedUpdate` methods are called on the node.
 
-#### Stopped:
+#### On Stopped:
 - The `OnStop` method is called on the node.
 
-Nodes can be stopped anywhere at anytime by invoking nodes `Stop` or `CallAndStop` methods.
+Nodes can be stopped anywhere at anytime by invoking the nodes `Stop` or `CallAndStop` methods.
 
 </BorderedSection>

@@ -1,6 +1,52 @@
 .borderedSection {
-    border: 2px solid var(--ifm-color-primary);
+    position: relative;
+    border: 1px solid var(--ifm-color-primary);
     border-radius: 8px;
-    padding: 16px;
-    margin: 16px 0;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: var(--ifm-background-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+
+    --rotateX: 0deg;
+    --rotateY: 0deg;
+}
+
+.borderedSection:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.sectionContent {
+    opacity: 0;
+    animation: fadeIn 0.25s forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .borderedSection {
+        padding: 16px;
+        margin: 16px 0;
+    }
+}
+
+.borderedSection:focus-within {
+    outline: 2px solid var(--ifm-color-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .borderedSection {
+        transition: none;
+    }
+
+    .sectionContent {
+        animation: none;
+    }
 }
