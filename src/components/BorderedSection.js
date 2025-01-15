@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import "../css/BorderedSection.css";
 
-export default function BorderedSection({ children }) {
+const BorderedSection = ({ children }) => {
     const sectionRef = useRef(null);
-
+    
     const handleMouseMove = (e) => {
         const section = sectionRef.current;
         const rect = section.getBoundingClientRect();
@@ -18,7 +18,7 @@ export default function BorderedSection({ children }) {
         const clampedDeltaY = Math.max(-1, Math.min(deltaY, 1));
 
         const rotateX = clampedDeltaY * 5; // Tilt forward/backward
-        const rotateY = clampedDeltaX * -5; // Tilt left/right
+        const rotateY = clampedDeltaX * -2.5; // Tilt left/right
 
         section.style.setProperty('--rotateX', `${rotateX}deg`);
         section.style.setProperty('--rotateY', `${rotateY}deg`);
@@ -32,14 +32,16 @@ export default function BorderedSection({ children }) {
     
     return (
         <div
-            className='borderedSection'
+            className='bordered-section'
             ref={sectionRef}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
         >
-            <div className="sectionContent">
+            <div className="section-content">
                 {children}
             </div>
         </div>
     );
 }
+
+export default BorderedSection;

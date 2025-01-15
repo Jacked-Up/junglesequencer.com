@@ -1,11 +1,25 @@
-.borderedSection {
+:root{
+    --bordered-section-background: #f5f5f5;
+    --bordered-section-border: var(--ifm-color-primary);
+    --bordered-section-shadow: rgba(0, 0, 0, 0.1);
+    --bordered-section-shadow-active: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme='dark'] {
+    --bordered-section-background: var(--ifm-color-primary-darkest);
+    --bordered-section-border: var(--ifm-color-primary);
+    --bordered-section-shadow: rgba(58, 200, 67, 0.1);
+    --bordered-section-shadow-active: rgba(58, 200, 67, 0.4);
+}
+
+.bordered-section {
     position: relative;
-    border: 1px solid var(--ifm-color-primary);
-    border-radius: 8px;
+    border: 1px solid var(--bordered-section-border);
+    border-radius: 12px;
     padding: 20px;
-    margin: 20px 0;
-    background-color: var(--ifm-background-color);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    background-color: var(--bordered-section-background);
+    box-shadow: 0 2px 8px var(--bordered-section-shadow);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     will-change: transform;
@@ -14,11 +28,11 @@
     --rotateY: 0deg;
 }
 
-.borderedSection:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+.bordered-section:hover {
+    box-shadow: 0 0 16px var(--bordered-section-shadow-active);
 }
 
-.sectionContent {
+.section-content {
     opacity: 0;
     animation: fadeIn 0.25s forwards;
     animation-delay: 0.2s;
@@ -31,22 +45,22 @@
 }
 
 @media (max-width: 768px) {
-    .borderedSection {
+    .bordered-section {
         padding: 16px;
         margin: 16px 0;
     }
 }
 
-.borderedSection:focus-within {
+.bordered-section:focus-within {
     outline: 2px solid var(--ifm-color-primary);
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .borderedSection {
+    .bordered-section {
         transition: none;
     }
 
-    .sectionContent {
+    .section-content {
         animation: none;
     }
 }
