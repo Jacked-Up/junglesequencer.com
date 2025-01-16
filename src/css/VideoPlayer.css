@@ -28,6 +28,7 @@
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     will-change: transform;
+
     --rotateX: 0deg;
     --rotateY: 0deg;
 }
@@ -84,5 +85,13 @@
 
     .text-container h2 {
         margin-bottom: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .video-player {
+        transition: none;
+        transform: none !important;
+        will-change: auto;
     }
 }
