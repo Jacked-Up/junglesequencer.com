@@ -8,7 +8,7 @@ slug: /concepts
 import BorderedSection from '@site/src/components/BorderedSection';
 
 There are many unique concepts and ideas that are essential to understanding Jungle.
-This page will help you understand the core concepts and ideas that are essential to using Jungle.
+This page will help you understand these core concepts and ideas.
 
 ---
 ## Important Terms
@@ -16,7 +16,7 @@ This page will help you understand the core concepts and ideas that are essentia
 - **Tree**: Collection of nodes connected together to form sequences.
 - **Node**: Unit of logic/behavior that performs a specific task.
 - **Port**: Connection point on a node where calls are sent or received.
-- **Edge**: Link between and input port and output port.
+- **Edge**: Link between an input port and output port.
 - **Call**: Payload of data sent from an output port to an input port.
 
 ---
@@ -29,32 +29,30 @@ Understanding the differences between each node variant is essential to creating
 <BorderedSection>
 #### Branch Node
 
-Branch nodes have one input port, and multiple output ports.
-Designed to be used in conditional logic and branching behavior.
+One input port and multiple output ports.
+It is used for conditional logic and branching behavior.
 </BorderedSection>
 
 <BorderedSection>
 #### IO Node
 
-IO nodes have one input port, and one output port.
-Designed to be used in simple logic and behavior.
-"IO" stands for Input/Output.
+One input port and one output port.
+It is designed for simple logic and behavior. The "IO" stands for Input/Output.
 </BorderedSection>
 
 <BorderedSection>
 #### Identity Node
 
-Identity nodes have one input port, and one output port.
-The only difference between an IO node and an Identity node is that the Identity nodes input and output port types
-are defined by the node connected to its input port.
+One input port and one output port.
+Its port types are automatically defined based on the nodes connected to it.
+This makes it flexible and useful for nodes like "Wait for Seconds," which don’t need predefined inputs to function.
 </BorderedSection>
 
 <BorderedSection>
 #### Event Node
 
-Event nodes have no input ports, and one or more output ports.
-Designed to be used in event-driven logic and behavior.
-All event nodes are automatically started when the tree is started.
+No input ports and one or more output ports.
+It is used for event-driven logic and starts automatically when the tree is played.
 </BorderedSection>
 
 ---
@@ -81,7 +79,7 @@ The tree will automatically stop when no nodes are running.
 <BorderedSection>
 #### 🛑 On Stopped:
 - All running nodes (if any) are stopped.
-- All created revert actions (if any) are invoked.
+- All created revert actions (if any) are called.
 </BorderedSection>
 
 ### Nodes
@@ -89,9 +87,9 @@ The tree will automatically stop when no nodes are running.
 #### ▶️ On Started:
 - The `OnStart` method is called on the node.
 
-:::info
+:::info Immediately Stopping Node
 If the `Stop` or `CallAndStop` method is called from the `OnStart` method,
-the `OnUpdate`, `OnLateUpdate`, and `OnFixedUpdate` methods will not be called.
+the `OnUpdate`, `OnLateUpdate`, and `OnFixedUpdate` methods will not be called by the runtime.
 :::
 </BorderedSection>
 
@@ -104,8 +102,6 @@ the `OnUpdate`, `OnLateUpdate`, and `OnFixedUpdate` methods will not be called.
 #### 🛑 On Stopped:
 - The `OnStop` method is called on the node.
 </BorderedSection>
-
-Nodes can be stopped anywhere at anytime by invoking the nodes `Stop` or `CallAndStop` methods.
 
 ---
 ## Port Calls
