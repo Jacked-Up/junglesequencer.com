@@ -66,7 +66,7 @@ const sidebars = {
       },
       'guides/jungle-validator',
       'guides/custom-node-inspectors',
-      'guides/node-editor-context',
+      'guides/node-context-features',
       'guides/revert-actions'
   ],
 };

@@ -99,17 +99,17 @@ using UnityEngine;
 public class JungleExample : MonoBehaviour
 {
     [SerializeField]
-    private JungleTree jungleTree;
+    private JungleTree tree;
 
     private string _playbackUid;
 
     private void Start()
     {
         // Option 1:
-        _playbackUid = JungleRuntime.Play(jungleTree);
+        _playbackUid = JungleRuntime.Play(tree);
 
         // Option 2:
-        _playbackUid = JungleRuntime.Play(jungleTree, out JunglePlayback playback);
+        _playbackUid = JungleRuntime.Play(tree, out JunglePlayback playback);
     }
 }
 ```
@@ -125,18 +125,18 @@ using UnityEngine;
 public class JungleExample : MonoBehaviour
 {
     [SerializeField]
-    private JungleTree jungleTree;
+    private JungleTree tree;
 
     private string _playbackUid;
     private JunglePlayback _playback;
 
     private void Start()
     {
-        _playbackUid = JungleRuntime.Play(jungleTree, out _playback);
-        Invoke(nameof(StopJungleTree), 5f);
+        _playbackUid = JungleRuntime.Play(tree, out _playback);
+        Invoke(nameof(StopTreeAfterFiveSeconds), 5);
     }
 
-    private void StopJungleTree()
+    private void StopTreeAfterFiveSeconds()
     {
         // Option 1: Stop via a playback uid
         JungleRuntime.Stop(_playbackUid);
