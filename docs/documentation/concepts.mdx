@@ -65,25 +65,28 @@ Understanding the lifecycle will help you to better understand the process of cr
 
 ### Trees
 <BorderedSection>
-#### On Played:
+#### ▶️ On Played:
 - All event nodes in the tree are started.
-- For example, the start node is an event node started when the tree is played.
+    - For example, the start node is an event node started when the tree is played.
 </BorderedSection>
 
 <BorderedSection>
-#### While Running:
-- The tree updates all running nodes.
-- If there are no more running nodes, the tree stops automatically.
+#### 🔄 While Running:
+- The tree automatically manages and updates running nodes.
+:::info Automatic Stopping
+The tree will automatically stop when no nodes are running. 
+:::
 </BorderedSection>
 
 <BorderedSection>
-#### On Stopped:
-- The tree calls all revert actions (if any).
+#### 🛑 On Stopped:
+- All running nodes (if any) are stopped.
+- All created revert actions (if any) are invoked.
 </BorderedSection>
 
 ### Nodes
 <BorderedSection>
-#### On Started:
+#### ▶️ On Started:
 - The `OnStart` method is called on the node.
 
 :::info
@@ -93,12 +96,12 @@ the `OnUpdate`, `OnLateUpdate`, and `OnFixedUpdate` methods will not be called.
 </BorderedSection>
 
 <BorderedSection>
-#### While Running:
+#### 🔄 While Running:
 - The `OnUpdate`, `OnLateUpdate`, and `OnFixedUpdate` methods are called on the node.
 </BorderedSection>
 
 <BorderedSection>
-#### On Stopped:
+#### 🛑 On Stopped:
 - The `OnStop` method is called on the node.
 </BorderedSection>
 
