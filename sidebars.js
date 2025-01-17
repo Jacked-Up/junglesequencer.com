@@ -58,16 +58,28 @@ const sidebars = {
           },
           collapsed: true,
           items: [
-              'guides/jungle-editor/node-graph',
-              'guides/jungle-editor/node-inspector',
-              'guides/jungle-editor/node-explorer',
+              'guides/jungle-editor/graph-panel',
+              'guides/jungle-editor/inspector-panel',
+              'guides/jungle-editor/explorer-panel',
               'guides/jungle-editor/sticky-notes'
           ],
       },
-      'guides/jungle-validator',
+      {
+          type: 'category',
+          label: 'Node Context Features',
+          link: {
+              type: 'generated-index',
+          },
+          collapsed: true,
+          items: [
+              'guides/node-context-features/details-box',
+              'guides/node-context-features/progress-bar',
+              'guides/node-context-features/control-panel'
+          ],
+      },
       'guides/custom-node-inspectors',
-      'guides/node-context-features',
-      'guides/revert-actions'
+      'guides/revert-actions',
+      'guides/jungle-validator'
   ],
 };
 
