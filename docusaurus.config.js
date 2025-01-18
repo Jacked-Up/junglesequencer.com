@@ -31,6 +31,9 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          postsPerPage: 999,
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'All Posts',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -132,6 +135,7 @@ const config = {
         additionalLanguages: ['csharp']
       },
     }),
+  
     plugins: [
       '@easyops-cn/docusaurus-search-local'
     ],

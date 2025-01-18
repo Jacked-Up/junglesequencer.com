@@ -25,7 +25,6 @@ const sidebars = {
       'documentation/jungle-playback',
       'documentation/jungle-manifest',
       'documentation/jungle-player',
-      'documentation/jungle-gizmos',
       'documentation/jungle-utils',
       'documentation/jungle-editor-utils',
       'documentation/jungle-validator',
@@ -74,7 +73,8 @@ const sidebars = {
           items: [
               'guides/node-context-features/details-box',
               'guides/node-context-features/progress-bar',
-              'guides/node-context-features/control-panel'
+              'guides/node-context-features/control-panel',
+              'guides/node-context-features/gizmos'
           ],
       },
       'guides/custom-node-inspectors',
