@@ -5,6 +5,122 @@ sidebar_position: 4
 slug: /guides/node-context-features/gizmos
 ---
 
+Gizmos is a powerful tool system that allows you to render simple shapes and lines in the scene and game views.
+Jungle uses Unity's builtin gizmos system for handling the rendering.
+A wrapper system is used to listen for gizmo render events and invoke them dynamically in Jungle Nodes.
+
+*In short, the gizmo wrapper is a self-managed system designed to make rendering gizmos a breeze.*
+
+import VideoPlayer from '@site/src/components/VideoPlayer';
+
+<VideoPlayer
+    videoUrl="https://youtu.be"
+    title="Implementing Gizmos"
+    description="Quick video guide on how to implement gizmos into your Jungle Nodes."
+/>
+
+---
+## Implementation
+
+There are three methods for rendering gizmos during different conditions:
+- `OnDrawGizmos`: Base method for rendering gizmos.
+    - Always called before `OnDrawGizmosSelected` and `OnDrawGizmosRunning`.
+- `OnDrawGizmosSelected`: Method called when the node is selected in the Jungle Editor.
+    - Not called while the node is running even if the node is selected.
+- `OnDrawGizmosRunning`: Method called when the node is running.
+
+:::info Editor Only
+Node gizmos methods are only called in the editor.
+These methods should be surrounded with script tags to ensure they are not compiled to the build.
+This is not a requirement but good practice.
+
+```csharp
+#if UNITY_EDITOR
+public override void OnDrawGizmos()
+{
+    // Your gizmos code here...
+}
+#endif
+```
+:::
+
+### Example
+
+```csharp
+using Jungle;
+using UnityEngine;
+
+public class GizmosSphereNode : IdentityNode
+{
+    [SerializeField]
+    private Vector3 position;
+
+    [SerializeField]
+    private float radius = 2;
+
+    [SerializeField]
+    private Color color = Color.red;
+
+    protected override void OnStart() { }
+
+    protected override void OnUpdate() { }
+
+    public override void OnDrawGizmos()
+    {
+        Color dimmedColor = color;
+        dimmedColor.a = 0.5f;
+
+        Gizmos.color = dimmedColor;
+        Gizmos.DrawSphere(position, radius);
+    }
+
+    public override void OnDrawGizmosSelected()
+    {
+        Gizmos.color = color;
+        Gizmos.DrawSphere(position, radius);
+    }
+
+    public override void OnDrawGizmosRunning()
+    {
+        Color pingPongColor = color;
+        pingPongColor.a = Mathf.PingPong(Time.time, 1);
+
+        Gizmos.color = pingPongColor;
+        Gizmos.DrawSphere(position, radius);
+    }
+}
+```
+
+---
+## Best Practices
+
+Gizmos methods are invoked frequently so ensure your code is efficient.
+If you believe Jungle's gizmos system is causing too significant of a performance impact,
+it can be disabled in the Jungle preferences.
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
 Unity provides a way to draw gizmos in the scene view. Gizmos are visual shapes and lines that can be used for debugging
 and visualizing information in the scene view. Usually, this feature is only available in the `OnDrawGizmos` and 
 `OnDrawGizmosSelected` methods within a `MonoBehaviour` class.
