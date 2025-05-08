@@ -1,9 +1,48 @@
 ---
-title: Using Revert Actions
+title: Revert Actions
 sidebar_position: 12
 
 slug: /guides/revert-actions
 ---
+
+Jungle comes with a system that helps you create and manage events to be called when the tree stops playing.
+
+Nodes may perform some action that you want to have reverted when the tree stops playing.
+Luckily, Jungle playbacks allow you to easily create and manage revert actions to solve this exact issue.
+
+#### Example Usage
+
+```csharp
+public class SetPlayerPosition : IONode<Player>
+{
+    [SerializeField]
+    private Vector3 position;
+
+    private Player _player;
+    private Vector3 _originalPosition;
+
+    protected override void OnStart(Player player)
+    {
+        _player = player;
+        _originalPosition = player.transform.position;
+
+        player.transform.position = position;
+
+        AddRevertAction(RevertPlayerPosition);
+    }
+
+    private void RevertPlayerPosition()
+    {
+        _player.transform.position = _originalPosition;
+    }
+
+    protected override void OnUpdate() {}
+}
+```
+
+Let's say you have node that sets a players position during a cutscene, and when the cutscene ends, you want the player to return to the original position.
+
+
 
 Sometimes you may want to revert an action performed by a node once the tree has finished running.
 This can be useful for things like resetting a value or undoing a change that was made during the tree's execution.

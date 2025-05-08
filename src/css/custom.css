@@ -6,35 +6,41 @@
 :root {
   font-family: Rubik, sans-serif !important;
 
+  --ifm-color-primary-darkest:  #0b290d;
+  --ifm-color-primary-darker:   #16521a;
+  --ifm-color-primary-dark:     #217b27;
   --ifm-color-primary:          #3aca44;
-  --ifm-color-primary-dark:     #184d1b;
-  --ifm-color-primary-darker:   #0d2a0e;
-  --ifm-color-primary-darkest:  #071508;
-  --ifm-color-primary-light:    #2a9b35;
-  --ifm-color-primary-lighter:  #30b03d;
-  --ifm-color-primary-lightest: #36cc46;
-  --ifm-color-secondary:        #8c9100;
+  --ifm-color-primary-light:    #61d569;
+  --ifm-color-primary-lighter:  #89df8f;
+  --ifm-color-primary-lightest: #b0eab4;
+  --ifm-color-secondary:        #faad07;
 
-  --ifm-navbar-background-color: var(--ifm-color-primary-darker);
-  --ifm-navbar-sidebar-width: 100%;
+  --ifm-navbar-background-color: #123c14;
   --ifm-navbar-height: 4rem;
-
   --ifm-navbar-link-color: white;
-  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary-light);
   --ifm-navbar-link-active-color: var(--ifm-color-primary-lightest);
   --ifm-navbar-shadow: rgba(0, 0, 0, 0.25) 0 0 10px 0;
-
   --ifm-navbar-search-input-background-color: white !important;
   --ifm-navbar-search-input-color: black;
   --ifm-navbar-search-input-placeholder-color: rgba(0, 0, 0, 0.2);
 
   --ifm-footer-background-color: var(--ifm-color-primary-darker);
 
-  --ifm-background-color: white;
+  --ifm-background-color: #f7faf6;
+  --ifm-background-alt:   #eaf4ec;
+  --ifm-surface-color:    #ffffff;
 }
 
+:root,
 [data-theme='dark'] {
-  --ifm-background-color: #141a13 !important;
+  --ifm-navbar-search-input-background-color: white !important;
+  --ifm-navbar-search-input-color: black !important;
+  --ifm-navbar-search-input-placeholder-color: rgba(0,0,0,0.3) !important;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: Rubik, sans-serif !important;
 }
 
 .navbar {
@@ -55,34 +61,6 @@
 
 .footer .footer__copyright{
   color: #b9b9b9;
-}
-
-h1 {
-  font-family: Rubik, sans-serif !important;
-}
-
-h2 {
-  font-family: Rubik, sans-serif !important;
-}
-
-h3 {
-  font-family: Rubik, sans-serif !important;
-}
-
-h4 {
-  font-family: Rubik, sans-serif !important;
-}
-
-h5 {
-  font-family: Rubik, sans-serif !important;
-}
-
-h6 {
-  font-family: Rubik, sans-serif !important;
-}
-
-p {
-  font-family: Rubik, sans-serif !important;
 }
 
 .DocItemTitle {
