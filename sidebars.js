@@ -35,20 +35,20 @@ const sidebars = {
   guidesSidebar: [
       {
           type: 'category',
-          label: 'Creating Nodes',
+          label: 'Creating Node Scripts',
           link: {
               type: 'generated-index',
           },
           collapsed: true,
           items: [
-              'guides/creating-nodes/using-the-node-fabricator',
-              'guides/creating-nodes/creating-branch-nodes',
-              'guides/creating-nodes/creating-io-nodes',
-              'guides/creating-nodes/creating-identity-nodes',
-              'guides/creating-nodes/creating-event-nodes'
+              'guides/creating-node-scripts/using-the-node-fabricator',
+              'guides/creating-node-scripts/creating-branch-nodes',
+              'guides/creating-node-scripts/creating-io-nodes',
+              'guides/creating-node-scripts/creating-identity-nodes',
+              'guides/creating-node-scripts/creating-event-nodes'
           ],
       },
-      'guides/deleting-nodes',
+      'guides/deleting-node-scripts',
       {
           type: 'category',
           label: 'Jungle Editor',
