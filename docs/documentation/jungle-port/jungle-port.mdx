@@ -1,0 +1,92 @@
+---
+title: Jungle Port
+slug: /jungle-port
+---
+
+Object used to represent a port on a Jungle Node and manage connections.
+
+## Overview
+
+Provides the following functionalities:
+- Stores the direction, index, port type, and connections.
+- Allows you to check if node instances are connected to the port.
+
+---
+## Properties
+
+### `Uid`
+`public string Uid { get; }`
+
+- The ports unique identifier.
+
+---
+
+### `Node`
+`public JungleNode Node { get; }`
+
+- The node the port belongs to.
+
+---
+
+### `Direction`
+`public Directions Direction { get; }`
+
+- Defines whether the port is used for input or output.
+
+---
+
+### `Index`
+`public byte Index { get; }`
+
+- Defines the index of the port within the nodes input or output container.
+
+---
+
+### `PortType`
+`public Type PortType { get; }`
+
+- Defines the type the port inputs or outputs.
+
+---
+
+### `Connections`
+`public JungleNode[] Connections { get; }`
+
+- List of nodes that are connected to the port.
+
+---
+## Methods
+
+### `IsConnected`
+`public bool IsConnected(JungleNode node)`
+
+- Checks if the given node is connected to the port.
+- **Returns:** `true` if the given node is connected; otherwise `false`.
+
+---
+
+### `IsConnected`
+`public bool IsConnected(string nodeUid)`
+
+- Checks if a node with the given UID is connected to the port.
+- **Returns:** `true` if a node with the given UID is connected; otherwise `false`.
+
+---
+
+:::warning EDITOR ONLY
+### `DisconnectAll`
+`public void DisconnectAll(bool recordUndo = true)`
+
+- Disconnects all nodes from the port.
+:::
+
+---
+
+:::warning EDITOR ONLY
+### `TryGetConnectionUid`
+`public bool TryGetConnectionUid(JungleNode connection, out string connectionUid)`
+
+- Attempts to fetch the given nodes connection uid for this connection.
+  Each connection has a different UID on the input and output sides.
+- **Returns:** `true` if the connection UID was found; otherwise `false`.
+:::

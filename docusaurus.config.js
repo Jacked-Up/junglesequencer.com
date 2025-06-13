@@ -24,7 +24,7 @@ const config = {
           editUrl: 'https://github.com/Jacked-Up/junglesequencer.com/tree/prod/',
           versions: {
             current: {
-              label: '1.0.6 (Unreleased)',
+              label: '1.1.0 (Unreleased)',
               path: 'unreleased',
             },
           },
