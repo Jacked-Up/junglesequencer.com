@@ -43,6 +43,7 @@ const sidebars = {
                 'documentation/jungle-port/jungle-port-call',
                 'documentation/jungle-port/jungle-port-info',
                 'documentation/jungle-port/jungle-port-none',
+                'documentation/jungle-port/jungle-port-directions',
                 'documentation/jungle-port/jungle-port-nas',
                 'documentation/jungle-port/jungle-port-error'
             ],
