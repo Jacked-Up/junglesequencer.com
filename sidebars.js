@@ -3,20 +3,32 @@ const sidebars = {
     documentationSidebar: [
         'documentation/welcome',
         'documentation/concepts',
-        'documentation/node-properties',
+        {
+            type: 'category',
+            label: 'Jungle Tree',
+            link: {
+                type: 'doc',
+                id: 'documentation/jungle-tree/jungle-tree',
+            },
+            collapsed: true,
+            items: [
+                'documentation/jungle-tree/jungle-manifest',
+            ],
+        },
         {
             type: 'category',
             label: 'Jungle Node',
             link: {
                 type: 'doc',
-                id: 'documentation/jungle-nodes/jungle-node',
+                id: 'documentation/jungle-node/jungle-node',
             },
-            collapsed: false,
+            collapsed: true,
             items: [
-                'documentation/jungle-nodes/branch-node',
-                'documentation/jungle-nodes/io-node',
-                'documentation/jungle-nodes/identity-node',
-                'documentation/jungle-nodes/event-node'
+                'documentation/jungle-node/node-properties',
+                'documentation/jungle-node/branch-node',
+                'documentation/jungle-node/io-node',
+                'documentation/jungle-node/identity-node',
+                'documentation/jungle-node/event-node'
             ],
         },
         {
@@ -24,7 +36,7 @@ const sidebars = {
             label: 'Jungle Port',
             link: {
                 type: 'doc',
-                id: 'documentation/jungle-port',
+                id: 'documentation/jungle-port/jungle-port',
             },
             collapsed: true,
             items: [
@@ -32,20 +44,43 @@ const sidebars = {
                 'documentation/jungle-port/jungle-port-info',
                 'documentation/jungle-port/jungle-port-none',
                 'documentation/jungle-port/jungle-port-nas',
-                'documentation/jungle-port/jungle-port-error',
+                'documentation/jungle-port/jungle-port-error'
             ],
         },
-        'documentation/jungle-tree',
-        'documentation/jungle-runtime',
-        'documentation/jungle-playback',
-        'documentation/jungle-manifest',
-        'documentation/jungle-player',
-        'documentation/jungle-utils',
-        'documentation/jungle-editor-utils',
-        'documentation/jungle-validator',
-        'documentation/jungle-exception',
-        'documentation/jungle-preferences',
-        'documentation/over-time-helper'
+        {
+            type: 'category',
+            label: 'Jungle Runtime',
+            link: {
+                type: 'doc',
+                id: 'documentation/jungle-runtime/jungle-runtime',
+            },
+            collapsed: true,
+            items: [
+                'documentation/jungle-runtime/jungle-playback',
+                'documentation/jungle-runtime/jungle-exception',
+                'documentation/jungle-runtime/jungle-player'
+            ],
+        },
+        {
+            type: 'category',
+            label: 'Miscellaneous',
+            collapsed: true,
+            items: [
+                'documentation/miscellaneous/jungle-utils',
+                'documentation/miscellaneous/jungle-gui-layout',
+                'documentation/miscellaneous/over-time-helper'
+            ],
+        },
+        {
+            type: 'category',
+            label: 'Editor Only',
+            collapsed: true,
+            items: [
+                'documentation/editor-only/jungle-editor-utils',
+                'documentation/editor-only/jungle-validator',
+                'documentation/editor-only/jungle-preferences',
+            ],
+        },
     ],
     guidesSidebar: [
         {

@@ -1,9 +1,10 @@
 ---
-title: Branch Node<T>
-slug: /jungle-nodes/branch-node
+title: Event Node
+slug: /jungle-node/event-node
 ---
 
-The Branch Node takes a single input of any type, and outputs to any number of outputs that all can output any types.
+The Event Node has zero inputs and outputs to any number of outputs that all can output any types.
+Event Nodes are started automatically when the tree is started.
 
 import VideoPlayer from '@site/src/components/VideoPlayer';
 
@@ -16,28 +17,23 @@ import VideoPlayer from '@site/src/components/VideoPlayer';
 ---
 ## Overview
 
-:::tip ONLY NEED ONE OUTPUT?
-If you plan to use only a single output from the branch node, we recommend building an **IO Node** instead.
-:::
+All Event Nodes are required to have a `EventNode` class attribute defined.
+This attribute defines the output ports on the node.
 
-All Branch Nodes are required to have a `BranchNode` class attribute defined. This attribute defines the input port
-and output ports on the node.
+Here's a list of all the properties you can define in the `EventNode` attribute:
 
-Here's a list of all the properties you can define in the `BranchNode` attribute:
-
-| Name               | Type       | Notes                                    |
-|--------------------|------------|------------------------------------------|
-| `InputPortName`    | `string`   | Defines the name of the input port       |
-| `OutputPortNames`  | `string[]` | Defines the names for each output port   |
-| `OutputPortTypes`  | `Type[]`   | Defines the outputted type for each port |
+| Property                     | Type       | Description                                                             |
+|------------------------------|------------|-------------------------------------------------------------------------|
+| `OutputPortNames`            | `string[]` | Defines the names for each output port.                                 |
+| `OutputPortTypes`            | `Type[]`   | Defines the outputted type for each output port.                        |
+| `PreventAutoStopWhileActive` | `bool`     | Prevents the tree from automatically stopping when this node is active. |
 
 The output port names and types should be defined in the same order and should always be the same length. You are
 limited to 256 output ports per node.
 
-Here's an example of a `BranchNode` attribute:
+Here's an example of a `EventNode` attribute:
 ```csharp
-[BranchNode(
-    InputPortName = "My Input",
+[EventNode(
     OutputPortNames = new []
     {
         "My Output A",
@@ -49,28 +45,18 @@ Here's an example of a `BranchNode` attribute:
         typeof(Port.None)
     }
 )]
-public class MyBranchNode : BranchNode<Port.None>
+public class MyEventNode : EventNode
 ...
 ```
 
 #### Result in the Jungle Editor
 
-![Branch node attribute visual](img/branch-node-attribute-visual.png)
-
-:::info WHERE IS THE INPUT TYPE DEFINED?
-The Branch Node is a generic class, so you define the input port type when you inherit from the class.
-<br />**For example**, if you want the input port to accept a `string` value, you would set your script up like so:
-```csharp
-public class MyBranchNode : BranchNode<string>
-...
-```
-:::
+![Event node attribute visual](img/event-node-attribute-visual.png)
 
 ---
-
 :::tip
-The `BranchNode<T>` class inherits from the `JungleNode` class.
-This means all public and protected members of `JungleNode` are accessible within `BranchNode<T>`.
+The `EventNode` class inherits from the `JungleNode` class.
+This means all public and protected members of `JungleNode` are accessible within `EventNode`.
 
 Read about the base `JungleNode` class **[here](../jungle-nodes/jungle-node)**.
 :::
@@ -113,6 +99,12 @@ Indicates whether this node is an instance of a playback.
 
 Gets the playback instance associated with this node.
 
+### `PreventAutoStopWhileActive`
+
+`public bool PreventAutoStopWhileActive { get; }`
+
+Prevents the tree from automatically stopping while this node is running.
+
 ---
 ## Methods
 
@@ -120,7 +112,7 @@ Gets the playback instance associated with this node.
 
 `public override Port.Info GetInputPortInfo()`
 
-Returns information about the node's input port.
+Returns information about the node's input port. This method returns an empty port information as EventNode takes no input.
 
 ### `GetOutputPortsInfo`
 
@@ -138,19 +130,19 @@ Adds a revert action to be executed when the playback stops.
 
 `protected void Call(Port.Call call)`
 
-Sends a port call to the node without stopping its execution.
+Sends out a port call without stopping the node.
 
 ### `Call`
 
 `protected void Call(Port.Call[] calls)`
 
-Sends multiple port calls to the node without stopping its execution.
+Sends out multiple port calls without stopping the node.
 
 ### `Stop`
 
 `protected void Stop()`
 
-Stops the node without sending out any port calls.
+Stops the node without sending out a port call.
 
 ### `CallAndStop`
 
@@ -166,7 +158,7 @@ Sends out multiple port calls and stops the node.
 
 ### `OnStart`
 
-`protected abstract void OnStart(T inputValue)`
+`protected abstract void OnStart()`
 
 Invoked immediately when this node is started.
 
@@ -207,11 +199,10 @@ Called whenever the tree performs a validation pass. Should return a list of iss
 using Jungle;
 
 [NodeProperties(
-    Title = "Branch Node",
-    Description = "One input, multiple outputs."
+    Title = "Event Node",
+    Description = "No inputs, multiple outputs."
 )]
-[BranchNode(
-    InputPortName = "Input",
+[EventNode(
     OutputPortNames = new []
     {
         "Output A",
@@ -223,9 +214,9 @@ using Jungle;
         typeof(Port.None)
     }
 )]
-public class MyBranchNode : BranchNode<Port.None>
+public class MyEventNode : EventNode
 {
-    protected override void OnStart(Port.None _)
+    protected override void OnStart()
     {
         CallAndStop(new []
         {
@@ -241,56 +232,73 @@ public class MyBranchNode : BranchNode<Port.None>
 ---
 ## Example
 
-Here's a simple example of a Branch Node that takes in a number and outputs weather the number is positive or negative.
+Here's an example of a Event Node that calls different output ports at 5, 10, and 15 seconds intervals.
+
+![Timed intervals node visual](img/event-node-example.png)
 
 ```csharp
 using Jungle;
+using UnityEngine;
 
 [NodeProperties(
-    Title = "Positive/Negative",
-    Description = "Outputs weather the input is positive or negative."
+    Title = "Timed Intervals",
+    Description = "Calls different outputs at 5, 10, and 15 seconds intervals.",
+    Color = Yellow
 )]
-[BranchNode(
-    InputPortName = "Number",
+[EventNode(
     OutputPortNames = new []
     {
-        "Positive",
-        "Negative"
+        "After 5 Seconds",
+        "After 10 Seconds",
+        "After 15 Seconds"
     },
     OutputPortTypes = new []
     {
         typeof(Port.None),
+        typeof(Port.None),
         typeof(Port.None)
     }
 )]
-public class PositiveNegativeNode : BranchNode<int>
+public class TimedIntervalsNode : EventNode
 {
-    protected override void OnStart(int number)
+    private float _startTime;
+    private bool _called5Seconds;
+    private bool _called10Seconds;
+    private bool _called15Seconds;
+    
+    protected override void OnStart()
     {
-        if (number >= 0)
+        _startTime = Time.time;
+        
+        _called5Seconds = false;
+        _called10Seconds = false;
+        _called15Seconds = false;
+    }
+
+    protected override void OnUpdate()
+    {
+        float elapsedTime = Time.time - _startTime;
+
+        // After 5 seconds
+        if (!_called5Seconds && elapsedTime >= 5)
         {
-            // Call the positive port
-            CallAndStop(new Port.Call(0, Nothing));
+            Call(new Port.Call(0, Nothing));
+            _called5Seconds = true;
         }
-        else
+        
+        // After 10 seconds
+        if (!_called10Seconds && elapsedTime >= 10)
         {
-            // Call the negative port
-            CallAndStop(new Port.Call(1, Nothing));
+            Call(new Port.Call(1, Nothing));
+            _called10Seconds = true;
+        }
+        
+        // After 15 seconds
+        if (!_called15Seconds && elapsedTime >= 15)
+        {
+            CallAndStop(new Port.Call(2, Nothing));
+            _called15Seconds = true;
         }
     }
-    
-    protected override void OnUpdate() { }
 }
 ```
-
-As shown in the example above, the input port is named **Number** and accepts the type **int**.
-Also defined are two output ports named **Positive** and **Negative** that output **nothing**.
-
-With this setup, when a node calls this node, it inputs a value of type int to the Number port. The node then checks if
-the number is greater than or equal to zero. If it is, it calls the Positive port. If it's not, it calls the Negative
-port.
-
-This configuration allows us to create a node with branching logic that can run different sequences based on whether the
-inputted number is positive or negative.
-
-![Branch node example visual](img/branch-node-example.png)
