@@ -73,7 +73,7 @@
     /* Layout */
     width: clamp(0px, 90vw, 1800px);
     margin-inline: auto;
-    padding-inline: 2rem;
+    padding-inline: 5rem;
 }
 
 .hero__text {
@@ -94,16 +94,6 @@
     line-height: 1.4;
     margin-bottom: 1.5rem;
 }
-
-
-
-
-
-
-
-
-
-
 
 .hero__actions{
     display:flex;
@@ -159,7 +149,7 @@
     opacity:1;
 }
 
-.hero__button--learn{ /* all defaults already fit */ }
+.hero__button--learn{ }
 
 .hero__button--buy{
     --bg-start:#f39c12;
@@ -177,33 +167,22 @@
     background:url("https://cdn.junglesequencer.com/homepage/shopping-cart.svg") no-repeat center/contain;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .hero__video {
     flex: 1;
     max-width: 675px;
     aspect-ratio: 16 / 9;
+    perspective: 800px;
 }
 
 .hero__video iframe {
     border-radius: 12px;
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     border: 0;
     box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.25);
+    
+    transform: rotateY(-8deg);
+    transform-origin: center;
+    transition: transform 0.4s ease;
 }
 
 @media (max-width: 768px) {
@@ -233,6 +212,10 @@
     .hero__video {
         width: 100%;
         max-width: none;
+    }
+    
+    .hero__video iframe {
+        transform: none;
     }
 }
 

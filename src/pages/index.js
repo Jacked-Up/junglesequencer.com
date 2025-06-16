@@ -64,8 +64,7 @@ function IndexPage() {
                             <div className="text">
                                 <h2>Creating and Editing Sequences</h2>
                                 <p>
-                                    Drag and drop nodes into the graph, then tweak everything in the inspector
-                                    — no code required!
+                                    Drag and drop nodes from the node explorer into the graph view to form a sequence, and edit node properties using the inspector.
                                 </p>
                             </div>
                             <div className="image">
@@ -77,7 +76,7 @@ function IndexPage() {
                             <div className="text">
                                 <h2>Create Nodes with C#</h2>
                                 <p>
-                                    Write ultra-fast C# scripts and Jungle Sequencer turns them into nodes automatically.
+                                    Create performant custom nodes using C# scripts. Nodes are automatically generated from the scripts you write.
                                 </p>
                             </div>
                             <div className="image">
@@ -89,7 +88,7 @@ function IndexPage() {
                             <div className="text">
                                 <h2>Custom Node Inspectors</h2>
                                 <p>
-                                    Design custom inspectors for a perfect editing experience.
+                                    Design custom inspectors for your nodes to make them more user-friendly and provide additional functionality.
                                 </p>
                             </div>
                             <div className="image">
@@ -101,7 +100,7 @@ function IndexPage() {
                             <div className="text">
                                 <h2>Editor Sticky Notes</h2>
                                 <p>
-                                    Leave comments and TODOs right inside your trees so ideas never get lost.
+                                    Add sticky notes in your trees to document ideas and provide context.
                                 </p>
                             </div>
                             <div className="image">
@@ -113,19 +112,19 @@ function IndexPage() {
                             <div className="text">
                                 <h2>Editor Gizmos Support</h2>
                                 <p>
-                                    Visualize logic in the Scene view with Unity Gizmos and debug at lightspeed.
+                                    Utilize Unity's gizmos system to provide visual feedback in the editor for your nodes.
                                 </p>
                             </div>
                             <div className="image">
                                 <img src="https://cdn.junglesequencer.com/homepage/feature-card-5.png" alt="Feature 5"/>
                             </div>
                         </div>
-
+                        
                         <div className="features-section-card reverse">
                             <div className="text">
                                 <h2>Validator & Error Handler</h2>
                                 <p>
-                                    Catch issues before play-mode starts and save hours of QA time.
+                                    Implement validation logic in your nodes to catch issues before they occur.
                                 </p>
                             </div>
                             <div className="image">
