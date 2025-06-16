@@ -10,33 +10,51 @@ const GITHUB_DISCUSSIONS_URL = "https://github.com/Jacked-Up/junglesequencer.com
 function IndexPage() {
     return (
         <Layout>
-            <div className="hero-section">
-                <div className="container margin-vert--xl">
-                    <h1>Jungle Sequencer</h1>
-                    <p>
-                        A visual node-based tool designed to help developers interact with their game code in a more
-                        intuitive way.
+            
+            
+            
+            
+            
+            
+            
+            <section className="hero">
+                
+                <div className="hero__text">
+                    <h1 className="hero__title">Jungle Sequencer</h1>
+                    <p className="hero__description">
+                        The best tool for creating and editing sequences in Unity.
+                        Haven't thought of a GOOD description yet.
                     </p>
-                    <a href="/docs/" rel="noopener noreferrer" className="cta-button">
-                        <strong>Learn More</strong>
-                    </a>
+                    <a href="/docs/" className="hero__button">Learn More</a>
                 </div>
-            </div>
+                
+                <div className="hero__video">
+                    <iframe src={OVERVIEW_VIDEO_URL} title="Overview Video" allowFullScreen>
+                        Jungle Sequencer Overview YouTube video.
+                    </iframe>
+                </div>
+                
+            </section>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             <div className="features-section">
                 <div className="container margin-vert--xl">
-                    <div className="features-video">
-                        <h2>Welcome to the Jungle!</h2>
-                        <p>
-                            Watch this video to see Jungle Sequencer in action and learn how it can enhance your development workflow.
-                        </p>
-                        <div className="video-wrapper">
-                            <iframe width="700" height="394" src={OVERVIEW_VIDEO_URL} frameBorder="0" allowFullScreen>
-                                Jungle Sequencer Overview YouTube video.
-                            </iframe>
-                        </div>
-                    </div>
-                    
                     <div className="features-section-cards">
                         <div className="features-section-card">
                             <div className="text">
