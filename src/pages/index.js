@@ -18,7 +18,18 @@ function IndexPage() {
                         <p className="hero__description">
                             The quickest and easiest solution for building node-based sequences in Unity.
                         </p>
-                        <a href="/docs/" className="hero__button">Learn More</a>
+                        <div className="hero__actions">
+                            <a className="hero__button hero__button--learn"
+                               href="/docs/">
+                                Learn More
+                            </a>
+                            <a className="hero__button hero__button--buy"
+                               href="https://assetstore.unity.com/packages/slug/258407"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Buy Jungle Sequencer
+                            </a>
+                        </div>
                     </div>
                     
                     <div className="hero__video">
