@@ -20,14 +20,12 @@ Provides the following functionalities:
 - The ports unique identifier.
 
 ---
-
 ### `Node`
 `public JungleNode Node { get; }`
 
 - The node the port belongs to.
 
 ---
-
 ### `Direction`
 `public Directions Direction { get; }`
 
@@ -35,21 +33,18 @@ Provides the following functionalities:
 - [`Port.Directions` documentation](./jungle-port/directions).
 
 ---
-
 ### `Index`
 `public byte Index { get; }`
 
 - Defines the index of the port within the nodes input or output container.
 
 ---
-
 ### `PortType`
 `public Type PortType { get; }`
 
 - Defines the type the port inputs or outputs.
 
 ---
-
 ### `Connections`
 `public JungleNode[] Connections { get; }`
 
@@ -65,7 +60,6 @@ Provides the following functionalities:
 - **Returns:** `true` if the given node is connected; otherwise `false`.
 
 ---
-
 ### `IsConnected`
 `public bool IsConnected(string nodeUid)`
 
@@ -73,7 +67,6 @@ Provides the following functionalities:
 - **Returns:** `true` if a node with the given UID is connected; otherwise `false`.
 
 ---
-
 :::warning EDITOR ONLY
 ### `DisconnectAll`
 `public void DisconnectAll(bool recordUndo = true)`
@@ -82,7 +75,6 @@ Provides the following functionalities:
 :::
 
 ---
-
 :::warning EDITOR ONLY
 ### `TryGetConnectionUid`
 `public bool TryGetConnectionUid(JungleNode connection, out string connectionUid)`
