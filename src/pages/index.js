@@ -22,8 +22,7 @@ function IndexPage() {
                 <div className="hero__text">
                     <h1 className="hero__title">Jungle Sequencer</h1>
                     <p className="hero__description">
-                        The best tool for creating and editing sequences in Unity.
-                        Haven't thought of a GOOD description yet.
+                        The quickest and easiest solution for building node-based sequences in Unity.
                     </p>
                     <a href="/docs/" className="hero__button">Learn More</a>
                 </div>
