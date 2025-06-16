@@ -11,28 +11,22 @@ function IndexPage() {
     return (
         <Layout>
             
-            
-            
-            
-            
-            
-            
             <section className="hero">
-                
-                <div className="hero__text">
-                    <h1 className="hero__title">Jungle Sequencer</h1>
-                    <p className="hero__description">
-                        The quickest and easiest solution for building node-based sequences in Unity.
-                    </p>
-                    <a href="/docs/" className="hero__button">Learn More</a>
+                <div className="hero__content">
+                    <div className="hero__text">
+                        <h1 className="hero__title">Jungle Sequencer</h1>
+                        <p className="hero__description">
+                            The quickest and easiest solution for building node-based sequences in Unity.
+                        </p>
+                        <a href="/docs/" className="hero__button">Learn More</a>
+                    </div>
+                    
+                    <div className="hero__video">
+                        <iframe src={OVERVIEW_VIDEO_URL} title="Overview Video" allowFullScreen>
+                            Jungle Sequencer Overview YouTube video.
+                        </iframe>
+                    </div>
                 </div>
-                
-                <div className="hero__video">
-                    <iframe src={OVERVIEW_VIDEO_URL} title="Overview Video" allowFullScreen>
-                        Jungle Sequencer Overview YouTube video.
-                    </iframe>
-                </div>
-                
             </section>
             
             
@@ -142,6 +136,14 @@ function IndexPage() {
                 </div>
             </div>
             
+            
+            
+            
+            
+            
+            
+            
+            
             <div className="community-section">
                 <div className="container margin-vert--xl">
                     <h1>Community</h1>
@@ -166,6 +168,15 @@ function IndexPage() {
                     </div>
                 </div>
             </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            
         </Layout>
     );
 }
