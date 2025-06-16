@@ -40,7 +40,7 @@
 
 .hero-section {
     background:
-            url("../../src/pages/img/jungle-hero-background.png") no-repeat bottom center,
+            url("https://cdn.junglesequencer.com/homepage/jungle-hero-background.png") no-repeat bottom center,
             linear-gradient(to right, var(--ifm-color-primary-darker) 0%, var(--ifm-color-primary-dark) 60%);
     box-shadow: 0 0 20px 2px rgba(0,0,0,0.25);
 
@@ -224,7 +224,7 @@
 @media (max-width: 768px) {
     .hero-section {
         background:
-                url("../../src/pages/img/jungle-hero-background.png") no-repeat bottom center,
+                url("https://cdn.junglesequencer.com/homepage/jungle-hero-background.png") no-repeat bottom center,
                 linear-gradient(to bottom, var(--ifm-color-primary-darker) 0%, var(--ifm-color-primary-dark) 60%);
         padding: 12px 0;
     }

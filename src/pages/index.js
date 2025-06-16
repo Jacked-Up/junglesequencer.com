@@ -2,16 +2,6 @@ import React, { useEffect } from "react";
 import '../css/index.css';
 import Layout from '@theme/Layout';
 
-import unityLogoBlack from "../../static/img/brands/unity/unity-logo-black.png";
-//import unityLogoWhite from "../../static/img/brands/unity/unity-logo-white.png";
-
-import feature1 from "../../static/img/feature-cards/feature-card-1.png";
-import feature2 from "../../static/img/feature-cards/feature-card-2.png";
-import feature3 from "../../static/img/feature-cards/feature-card-3.png";
-import feature4 from "../../static/img/feature-cards/feature-card-4.png";
-import feature5 from "../../static/img/feature-cards/feature-card-5.png";
-import feature6 from "../../static/img/feature-cards/feature-card-6.png";
-
 function IndexPage() {
     return (
         <Layout>
@@ -48,7 +38,7 @@ function IndexPage() {
                                 </p>
                             </div>
                             <div className="image">
-                                <img src={feature1} alt="Feature 1"/>
+                                <img src="https://cdn.junglesequencer.com/homepage/feature-card-1.png" alt="Feature 1"/>
                             </div>
                         </div>
 
@@ -60,7 +50,7 @@ function IndexPage() {
                                 </p>
                             </div>
                             <div className="image">
-                                <img src={feature2} alt="Feature 2"/>
+                                <img src="https://cdn.junglesequencer.com/homepage/feature-card-2.png" alt="Feature 2"/>
                             </div>
                         </div>
 
@@ -72,7 +62,7 @@ function IndexPage() {
                                 </p>
                             </div>
                             <div className="image">
-                                <img src={feature3} alt="Feature 3"/>
+                                <img src="https://cdn.junglesequencer.com/homepage/feature-card-3.png" alt="Feature 3"/>
                             </div>
                         </div>
 
@@ -84,7 +74,7 @@ function IndexPage() {
                                 </p>
                             </div>
                             <div className="image">
-                                <img src={feature4} alt="Feature 4"/>
+                                <img src="https://cdn.junglesequencer.com/homepage/feature-card-4.png" alt="Feature 4"/>
                             </div>
                         </div>
 
@@ -96,7 +86,7 @@ function IndexPage() {
                                 </p>
                             </div>
                             <div className="image">
-                                <img src={feature5} alt="Feature 5"/>
+                                <img src="https://cdn.junglesequencer.com/homepage/feature-card-5.png" alt="Feature 5"/>
                             </div>
                         </div>
 
@@ -108,25 +98,26 @@ function IndexPage() {
                                 </p>
                             </div>
                             <div className="image">
-                                <img src={feature6} alt="Feature 6"/>
+                                <img src="https://cdn.junglesequencer.com/homepage/feature-card-6.png" alt="Feature 6"/>
                             </div>
                         </div>
                     </div>
-
+                    
                     <div className="features-section-unity">
                         <div>
                             <h2>
                                 Built for the Engine You Love
                             </h2>
                             <p>
-                                Supported on Unity versions <span className="text-glow"><strong>2021.3 +</strong></span>
+                                Supported on all Unity Editor versions
+                                <span className="text-glow"><strong> 2022.3 +</strong></span>
                             </p>
                         </div>
-                        <img src={unityLogoBlack} alt="Unity Logo (black)"/>
+                        <img src="https://cdn.junglesequencer.com/homepage/unity-logo-black.png" alt="Unity Logo"/>
                     </div>
                 </div>
             </div>
-
+            
             <div className="community-section">
                 <div className="container margin-vert--xl">
                     <h1>Community</h1>
