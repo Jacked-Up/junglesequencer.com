@@ -46,7 +46,7 @@ const config = {
     },
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Jungle',
+      title: 'Jungle Sequencer',
       logo: {
         alt: 'Jungle Sequencer Logo',
         src: 'img/logo.png',
@@ -71,8 +71,8 @@ const config = {
         },
         {
           to: '/blog',
-          label: 'Blog/Changelog',
-          position: 'left',
+          label: 'News & Changelog',
+          position: 'right',
         },
         {
           href: 'https://assetstore.unity.com/packages/slug/258407',
