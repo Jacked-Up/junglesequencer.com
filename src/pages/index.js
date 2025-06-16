@@ -22,12 +22,14 @@ function IndexPage() {
                 <div className="container margin-vert--xl">
                     <div className="features-video">
                         <h2>Welcome to the Jungle!</h2>
-                        <p>Watch this video to see Jungle Sequencer in action and learn how it can enhance your development workflow.</p>
+                        <p>
+                            Watch this video to see Jungle Sequencer in action and learn how it can enhance your development workflow.
+                        </p>
                         <div className="video-wrapper">
                             <iframe width="700" height="394" src="https://www.youtube.com/embed/mX08Ofr6Fcc?enablejsapi=1" frameBorder="0" allowFullScreen></iframe>
                         </div>
                     </div>
-
+                    
                     <div className="features-section-cards">
                         <div className="features-section-card">
                             <div className="text">
@@ -105,9 +107,7 @@ function IndexPage() {
                     
                     <div className="features-section-unity">
                         <div>
-                            <h2>
-                                Built for the Engine You Love
-                            </h2>
+                            <h2>Built for the Engine You Love</h2>
                             <p>
                                 Supported on all Unity Editor versions
                                 <span className="text-glow"><strong> 2022.3 +</strong></span>
@@ -121,17 +121,13 @@ function IndexPage() {
             <div className="community-section">
                 <div className="container margin-vert--xl">
                     <h1>Community</h1>
-                    <p>
-                        Connect with other developers, share your projects, and get help with Jungle Sequencer.
-                    </p>
+                    <p>Connect with other developers, share your projects, and get help with Jungle Sequencer.</p>
 
                     <br/>
 
                     <div>
                         <h2>Discord Server</h2>
-                        <p>
-                            Chat with the community, ask questions, and get help with your projects.
-                        </p>
+                        <p>Chat with the community, ask questions, and get help with your projects.</p>
                         <a href="https://discord.gg/vJ4AXsExfE" target="_blank" rel="noopener noreferrer"
                            className="discord-button">
                             <img
