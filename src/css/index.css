@@ -16,7 +16,6 @@
     width: 100%;
 
     /* Visual */
-    border-top: 2px solid rgba(255, 255, 255, 0.15);
     border-bottom: 2px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -406,7 +405,6 @@
     
     /* Visual */
     border-top: 2px solid rgba(255, 255, 255, 0.15);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
 }
 
 .community__grid {
