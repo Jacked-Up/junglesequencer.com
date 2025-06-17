@@ -316,82 +316,100 @@
             url("https://cdn.junglesequencer.com/homepage/jungle-hero-background.png") repeat-x bottom center,
             linear-gradient(to right,
             var(--ifm-color-primary-darker) 0%,
-            var(--ifm-color-primary-dark)   90%);
-    padding-block:4rem;
-    text-align:center;
+            var(--ifm-color-primary-dark) 90%);
+    padding-block: 4rem;
+    text-align: center;
 }
 
-/* --- GRID -------------------------------------------------------------------- */
 .community__grid{
-    display:flex;flex-wrap:wrap;justify-content:center;
-    gap:1.5rem;max-width:960px;margin-inline:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 960px;
+    margin-inline: auto;
 }
 
-/* --- CARD -------------------------------------------------------------------- */
 .community__card{
-    position:relative;
-    flex:1 1 400px;max-width:440px;min-height:270px;
-    padding:2rem 2rem 2.4rem;
-    border-radius:16px;
-    background:rgba(255,255,255,.05);
-    backdrop-filter:blur(3px);
-    border:1px solid rgba(255,255,255,.15);
-    color:#fff;text-align:left;
-    box-shadow:0 8px 26px rgba(0,0,0,.35);
+    position: relative;
+    flex: 1 1 400px;
+    max-width: 440px;
+    min-height: 270px;
+    padding: 2rem 2rem 2.4rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    text-align: left;
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
 }
 
-/* neon-green edge */
 .community__card::before{
-    content:"";position:absolute;inset:0;padding:1px;border-radius:inherit;
-    background:linear-gradient(135deg,
-    var(--ifm-color-primary-light) 0%,
-    var(--ifm-color-primary)       100%);
-    -webkit-mask:
-            linear-gradient(#000 0 0) content-box,
-            linear-gradient(#000 0 0);
-    -webkit-mask-composite:xor;mask-composite:exclude;
-    pointer-events:none;
-    opacity:0.85;
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, var(--ifm-color-primary-light) 0%, var(--ifm-color-primary) 100%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0.85;
 }
 
 .community__card-title{
-    margin:0 0 .6rem;font-size:1.5rem;font-weight:700;
+    margin: 0 0 0.6rem;
+    font-size: 1.5rem;
+    font-weight: 700;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 .community__card-description{
-    margin:0 0 1.6rem;font-size:1.05rem;line-height:1.45;
+    margin: 0 0 1.6rem;
+    font-size: 1.05rem;
+    line-height: 1.45;
     color: var(--ifm-color-primary-lightest);
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .community__button{
-    --pad-x:1.8rem;
-    display:flex;align-items:center;justify-content:center;gap:.7rem;
-    width:100%;                     /* full-width button */
-    padding:1rem var(--pad-x);
-    font-size:1rem;font-weight:700;letter-spacing:.02em;
-    color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.25);
-    border-radius:10px;
-    transition:transform .25s ease;
-    overflow:hidden;position:relative;
+    --pad-x: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    width: 100%;
+    padding: 1rem var(--pad-x);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition:transform 0.25s ease;
 }
 
 .community__button-icon{
-    width:1.4rem;height:1.4rem;flex:0 0 1.4rem;
-    background-size:contain;background-repeat:no-repeat;
+    width: 1.4rem;
+    height: 1.4rem;
+    flex: 0 0 1.4rem;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .community__button--discord{
-    background:linear-gradient(135deg,#6572ff 0%,#5865F2 100%);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #6572ff 10%, #5865F2 100%);
 }
 .community__icon--discord{
     background-image:url("https://cdn.junglesequencer.com/homepage/discord-logo.svg");
 }
 
 .community__button--github{
-    background:linear-gradient(135deg,#24292f 0%,#0d1117 100%);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #24292f 10%, #0d1117 100%);
 }
 .community__icon--github{
     background-image:url("https://cdn.junglesequencer.com/homepage/github-logo.svg");
@@ -399,12 +417,17 @@
 
 .community__button:hover{
     color: #fff;
-    transform:scale(1.05);
+    transform: scale(1.05);
 }
 
 @media(max-width:600px){
-    .community{padding-block:3rem;}
-    .community__card{flex:1 1 100%;}
+    .community{
+        padding-block: 3rem;
+    }
+    
+    .community__card{
+        flex: 1 1 100%;
+    }
 }
 
 /* COMMUNITY SECTION ------------------------------------------------------------------------------------------------ */
