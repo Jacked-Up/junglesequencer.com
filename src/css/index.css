@@ -16,7 +16,7 @@
     width: 100%;
 
     /* Visual */
-    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 2px solid rgba(176, 234, 180, 0.15);
 }
 
 .hero__content {
@@ -404,7 +404,7 @@
     text-align: center;
     
     /* Visual */
-    border-top: 2px solid rgba(255, 255, 255, 0.15);
+    border-top: 2px solid rgba(176, 234, 180, 0.15);
 }
 
 .community__grid {
