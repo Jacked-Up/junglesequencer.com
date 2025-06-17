@@ -14,6 +14,10 @@
     padding-top: 2.5rem;
     padding-bottom: 5rem;
     width: 100%;
+
+    /* Visual */
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
 }
 
 .hero__content {
@@ -399,6 +403,10 @@
     padding-block: 4rem;
     padding-inline: 5rem;
     text-align: center;
+    
+    /* Visual */
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
 }
 
 .community__grid {
@@ -427,7 +435,7 @@
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(3px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.15);
     color: #fff;
     text-align: left;
     box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
@@ -441,7 +449,7 @@
     padding: 1px;
     border-radius: inherit;
     background: linear-gradient(135deg, var(--ifm-color-primary-light) 0%, var(--ifm-color-primary) 100%);
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    background: rgba(255, 255, 255, 0.025);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
