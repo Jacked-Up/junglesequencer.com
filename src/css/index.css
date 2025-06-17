@@ -7,9 +7,9 @@
             repeat-x bottom center,
             linear-gradient(to right,
             var(--ifm-color-primary-darker) 0%,
-            var(--ifm-color-primary-dark)   60%);
+            var(--ifm-color-primary-dark) 60%);
     box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.25);
-    
+
     /* Layout */
     padding-top: 2.5rem;
     padding-bottom: 5rem;
@@ -22,7 +22,7 @@
     align-items: center;
     gap: 2rem;
     justify-content: center;
-    
+
     /* Layout */
     width: clamp(0px, 90vw, 1800px);
     margin-inline: auto;
@@ -30,11 +30,15 @@
 }
 
 .hero__text {
+    /* Flex */
     flex: 1;
+
+    /* Typography */
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hero__title {
+    /* Typography */
     color: #fff;
     font-size: clamp(2rem, 8vw, 6rem);
     line-height: 1.1;
@@ -42,62 +46,74 @@
 }
 
 .hero__description {
+    /* Typography */
     color: var(--ifm-color-primary-lightest);
     font-size: 1.2rem;
     line-height: 1.4;
     margin-bottom: 1.5rem;
 }
 
-.hero__actions{
+.hero__actions {
+    /* Box */
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
-.hero__button{
+.hero__button {
+    /* Custom properties */
     --bg-start: var(--ifm-color-primary-dark);
     --bg-end: var(--ifm-color-primary);
     --shadow: 0 4px 15px rgba(0,0,0,0.2);
     --shadow-hover: 0 6px 20px rgba(0,0,0,0.25);
     --width: 200px;
     --pad-left: 1.5rem;
-    
+
+    /* Positioning */
     position: relative;
+    overflow: hidden;
+
+    /* Box */
     display: inline-block;
     width: var(--width);
     padding: 0.8rem 1.5rem 0.8rem var(--pad-left);
-
-    color:#fff;
-    font-weight:bold;
-    text-align:center;
-    text-shadow:0 1px 2px rgba(0,0,0,0.3);
-
-    background: linear-gradient(135deg,var(--bg-start) 0%,var(--bg-end) 100%);
     border-radius: 8px;
-    box-shadow: var(--shadow);
-    overflow: hidden;
 
+    /* Typography */
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+
+    /* Visual */
+    background: linear-gradient(135deg,var(--bg-start) 0%,var(--bg-end) 100%);
+    box-shadow: var(--shadow);
+
+    /* Interaction */
     transform-origin: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero__button::after{
+.hero__button::after {
+    /* Visual ripple */
     content: "";
     position: absolute;
-    top:50%; left:50%;
-    width:0; height:0;
+    top: 50%; left: 50%;
+    width: 0; height: 0;
     opacity: 0;
     transform: translate(-50%, -50%);
     transition: width 0.5s ease-out, height 0.5s ease-out, opacity 0.5s ease-out;
 }
 
-.hero__button:hover{
+.hero__button:hover {
+    /* Interaction */
     color: #fff;
     transform: scale(1.05);
     box-shadow: var(--shadow-hover);
 }
 
-.hero__button:hover::after{
+.hero__button:hover::after {
+    /* Visual ripple */
     width: 200%;
     height: 200%;
     opacity: 1;
@@ -105,35 +121,44 @@
 
 .hero__button--learn { }
 
-.hero__button--buy{
+.hero__button--buy {
+    /* Overrides */
     --bg-start: #f39c12;
     --bg-end: #f1c40f;
     --width: 260px;
     --pad-left: 3.5rem;
 }
 
-.hero__button--buy::before{
-    content:"";
-    position:absolute;
-    top:50%; left:1rem;
-    width:1.6rem; height:1.6rem;
-    transform:translateY(-50%);
-    background:url("https://cdn.junglesequencer.com/homepage/shopping-cart.svg") no-repeat center/contain;
+.hero__button--buy::before {
+    /* Shopping-cart icon */
+    content: "";
+    position: absolute;
+    top: 50%; left: 1rem;
+    width: 1.6rem; height: 1.6rem;
+    transform: translateY(-50%);
+    background: url("https://cdn.junglesequencer.com/homepage/shopping-cart.svg") no-repeat center / contain;
 }
 
 .hero__video {
+    /* Flex */
     flex: 1;
+
+    /* Sizing */
     max-width: 675px;
     aspect-ratio: 16 / 9;
+
+    /* Visual */
     perspective: 800px;
 }
 
 .hero__video iframe {
-    border-radius: 12px;
+    /* Sizing */
     width: 100%; height: 100%;
+
+    /* Visual */
     border: 0;
+    border-radius: 12px;
     box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.25);
-    
     transform: rotateY(-6deg);
     transform-origin: center;
     transition: transform 0.4s ease;
@@ -141,140 +166,179 @@
 
 @media (max-width: 768px) {
     .hero {
+        /* Layout */
         padding-block: 3rem;
     }
-    
+
     .hero__content {
+        /* Box */
         flex-direction: column;
         gap: 1.5rem;
+
+        /* Layout */
         text-align: center;
         padding-inline: 1.5rem;
     }
-    
+
     .hero__text,
     .hero__title,
     .hero__description {
+        /* Layout */
         width: 100%;
     }
-    
+
     .hero__actions {
+        /* Box */
         flex-direction: column;
         align-items: center;
     }
-    
+
     .hero__button {
+        /* Layout */
         width: 100%;
         margin-inline: auto;
     }
-    
+
     .hero__video {
+        /* Layout */
         width: 100%;
         max-width: none;
     }
-    
+
     .hero__video iframe {
+        /* Visual */
         transform: none;
     }
 }
 
 /* HERO SECTION ----------------------------------------------------------------------------------------------------- */
 
+
 /* FEATURE SECTION -------------------------------------------------------------------------------------------------- */
 
 .features {
+    /* Background */
     background: var(--ifm-background-color);
-    
+
     /* Layout */
     padding-block: 5rem;
     width: 100%;
 }
 
 .features__content {
+    /* Box */
     display: flex;
     flex-direction: column;
     gap: 4rem;
 
+    /* Layout */
     width: clamp(0px, 90vw, 1800px);
     margin-inline: auto;
     padding-inline: 5rem;
 }
 
 .feature-card {
+    /* Box */
     display: flex;
     align-items: center;
     gap: 2rem;
+
+    /* Typography */
     text-align: right;
 }
 
 .feature-card.reverse {
+    /* Box */
     flex-direction: row-reverse;
+
+    /* Typography */
     text-align: left;
 }
 
 .feature-card__text {
+    /* Flex */
     flex: 1;
+
+    /* Typography */
     color: #fff;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme='light'] .feature-card__text {
+    /* Typography (light mode) */
     color: #000;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .feature-card__title {
-    font-size: clamp(2rem, 3vw, 6rem);
+    /* Typography */
+    font-size: clamp(2rem, 3vw, 4rem);
     line-height: 1.1;
     margin-bottom: 1rem;
 }
 
 .feature-card__description {
+    /* Typography */
     color: #b0b0b0;
     font-size: 1.2rem;
     line-height: 1.4;
     margin-bottom: 1.5rem;
-    
+
+    /* Layout */
     max-width: 400px;
     text-align: justify;
 }
 
 [data-theme='light'] .feature-card__description {
+    /* Typography (light mode) */
     color: #333;
 }
 
 .feature-card__image {
+    /* Flex */
     flex: 1;
+
+    /* Sizing */
     max-width: 675px;
     width: 100%;
     aspect-ratio: 16 / 9;
     max-height: none;
+
+    /* Visual */
     object-fit: contain;
     perspective: 800px;
 }
 
 .feature-card__image img {
+    /* Sizing */
     width: 100%;
     height: 100%;
+
+    /* Visual */
     border-radius: 12px;
     box-shadow: 0 0 25px 5px rgba(0,0,0,0.25);
     transition: transform 0.4s ease;
 }
 
 .feature-card:not(.reverse) .feature-card__image img {
+    /* Transform */
     transform: rotateY(-6deg);
 }
 
 .feature-card.reverse .feature-card__image img {
+    /* Transform */
     transform: rotateY(6deg);
 }
 
 @media (min-width: 769px) {
     .feature-card:not(.reverse) .feature-card__description {
+        /* Layout */
         margin-left: auto;
         text-align-last: right;
     }
 
     .feature-card.reverse .feature-card__description {
+        /* Layout */
         margin-right: auto;
         text-align-last: left;
     }
@@ -282,25 +346,32 @@
 
 @media (max-width: 768px) {
     .features__content {
+        /* Layout */
         padding-inline: 1rem;
     }
-    
+
     .feature-card,
     .feature-card.reverse {
+        /* Box */
         flex-direction: column;
+
+        /* Typography */
         text-align: center;
     }
 
     .feature-card__image {
+        /* Sizing */
         max-width: none;
         max-height: none;
     }
 
     .feature-card__image img {
+        /* Transform */
         transform: none;
     }
-    
+
     .feature-card__description {
+        /* Layout */
         margin-inline: auto;
         text-align: justify;
         text-align-last: center;
@@ -309,33 +380,49 @@
 
 /* FEATURE SECTION -------------------------------------------------------------------------------------------------- */
 
+
 /* COMMUNITY SECTION ------------------------------------------------------------------------------------------------ */
 
-.community{
+.community {
+    /* Background */
     background:
             url("https://cdn.junglesequencer.com/homepage/jungle-hero-background.png") repeat-x bottom center,
             linear-gradient(to right,
             var(--ifm-color-primary-darker) 0%,
             var(--ifm-color-primary-dark) 90%);
+
+    /* Layout */
     padding-block: 4rem;
     text-align: center;
 }
 
-.community__grid{
+.community__grid {
+    /* Box */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
+
+    /* Layout */
     max-width: 960px;
     margin-inline: auto;
 }
 
-.community__card{
+.community__card {
+    /* Positioning */
     position: relative;
+
+    /* Flex */
     flex: 1 1 400px;
+
+    /* Sizing */
     max-width: 440px;
     min-height: 270px;
+
+    /* Spacing */
     padding: 2rem 2rem 2.4rem;
+
+    /* Visual */
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(3px);
@@ -345,7 +432,8 @@
     box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
 }
 
-.community__card::before{
+.community__card::before {
+    /* Gradient border (pseudo-element) */
     content: "";
     position: absolute;
     inset: 0;
@@ -359,13 +447,16 @@
     opacity: 0.85;
 }
 
-.community__card-title{
+.community__card-title {
+    /* Typography */
     margin: 0 0 0.6rem;
     font-size: 1.5rem;
     font-weight: 700;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
-.community__card-description{
+
+.community__card-description {
+    /* Typography */
     margin: 0 0 1.6rem;
     font-size: 1.05rem;
     line-height: 1.45;
@@ -373,59 +464,82 @@
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.community__button{
+.community__button {
+    /* Custom properties */
     --pad-x: 1.8rem;
+
+    /* Box */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.7rem;
+
+    /* Sizing */
     width: 100%;
     padding: 1rem var(--pad-x);
+
+    /* Typography */
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.02em;
     color: #fff;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+
+    /* Visual */
     border-radius: 10px;
     overflow: hidden;
     position: relative;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition:transform 0.25s ease;
+
+    /* Interaction */
+    transition: transform 0.25s ease;
 }
 
-.community__button-icon{
+.community__button-icon {
+    /* Sizing */
     width: 1.4rem;
     height: 1.4rem;
     flex: 0 0 1.4rem;
+
+    /* Visual */
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-.community__button--discord{
+.community__button--discord {
+    /* Background */
     background: linear-gradient(135deg, #6572ff 10%, #5865F2 100%);
 }
-.community__icon--discord{
-    background-image:url("https://cdn.junglesequencer.com/homepage/discord-logo.svg");
+
+.community__icon--discord {
+    /* Visual */
+    background-image: url("https://cdn.junglesequencer.com/homepage/discord-logo.svg");
 }
 
-.community__button--github{
+.community__button--github {
+    /* Background */
     background: linear-gradient(135deg, #24292f 10%, #0d1117 100%);
 }
-.community__icon--github{
-    background-image:url("https://cdn.junglesequencer.com/homepage/github-logo.svg");
+
+.community__icon--github {
+    /* Visual */
+    background-image: url("https://cdn.junglesequencer.com/homepage/github-logo.svg");
 }
 
-.community__button:hover{
+.community__button:hover {
+    /* Interaction */
     color: #fff;
     transform: scale(1.05);
 }
 
-@media(max-width:600px){
-    .community{
+@media (max-width: 600px) {
+    .community {
+        /* Layout */
         padding-block: 3rem;
     }
-    
-    .community__card{
+
+    .community__card {
+        /* Flex */
         flex: 1 1 100%;
     }
 }
