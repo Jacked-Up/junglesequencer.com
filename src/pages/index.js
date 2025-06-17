@@ -142,47 +142,46 @@ function IndexPage() {
             </section>
             
             <section className="community">
-                <div className="community__content">
-
-                    <h2 className="community__title">Join the Community</h2>
-                    <p className="community__subtitle">
-                        Share ideas, get feedback, and see what others build with Jungle Sequencer.
-                    </p>
-
-                    <div className="community__grid">
-                        {/* Discord */}
-                        <div className="community__card">
-                            <h3 className="community__card-title">Discord Server</h3>
-                            <p className="community__card-desc">
-                                Chat live, ask questions, and hang out with fellow devs.
-                            </p>
-                            <a
-                                className="hero__button community__button community__button--discord"
-                                href={DISCORD_SERVER_URL}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <span className="community__button-icon community__icon--discord" />
-                                Join&nbsp;Server
-                            </a>
-                        </div>
-
-                        {/* GitHub */}
-                        <div className="community__card">
-                            <h3 className="community__card-title">GitHub Discussions</h3>
-                            <p className="community__card-desc">
-                                File feature requests, share tips, and vote on ideas.
-                            </p>
-                            <a
-                                className="hero__button community__button community__button--github"
-                                href={GITHUB_DISCUSSIONS_URL}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <span className="community__button-icon community__icon--github" />
-                                Join&nbsp;Discussions
-                            </a>
-                        </div>
+                <h2 className="hero__title">Join the Community</h2>
+                <p className="hero__description" style={{marginBottom:"2.4rem"}}>
+                    Share ideas, get feedback, and see what others build with Jungle Sequencer.
+                </p>
+                
+                <div className="community__grid">
+                    
+                    <div className="community__card">
+                        <h3 className="community__card-title">Discord Server</h3>
+                        <p className="community__card-description">
+                            Real-time help, weekly showcases, behind-the-scenes chat, and casual hangouts with fellow
+                            Jungle devs.
+                        </p>
+                        <a
+                            className="community__button community__button--discord"
+                            href={DISCORD_SERVER_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span className="community__button-icon community__icon--discord" />
+                            Join Server
+                        </a>
+                    </div>
+                    
+                    {/* GITHUB CARD ------------------------------------------------------------ */}
+                    <div className="community__card">
+                        <h3 className="community__card-title">GitHub Discussions</h3>
+                        <p className="community__card-description">
+                            Request features, vote on ideas, and share best-practice snippets with the open-source
+                            community.
+                        </p>
+                        <a
+                            className="community__button community__button--github"
+                            href={GITHUB_DISCUSSIONS_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span className="community__button-icon community__icon--github" />
+                            Join Discussions
+                        </a>
                     </div>
 
                 </div>
