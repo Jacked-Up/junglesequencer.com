@@ -52,7 +52,7 @@
     /* Background + visual effects */
     background:
             url("https://cdn.junglesequencer.com/homepage/jungle-hero-background.png")
-            no-repeat bottom center,
+            repeat-x bottom center,
             linear-gradient(to right,
             var(--ifm-color-primary-darker) 0%,
             var(--ifm-color-primary-dark)   60%);
@@ -220,6 +220,164 @@
 }
 
 /* HERO SECTION ----------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========  FEATURES  (matches hero look-and-feel)  ========= */
+
+.features {
+    background: var(--ifm-background-color);
+    padding-block: 4rem;
+    width: 100%;
+}
+
+.features__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    
+    /* same width treatment as .hero__content */
+    width: clamp(0px, 90vw, 1800px);
+    margin-inline: auto;
+    padding-inline: 5rem;
+}
+
+/* individual card */
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.feature-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-card__text {
+    flex: 1;
+    color: var(--ifm-font-color-base);
+}
+
+.feature-card__text h2 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.feature-card__text p {
+    font-size: 1.1rem;
+    line-height: 1.45;
+}
+
+.feature-card__image {
+    flex: 1;
+    max-width: 800px;     /* plays nicely with 800 × 600 and future 2400 × 1600 */
+    max-height: 600px;    /* “more tolerable” vertical footprint         */
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    object-position: center;
+    perspective: 800px;
+}
+
+.feature-card__image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.25);
+    transition: transform 0.25s ease;   /* keeps it snappy on resize */
+}
+
+/* --- gentle static tilt toward page center --- */
+.feature-card:not(.reverse) .feature-card__image img {
+    transform: rotateY(-4deg)
+}
+.feature-card.reverse .feature-card__image img {
+    transform: rotateY(4deg)
+}
+
+
+
+/* --------  Unity call-out  -------- */
+.features__unity {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6rem;
+    width: clamp(0px, 90vw, 1800px);
+    margin-inline: auto;
+    padding-inline: 5rem;
+}
+
+.features__unity h2 {
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    font-weight: bold;
+    margin: 0 0 0.3rem 0;
+}
+
+.features__unity p {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.features__unity img {
+    height: 11vw;
+}
+
+[data-theme='dark'] .features__unity img {
+    filter: invert(1);
+}
+
+@media (max-width: 768px) {
+    .feature-card,
+    .feature-card.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-card__image {
+        max-height: 400px;
+    }
+    .feature-card__image img {
+        transform: none;
+    }
+
+    .features__unity {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .features__unity img {
+        height: 24vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

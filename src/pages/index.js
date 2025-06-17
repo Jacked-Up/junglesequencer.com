@@ -39,113 +39,149 @@ function IndexPage() {
                     </div>
                 </div>
             </section>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <div className="features-section">
-                <div className="container margin-vert--xl">
-                    <div className="features-section-cards">
-                        <div className="features-section-card">
-                            <div className="text">
-                                <h2>Creating and Editing Sequences</h2>
-                                <p>
-                                    Drag and drop nodes from the node explorer into the graph view to form a sequence, and edit node properties using the inspector.
-                                </p>
-                            </div>
-                            <div className="image">
-                                <img src="https://cdn.junglesequencer.com/homepage/feature-card-1.png" alt="Feature 1"/>
-                            </div>
-                        </div>
 
-                        <div className="features-section-card reverse">
-                            <div className="text">
-                                <h2>Create Nodes with C#</h2>
-                                <p>
-                                    Create performant custom nodes using C# scripts. Nodes are automatically generated from the scripts you write.
-                                </p>
-                            </div>
-                            <div className="image">
-                                <img src="https://cdn.junglesequencer.com/homepage/feature-card-2.png" alt="Feature 2"/>
-                            </div>
-                        </div>
-
-                        <div className="features-section-card">
-                            <div className="text">
-                                <h2>Custom Node Inspectors</h2>
-                                <p>
-                                    Design custom inspectors for your nodes to make them more user-friendly and provide additional functionality.
-                                </p>
-                            </div>
-                            <div className="image">
-                                <img src="https://cdn.junglesequencer.com/homepage/feature-card-3.png" alt="Feature 3"/>
-                            </div>
-                        </div>
-
-                        <div className="features-section-card reverse">
-                            <div className="text">
-                                <h2>Editor Sticky Notes</h2>
-                                <p>
-                                    Add sticky notes in your trees to document ideas and provide context.
-                                </p>
-                            </div>
-                            <div className="image">
-                                <img src="https://cdn.junglesequencer.com/homepage/feature-card-4.png" alt="Feature 4"/>
-                            </div>
-                        </div>
-
-                        <div className="features-section-card">
-                            <div className="text">
-                                <h2>Editor Gizmos Support</h2>
-                                <p>
-                                    Utilize Unity's gizmos system to provide visual feedback in the editor for your nodes.
-                                </p>
-                            </div>
-                            <div className="image">
-                                <img src="https://cdn.junglesequencer.com/homepage/feature-card-5.png" alt="Feature 5"/>
-                            </div>
-                        </div>
-                        
-                        <div className="features-section-card reverse">
-                            <div className="text">
-                                <h2>Validator & Error Handler</h2>
-                                <p>
-                                    Implement validation logic in your nodes to catch issues before they occur.
-                                </p>
-                            </div>
-                            <div className="image">
-                                <img src="https://cdn.junglesequencer.com/homepage/feature-card-6.png" alt="Feature 6"/>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div className="features-section-unity">
-                        <div>
-                            <h2>Built for the Engine You Love</h2>
+            
+            
+            
+            
+            
+            
+            
+            <section className="features">
+                <div className="features__content">
+                    {/* card 1 */}
+                    <article className="feature-card">
+                        <div className="feature-card__text">
+                            <h2>Creating and Editing Sequences</h2>
                             <p>
-                                Supported on all Unity Editor versions
-                                <span className="text-glow"><strong> 2022.3 +</strong></span>
+                                Drag and drop nodes from the node explorer into the graph view to
+                                form a sequence, and edit node properties using the inspector.
                             </p>
                         </div>
-                        <img src="https://cdn.junglesequencer.com/homepage/unity-logo-black.png" alt="Unity Logo"/>
-                    </div>
+                        <div className="feature-card__image">
+                            <img
+                                src="https://cdn.junglesequencer.com/homepage/feature-card-1.jpg"
+                                alt="Creating and Editing Sequences"
+                            />
+                        </div>
+                    </article>
+
+                    {/* card 2 */}
+                    <article className="feature-card reverse">
+                        <div className="feature-card__text">
+                            <h2>Create Nodes with C#</h2>
+                            <p>
+                                Create performant custom nodes using C# scripts. Nodes are
+                                automatically generated from the scripts you write.
+                            </p>
+                        </div>
+                        <div className="feature-card__image">
+                            <img
+                                src="https://cdn.junglesequencer.com/homepage/feature-card-2.jpg"
+                                alt="Create Nodes with C#"
+                            />
+                        </div>
+                    </article>
+
+                    {/* card 3 */}
+                    <article className="feature-card">
+                        <div className="feature-card__text">
+                            <h2>Custom Node Inspectors</h2>
+                            <p>
+                                Design custom inspectors for your nodes to make them more
+                                user-friendly and provide additional functionality.
+                            </p>
+                        </div>
+                        <div className="feature-card__image">
+                            <img
+                                src="https://cdn.junglesequencer.com/homepage/feature-card-3.jpg"
+                                alt="Custom Node Inspectors"
+                            />
+                        </div>
+                    </article>
+                    
+                    {/* card 4 */}
+                    <article className="feature-card reverse">
+                        <div className="feature-card__text">
+                            <h2>Editor Sticky Notes</h2>
+                            <p>Add sticky notes in your trees to document ideas and provide context.</p>
+                        </div>
+                        <div className="feature-card__image">
+                            <img
+                                src="https://cdn.junglesequencer.com/homepage/feature-card-4.jpg"
+                                alt="Editor Sticky Notes"
+                            />
+                        </div>
+                    </article>
+
+                    {/* card 5 */}
+                    <article className="feature-card">
+                        <div className="feature-card__text">
+                            <h2>Editor Gizmos Support</h2>
+                            <p>
+                                Utilize Unity’s gizmos system to provide visual feedback in the editor
+                                for your nodes.
+                            </p>
+                        </div>
+                        <div className="feature-card__image">
+                            <img
+                                src="https://cdn.junglesequencer.com/homepage/feature-card-5.jpg"
+                                alt="Editor Gizmos Support"
+                            />
+                        </div>
+                    </article>
+
+                    {/* card 6 */}
+                    <article className="feature-card reverse">
+                        <div className="feature-card__text">
+                            <h2>Validator & Error Handler</h2>
+                            <p>
+                                Implement validation logic in your nodes to catch issues before they
+                                occur.
+                            </p>
+                        </div>
+                        <div className="feature-card__image">
+                            <img
+                                src="https://cdn.junglesequencer.com/homepage/feature-card-6.jpg"
+                                alt="Validator & Error Handler"
+                            />
+                        </div>
+                    </article>
                 </div>
-            </div>
-            
+
+                {/* Unity call-out stays the same for now */}
+                <div className="features__unity">
+                    <div>
+                        <h2>Built for the Engine You Love</h2>
+                        <p>
+                            Supported on all Unity Editor versions
+                            <span className="text-glow">
+          <strong> 2022.3 +</strong>
+        </span>
+                        </p>
+                    </div>
+                    <img
+                        src="https://cdn.junglesequencer.com/homepage/unity-logo-black.png"
+                        alt="Unity Logo"
+                    />
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             
             
             
