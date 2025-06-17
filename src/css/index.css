@@ -1,3 +1,326 @@
+/* HERO SECTION ----------------------------------------------------------------------------------------------------- */
+
+.hero {
+    /* Background + visual effects */
+    background:
+            url("https://cdn.junglesequencer.com/homepage/jungle-hero-background.png")
+            repeat-x bottom center,
+            linear-gradient(to right,
+            var(--ifm-color-primary-darker) 0%,
+            var(--ifm-color-primary-dark)   60%);
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.25);
+    
+    /* Layout */
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
+    width: 100%;
+}
+
+.hero__content {
+    /* Box */
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+    
+    /* Layout */
+    width: clamp(0px, 90vw, 1800px);
+    margin-inline: auto;
+    padding-inline: 5rem;
+}
+
+.hero__text {
+    flex: 1;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero__title {
+    font-size: clamp(2rem, 8vw, 6rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.hero__description {
+    color: var(--ifm-color-primary-lightest);
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+}
+
+.hero__actions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hero__button{
+    --bg-start: var(--ifm-color-primary-dark);
+    --bg-end: var(--ifm-color-primary);
+    --shadow: 0 4px 15px rgba(0,0,0,0.2);
+    --shadow-hover: 0 6px 20px rgba(0,0,0,0.25);
+    --width: 200px;
+    --pad-left: 1.5rem;
+    
+    position: relative;
+    display: inline-block;
+    width: var(--width);
+    padding: 0.8rem 1.5rem 0.8rem var(--pad-left);
+
+    color:#fff;
+    font-weight:bold;
+    text-align:center;
+    text-shadow:0 1px 2px rgba(0,0,0,0.3);
+
+    background: linear-gradient(135deg,var(--bg-start) 0%,var(--bg-end) 100%);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+
+    transform-origin: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero__button::after{
+    content: "";
+    position: absolute;
+    top:50%; left:50%;
+    width:0; height:0;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease-out, height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.hero__button:hover{
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: var(--shadow-hover);
+}
+
+.hero__button:hover::after{
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+}
+
+.hero__button--learn { }
+
+.hero__button--buy{
+    --bg-start: #f39c12;
+    --bg-end: #f1c40f;
+    --width: 260px;
+    --pad-left: 3.5rem;
+}
+
+.hero__button--buy::before{
+    content:"";
+    position:absolute;
+    top:50%; left:1rem;
+    width:1.6rem; height:1.6rem;
+    transform:translateY(-50%);
+    background:url("https://cdn.junglesequencer.com/homepage/shopping-cart.svg") no-repeat center/contain;
+}
+
+.hero__video {
+    flex: 1;
+    max-width: 675px;
+    aspect-ratio: 16 / 9;
+    perspective: 800px;
+}
+
+.hero__video iframe {
+    border-radius: 12px;
+    width: 100%; height: 100%;
+    border: 0;
+    box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.25);
+    
+    transform: rotateY(-6deg);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-block: 3rem;
+    }
+    
+    .hero__content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        padding-inline: 1.5rem;
+    }
+    
+    .hero__text,
+    .hero__title,
+    .hero__description {
+        width: 100%;
+    }
+    
+    .hero__actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero__button {
+        width: 100%;
+        margin-inline: auto;
+    }
+    
+    .hero__video {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .hero__video iframe {
+        transform: none;
+    }
+}
+
+/* HERO SECTION ----------------------------------------------------------------------------------------------------- */
+
+/* FEATURE SECTION -------------------------------------------------------------------------------------------------- */
+
+.features {
+    background: var(--ifm-background-color);
+    
+    /* Layout */
+    padding-block: 5rem;
+    width: 100%;
+}
+
+.features__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    width: clamp(0px, 90vw, 1800px);
+    margin-inline: auto;
+    padding-inline: 5rem;
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-align: right;
+}
+
+.feature-card.reverse {
+    flex-direction: row-reverse;
+    text-align: left;
+}
+
+.feature-card__text {
+    flex: 1;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='light'] .feature-card__text {
+    color: #000;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card__title {
+    font-size: clamp(2rem, 3vw, 6rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.feature-card__description {
+    color: #b0b0b0;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    
+    max-width: 400px;
+    text-align: justify;
+}
+
+[data-theme='light'] .feature-card__description {
+    color: #333;
+}
+
+.feature-card__image {
+    flex: 1;
+    max-width: 675px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: none;
+    object-fit: contain;
+    perspective: 800px;
+}
+
+.feature-card__image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 25px 5px rgba(0,0,0,0.25);
+    transition: transform 0.4s ease;
+}
+
+.feature-card:not(.reverse) .feature-card__image img {
+    transform: rotateY(-6deg);
+}
+
+.feature-card.reverse .feature-card__image img {
+    transform: rotateY(6deg);
+}
+
+@media (min-width: 769px) {
+    .feature-card:not(.reverse) .feature-card__description {
+        margin-left: auto;
+        text-align-last: right;
+    }
+
+    .feature-card.reverse .feature-card__description {
+        margin-right: auto;
+        text-align-last: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .features__content {
+        padding-inline: 1rem;
+    }
+    
+    .feature-card,
+    .feature-card.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-card__image {
+        max-width: none;
+        max-height: none;
+    }
+
+    .feature-card__image img {
+        transform: none;
+    }
+    
+    .feature-card__description {
+        margin-inline: auto;
+        text-align: justify;
+        text-align-last: center;
+    }
+}
+
+/* FEATURE SECTION -------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+/* COMMUNITY SECTION ------------------------------------------------------------------------------------------------ */
+
 :root {
     --community-section-background: #eaeaea;
 }
@@ -31,486 +354,6 @@
     transform: scale(1.05);
 }
 
-.text-glow {
-    color: var(--ifm-color-primary);
-    text-shadow: 0 0 25px rgba(159, 234, 55, 0.5);
-}
-
-
-
-
-
-
-
-
-
-
-
-/* HERO SECTION ----------------------------------------------------------------------------------------------------- */
-
-.hero {
-    /* Background + visual effects */
-    background:
-            url("https://cdn.junglesequencer.com/homepage/jungle-hero-background.png")
-            repeat-x bottom center,
-            linear-gradient(to right,
-            var(--ifm-color-primary-darker) 0%,
-            var(--ifm-color-primary-dark)   60%);
-    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.25);
-    
-    /* Layout */
-    padding-block: 3rem;
-    width: 100%;
-}
-
-.hero__content {
-    /* Box */
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    justify-content: center;
-    
-    /* Layout */
-    width: clamp(0px, 90vw, 1800px);
-    margin-inline: auto;
-    padding-inline: 5rem;
-}
-
-.hero__text {
-    flex: 1;
-    color: #fff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.hero__title {
-    font-size: clamp(2rem, 8vw, 5rem);
-    line-height: 1.1;
-    margin-bottom: 1rem;
-}
-
-.hero__description {
-    color: var(--ifm-color-primary-lightest);
-    font-size: 1.2rem;
-    line-height: 1.4;
-    margin-bottom: 1.5rem;
-}
-
-.hero__actions{
-    display:flex;
-    flex-wrap:wrap;
-    gap:1rem;
-}
-
-.hero__button{
-    --bg-start:var(--ifm-color-primary-dark);
-    --bg-end:  var(--ifm-color-primary);
-    --shadow:       0 4px 15px rgba(0,0,0,.2);
-    --shadow-hover: 0 6px 20px rgba(0,0,0,.25);
-    --width:200px;
-    --pad-left:1.5rem;
-
-    position:relative;
-    display:inline-block;
-    width:var(--width);
-    padding:.8rem 1.5rem .8rem var(--pad-left);
-
-    color:#fff;
-    font-weight:bold;
-    text-align:center;
-    text-shadow:0 1px 2px rgba(0,0,0,.3);
-
-    background:linear-gradient(135deg,var(--bg-start) 0%,var(--bg-end) 100%);
-    border-radius:8px;
-    box-shadow:var(--shadow);
-    overflow:hidden;
-
-    transform-origin:center;
-    transition:transform .3s ease,box-shadow .3s ease;
-}
-
-.hero__button::after{
-    content:"";
-    position:absolute;
-    top:50%; left:50%;
-    width:0;  height:0;
-    opacity:0;
-    transform:translate(-50%,-50%);
-    transition:width .5s ease-out,height .5s ease-out,opacity .5s ease-out;
-}
-
-.hero__button:hover{
-    color:#fff;
-    transform:scale(1.05);
-    box-shadow:var(--shadow-hover);
-}
-.hero__button:hover::after{
-    width:200%;
-    height:200%;
-    opacity:1;
-}
-
-.hero__button--learn{ }
-
-.hero__button--buy{
-    --bg-start:#f39c12;
-    --bg-end:#f1c40f;
-    --width:260px;
-    --pad-left:3.5rem;
-}
-
-.hero__button--buy::before{
-    content:"";
-    position:absolute;
-    top:50%; left:1rem;
-    width:1.6rem; height:1.6rem;
-    transform:translateY(-50%);
-    background:url("https://cdn.junglesequencer.com/homepage/shopping-cart.svg") no-repeat center/contain;
-}
-
-.hero__video {
-    flex: 1;
-    max-width: 675px;
-    aspect-ratio: 16 / 9;
-    perspective: 800px;
-}
-
-.hero__video iframe {
-    border-radius: 12px;
-    width: 100%; height: 100%;
-    border: 0;
-    box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.25);
-    
-    transform: rotateY(-8deg);
-    transform-origin: center;
-    transition: transform 0.4s ease;
-}
-
-@media (max-width: 768px) {
-    .hero__content {
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: center;
-    }
-    
-    .hero__text,
-    .hero__title,
-    .hero__description {
-        width: 100%;
-    }
-    
-    .hero__actions {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .hero__button {
-        width: 100%;
-        max-width: 260px;
-        margin-inline: auto;
-    }
-    
-    .hero__video {
-        width: 100%;
-        max-width: none;
-    }
-    
-    .hero__video iframe {
-        transform: none;
-    }
-}
-
-/* HERO SECTION ----------------------------------------------------------------------------------------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =========  FEATURES  (matches hero look-and-feel)  ========= */
-
-.features {
-    background: var(--ifm-background-color);
-    padding-block: 4rem;
-    width: 100%;
-}
-
-.features__content {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-    
-    /* same width treatment as .hero__content */
-    width: clamp(0px, 90vw, 1800px);
-    margin-inline: auto;
-    padding-inline: 5rem;
-}
-
-/* individual card */
-.feature-card {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
-
-.feature-card.reverse {
-    flex-direction: row-reverse;
-}
-
-.feature-card__text {
-    flex: 1;
-    color: var(--ifm-font-color-base);
-}
-
-.feature-card__text h2 {
-    font-size: clamp(1.8rem, 4vw, 3rem);
-    margin-bottom: 1rem;
-}
-
-.feature-card__text p {
-    font-size: 1.1rem;
-    line-height: 1.45;
-}
-
-.feature-card__image {
-    flex: 1;
-    max-width: 800px;     /* plays nicely with 800 × 600 and future 2400 × 1600 */
-    max-height: 600px;    /* “more tolerable” vertical footprint         */
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: contain;
-    object-position: center;
-    perspective: 800px;
-}
-
-.feature-card__image img {
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.25);
-    transition: transform 0.25s ease;   /* keeps it snappy on resize */
-}
-
-/* --- gentle static tilt toward page center --- */
-.feature-card:not(.reverse) .feature-card__image img {
-    transform: rotateY(-4deg)
-}
-.feature-card.reverse .feature-card__image img {
-    transform: rotateY(4deg)
-}
-
-
-
-/* --------  Unity call-out  -------- */
-.features__unity {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 6rem;
-    width: clamp(0px, 90vw, 1800px);
-    margin-inline: auto;
-    padding-inline: 5rem;
-}
-
-.features__unity h2 {
-    font-size: clamp(2.2rem, 6vw, 3.4rem);
-    font-weight: bold;
-    margin: 0 0 0.3rem 0;
-}
-
-.features__unity p {
-    font-size: 1.25rem;
-    margin: 0;
-}
-
-.features__unity img {
-    height: 11vw;
-}
-
-[data-theme='dark'] .features__unity img {
-    filter: invert(1);
-}
-
-@media (max-width: 768px) {
-    .feature-card,
-    .feature-card.reverse {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .feature-card__image {
-        max-height: 400px;
-    }
-    .feature-card__image img {
-        transform: none;
-    }
-
-    .features__unity {
-        flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
-    }
-
-    .features__unity img {
-        height: 24vw;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* FEATURES SECTION ------------------------------------------------------------------------------------------------- */
-
-.features-section {
-    background: var(--ifm-background-color);
-}
-
-.features-video {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.features-video h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.features-video p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.video-wrapper {
-    position: relative;
-    padding-bottom: 39.375%;
-    height: 0;
-    overflow: hidden;
-    max-width: 70%;
-    margin: 0 auto;
-    background: #000;
-    border-radius: 8px;
-    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.2);
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.features-section-unity {
-    position: relative;
-    display: inline-flex;
-    height: auto;
-    width: 100%;
-}
-
-.features-section-unity div {
-    margin-right: 24px;
-}
-
-.features-section-unity h2 {
-    font-size: 55px;
-    font-weight: bold;
-    margin-bottom: 0;
-    width: 65%;
-}
-
-.features-section-unity p {
-    font-size: 20px;
-    margin-top: 0;
-}
-
-.features-section-unity img {
-    position: absolute;
-    right: 0;
-    height: 11vw;
-}
-
-[data-theme='dark'] .features-section-unity img {
-    filter: invert(1);
-}
-
-.features-section-cards {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 100px;
-}
-
-.features-section-card {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.features-section-card .text, .features-section-card .image {
-    flex: 1 1 50%;
-    padding-right: 2vw;
-    padding-left: 2vw;
-}
-
-.features-section-card .image img {
-    width: 100%; /* Fill the container */
-    height: auto;
-    display: block;
-    border-radius: 8px;
-    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.35);
-}
-
-/* Reverse the order for alternate features */
-.features-section-card.reverse {
-    flex-direction: row-reverse;
-}
-
-/* FEATURES SECTION ------------------------------------------------------------------------------------------------- */
-
-/* COMMUNITY SECTION ------------------------------------------------------------------------------------------------ */
-
 .community-section {
     background: linear-gradient(to right, var(--ifm-color-primary-darker) 0%, var(--ifm-color-primary-dark) 60%);
     color: white;
@@ -542,76 +385,7 @@
     box-shadow: 0 0 50px 5px rgba(15, 17, 19, 0.5);
 }
 
-/* COMMUNITY SECTION ------------------------------------------------------------------------------------------------ */
-
 @media (max-width: 768px) {
-    .hero-section {
-        background:
-                url("https://cdn.junglesequencer.com/homepage/jungle-hero-background.png") no-repeat bottom center,
-                linear-gradient(to bottom, var(--ifm-color-primary-darker) 0%, var(--ifm-color-primary-dark) 60%);
-        padding: 12px 0;
-    }
-
-    .hero-section h1 {
-        color: white;
-        font-size: 9vw;
-        text-align: center;
-    }
-
-    .hero-section p {
-        font-size: 16px;
-        text-align: center;
-        max-width: 90%;
-        margin: 0 auto;
-    }
-
-    .video-wrapper {
-        padding-bottom: 56.25%;
-        max-width: 100%;
-    }
-
-    .features-section-unity {
-        display: inline-block;
-        margin-bottom: 8vw;
-    }
-
-    .features-section-unity div {
-        margin-right: 0;
-    }
-
-    .features-section-unity h2 {
-        font-size: 10vw;
-        font-weight: bold;
-        text-align: center;
-        width: 100%;
-    }
-
-    .features-section-unity p {
-        font-size: 4vw;
-        margin-top: 12px;
-        text-align: center;
-        width: 100%;
-    }
-
-    .features-section-unity img {
-        width: 100%;
-        height: auto;
-        padding: 0 20vw;
-    }
-
-    .features-section-cards {
-        margin-bottom: 50px;
-    }
-
-    .features-section-card {
-        flex-direction: column;
-    }
-
-    .features-section-card .text, .features-section-card .image {
-        flex: 1 1 100%;
-    }
-
-
     .community-section {
         background: linear-gradient(to top, var(--ifm-color-primary-darker) 0%, var(--ifm-color-primary-dark) 60%);
         padding: 12px 0;
@@ -639,3 +413,5 @@
         margin: 0 auto;
     }
 }
+
+/* COMMUNITY SECTION ------------------------------------------------------------------------------------------------ */
