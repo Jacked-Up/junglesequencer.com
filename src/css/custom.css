@@ -24,8 +24,8 @@
   --ifm-navbar-search-input-background-color: white !important;
   --ifm-navbar-search-input-color: black;
   --ifm-navbar-search-input-placeholder-color: rgba(0, 0, 0, 0.2);
-
-  --ifm-footer-background-color: var(--ifm-color-primary-darker);
+  
+  --ifm-footer-background-color: #123c14;
 
   --ifm-background-color: #f7faf6;
   --ifm-background-alt:   #eaf4ec;
@@ -50,6 +50,29 @@ h1, h2, h3, h4, h5, h6, p {
 .navbar a {
   color: white;
 }
+
+.navbar a,
+.navbar__link {
+  transition: transform 0.25s ease;
+}
+
+.navbar a:hover,
+.navbar__link:hover {
+  color: white;
+  text-decoration: underline;
+  transform: scale(1.05)
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .footer {
   color: white;
@@ -76,15 +99,16 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .menu__link {
-  border-left-width: 0;
-  border-left-style: solid;
-  border-left-color: transparent;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
   transition: border-left-width 0.5s ease, border-left-color 0.5s ease;
 }
 
 .menu__link--active {
-  border-left-width: 5px;
-  border-left-color: var(--ifm-color-primary-lightest);
+  border-width: 1px;
+  border-color: var(--ifm-color-primary);
+  text-decoration: underline;
 }
 
 .menu.thin-scrollbar {
