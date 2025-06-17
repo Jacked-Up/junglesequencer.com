@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import '../css/index.css';
 import Layout from '@theme/Layout';
 
@@ -152,8 +152,7 @@ function IndexPage() {
                     <div className="community__card">
                         <h3 className="community__card-title">Discord Server</h3>
                         <p className="community__card-description">
-                            Real-time help, weekly showcases, behind-the-scenes chat, and casual hangouts with fellow
-                            Jungle devs.
+                            Get instant help, ask questions, and share your projects with the community.
                         </p>
                         <a
                             className="community__button community__button--discord"
@@ -162,16 +161,14 @@ function IndexPage() {
                             rel="noopener noreferrer"
                         >
                             <span className="community__button-icon community__icon--discord" />
-                            Join Server
+                            Join Discord Server
                         </a>
                     </div>
                     
-                    {/* GITHUB CARD ------------------------------------------------------------ */}
                     <div className="community__card">
                         <h3 className="community__card-title">GitHub Discussions</h3>
                         <p className="community__card-description">
-                            Request features, vote on ideas, and share best-practice snippets with the open-source
-                            community.
+                            Request features, vote on ideas, report bugs, and share any other feedback you may have.
                         </p>
                         <a
                             className="community__button community__button--github"
@@ -180,7 +177,7 @@ function IndexPage() {
                             rel="noopener noreferrer"
                         >
                             <span className="community__button-icon community__icon--github" />
-                            Join Discussions
+                            View GitHub Discussions
                         </a>
                     </div>
 

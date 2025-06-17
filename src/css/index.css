@@ -32,9 +32,6 @@
 .hero__text {
     /* Flex */
     flex: 1;
-
-    /* Typography */
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hero__title {
@@ -43,6 +40,7 @@
     font-size: clamp(2rem, 8vw, 6rem);
     line-height: 1.1;
     margin-bottom: 1rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hero__description {
@@ -51,6 +49,7 @@
     font-size: 1.2rem;
     line-height: 1.4;
     margin-bottom: 1.5rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .hero__actions {
@@ -345,9 +344,14 @@
 }
 
 @media (max-width: 768px) {
+    .features {
+        /* Layout */
+        padding-block: 3rem;
+    }
+    
     .features__content {
         /* Layout */
-        padding-inline: 1rem;
+        padding-inline: 1.5rem;
     }
 
     .feature-card,
@@ -390,9 +394,10 @@
             linear-gradient(to right,
             var(--ifm-color-primary-darker) 0%,
             var(--ifm-color-primary-dark) 90%);
-
+    
     /* Layout */
     padding-block: 4rem;
+    padding-inline: 5rem;
     text-align: center;
 }
 
@@ -402,7 +407,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
-
+    
     /* Layout */
     max-width: 960px;
     margin-inline: auto;
@@ -411,14 +416,10 @@
 .community__card {
     /* Positioning */
     position: relative;
-
+    
     /* Flex */
     flex: 1 1 400px;
-
-    /* Sizing */
-    max-width: 440px;
-    min-height: 270px;
-
+    
     /* Spacing */
     padding: 2rem 2rem 2.4rem;
 
@@ -536,11 +537,13 @@
     .community {
         /* Layout */
         padding-block: 3rem;
+        padding-inline: 1.5rem;
     }
-
+    
     .community__card {
         /* Flex */
         flex: 1 1 100%;
+        text-align: center;
     }
 }
 
