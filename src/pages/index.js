@@ -137,65 +137,57 @@ function IndexPage() {
                             />
                         </div>
                     </article>
+                    
                 </div>
-                
+            </section>
+            
+            <section className="community">
+                <div className="community__content">
+
+                    <h2 className="community__title">Join the Community</h2>
+                    <p className="community__subtitle">
+                        Share ideas, get feedback, and see what others build with Jungle Sequencer.
+                    </p>
+
+                    <div className="community__grid">
+                        {/* Discord */}
+                        <div className="community__card">
+                            <h3 className="community__card-title">Discord Server</h3>
+                            <p className="community__card-desc">
+                                Chat live, ask questions, and hang out with fellow devs.
+                            </p>
+                            <a
+                                className="hero__button community__button community__button--discord"
+                                href={DISCORD_SERVER_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <span className="community__button-icon community__icon--discord" />
+                                Join&nbsp;Server
+                            </a>
+                        </div>
+
+                        {/* GitHub */}
+                        <div className="community__card">
+                            <h3 className="community__card-title">GitHub Discussions</h3>
+                            <p className="community__card-desc">
+                                File feature requests, share tips, and vote on ideas.
+                            </p>
+                            <a
+                                className="hero__button community__button community__button--github"
+                                href={GITHUB_DISCUSSIONS_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <span className="community__button-icon community__icon--github" />
+                                Join&nbsp;Discussions
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
             </section>
 
-
-
-
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-
-            <div className="community-section">
-                <div className="container margin-vert--xl">
-                    <h1>Community</h1>
-                    <p>Connect with other developers, share your projects, and get help with Jungle Sequencer.</p>
-                    <br/>
-                    <div>
-                        <h2>Discord Server</h2>
-                        <p>Chat with the community, ask questions, and get help with your projects.</p>
-                        <a href={DISCORD_SERVER_URL} target="_blank" rel="noopener noreferrer" className="discord-button">
-                            <img src="https://cdn.junglesequencer.com/homepage/discord-logo.svg" alt="Discord" height="20"/>
-                            <strong>Join Server</strong>
-                        </a>
-                    </div>
-                    <br/>
-                    <div>
-                        <h2>GitHub Discussions</h2>
-                        <p>Join the discussions on GitHub to explore more topics and engage with the community.</p>
-                        <a href={GITHUB_DISCUSSIONS_URL} target="_blank" rel="noopener noreferrer" className="github-button">
-                            <img src="https://cdn.junglesequencer.com/homepage/github-logo.svg" alt="GitHub" height="24"/>
-                            <strong>Join Discussions</strong>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
         </Layout>
     );
 }
