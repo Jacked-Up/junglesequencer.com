@@ -82,8 +82,12 @@ h1, h2, h3, h4, h5, h6, p {
   color: white;
 }
 
+.footer a:hover {
+  color: white;
+}
+
 .footer .footer__copyright{
-  color: #b9b9b9;
+  color: var(--ifm-color-primary-lightest);
 }
 
 .DocItemTitle {
