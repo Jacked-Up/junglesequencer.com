@@ -4,8 +4,8 @@ import Layout from '@theme/Layout';
 
 // URL config
 const OVERVIEW_VIDEO_URL = "https://www.youtube.com/embed/mX08Ofr6Fcc?enablejsapi=1";
-const DISCORD_SERVER_URL = "https://discord.gg/vJ4AXsExfE";
-const GITHUB_DISCUSSIONS_URL = "https://github.com/Jacked-Up/junglesequencer.com/discussions";
+const DISCORD_SERVER_URL = "/discord";
+const GITHUB_DISCUSSIONS_URL = "/github-discussions";
 
 function IndexPage() {
     return (

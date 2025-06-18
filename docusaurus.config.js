@@ -1,6 +1,6 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 
-const config = {
+module.exports = {
   title: 'Jungle Sequencer',
   tagline: 'A visual node-based tool designed to help developers interact with their game code in a more intuitive way.',
   favicon: 'img/favicon.ico',
@@ -12,32 +12,52 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  
+  
   presets: [
     [
-      'classic',
-      ({
+      '@docusaurus/preset-classic',
+      {
+        // Theme config
+        theme: { customCss: './src/css/custom.css' },
+        
+        // Documentation config
         docs: {
           sidebarPath: './sidebars.js',
           editUrl: 'https://github.com/Jacked-Up/junglesequencer.com/tree/prod/',
           versions: {
-            current: {
-              label: '1.1.0 (Preview)',
-              path: '1.1.0',
-            },
+            current: { label: '1.1.0 (Preview)', path: '1.1.0' }
           },
         },
+        
+        // Blog config
         blog: {
           showReadingTime: true,
           postsPerPage: 999,
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All Posts',
         },
-        theme: {
-          customCss: './src/css/custom.css',
+        
+        // Sitemap config
+        sitemap: {
+          lastmod: 'date',
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+          async createSitemapItems(params) {
+            const { defaultCreateSitemapItems, ...rest } = params;
+            const items = await defaultCreateSitemapItems(rest);
+            return items.filter((item) => !item.url.includes('/page/'));
+          },
         },
-      }),
+      },
     ],
   ],
+  
+  
+  
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
@@ -101,15 +121,11 @@ const config = {
           items: [
             {
               label: 'Discord Server',
-              href: 'https://discord.gg/vJ4AXsExfE',
+              href: '/discord',
             },
             {
               label: 'GitHub Discussions',
-              href: 'https://github.com/Jacked-Up/junglesequencer.com/discussions',
-            },
-            {
-              label: 'Trello Board',
-              href: 'https://trello.com/b/hSJvNBCh/jungle-sequencer',
+              href: '/github-discussions',
             },
           ],
         },
@@ -127,15 +143,13 @@ const config = {
           ],
         },
       ],
-      copyright: `<br/> © 2025 Jacked Up Software`,
+      copyright: `<br/>© 2025 Jacked Up Software`,
     },
     prism: {
-      theme: prismThemes.vsLight,
-      darkTheme: prismThemes.vsDark,
+      theme: prismThemes.oneLight,
+      darkTheme: prismThemes.oneDark,
       additionalLanguages: ['csharp'],
     },
   },
-  plugins: ['@easyops-cn/docusaurus-search-local'],
+  plugins: ['@easyops-cn/docusaurus-search-local']
 };
-
-module.exports = config;

@@ -6,7 +6,15 @@ function DiscordPage() {
     }, []);
 
     return (
-        <div>
+        <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100vh',
+            fontSize: '2rem',
+            fontWeight: 'bold',
+            textAlign: 'center'
+        }}>
             Redirecting...
         </div>
     );
