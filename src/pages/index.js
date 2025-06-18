@@ -21,7 +21,7 @@ function IndexPage() {
                         <div className="hero__actions">
                             <a className="hero__button hero__button--learn"
                                href="/docs/">
-                                Learn More
+                                View Documentation
                             </a>
                             <a className="hero__button hero__button--buy"
                                href="https://assetstore.unity.com/packages/slug/258407"
@@ -61,10 +61,10 @@ function IndexPage() {
                     
                     <article className="feature-card reverse">
                         <div className="feature-card__text">
-                            <h2 className="feature-card__title">Create Nodes with C#</h2>
+                            <h2 className="feature-card__title">Create Custom Nodes with C#</h2>
                             <p className="feature-card__description">
-                                Create performant custom nodes using C# scripts. Nodes are
-                                automatically generated from the scripts you write.
+                                Jungle makes it easy to create custom nodes with C#.
+                                Nodes are automatically generated from the scripts you write!
                             </p>
                         </div>
                         <div className="feature-card__image">
@@ -77,25 +77,10 @@ function IndexPage() {
                     
                     <article className="feature-card">
                         <div className="feature-card__text">
-                            <h2 className="feature-card__title">Custom Node Inspectors</h2>
+                            <h2 className="feature-card__title">Sticky Notes</h2>
                             <p className="feature-card__description">
-                                Design custom inspectors for your nodes to make them more
-                                user-friendly and provide additional functionality.
-                            </p>
-                        </div>
-                        <div className="feature-card__image">
-                            <img
-                                src="https://cdn.junglesequencer.com/homepage/feature-card-3.png"
-                                alt="Custom Node Inspectors"
-                            />
-                        </div>
-                    </article>
-                    
-                    <article className="feature-card reverse">
-                        <div className="feature-card__text">
-                            <h2 className="feature-card__title">Editor Sticky Notes</h2>
-                            <p className="feature-card__description">
-                                Add sticky notes in your trees to document ideas and provide context.
+                                Drop sticky notes anywhere to jot down ideas, reminders, or context.
+                                Stay organized and keep your thoughts where they matter most: Right in the tree.
                             </p>
                         </div>
                         <div className="feature-card__image">
@@ -106,12 +91,28 @@ function IndexPage() {
                         </div>
                     </article>
                     
+                    <article className="feature-card reverse">
+                        <div className="feature-card__text">
+                            <h2 className="feature-card__title">Custom Node Inspector Support</h2>
+                            <p className="feature-card__description">
+                                Jungle taps into Unity’s inspector system to let you fully customize your nodes. 
+                                Create sleek, purpose-built editors that make node editing faster and more intuitive.
+                            </p>
+                        </div>
+                        <div className="feature-card__image">
+                            <img
+                                src="https://cdn.junglesequencer.com/homepage/feature-card-3.png"
+                                alt="Custom Node Inspectors"
+                            />
+                        </div>
+                    </article>
+                    
                     <article className="feature-card">
                         <div className="feature-card__text">
-                            <h2 className="feature-card__title">Editor Gizmos Support</h2>
+                            <h2 className="feature-card__title">Unity Gizmos Support</h2>
                             <p className="feature-card__description">
-                                Utilize Unity’s gizmos system to provide visual feedback in the editor
-                                for your nodes.
+                                Bring your nodes to life with visual feedback using Unity’s Gizmos system. 
+                                Highlight paths, triggers, or any custom logic directly in the editor.
                             </p>
                         </div>
                         <div className="feature-card__image">
@@ -126,8 +127,8 @@ function IndexPage() {
                         <div className="feature-card__text">
                             <h2 className="feature-card__title">Validator & Error Handler</h2>
                             <p className="feature-card__description">
-                                Implement validation logic in your nodes to catch issues before they
-                                occur.
+                                Add custom validation logic on your nodes to catch issues early. 
+                                Spot errors before they can break anything.
                             </p>
                         </div>
                         <div className="feature-card__image">
@@ -142,45 +143,47 @@ function IndexPage() {
             </section>
             
             <section className="community">
-                <h2 className="hero__title">Join the Community</h2>
-                <p className="hero__description" style={{marginBottom:"2.4rem"}}>
-                    Share ideas, get feedback, and see what others build with Jungle Sequencer.
-                </p>
-                
-                <div className="community__grid">
-                    
-                    <div className="community__card">
-                        <h3 className="community__card-title">Discord Server</h3>
-                        <p className="community__card-description">
-                            Get instant help, ask questions, and share your projects with the community.
-                        </p>
-                        <a
-                            className="community__button community__button--discord"
-                            href={DISCORD_SERVER_URL}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <span className="community__button-icon community__icon--discord" />
-                            Join Discord Server
-                        </a>
-                    </div>
-                    
-                    <div className="community__card">
-                        <h3 className="community__card-title">GitHub Discussions</h3>
-                        <p className="community__card-description">
-                            Request features, vote on ideas, report bugs, and share any other feedback you may have.
-                        </p>
-                        <a
-                            className="community__button community__button--github"
-                            href={GITHUB_DISCUSSIONS_URL}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <span className="community__button-icon community__icon--github" />
-                            View GitHub Discussions
-                        </a>
-                    </div>
+                <div className="community__content">
 
+                    <h2 className="hero__title">Join the Community</h2>
+                    <p className="hero__description" style={{marginBottom:"2.4rem"}}>
+                        Share ideas, get feedback, and see what others build with Jungle Sequencer.
+                    </p>
+                    
+                    <div className="community__grid">
+                    
+                        <div className="community__card">
+                            <h3 className="community__card-title">Discord Server</h3>
+                            <p className="community__card-description">
+                                Get instant help, ask questions, and share your projects with the community.
+                            </p>
+                            <a
+                                className="community__button community__button--discord"
+                                href={DISCORD_SERVER_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Join Discord Server
+                            </a>
+                        </div>
+
+                        <div className="community__card">
+                            <h3 className="community__card-title">GitHub Discussions</h3>
+                            <p className="community__card-description">
+                                Request features, vote on ideas, report bugs, and share any other feedback you may have.
+                            </p>
+                            <a
+                                className="community__button community__button--github"
+                                href={GITHUB_DISCUSSIONS_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View GitHub Discussions
+                            </a>
+                        </div>
+
+                    </div>
+                    
                 </div>
             </section>
 
