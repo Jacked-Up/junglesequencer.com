@@ -21,7 +21,7 @@ function IndexPage() {
                         <div className="hero__actions">
                             <a className="hero__button hero__button--learn"
                                href="/docs/">
-                                Learn More
+                                View Documentation
                             </a>
                             <a className="hero__button hero__button--buy"
                                href="https://assetstore.unity.com/packages/slug/258407"
@@ -160,7 +160,6 @@ function IndexPage() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <span className="community__button-icon community__icon--discord" />
                             Join Discord Server
                         </a>
                     </div>
@@ -176,7 +175,6 @@ function IndexPage() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <span className="community__button-icon community__icon--github" />
                             View GitHub Discussions
                         </a>
                     </div>

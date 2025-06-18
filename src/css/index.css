@@ -68,17 +68,14 @@
     --bg-end: var(--ifm-color-primary);
     --shadow: 0 4px 15px rgba(0,0,0,0.2);
     --shadow-hover: 0 6px 20px rgba(0,0,0,0.25);
-    --width: 200px;
-    --pad-left: 1.5rem;
 
     /* Positioning */
     position: relative;
     overflow: hidden;
-
+    
     /* Box */
     display: inline-block;
-    width: var(--width);
-    padding: 0.8rem 1.5rem 0.8rem var(--pad-left);
+    padding: 1rem 1.5rem 1rem 3.5rem;
     border-radius: 8px;
 
     /* Typography */
@@ -93,18 +90,7 @@
 
     /* Interaction */
     transform-origin: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hero__button::after {
-    /* Visual ripple */
-    content: "";
-    position: absolute;
-    top: 50%; left: 50%;
-    width: 0; height: 0;
-    opacity: 0;
-    transform: translate(-50%, -50%);
-    transition: width 0.5s ease-out, height 0.5s ease-out, opacity 0.5s ease-out;
+    transition: transform 0.3s ease;
 }
 
 .hero__button:hover {
@@ -114,20 +100,22 @@
     box-shadow: var(--shadow-hover);
 }
 
-.hero__button:hover::after {
-    /* Visual ripple */
-    width: 200%;
-    height: 200%;
-    opacity: 1;
-}
-
 .hero__button--learn { }
+
+.hero__button--learn::before {
+    content: "";
+    position: absolute;
+    top: 50%; left: 1rem;
+    width: 1.5rem; height: 1.5rem;
+    transform: translateY(-50%);
+    background: url("https://cdn.junglesequencer.com/homepage/document.svg") no-repeat center / contain;
+}
 
 .hero__button--buy {
     /* Overrides */
     --bg-start: #f39c12;
     --bg-end: #f1c40f;
-    --width: 260px;
+    --width: 275px;
     --pad-left: 3.5rem;
 }
 
@@ -136,7 +124,7 @@
     content: "";
     position: absolute;
     top: 50%; left: 1rem;
-    width: 1.6rem; height: 1.6rem;
+    width: 1.5rem; height: 1.5rem;
     transform: translateY(-50%);
     background: url("https://cdn.junglesequencer.com/homepage/shopping-cart.svg") no-repeat center / contain;
 }
@@ -535,9 +523,13 @@
     background: linear-gradient(135deg, #6572ff 10%, #5865F2 100%);
 }
 
-.community__icon--discord {
-    /* Visual */
-    background-image: url("https://cdn.junglesequencer.com/homepage/discord-logo.svg");
+.community__button--discord::before {
+    content: "";
+    position: absolute;
+    top: 50%; left: 1rem;
+    width: 1.5rem; height: 1.5rem;
+    transform: translateY(-50%);
+    background: url("https://cdn.junglesequencer.com/homepage/discord-logo.svg") no-repeat center / contain;
 }
 
 .community__button--github {
@@ -545,9 +537,13 @@
     background: linear-gradient(135deg, #24292f 10%, #0d1117 100%);
 }
 
-.community__icon--github {
-    /* Visual */
-    background-image: url("https://cdn.junglesequencer.com/homepage/github-logo.svg");
+.community__button--github::before {
+    content: "";
+    position: absolute;
+    top: 50%; left: 1rem;
+    width: 1.5rem; height: 1.5rem;
+    transform: translateY(-50%);
+    background: url("https://cdn.junglesequencer.com/homepage/github-logo.svg") no-repeat center / contain;
 }
 
 .community__button:hover {
