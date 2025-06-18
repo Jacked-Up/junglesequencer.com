@@ -75,17 +75,6 @@ module.exports = {
                             });
                     },
                 },
-                
-                // Google Analytics config
-                gtag: {
-                    trackingID: 'G-EWYE80PRZH',
-                    anonymizeIP: true,
-                },
-                
-                // Google Tag Manager config
-                googleTagManager: {
-                    containerId: 'GTM-T65LBZC3',
-                },
             },
         ],
     ],

@@ -28,16 +28,6 @@
     pointer-events: none;
 }
 
-
-
-
-
-
-
-
-
-
- 
 .cookie-prompt__content{
     flex:1;
     color: #fff;
@@ -52,11 +42,6 @@
     margin: 0;
     color: #e0e0e0;
 }
-
-
-
-
-
 
 .cookie-prompt__actions{
     display: flex; gap: 1rem;
@@ -112,11 +97,6 @@
 .cookie-prompt__button--reject::before{
     background-image:url("https://cdn.junglesequencer.com/homepage/decline.svg");
 }
-
-
-
-
-
 
 @media (max-width: 768px) {
     .cookie-prompt {
