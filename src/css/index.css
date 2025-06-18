@@ -3,7 +3,7 @@
 .hero {
     /* Background + visual effects */
     background:
-            url("https://cdn.junglesequencer.com/homepage/jungle-hero-background.png")
+            url("https://cdn.junglesequencer.com/homepage/hero-background.png")
             repeat-x bottom center,
             linear-gradient(to right,
             var(--ifm-color-primary-darker) 0%,
@@ -405,7 +405,7 @@
 .community {
     /* Background */
     background:
-            url("https://cdn.junglesequencer.com/homepage/jungle-hero-background.png") repeat-x bottom center,
+            url("https://cdn.junglesequencer.com/homepage/hero-background.png") repeat-x bottom center,
             linear-gradient(to right,
             var(--ifm-color-primary-darker) 0%,
             var(--ifm-color-primary-dark) 90%);
@@ -556,7 +556,7 @@
     transform: scale(1.05);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .community {
         /* Layout */
         padding-block: 3rem;
