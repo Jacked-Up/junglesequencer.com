@@ -71,9 +71,11 @@ function CookieConsentInner() {
     return (
         <div className={`cookie-prompt ${hiding ? 'hide' : ''}`}>
             <div className="cookie-prompt__content">
-                <h2>Cookies are used to track site analytics</h2>
+                <h2>We use cookies to improve your experience</h2>
                 <p>
-                    The data collected is <strong>completely anonymous</strong> and helps improve the site.
+                    By using this site, you agree to the use of <strong>secure</strong> cookies.
+                    <br />
+                    Learn more in the <a href="https://jackedupsoftware.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
                 </p>
             </div>
 
