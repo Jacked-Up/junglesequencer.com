@@ -32,16 +32,24 @@
   --ifm-surface-color:    #ffffff;
 }
 
-:root,
-[data-theme='dark'] {
+:root, [data-theme='dark'] {
   --ifm-navbar-search-input-background-color: white !important;
   --ifm-navbar-search-input-color: black !important;
   --ifm-navbar-search-input-placeholder-color: rgba(0,0,0,0.3) !important;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, a, button {
   font-family: Rubik, sans-serif !important;
 }
+
+
+
+
+
+
+
+
+
 
 .navbar {
   color: white;

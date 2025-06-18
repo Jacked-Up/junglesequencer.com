@@ -6,9 +6,14 @@ import DiscordPrompt from "../../components/DiscordPrompt";
 function LayoutWrapper(props) {
     return (
         <>
-            <CookieConsent />
-            <DiscordPrompt />
+            { /* Main Docusaurus layout */ }
             <Layout {...props} />
+            
+            { /* Cookies prompt */ }
+            <CookieConsent />
+            
+            { /* TODO: Update the theme */ }
+            <DiscordPrompt />
         </>
     );
 }
