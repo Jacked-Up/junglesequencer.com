@@ -20,7 +20,7 @@ This will form the foundation of your IO node.
 ```csharp
 using Jungle;
 
-//                      ↓↓↓↓↓↓
+// highlight-next-line
 public class MyIONode : IONode<...>
 {
 
@@ -36,7 +36,7 @@ For example, `IONode<int>`.
 ```csharp
 using Jungle;
 
-//                             ↓↓↓↓↓↓↓↓↓↓
+// highlight-next-line
 public class MyIONode : IONode<INPUT_TYPE>
 {
 
@@ -54,17 +54,19 @@ using Jungle;
 
 public class MyIONode : IONode<INPUT_TYPE>
 {
-    //                      ↓↓↓↓↓↓↓ ↓↓↓↓↓↓↓↓↓↓
+    // highlight-start
     protected override void OnStart(INPUT_TYPE inputValue)
     {
 
     }
+    // highlight-end
 
-    //                      ↓↓↓↓↓↓↓↓
+    // highlight-start
     protected override void OnUpdate()
     {
 
     }
+    // highlight-end
 }
 ```
 
@@ -82,12 +84,13 @@ If you don't want an output port, set the `OutputPortName` and `OutputPortType` 
 ```csharp
 using Jungle;
 
-// ↓↓↓↓↓↓↓↓↓
+// highlight-start
 [IONode(
     InputPortName = "My Input",
     OutputPortName = "My Output",
     OutputPortType = typeof(OUTPUT_TYPE)
 )]
+// highlight-end
 public class MyIONode : IONode<INPUT_TYPE>
 {
     protected override void OnStart(INPUT_TYPE inputValue)
@@ -111,13 +114,14 @@ This defines additional properties such as the title, description, and category 
 ```csharp
 using Jungle;
 
-// ↓↓↓↓↓↓↓↓↓↓↓↓
+// highlight-start
 [NodeProperties(
     Title = "My IO Node",
     Description = "This is an IO node.",
     Category = "My Nodes/IO",
     Color = Green
 )]
+// highlight-end
 [IONode(
     InputPortName = "My Input",
     OutputPortName = "My Output",

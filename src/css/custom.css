@@ -38,13 +38,19 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 
   /* Footer */
   --ifm-footer-background-color: #123c14;
+  
+  /* Code block */
+  --docusaurus-highlighted-code-line-bg: rgba(58, 202, 68, 0.15);
 }
 
-[data-theme='light'] :root {
+[data-theme='light'] {
   /* Theme */
   --ifm-background-color: #f7faf6;
   --ifm-background-alt:   #eaf4ec;
   --ifm-surface-color:    #ffffff;
+  
+  /* Code block */
+  --docusaurus-highlighted-code-line-bg: rgba(141, 187, 141, 0.25);
 }
 
 

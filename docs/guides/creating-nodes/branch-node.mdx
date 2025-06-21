@@ -20,8 +20,8 @@ This will form the foundation of your branch node.
 ```csharp
 using Jungle;
 
-//                          ↓↓↓↓↓↓↓↓↓↓
-public class MyBranchNode : BranchNode<...>
+// highlight-next-line
+public class MyBranchNode : BranchNode<INPUT_TYPE>
 {
 
 }
@@ -38,17 +38,19 @@ using Jungle;
 
 public class MyBranchNode : BranchNode<INPUT_TYPE>
 {
-    //                      ↓↓↓↓↓↓↓ ↓↓↓↓↓↓↓↓↓↓
+    // highlight-start
     protected override void OnStart(INPUT_TYPE inputValue)
     {
 
     }
-
-    //                      ↓↓↓↓↓↓↓↓
+    // highlight-end
+    
+    // highlight-start
     protected override void OnUpdate()
     {
 
     }
+    // highlight-end
 }
 ```
 
@@ -61,7 +63,7 @@ This defines the input and output ports.
 ```csharp
 using Jungle;
 
-// ↓↓↓↓↓↓↓↓
+// highlight-start
 [BranchNode(
     InputPortName = "My Input",
     OutputPortNames = new []
@@ -75,6 +77,7 @@ using Jungle;
         typeof(OUTPUT_TYPE)
     }
 )]
+// highlight-end
 public class MyBranchNode : BranchNode<INPUT_TYPE>
 {
     protected override void OnStart(INPUT_TYPE inputValue)
@@ -98,13 +101,14 @@ This defines additional properties such as the title, description, and category 
 ```csharp
 using Jungle;
 
-// ↓↓↓↓↓↓↓↓↓↓↓↓
+// highlight-start
 [NodeProperties(
     Title = "My Branch Node",
     Description = "This is a Branch node.",
     Category = "My Nodes/Branch",
     Color = Green
 )]
+// highlight-end
 [BranchNode(
     InputPortName = "My Input",
     OutputPortNames = new []
