@@ -3,19 +3,11 @@ import { themes as prismThemes } from 'prism-react-renderer';
 module.exports = {
     title: 'Jungle Sequencer',
     tagline: 'The quickest and easiest solution for building node-based sequences in Unity.',
-
+    
     favicon: 'img/favicon.ico',
     url: 'https://junglesequencer.com',
-
-    baseUrl: '/',
-
-    onBrokenLinks: 'throw',
-    onBrokenMarkdownLinks: 'warn',
     
-    i18n: {
-        defaultLocale: 'en',
-        locales: ['en'],
-    },
+    baseUrl: '/',
     
     presets: [
         [
@@ -23,17 +15,20 @@ module.exports = {
             {
                 // Theme config
                 theme: { customCss: './src/css/custom.css' },
-
+                
                 // Documentation config
                 docs: {
                     path: 'docs',
                     sidebarPath: './sidebars.js',
-                    editUrl: 'https://github.com/Jacked-Up/junglesequencer.com/tree/prod/',
+                    editUrl: 'https://github.com/Jacked-Up/junglesequencer.com/blob/live/',
                     versions: {
-                        current: { label: '1.1.0 (Preview)', path: '1.1.0' }
+                        current: { 
+                            label: '1.1.0 (Preview)',
+                            path: '1.1.0' 
+                        }
                     },
-                    showLastUpdateAuthor: true,
-                    showLastUpdateTime: true,
+                    showLastUpdateAuthor: false,
+                    showLastUpdateTime: false,
                 },
                 
                 // Blog config
@@ -65,12 +60,10 @@ module.exports = {
                         return items
                             .filter(item => !item.url.includes('/page/'))
                             .map(item => {
-                                if (item.url === `${siteConfig.url}/`) {
+                                if (item.url === `${siteConfig.url}/`)
                                     return { ...item, priority: 1.0, changefreq: 'daily' };
-                                }
-                                if (item.url.includes('/archive/')) {
+                                if (item.url.includes('/archive/'))
                                     return { ...item, priority: 0.3, changefreq: 'monthly' };
-                                }
                                 return item;
                             });
                     },
@@ -78,16 +71,13 @@ module.exports = {
             },
         ],
     ],
-
-
-
+    
     themeConfig: {
         colorMode: {
             defaultMode: 'dark',
             disableSwitch: false,
             respectPrefersColorScheme: true,
         },
-        image: 'img/docusaurus-social-card.jpg',
         navbar: {
             title: 'Jungle Sequencer',
             logo: {
@@ -174,5 +164,14 @@ module.exports = {
             additionalLanguages: ['csharp'],
         },
     },
-    plugins: ['@easyops-cn/docusaurus-search-local']
+
+    i18n: {
+        defaultLocale: 'en',
+        locales: ['en'],
+    },
+    
+    plugins: ['@easyops-cn/docusaurus-search-local'],
+    
+    onBrokenLinks: 'throw',
+    onBrokenMarkdownLinks: 'warn'
 };

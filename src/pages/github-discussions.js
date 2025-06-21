@@ -1,23 +1,26 @@
 import React, { useEffect } from 'react';
+import Layout from '@theme/Layout';
 
-function GitHubDiscussionsPage() {
+export default function GitHubDiscussionsPage() {
     useEffect(() => {
         window.location.href = 'https://github.com/Jacked-Up/junglesequencer.com/discussions';
     }, []);
     
     return (
-        <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '100vh',
-            fontSize: '2rem',
-            fontWeight: 'bold',
-            textAlign: 'center'
-        }}>
-            Redirecting...
-        </div>
+        <Layout title="GitHub Discussions Redirect" 
+                description="Redirects user to the Jungle Sequencer GitHub discussions."
+        >
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '50vh',
+                fontSize: '2rem',
+                fontWeight: 'bold',
+                textAlign: 'center'
+            }}>
+                Redirecting...
+            </div>
+        </Layout>
     );
 }
-
-export default GitHubDiscussionsPage;
