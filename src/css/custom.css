@@ -3,9 +3,19 @@
   src: local('Rubik'), url('../Rubik.ttf') format('truetype');
 }
 
+h1, h2, h3, h4, h5, h6, p, a, button {
+  font-family: Rubik, sans-serif !important;
+}
+
 :root {
   font-family: Rubik, sans-serif !important;
 
+  /* Theme */
+  /*--ifm-background-color: #f7faf6;
+  --ifm-background-alt:   #eaf4ec;
+  --ifm-surface-color:    #ffffff;*/
+
+  /* Color palette */
   --ifm-color-primary-darkest:  #0b290d;
   --ifm-color-primary-darker:   #16521a;
   --ifm-color-primary-dark:     #217b27;
@@ -15,6 +25,7 @@
   --ifm-color-primary-lightest: #b0eab4;
   --ifm-color-secondary:        #faad07;
 
+  /* Navbar */
   --ifm-navbar-background-color: #123c14;
   --ifm-navbar-height: 4rem;
   --ifm-navbar-link-color: white;
@@ -22,24 +33,18 @@
   --ifm-navbar-link-active-color: var(--ifm-color-primary-lightest);
   --ifm-navbar-shadow: rgba(0, 0, 0, 0.25) 0 0 10px 0;
   --ifm-navbar-search-input-background-color: white !important;
-  --ifm-navbar-search-input-color: black;
-  --ifm-navbar-search-input-placeholder-color: rgba(0, 0, 0, 0.2);
-  
-  --ifm-footer-background-color: #123c14;
+  --ifm-navbar-search-input-color: black !important;
+  --ifm-navbar-search-input-placeholder-color: rgba(0,0,0,0.3) !important;
 
+  /* Footer */
+  --ifm-footer-background-color: #123c14;
+}
+
+[data-theme='light'] :root {
+  /* Theme */
   --ifm-background-color: #f7faf6;
   --ifm-background-alt:   #eaf4ec;
   --ifm-surface-color:    #ffffff;
-}
-
-:root, [data-theme='dark'] {
-  --ifm-navbar-search-input-background-color: white !important;
-  --ifm-navbar-search-input-color: black !important;
-  --ifm-navbar-search-input-placeholder-color: rgba(0,0,0,0.3) !important;
-}
-
-h1, h2, h3, h4, h5, h6, p, a, button {
-  font-family: Rubik, sans-serif !important;
 }
 
 

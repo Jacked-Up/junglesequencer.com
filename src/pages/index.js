@@ -167,7 +167,7 @@ function IndexPage() {
                                 View LinkedIn Group
                             </a>
                         </div>
-                        
+
                         <div className="community__card">
                             <h3 className="community__card-title">Discord Server</h3>
                             <p className="community__card-description">
