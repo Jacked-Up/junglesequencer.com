@@ -1,20 +1,23 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 
+
+
 module.exports = {
     title: 'Jungle Sequencer',
     tagline: 'The quickest and easiest solution for building node-based sequences in Unity.',
     
-    favicon: 'img/favicon.ico',
+    favicon: './favicon.ico',
     url: 'https://junglesequencer.com',
     
     baseUrl: '/',
+    staticDirectories: ['static'],
     
     presets: [
         [
             '@docusaurus/preset-classic',
             {
                 // Theme config
-                theme: { customCss: './src/css/custom.css' },
+                theme: { customCss: require.resolve('./src/css/custom.css') },
                 
                 // Documentation config
                 docs: {

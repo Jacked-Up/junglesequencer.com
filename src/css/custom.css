@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'Rubik';
-  src: local('Rubik'), url('../../static/Rubik.ttf') format('truetype');
+  src: url('https://cdn.junglesequencer.com/fonts/rubik.ttf') format('truetype');
+  /*font-weight: 500;
+  font-style: normal;*/
 }
 
-h1, h2, h3, h4, h5, h6, p, a, button {
-  font-family: Rubik, sans-serif !important;
+* {
+  font-family: 'Rubik', sans-serif !important;
 }
 
 :root {
-  font-family: Rubik, sans-serif !important;
-
   /* Theme */
   /*--ifm-background-color: #f7faf6;
   --ifm-background-alt:   #eaf4ec;
