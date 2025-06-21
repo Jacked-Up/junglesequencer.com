@@ -6,6 +6,7 @@ import Layout from '@theme/Layout';
 const OVERVIEW_VIDEO_URL = "https://www.youtube.com/embed/mX08Ofr6Fcc?enablejsapi=1";
 const DISCORD_SERVER_URL = "/discord";
 const GITHUB_DISCUSSIONS_URL = "/github-discussions";
+const LINKEDIN_URL = "/linkedin";
 
 function IndexPage() {
     return (
@@ -179,6 +180,21 @@ function IndexPage() {
                                 rel="noopener noreferrer"
                             >
                                 View GitHub Discussions
+                            </a>
+                        </div>
+                        
+                        <div className="community__card">
+                            <h3 className="community__card-title">LinkedIn Group</h3>
+                            <p className="community__card-description">
+                                Share your projects and connect with other users in a professional setting.
+                            </p>
+                            <a
+                                className="community__button community__button--linkedin"
+                                href={LINKEDIN_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View LinkedIn Group
                             </a>
                         </div>
 
