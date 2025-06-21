@@ -39,7 +39,7 @@ module.exports = {
                     postsPerPage: 10,
                     blogSidebarTitle: 'All Posts',
                     blogSidebarCount: 'ALL',
-                    showReadingTime: true,
+                    showReadingTime: false,
                     onUntruncatedBlogPosts: 'ignore'
                 },
                 
@@ -81,8 +81,8 @@ module.exports = {
         navbar: {
             title: 'Jungle Sequencer',
             logo: {
+                src: 'https://cdn.junglesequencer.com/homepage/jungle-sequencer-logo.svg',
                 alt: 'Jungle Sequencer Logo',
-                src: 'img/logo.png',
             },
             items: [
                 {
