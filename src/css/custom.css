@@ -101,25 +101,11 @@ h1, h2, h3, h4, h5, h6, p, a, button {
   color: var(--ifm-color-primary-lightest);
 }
 
+
+
+
+
 /*
-.DocItemTitle {
-  color: var(--ifm-color-primary);
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.DocItemParameter {
-  color: var(--ifm-color-secondary);
-  font-size: 18px;
-  font-weight: bold;
-}
-*/
-
-
-
-
-
-
 .menu__list ul {
   padding-right: 4px;
   padding-left: 4px;
@@ -144,7 +130,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 .theme-doc-sidebar-item-category:hover {
   transform: scale(1.0125);
 }
-
+*/
 
 
 
@@ -156,6 +142,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 }
 */
 
+/*
 table {
   border: 2px solid rgba(176, 234, 180, 0.25);
   border-radius: 12px;
@@ -173,7 +160,7 @@ tr:last-child td {
 td:last-child, th:last-child {
   border-right: none;
 }
-
+*/
 
 
 
