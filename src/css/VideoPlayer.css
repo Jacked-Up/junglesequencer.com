@@ -16,7 +16,7 @@
     width: 100%;
     background-color: var(--video-player-background);
     border: 1px solid var(--video-player-border);
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     display: flex;
     flex-direction: row;
     align-items: center;
