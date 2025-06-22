@@ -1,7 +1,5 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 
-
-
 module.exports = {
     title: 'Jungle Sequencer',
     tagline: 'The quickest and easiest solution for building node-based sequences in Unity.',
@@ -81,6 +79,7 @@ module.exports = {
             disableSwitch: false,
             respectPrefersColorScheme: true,
         },
+        
         navbar: {
             title: 'Jungle Sequencer',
             logo: {
@@ -117,6 +116,7 @@ module.exports = {
                 },
             ],
         },
+        
         footer: {
             links: [
                 {
@@ -161,6 +161,22 @@ module.exports = {
             ],
             copyright: `<br/>© ${new Date().getFullYear()} Jacked Up Software`,
         },
+        
+        algolia: {
+            appId: 'R2IYF7ETH7',
+            apiKey: '599cec31baffa4868cae4e79f180729b',
+            indexName: 'docsearch',
+            
+            externalUrlRegex: 'external\\.com|domain\\.com',
+            replaceSearchResultPathname: {
+                from: '/docs/',
+                to: '/',
+            },
+            searchParameters: { },
+            searchPagePath: 'search',
+            insights: false,
+        },
+        
         prism: {
             theme: prismThemes.oneLight,
             darkTheme: prismThemes.oneDark,
