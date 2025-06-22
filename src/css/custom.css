@@ -157,15 +157,14 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 
 /* Markdown prompts */
 .theme-admonition {
-    border-radius: 12px;
     border-width: var(--border-width);
+    border-radius: 12px;
 }
 
 /* Markdown image */
 .markdown img {
     border: var(--border-primary);
     border-radius: 12px;
-    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
 }
 
 /* Markdown code blocks */
