@@ -3,7 +3,7 @@ import Layout from '@theme-original/Layout';
 import CookieConsent from "../../components/CookieConsent";
 import DiscordPrompt from "../../components/DiscordPrompt";
 
-function LayoutWrapper(props) {
+export default function LayoutWrapper(props) {
     return (
         <>
             { /* Cookies prompt */ }
@@ -17,5 +17,3 @@ function LayoutWrapper(props) {
         </>
     );
 }
-
-export default LayoutWrapper;

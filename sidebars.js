@@ -65,6 +65,9 @@ const sidebars = {
         {
             type: 'category',
             label: 'Miscellaneous',
+            link: {
+                "type": "generated-index"
+            },
             collapsed: true,
             items: [
                 'documentation/miscellaneous/jungle-utils',
@@ -75,6 +78,9 @@ const sidebars = {
         {
             type: 'category',
             label: 'Editor Only',
+            "link": {
+                "type": "generated-index"
+            },
             collapsed: true,
             items: [
                 'documentation/editor-only/jungle-editor-utils',
@@ -103,6 +109,9 @@ const sidebars = {
         {
             type: 'category',
             label: 'Jungle Editor',
+            link: {
+                "type": "generated-index"
+            },
             collapsed: true,
             items: [
                 'guides/jungle-editor/graph-panel',
@@ -114,6 +123,9 @@ const sidebars = {
         {
             type: 'category',
             label: 'Node Features',
+            link: {
+                "type": "generated-index"
+            },
             collapsed: true,
             items: [
                 'guides/node-features/details-box',
@@ -125,8 +137,6 @@ const sidebars = {
         },
         'guides/revert-actions',
         'guides/over-time-helper',
-        
-        
         'guides/jungle-validator',
         'guides/jungle-preferences'
     ],

@@ -152,7 +152,22 @@ function IndexPage() {
                     </p>
                     
                     <div className="community__grid">
-                    
+
+                        <div className="community__card">
+                            <h3 className="community__card-title">LinkedIn Group</h3>
+                            <p className="community__card-description">
+                                Share your projects and connect with other users in a professional setting.
+                            </p>
+                            <a
+                                className="community__button community__button--linkedin"
+                                href={LINKEDIN_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View LinkedIn Group
+                            </a>
+                        </div>
+
                         <div className="community__card">
                             <h3 className="community__card-title">Discord Server</h3>
                             <p className="community__card-description">
@@ -180,21 +195,6 @@ function IndexPage() {
                                 rel="noopener noreferrer"
                             >
                                 View GitHub Discussions
-                            </a>
-                        </div>
-                        
-                        <div className="community__card">
-                            <h3 className="community__card-title">LinkedIn Group</h3>
-                            <p className="community__card-description">
-                                Share your projects and connect with other users in a professional setting.
-                            </p>
-                            <a
-                                className="community__button community__button--linkedin"
-                                href={LINKEDIN_URL}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                View LinkedIn Group
                             </a>
                         </div>
 

@@ -3,37 +3,34 @@ import { themes as prismThemes } from 'prism-react-renderer';
 module.exports = {
     title: 'Jungle Sequencer',
     tagline: 'The quickest and easiest solution for building node-based sequences in Unity.',
-
-    favicon: 'img/favicon.ico',
-    url: 'https://junglesequencer.com',
-
-    baseUrl: '/',
-
-    onBrokenLinks: 'throw',
-    onBrokenMarkdownLinks: 'warn',
     
-    i18n: {
-        defaultLocale: 'en',
-        locales: ['en'],
-    },
+    favicon: './favicon.ico',
+    url: 'https://junglesequencer.com',
+    
+    baseUrl: '/',
+    staticDirectories: ['static'],
     
     presets: [
         [
             '@docusaurus/preset-classic',
             {
                 // Theme config
-                theme: { customCss: './src/css/custom.css' },
-
+                theme: { customCss: require.resolve('./src/css/custom.css') },
+                
                 // Documentation config
                 docs: {
                     path: 'docs',
                     sidebarPath: './sidebars.js',
-                    editUrl: 'https://github.com/Jacked-Up/junglesequencer.com/tree/prod/',
+                    editUrl: 'https://github.com/Jacked-Up/junglesequencer.com/blob/live/',
                     versions: {
-                        current: { label: '1.1.0 (Preview)', path: '1.1.0' }
+                        current: {
+                            label: '🚧 Work in Progress',
+                            path: 'wip' 
+                        }
                     },
-                    showLastUpdateAuthor: true,
-                    showLastUpdateTime: true,
+                    sidebarCollapsible: true,
+                    showLastUpdateAuthor: false,
+                    showLastUpdateTime: false,
                 },
                 
                 // Blog config
@@ -44,7 +41,7 @@ module.exports = {
                     postsPerPage: 10,
                     blogSidebarTitle: 'All Posts',
                     blogSidebarCount: 'ALL',
-                    showReadingTime: true,
+                    showReadingTime: false,
                     onUntruncatedBlogPosts: 'ignore'
                 },
                 
@@ -65,12 +62,10 @@ module.exports = {
                         return items
                             .filter(item => !item.url.includes('/page/'))
                             .map(item => {
-                                if (item.url === `${siteConfig.url}/`) {
+                                if (item.url === `${siteConfig.url}/`)
                                     return { ...item, priority: 1.0, changefreq: 'daily' };
-                                }
-                                if (item.url.includes('/archive/')) {
+                                if (item.url.includes('/archive/'))
                                     return { ...item, priority: 0.3, changefreq: 'monthly' };
-                                }
                                 return item;
                             });
                     },
@@ -78,28 +73,21 @@ module.exports = {
             },
         ],
     ],
-
-
-
+    
     themeConfig: {
         colorMode: {
             defaultMode: 'dark',
             disableSwitch: false,
             respectPrefersColorScheme: true,
         },
-        image: 'img/docusaurus-social-card.jpg',
+        
         navbar: {
             title: 'Jungle Sequencer',
             logo: {
+                src: 'https://cdn.junglesequencer.com/homepage/jungle-sequencer-logo.svg',
                 alt: 'Jungle Sequencer Logo',
-                src: 'img/logo.png',
             },
             items: [
-                {
-                    type: 'docsVersionDropdown',
-                    position: 'right',
-                    dropdownActiveClassDisabled: true,
-                },
                 {
                     type: 'docSidebar',
                     sidebarId: 'documentationSidebar',
@@ -113,6 +101,11 @@ module.exports = {
                     label: 'Guides',
                 },
                 {
+                    type: 'docsVersionDropdown',
+                    position: 'left',
+                    dropdownActiveClassDisabled: true,
+                },
+                {
                     to: '/announcements',
                     label: 'News & Changelog',
                     position: 'right',
@@ -124,6 +117,15 @@ module.exports = {
                 },
             ],
         },
+        
+        docs: {
+            versionPersistence: 'localStorage',
+            sidebar: {
+                hideable: true,
+                autoCollapseCategories: true,
+            },
+        },
+        
         footer: {
             links: [
                 {
@@ -150,6 +152,10 @@ module.exports = {
                             label: 'GitHub Discussions',
                             href: '/github-discussions',
                         },
+                        {
+                            label: 'LinkedIn Group',
+                            href: '/linkedin',
+                        },
                     ],
                 },
                 {
@@ -168,11 +174,31 @@ module.exports = {
             ],
             copyright: `<br/>© ${new Date().getFullYear()} Jacked Up Software`,
         },
+        
+        algolia: {
+            appId: '7651ITKIZU',
+            apiKey: 'd7260d5f1b5b2291f4509c0e9037adb4',
+            indexName: 'junglesequencer_docs',
+            contextualSearch: true,
+            searchPagePath: 'search',
+            searchParameters: {
+                clickAnalytics: false,
+                facetFilters: ['type:docs'],
+            },
+        },
+        
         prism: {
-            theme: prismThemes.oneLight,
+            theme:     prismThemes.oneLight,
             darkTheme: prismThemes.oneDark,
             additionalLanguages: ['csharp'],
         },
     },
-    plugins: ['@easyops-cn/docusaurus-search-local']
+    
+    i18n: {
+        defaultLocale: 'en',
+        locales: ['en'],
+    },
+    
+    onBrokenLinks: 'throw',
+    onBrokenMarkdownLinks: 'warn'
 };

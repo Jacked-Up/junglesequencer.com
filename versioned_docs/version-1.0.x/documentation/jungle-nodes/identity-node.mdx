@@ -1,10 +1,11 @@
 ---
-title: IO Node<T>
-slug: /jungle-nodes/io-node
+title: Identity Node
+sidebar_position: 3
+
+slug: /jungle-nodes/identity-node
 ---
 
-The IO Node is a simpler version of the Branch Node.
-It takes a single input of any type, and outputs to a single outputof any type.
+The Identity Node takes a single input of any type, and outputs the inputted value without changing or mutating it.
 
 import VideoPlayer from '@site/src/components/VideoPlayer';
 
@@ -17,43 +18,50 @@ import VideoPlayer from '@site/src/components/VideoPlayer';
 ---
 ## Overview
 
-All IO Nodes are required to have an `IONode` class attribute defined. This attribute defines the input port and
-output port on the node.
+This node type is useful for nodes that do not require an input to function.
+**For instance**, a node that waits for a set amount of time before continuing.
 
-Here's a list of all the properties you can define in the `IONode` attribute:
+:::tip
+The inputted value is stored internally and **cannot** be modified or changed.
+:::
 
+---
+
+The input port and output port name can be defined by adding the `IdentityNode` attribute to your node script.
+
+`IdentityNode` attribute properties:
 | Property         | Type     | Description                          |
 |------------------|----------|--------------------------------------|
 | `InputPortName`  | `string` | Defines the name of the input port.  |
 | `OutputPortName` | `string` | Defines the name of the output port. |
-| `OutputPortType` | `Type`   | Defines the ports outputted type.    |
 
 ```csharp
-[IONode(
+[IdentityNode(
     InputPortName = "My Input",
-    OutputPortName = "My Output",
-    OutputPortType = typeof(Port.None)
+    OutputPortName = "My Output"
 )]
-public class MyIONode : IONode<Port.None>
+public class MyIdentityNode : IdentityNode
 ...
 ```
 
 #### Result in the Jungle Editor
-![IO node attribute visual](https://cdn.junglesequencer.com/v1-0-5/documentation/jungle-nodes/io-node-attribute-visual.png)
 
-:::info WHERE IS THE INPUT TYPE DEFINED?
-The IO Node is a generic class, so you define the input port type when you inherit from the class.
-<br />**For example**, if you want the input port to accept a `float` value, you would set your script up like so:
-```csharp
-public class MyIONode : IONode<float>
-...
-```
+![Identity node attribute visual](https://cdn.junglesequencer.com/v1.0.x/documentation/jungle-nodes/identity-node-attribute-visual.png)
+
+:::info HOW IS THE INPUT PORT TYPE DEFINED?
+What makes the identity node unique is that the input port type and output port type is defined by the node connected to
+its input.
+
+![Identity node input type example](https://cdn.junglesequencer.com/v1.0.x/documentation/jungle-nodes/identity-node-input-type-example.gif)
+
+The `WaitForSecondsNode` above is an Identity node. The `GetTransformNode` and `GetRigidbodyNode` are IO nodes.
+Since the `WaitForSecondsNode`'s input port type is defined by the connected node, it can accept either type.
 :::
 
 ---
 :::tip
-The `IONode<T>` class inherits from the `JungleNode` class.
-This means all public and protected members of `JungleNode` are accessible within `IONode<T>`.
+The `IdentityNode` class inherits from the `JungleNode` class.
+This means all public and protected members of `JungleNode` are accessible within `IdentityNode`.
 
 Read about the base `JungleNode` class **[here](../jungle-nodes/jungle-node)**.
 :::
@@ -119,7 +127,7 @@ Adds a revert action to be executed when the playback stops.
 
 ### `Call`
 
-`protected void Call(object outputValue)`
+`protected void Call()`
 
 Sends out a port call without stopping the node.
 
@@ -131,13 +139,13 @@ Stops the node without sending out a port call.
 
 ### `CallAndStop`
 
-`protected void CallAndStop(object outputValue)`
+`protected void CallAndStop()`
 
 Sends out a port call and stops the node.
 
 ### `OnStart`
 
-`protected abstract void OnStart(T inputValue)`
+`protected abstract void OnStart()`
 
 Invoked immediately when this node is started.
 
@@ -178,19 +186,18 @@ Called whenever the tree performs a validation pass. Should return a list of iss
 using Jungle;
 
 [NodeProperties(
-    Title = "IO Node",
+    Title = "Identity Node",
     Description = "One input, one output."
 )]
-[IONode(
+[IdentityNode(
     InputPortName = "Input",
-    OutputPortName = "Output",
-    OutputPortType = typeof(Port.None)
+    OutputPortName = "Output"
 )]
-public class MyIONode : IONode<Port.None>
+public class MyIdentityNode : IdentityNode
 {
-    protected override void OnStart(Port.None _)
+    protected override void OnStart()
     {
-        CallAndStop(Nothing);
+        CallAndStop();
     }
     
     protected override void OnUpdate() { }
@@ -200,35 +207,48 @@ public class MyIONode : IONode<Port.None>
 ---
 ## Example
 
-Here's a simple example of an IO Node that squares the inputted number.
+Here's a simple example of a identity node that waits for some time before continuing.
 
 ```csharp
 using Jungle;
 
 [NodeProperties(
-    Title = "Square Number",
-    Description = "Squares a the inputted number.",
-    Color = Green
+    Title = "Wait For Time",
+    Description = "One input, one output.",
+    Color = Yellow
 )]
-[IONode(
-    InputPortName = "Number",
-    OutputPortName = "Square",
-    OutputPortType = typeof(int)
+[IdentityNode(
+    InputPortName = "Start",
+    OutputPortName = "Elapsed"
 )]
-public class SquareNumberNode : IONode<int>
+public class WaitForTimeNode : IdentityNode
 {
-    protected override void OnStart(int number)
+    [SerializeField]
+    private float waitTime = 1f;
+
+    private float _startTime;
+
+    protected override void OnStart()
     {
-        CallAndStop(number * number);
+        _startTime = Time.time;
     }
     
-    protected override void OnUpdate() { }
+    protected override void OnUpdate() 
+    { 
+        if (Time.time - _startTime < waitTime)
+            return;
+        
+        CallAndStop();
+    }
 }
 ```
 
-As shown in the example above, the input port is named **Number** and accepts the type **int**. Also defined is the
-output named **squared** which outputs type **int**.
+As shown in the example above, the input port is named **Start** and accepts any type, and the output port is named
+**Elapsed** and outputs the inputted type.
 
-With this setup, what a node calls this node, the inputted value is squared and outputted to the **Squared** port.
+With this setup, when a node calls this node, the inputted value will be stored in the `WaitForTimeNode` internally and
+outputted after the set amount of time has elapsed.
 
-![IO node example visual](https://cdn.junglesequencer.com/v1-0-5/documentation/jungle-nodes/io-node-example.png)
+This configuration allows us to create a node that waits for a set amount of time before continuing.
+
+![Identity node example](https://cdn.junglesequencer.com/v1.0.x/documentation/jungle-nodes/identity-node-example.png)

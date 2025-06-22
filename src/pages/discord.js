@@ -1,23 +1,26 @@
 import React, { useEffect } from 'react';
+import Layout from '@theme/Layout';
 
-function DiscordPage() {
+export default function DiscordPage() {
     useEffect(() => {
         window.location.href = 'https://discord.gg/vJ4AXsExfE';
     }, []);
-
+    
     return (
-        <div style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            height: '100vh',
-            fontSize: '2rem',
-            fontWeight: 'bold',
-            textAlign: 'center'
-        }}>
-            Redirecting...
-        </div>
+        <Layout title="Discord Server Redirect" 
+                description="Redirects user to the Jungle Sequencer Discord server."
+        >
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '50vh',
+                fontSize: '2rem',
+                fontWeight: 'bold',
+                textAlign: 'center'
+            }}>
+                Redirecting...
+            </div>
+        </Layout>
     );
 }
-
-export default DiscordPage;

@@ -1,46 +1,96 @@
 @font-face {
-  font-family: 'Rubik';
-  src: local('Rubik'), url('../Rubik.ttf') format('truetype');
-}
-
-:root {
-  font-family: Rubik, sans-serif !important;
-
-  --ifm-color-primary-darkest:  #0b290d;
-  --ifm-color-primary-darker:   #16521a;
-  --ifm-color-primary-dark:     #217b27;
-  --ifm-color-primary:          #3aca44;
-  --ifm-color-primary-light:    #61d569;
-  --ifm-color-primary-lighter:  #89df8f;
-  --ifm-color-primary-lightest: #b0eab4;
-  --ifm-color-secondary:        #faad07;
-
-  --ifm-navbar-background-color: #123c14;
-  --ifm-navbar-height: 4rem;
-  --ifm-navbar-link-color: white;
-  --ifm-navbar-link-hover-color: var(--ifm-color-primary-light);
-  --ifm-navbar-link-active-color: var(--ifm-color-primary-lightest);
-  --ifm-navbar-shadow: rgba(0, 0, 0, 0.25) 0 0 10px 0;
-  --ifm-navbar-search-input-background-color: white !important;
-  --ifm-navbar-search-input-color: black;
-  --ifm-navbar-search-input-placeholder-color: rgba(0, 0, 0, 0.2);
-  
-  --ifm-footer-background-color: #123c14;
-
-  --ifm-background-color: #f7faf6;
-  --ifm-background-alt:   #eaf4ec;
-  --ifm-surface-color:    #ffffff;
-}
-
-:root, [data-theme='dark'] {
-  --ifm-navbar-search-input-background-color: white !important;
-  --ifm-navbar-search-input-color: black !important;
-  --ifm-navbar-search-input-placeholder-color: rgba(0,0,0,0.3) !important;
+    font-family: 'Rubik';
+    src: url('https://cdn.junglesequencer.com/fonts/rubik.ttf') format('truetype');
+    /*font-weight: 500;
+    font-style: normal;*/
 }
 
 h1, h2, h3, h4, h5, h6, p, a, button {
-  font-family: Rubik, sans-serif !important;
+    font-family: 'Rubik', sans-serif !important;
 }
+
+:root {
+    /* Theme */
+    /*--ifm-background-color: #f7faf6;
+    --ifm-background-alt:   #eaf4ec;
+    --ifm-surface-color:    #ffffff;*/
+
+    /* Color palette */
+    --ifm-color-primary-darkest:  #0b290d;
+    --ifm-color-primary-darker:   #16521a;
+    --ifm-color-primary-dark:     #217b27;
+    --ifm-color-primary:          #3aca44;
+    --ifm-color-primary-light:    #61d569;
+    --ifm-color-primary-lighter:  #89df8f;
+    --ifm-color-primary-lightest: #b0eab4;
+    --ifm-color-secondary:        #faad07;
+
+    /* Navbar */
+    --ifm-navbar-background-color: #123c14;
+    --ifm-navbar-height: 4rem;
+    --ifm-navbar-link-color: white;
+    --ifm-navbar-link-hover-color: var(--ifm-color-primary-light);
+    --ifm-navbar-link-active-color: var(--ifm-color-primary-lightest);
+    --ifm-navbar-shadow: rgba(0, 0, 0, 0.25) 0 0 10px 0;
+    --ifm-navbar-search-input-background-color: white !important;
+    --ifm-navbar-search-input-color: black !important;
+    --ifm-navbar-search-input-placeholder-color: rgba(0,0,0,0.3) !important;
+
+    /* Footer */
+    --ifm-footer-background-color: #123c14;
+
+    /* Code block */
+    --docusaurus-highlighted-code-line-bg: rgba(58, 202, 68, 0.15);
+}
+
+[data-theme='light'] {
+    /* Theme */
+    --ifm-background-color: #f7faf6;
+    --ifm-background-alt:   #eaf4ec;
+    --ifm-surface-color:    #ffffff;
+
+    /* Code block */
+    --docusaurus-highlighted-code-line-bg: rgba(141, 187, 141, 0.25);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.DocSearch {
+    --docsearch-text-color: #383b38 !important;
+    --docsearch-muted-color: rgba(51, 56, 51, 0.5) !important;
+    --docsearch-searchbox-background: #e9f1e9 !important;
+    --docsearch-searchbox-focus-background: #fafcf5 !important;
+    --docsearch-modal-background: var(--ifm-background-color) !important;
+    --docsearch-container-background: rgba(17, 24, 16, 0.3) !important;
+    --docsearch-key-gradient: linear-gradient(45deg, #d7ded4 0%, #bfcbbf 100%) !important;
+    --docsearch-key-shadow: inset 0 -2px 0 0 rgba(101, 107, 100, 0.3) !important;
+    --docsearch-key-pressed-shadow: inset 0 -2px 0 0 rgba(101, 107, 100, 0.3) !important;
+}
+
+[data-theme='light'] .DocSearch {
+    
+}
+
+.DocSearch-Modal {
+
+}
+
+[data-theme='light'] .DocSearch-Modal {
+    
+}
+
+
+
 
 
 
@@ -52,25 +102,25 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 
 
 .navbar {
-  color: white;
-  border-bottom: 2px solid rgba(176, 234, 180, 0.15);
+    color: white;
+    border-bottom: 2px solid rgba(176, 234, 180, 0.15);
 }
 
 .navbar a {
-  color: white;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 .navbar a,
 .navbar__link {
-  transition: transform 0.25s ease;
+    transition: transform 0.25s ease;
 }
 
 .navbar a:hover,
 .navbar__link:hover {
-  color: white;
-  text-decoration: underline;
-  transform: scale(1.05)
+    color: white;
+    text-decoration: underline;
+    transform: scale(1.05)
 }
 
 
@@ -85,20 +135,20 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 
 
 .footer {
-  color: white;
-  border-top: 2px solid rgba(176, 234, 180, 0.15);
+    color: white;
+    border-top: 2px solid rgba(176, 234, 180, 0.15);
 }
 
 .footer a {
-  color: white;
+    color: white;
 }
 
 .footer a:hover {
-  color: white;
+    color: white;
 }
 
 .footer .footer__copyright{
-  color: var(--ifm-color-primary-lightest);
+    color: var(--ifm-color-primary-lightest);
 }
 
 
@@ -173,11 +223,11 @@ td:last-child, th:last-child {
 
 
 .table-of-contents__left-border {
-  border-left: 2px solid rgba(176, 234, 180, 0.1);
+    border-left: 2px solid rgba(176, 234, 180, 0.1);
 }
 
 .theme-doc-sidebar-container {
-  border-right: 2px solid rgba(176, 234, 180, 0.1) !important;
+    border-right: 2px solid rgba(176, 234, 180, 0.1) !important;
 }
 
 
@@ -185,26 +235,26 @@ td:last-child, th:last-child {
 
 
 .markdown img {
-  border-radius: 12px;
-  border: 2px solid rgba(176, 234, 180, 0.1);
-  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
+    border-radius: 12px;
+    border: 2px solid rgba(176, 234, 180, 0.1);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
 }
 
 /* Markdown border */
 .markdown hr {
-  background: rgba(176, 234, 180, 0.1);
-  height: 2px;
+    background: rgba(176, 234, 180, 0.1);
+    height: 2px;
 }
 
 /* Markdown prompts */
 .theme-admonition {
-  border-radius: 12px;
-  border-width: 2px;
+    border-radius: 12px;
+    border-width: 2px;
 }
 
 .theme-code-block {
-  border-radius: 12px !important;
-  border: 2px solid rgba(176, 234, 180, 0.1);
+    border-radius: 12px !important;
+    border: 2px solid rgba(176, 234, 180, 0.1);
 }
 
 
@@ -212,5 +262,5 @@ td:last-child, th:last-child {
 
 
 .menu.thin-scrollbar {
-  padding: 8px;
+    padding: 8px;
 }
