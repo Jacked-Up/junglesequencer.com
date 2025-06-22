@@ -118,6 +118,14 @@ module.exports = {
             ],
         },
         
+        docs: {
+            versionPersistence: 'localStorage',
+            sidebar: {
+                hideable: true,
+                autoCollapseCategories: true,
+            },
+        },
+        
         footer: {
             links: [
                 {
@@ -165,14 +173,6 @@ module.exports = {
                 },
             ],
             copyright: `<br/>© ${new Date().getFullYear()} Jacked Up Software`,
-        },
-        
-        docs: {
-            versionPersistence: 'localStorage',
-            sidebar: {
-                hideable: true,
-                autoCollapseCategories: true,
-            },
         },
         
         algolia: {
