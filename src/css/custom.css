@@ -148,15 +148,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     color: var(--ifm-color-primary-lightest);
 }
 
-
-
-.markdown img {
-    border: var(--border-primary);
-    border-radius: 12px;
-    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
-}
-
-/* Markdown border */
+/* Markdown section border */
 .markdown hr {
     background: var(--border-secondary-color);
     height: var(--border-width);
@@ -165,13 +157,21 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 /* Markdown prompts */
 .theme-admonition {
     border-radius: 12px;
-    border-width: 2px;
+    border-width: var(--border-width);
 }
 
+/* Markdown image */
+.markdown img {
+    border: var(--border-primary);
+    border-radius: 12px;
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
+}
+
+/* Markdown code blocks */
 .theme-code-block {
     border: var(--border-primary);
 }
 
 .menu.thin-scrollbar {
-    padding: 8px;
+    padding: 0.5rem !important;
 }
