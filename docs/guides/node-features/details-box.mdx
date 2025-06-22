@@ -53,13 +53,13 @@ public class WaitForTimeNode : IdentityNode
             CallAndStop();
     }
     
-    // ----------------------------------------------------------
+    // highlight-start
     public override string GetDetails()
     {
         // Return the text to be displayed in the details box.
         return $"Wait for {time} seconds";
     }
-    // ----------------------------------------------------------
+    // highlight-end
 }
 ```
 
