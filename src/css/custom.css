@@ -57,6 +57,35 @@
 
 
 
+.DocSearch {
+  --docsearch-text-color: var(--ifm-font-color-base) !important;
+  --docsearch-muted-color: var(--ifm-color-secondary-darkest) !important;
+  --docsearch-container-background: rgba(17, 24, 16, 0.5) !important;
+  
+  /* Modal */
+  --docsearch-modal-background: var(--ifm-background-color) !important;
+  /* Search box */
+  --docsearch-searchbox-background: #ecf1ea !important;
+  --docsearch-searchbox-focus-background: #d9e0d3 !important;
+  /* Hit */
+  --docsearch-hit-color: var(--ifm-font-color-base) !important;
+  --docsearch-hit-active-color: var(--ifm-color-white) !important;
+  --docsearch-hit-background: var(--ifm-color-emphasis-100) !important;
+  /* Footer */
+  --docsearch-footer-background: var(--ifm-background-surface-color) !important;
+  --docsearch-key-gradient: linear-gradient(
+          -26.5deg,
+          #eef5eb 0%,
+          #dae1d9 100%
+  ) !important;
+}
+
+
+
+
+
+
+
 
 
 

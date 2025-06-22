@@ -163,22 +163,19 @@ module.exports = {
         },
         
         algolia: {
-            appId: 'R2IYF7ETH7',
-            apiKey: '599cec31baffa4868cae4e79f180729b',
-            indexName: 'docsearch',
-            
-            externalUrlRegex: 'external\\.com|domain\\.com',
-            replaceSearchResultPathname: {
-                from: '/docs/',
-                to: '/',
-            },
-            searchParameters: { },
+            appId: '7651ITKIZU',
+            apiKey: 'd7260d5f1b5b2291f4509c0e9037adb4',
+            indexName: 'junglesequencer_docs',
+            contextualSearch: true,
             searchPagePath: 'search',
-            insights: false,
+            searchParameters: {
+                clickAnalytics: false,
+                facetFilters: ['type:docs'],
+            },
         },
         
         prism: {
-            theme: prismThemes.oneLight,
+            theme:     prismThemes.oneLight,
             darkTheme: prismThemes.oneDark,
             additionalLanguages: ['csharp'],
         },
