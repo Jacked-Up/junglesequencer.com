@@ -189,8 +189,6 @@ module.exports = {
         locales: ['en'],
     },
     
-    plugins: ['@easyops-cn/docusaurus-search-local'],
-    
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn'
 };
