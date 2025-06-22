@@ -89,7 +89,7 @@ module.exports = {
             items: [
                 {
                     type: 'docsVersionDropdown',
-                    position: 'right',
+                    position: 'left',
                     dropdownActiveClassDisabled: true,
                 },
                 {
@@ -143,6 +143,10 @@ module.exports = {
                             label: 'GitHub Discussions',
                             href: '/github-discussions',
                         },
+                        {
+                            label: 'LinkedIn Group',
+                            href: '/linkedin',
+                        },
                     ],
                 },
                 {
@@ -180,7 +184,7 @@ module.exports = {
             additionalLanguages: ['csharp'],
         },
     },
-
+    
     i18n: {
         defaultLocale: 'en',
         locales: ['en'],
