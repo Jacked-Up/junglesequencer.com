@@ -1,8 +1,6 @@
 @font-face {
     font-family: 'Rubik';
     src: url('https://cdn.junglesequencer.com/fonts/rubik.ttf') format('truetype');
-    /*font-weight: 500;
-    font-style: normal;*/
 }
 
 h1, h2, h3, h4, h5, h6, p, a, button {
@@ -39,6 +37,10 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     /* Footer */
     --ifm-footer-background-color: #123c14;
 
+    /* Sidebar */
+    --docusaurus-collapse-button-bg: rgb(38, 39, 38) !important;
+    --docusaurus-collapse-button-bg-hover: rgb(52, 54, 52) !important;
+    
     /* Code block */
     --docusaurus-highlighted-code-line-bg: rgba(58, 202, 68, 0.15);
 }
@@ -49,6 +51,9 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --ifm-background-alt:   #eaf4ec;
     --ifm-surface-color:    #ffffff;
 
+    /* Sidebar */
+    --docusaurus-collapse-button-bg: rgb(207, 217, 207) !important;
+    
     /* Code block */
     --docusaurus-highlighted-code-line-bg: rgba(141, 187, 141, 0.25);
 }
@@ -222,13 +227,65 @@ td:last-child, th:last-child {
 
 
 
-.table-of-contents__left-border {
-    border-left: 2px solid rgba(176, 234, 180, 0.1);
-}
+
 
 .theme-doc-sidebar-container {
-    border-right: 2px solid rgba(176, 234, 180, 0.1) !important;
+    border-right: 2px solid rgb(57, 58, 54, 0.5) !important;
 }
+
+.theme-doc-sidebar-container .button--secondary {
+    border-color: rgb(57, 58, 54);
+    
+    border-width: 2px;
+    border-radius: 8px;
+    margin: 8px;
+    transition: transform 0.25s ease;
+}
+
+
+
+
+
+[data-theme='light'] .theme-doc-sidebar-container {
+    border-right: 2px solid rgba(176, 182, 175, 0.5) !important;
+}
+
+[data-theme='light'] .theme-doc-sidebar-container .button--secondary {
+    border-color: rgb(176, 182, 175);
+}
+
+
+
+
+
+
+.table-of-contents__left-border {
+    border-left: 2px solid rgb(57, 58, 54, 0.5) !important;
+}
+
+[data-theme='light'] .table-of-contents__left-border {
+    border-left: 2px solid rgba(176, 182, 175, 0.5) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
