@@ -45,8 +45,8 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --ifm-footer-background-color: #123c14;
     
     /* Sidebar */
-    --docusaurus-collapse-button-bg: rgb(38, 39, 38) !important;
-    --docusaurus-collapse-button-bg-hover: rgb(38, 39, 38) !important;
+    --docusaurus-collapse-button-bg: rgb(34, 35, 34) !important;
+    --docusaurus-collapse-button-bg-hover: rgb(36, 37, 36) !important;
     
     /* Code block */
     --docusaurus-highlighted-code-line-bg: rgba(58, 202, 68, 0.15);
@@ -66,8 +66,8 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --border-secondary-color: rgba(176, 182, 175, 0.5);
     
     /* Sidebar */
-    --docusaurus-collapse-button-bg: rgb(207, 217, 207) !important;
-    --docusaurus-collapse-button-bg-hover: rgb(207, 217, 207) !important;
+    --docusaurus-collapse-button-bg: rgb(236, 241, 236) !important;
+    --docusaurus-collapse-button-bg-hover: rgb(218, 224, 218) !important;
     
     /* Code block */
     --docusaurus-highlighted-code-line-bg: rgba(141, 187, 141, 0.25);
@@ -103,18 +103,27 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 
 
 
-.theme-doc-sidebar-container {
-    border-right: var(--border-secondary) !important;
-}
+
 
 .menu.thin-scrollbar {
     padding: 0.5rem 0.5rem 0 0.5rem !important;
 }
+.table-of-contents__left-border {
+     border-left: var(--border-secondary) !important;
+ }
+
+
+
+.theme-doc-sidebar-container {
+    border-right: var(--border-secondary) !important;
+}
 
 .theme-doc-sidebar-container .button--secondary {
+    margin: 0 0.5rem 0.5rem;
+    
     border: var(--border-primary) !important;
     border-radius: 8px;
-    margin: 0 0.5rem 0.5rem;
+    
     opacity: 0.5;
     transition: opacity 0.25s ease;
 }
@@ -125,9 +134,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 
 
 
-.table-of-contents__left-border {
-    border-left: var(--border-secondary) !important;
-}
+
 
 
 
