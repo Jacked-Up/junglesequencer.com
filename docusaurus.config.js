@@ -88,11 +88,6 @@ module.exports = {
             },
             items: [
                 {
-                    type: 'docsVersionDropdown',
-                    position: 'left',
-                    dropdownActiveClassDisabled: true,
-                },
-                {
                     type: 'docSidebar',
                     sidebarId: 'documentationSidebar',
                     position: 'left',
@@ -103,6 +98,11 @@ module.exports = {
                     sidebarId: 'guidesSidebar',
                     position: 'left',
                     label: 'Guides',
+                },
+                {
+                    type: 'docsVersionDropdown',
+                    position: 'left',
+                    dropdownActiveClassDisabled: true,
                 },
                 {
                     to: '/announcements',
