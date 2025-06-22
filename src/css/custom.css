@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     
     /* Borders */
     --border-width: 2px;
+    --border-radius: 12px;
     --border-primary-color: rgb(57, 58, 54);
     --border-secondary-color: rgba(57, 58, 54, 0.5);
     --border-primary: var(--border-width) solid var(--border-primary-color);
@@ -73,74 +74,6 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --docusaurus-highlighted-code-line-bg: rgba(141, 187, 141, 0.25);
 }
 
-.DocSearch {
-    --docsearch-text-color: #383b38 !important;
-    --docsearch-muted-color: rgba(51, 56, 51, 0.5) !important;
-    --docsearch-searchbox-background: #e9f1e9 !important;
-    --docsearch-searchbox-focus-background: #fafcf5 !important;
-    --docsearch-modal-background: var(--ifm-background-color) !important;
-    --docsearch-container-background: rgba(17, 24, 16, 0.3) !important;
-    --docsearch-key-gradient: linear-gradient(45deg, #d7ded4 0%, #bfcbbf 100%) !important;
-    --docsearch-key-shadow: inset 0 -2px 0 0 rgba(101, 107, 100, 0.3) !important;
-    --docsearch-key-pressed-shadow: inset 0 -2px 0 0 rgba(101, 107, 100, 0.3) !important;
-}
-
-[data-theme='light'] .DocSearch {
-    
-}
-
-.DocSearch-Modal {
-
-}
-
-[data-theme='light'] .DocSearch-Modal {
-    
-}
-
-
-
-
-
-
-
-
-
-.menu.thin-scrollbar {
-    padding: 0.5rem 0.5rem 0 0.5rem !important;
-}
-.table-of-contents__left-border {
-     border-left: var(--border-secondary) !important;
- }
-
-
-
-.theme-doc-sidebar-container {
-    border-right: var(--border-secondary) !important;
-}
-
-.theme-doc-sidebar-container .button--secondary {
-    margin: 0 0.5rem 0.5rem;
-    
-    border: var(--border-primary) !important;
-    border-radius: 8px;
-    
-    opacity: 0.5;
-    transition: opacity 0.25s ease;
-}
-
-.theme-doc-sidebar-container .button--secondary:hover {
-    opacity: 1;
-}
-
-
-
-
-
-
-
-
-
-
 .navbar {
     color: white;
     border-bottom: 2px solid rgba(176, 234, 180, 0.15);
@@ -180,6 +113,84 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     color: var(--ifm-color-primary-lightest);
 }
 
+
+
+
+
+
+.DocSearch {
+    --docsearch-text-color: #383b38 !important;
+    --docsearch-muted-color: rgba(51, 56, 51, 0.5) !important;
+    --docsearch-searchbox-background: #e9f1e9 !important;
+    --docsearch-searchbox-focus-background: #fafcf5 !important;
+    --docsearch-modal-background: var(--ifm-background-color) !important;
+    --docsearch-container-background: rgba(17, 24, 16, 0.3) !important;
+    --docsearch-key-gradient: linear-gradient(45deg, #d7ded4 0%, #bfcbbf 100%) !important;
+    --docsearch-key-shadow: inset 0 -2px 0 0 rgba(101, 107, 100, 0.3) !important;
+    --docsearch-key-pressed-shadow: inset 0 -2px 0 0 rgba(101, 107, 100, 0.3) !important;
+}
+
+[data-theme='light'] .DocSearch {
+    
+}
+
+.DocSearch-Modal {
+
+}
+
+[data-theme='light'] .DocSearch-Modal {
+    
+}
+
+
+.theme-doc-version-banner {
+    border-width: var(--border-width) !important;
+    border-radius: var(--border-radius) !important;
+}
+
+
+
+
+
+
+.menu.thin-scrollbar {
+    padding: 0.5rem 0.5rem 0 0.5rem !important;
+}
+.table-of-contents__left-border {
+     border-left: var(--border-secondary) !important;
+ }
+
+
+
+.theme-doc-sidebar-container {
+    border-right: var(--border-secondary) !important;
+}
+
+.theme-doc-sidebar-container .button--secondary {
+    margin: 0 0.5rem 0.5rem;
+    
+    border: var(--border-primary) !important;
+    border-radius: var(--border-radius) !important;
+    
+    opacity: 0.5;
+    transition: opacity 0.25s ease;
+}
+
+.theme-doc-sidebar-container .button--secondary:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* Markdown section border */
 .markdown hr {
     height: var(--border-width);
@@ -188,13 +199,13 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 /* Markdown prompts */
 .theme-admonition {
     border-width: var(--border-width);
-    border-radius: 12px;
+    border-radius: var(--border-radius);
 }
 
 /* Markdown image */
 .markdown img {
     border: var(--border-primary);
-    border-radius: 12px;
+    border-radius: var(--border-radius);
 }
 
 /* Markdown code blocks */
