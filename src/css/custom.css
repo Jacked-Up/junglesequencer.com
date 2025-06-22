@@ -50,6 +50,9 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     
     /* Code block */
     --docusaurus-highlighted-code-line-bg: rgba(58, 202, 68, 0.15);
+    
+    /* Markdown section border */
+    --ifm-hr-background-color: var(--border-secondary-color);
 }
 
 [data-theme='light'] {
@@ -100,8 +103,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 .theme-doc-sidebar-container .button--secondary {
     border: var(--border-primary) !important;
     border-radius: 8px;
-    
-    margin: 8px;
+    margin: 0 0.5rem 0.5rem;
     transition: transform 0.25s ease;
 }
 
@@ -150,7 +152,6 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 
 /* Markdown section border */
 .markdown hr {
-    background: var(--border-secondary-color);
     height: var(--border-width);
 }
 
@@ -173,5 +174,5 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 }
 
 .menu.thin-scrollbar {
-    padding: 0.5rem !important;
+    padding: 0.5rem 0.5rem 0 0.5rem !important;
 }
