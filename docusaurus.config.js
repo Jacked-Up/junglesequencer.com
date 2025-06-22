@@ -167,6 +167,14 @@ module.exports = {
             copyright: `<br/>© ${new Date().getFullYear()} Jacked Up Software`,
         },
         
+        docs: {
+            versionPersistence: 'localStorage',
+            sidebar: {
+                hideable: true,
+                autoCollapseCategories: true,
+            },
+        },
+        
         algolia: {
             appId: '7651ITKIZU',
             apiKey: 'd7260d5f1b5b2291f4509c0e9037adb4',
