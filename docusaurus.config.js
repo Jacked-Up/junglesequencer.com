@@ -23,11 +23,12 @@ module.exports = {
                     sidebarPath: './sidebars.js',
                     editUrl: 'https://github.com/Jacked-Up/junglesequencer.com/blob/live/',
                     versions: {
-                        current: { 
-                            label: '1.1.0 (Preview)',
-                            path: '1.1.0' 
+                        current: {
+                            label: '🚧 Work in Progress',
+                            path: 'wip' 
                         }
                     },
+                    sidebarCollapsible: true,
                     showLastUpdateAuthor: false,
                     showLastUpdateTime: false,
                 },
