@@ -75,7 +75,7 @@
     /* Box */
     display: inline-block;
     padding: 1rem 1.5rem 1rem 3.5rem;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
 
     /* Typography */
     color: #fff;
@@ -148,7 +148,7 @@
 
     /* Visual */
     border: 2px solid rgba(176, 234, 180, 0.15);
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.25);
     transform: rotateY(-6deg);
     transform-origin: center;
@@ -314,7 +314,7 @@
 
     /* Visual */
     border: 2px solid rgb(61, 123, 64);
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     box-shadow: 0 0 25px 5px rgba(0,0,0,0.25);
     transition: transform 0.4s ease;
 }
@@ -438,7 +438,7 @@
     max-width: 480px;
     
     /* Visual */
-    border-radius: 16px;
+    border-radius: var(--border-radius);
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(3px);
     border: 2px solid rgba(176, 234, 180, 0.15);
@@ -492,7 +492,7 @@
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 
     /* Visual */
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     overflow: hidden;
     position: relative;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
