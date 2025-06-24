@@ -12,6 +12,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     /*--ifm-background-color: #f7faf6;
     --ifm-background-alt:   #eaf4ec;
     --ifm-surface-color:    #ffffff;*/
+    --ifm-dropdown-background-color: var(--ifm-color-primary-darker);
 
     /* Color palette */
     --ifm-color-primary-darkest:  #0b290d;
@@ -23,6 +24,18 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --ifm-color-primary-lightest: #b0eab4;
     --ifm-color-secondary:        #faad07;
     
+    /* Color emphasis palette */
+    --ifm-color-emphasis-100:  #ffffff !important;
+    --ifm-color-emphasis-200:  #fbfbfb !important;
+    --ifm-color-emphasis-300:  #f6f6f6 !important;
+    --ifm-color-emphasis-400:  #f1f1f1 !important;
+    --ifm-color-emphasis-500:  #ebebeb !important;
+    --ifm-color-emphasis-600:  #e5e5e5 !important;
+    --ifm-color-emphasis-700:  #dfdfdf !important;
+    --ifm-color-emphasis-800:  #d8d8d8 !important;
+    --ifm-color-emphasis-900:  #d1d1d1 !important;
+    --ifm-color-emphasis-1000: #cacaca !important;
+
     /* Borders */
     --border-width: 2px;
     --border-radius: 12px;
@@ -62,6 +75,18 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --ifm-background-alt:   #eaf4ec;
     --ifm-surface-color:    #ffffff;
     
+    /* Color emphasis palette */
+    --ifm-color-emphasis-100:  #1a1a1a !important;
+    --ifm-color-emphasis-200:  #1e1e1e !important;
+    --ifm-color-emphasis-300:  #222222 !important;
+    --ifm-color-emphasis-400:  #262626 !important;
+    --ifm-color-emphasis-500:  #2a2a2a !important;
+    --ifm-color-emphasis-600:  #2e2e2e !important;
+    --ifm-color-emphasis-700:  #323232 !important;
+    --ifm-color-emphasis-800:  #363636 !important;
+    --ifm-color-emphasis-900:  #3b3b3b !important;
+    --ifm-color-emphasis-1000: #404040 !important;
+    
     /* Borders */
     --border-primary-color: rgb(176, 182, 175);
     --border-secondary-color: rgba(176, 182, 175, 0.5);
@@ -73,6 +98,11 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     /* Code block */
     --docusaurus-highlighted-code-line-bg: rgba(141, 187, 141, 0.25);
 }
+
+
+
+
+
 
 .navbar {
     color: white;
@@ -86,7 +116,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 
 .navbar a,
 .navbar__link {
-    transition: transform 0.25s ease;
+    transition: transform 0.3s ease;
 }
 
 .navbar a:hover,
@@ -95,6 +125,36 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     text-decoration: underline;
     transform: scale(1.05)
 }
+
+.navbar a:active,
+.navbar__link:active {
+    color: white;
+    text-decoration: underline;
+    transform: scale(1);
+    transition: transform 0.05s ease-out;
+}
+
+
+.navbar__items .clean-btn {
+    background: none !important;
+    transition: transform 0.3s ease;
+}
+
+.navbar__items .clean-btn:hover {
+    transform: scale(1.25);
+}
+
+.navbar__items .clean-btn:active {
+    transform: scale(1);
+    transition: transform 0.05s ease-out;
+}
+
+
+
+
+
+
+
 
 .footer {
     color: white;
@@ -184,10 +244,25 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 
 
 
+.pagination-nav__link {
+    border: var(--border-primary);
+}
 
 
 
+.cardContainer_fWXF {
+    border: var(--border-primary) !important;
+    box-shadow: none !important;
+    
+    transform-origin: center !important;
+    transition: transform 0.3s ease, border-color 0.3s ease !important;
+}
 
+.cardContainer_fWXF:hover {
+    border: var(--border-primary) !important;
+    transform: scale(1.02);
+    border-color: var(--ifm-color-primary) !important;
+}
 
 
 
