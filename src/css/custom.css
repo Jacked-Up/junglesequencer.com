@@ -12,6 +12,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     /*--ifm-background-color: #f7faf6;
     --ifm-background-alt:   #eaf4ec;
     --ifm-surface-color:    #ffffff;*/
+    --ifm-dropdown-background-color: var(--ifm-color-primary-darker);
 
     /* Color palette */
     --ifm-color-primary-darkest:  #0b290d;
