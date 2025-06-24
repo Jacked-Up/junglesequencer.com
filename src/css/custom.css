@@ -23,6 +23,18 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --ifm-color-primary-lightest: #b0eab4;
     --ifm-color-secondary:        #faad07;
     
+    /* Color emphasis palette */
+    --ifm-color-emphasis-100:  #ffffff !important;
+    --ifm-color-emphasis-200:  #fbfbfb !important;
+    --ifm-color-emphasis-300:  #f6f6f6 !important;
+    --ifm-color-emphasis-400:  #f1f1f1 !important;
+    --ifm-color-emphasis-500:  #ebebeb !important;
+    --ifm-color-emphasis-600:  #e5e5e5 !important;
+    --ifm-color-emphasis-700:  #dfdfdf !important;
+    --ifm-color-emphasis-800:  #d8d8d8 !important;
+    --ifm-color-emphasis-900:  #d1d1d1 !important;
+    --ifm-color-emphasis-1000: #cacaca !important;
+
     /* Borders */
     --border-width: 2px;
     --border-radius: 12px;
@@ -61,6 +73,18 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --ifm-background-color: #f7faf6;
     --ifm-background-alt:   #eaf4ec;
     --ifm-surface-color:    #ffffff;
+    
+    /* Color emphasis palette */
+    --ifm-color-emphasis-100:  #1a1a1a !important;
+    --ifm-color-emphasis-200:  #1e1e1e !important;
+    --ifm-color-emphasis-300:  #222222 !important;
+    --ifm-color-emphasis-400:  #262626 !important;
+    --ifm-color-emphasis-500:  #2a2a2a !important;
+    --ifm-color-emphasis-600:  #2e2e2e !important;
+    --ifm-color-emphasis-700:  #323232 !important;
+    --ifm-color-emphasis-800:  #363636 !important;
+    --ifm-color-emphasis-900:  #3b3b3b !important;
+    --ifm-color-emphasis-1000: #404040 !important;
     
     /* Borders */
     --border-primary-color: rgb(176, 182, 175);
@@ -184,7 +208,9 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 
 
 
-
+.pagination-nav__link {
+    border: var(--border-primary);
+}
 
 
 
