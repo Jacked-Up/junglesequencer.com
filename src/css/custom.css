@@ -98,6 +98,11 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --docusaurus-highlighted-code-line-bg: rgba(141, 187, 141, 0.25);
 }
 
+
+
+
+
+
 .navbar {
     color: white;
     border-bottom: 2px solid rgba(176, 234, 180, 0.15);
@@ -110,7 +115,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 
 .navbar a,
 .navbar__link {
-    transition: transform 0.25s ease;
+    transition: transform 0.3s ease;
 }
 
 .navbar a:hover,
@@ -119,6 +124,36 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     text-decoration: underline;
     transform: scale(1.05)
 }
+
+.navbar a:active,
+.navbar__link:active {
+    color: white;
+    text-decoration: underline;
+    transform: scale(1);
+    transition: transform 0.05s ease-out;
+}
+
+
+.navbar__items .clean-btn {
+    background: none !important;
+    transition: transform 0.3s ease;
+}
+
+.navbar__items .clean-btn:hover {
+    transform: scale(1.25);
+}
+
+.navbar__items .clean-btn:active {
+    transform: scale(1);
+    transition: transform 0.05s ease-out;
+}
+
+
+
+
+
+
+
 
 .footer {
     color: white;
@@ -214,6 +249,19 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 
 
 
+.cardContainer_fWXF {
+    border: var(--border-primary) !important;
+    box-shadow: none !important;
+    
+    transform-origin: center !important;
+    transition: transform 0.3s ease, border-color 0.3s ease !important;
+}
+
+.cardContainer_fWXF:hover {
+    border: var(--border-primary) !important;
+    transform: scale(1.02);
+    border-color: var(--ifm-color-primary) !important;
+}
 
 
 
