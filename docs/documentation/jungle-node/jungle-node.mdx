@@ -1,0 +1,170 @@
+---
+title: Jungle Node  
+slug: /jungle-node
+---
+
+The `JungleNode` class represents the base class for all nodes in the Jungle Sequencer.
+It serves as the foundation for creating various types of nodes with specific functionalities and properties.
+
+## Overview
+
+The `JungleNode` class provides the following functionalities:
+- Defining unique identifiers and properties for each node.
+- Managing node connections and playback instances.
+- Providing editor-specific functionalities for managing nodes within the Jungle Editor.
+
+---
+
+## Properties
+
+### `Uid`
+
+`public string Uid { get; }`
+
+Gets the unique identifier for this node.
+
+### `Tree`
+
+`public JungleTree Tree { get; }`
+
+Gets a reference to the original tree this node is part of.
+
+### `OutputPorts`
+
+`public Port[] OutputPorts { get; }`
+
+Gets the list of output ports for this node.
+
+### `Nothing`
+
+`public static readonly Port.None Nothing`
+
+Gets the shorthand equivalent of `new Port.None()`.
+
+### `IsPlayback`
+
+`public bool IsPlayback { get; }`
+
+Indicates whether this node is an instance of a playback.
+
+### `Playback`
+
+`public JunglePlayback Playback`
+
+Gets the playback instance associated with this node. Throws an `InvalidOperationException` if the node is not an instance of a playback.
+
+---
+
+## Methods
+
+### `AddRevertAction`
+
+`public string AddRevertAction(Action action)`
+
+Adds a revert action to be executed when the playback stops.
+
+#### Parameters
+
+- `action`: The action to be added for revert during playback.
+
+#### Returns
+
+A unique identifier for the added revert action.
+
+#### Exceptions
+
+- `InvalidOperationException`: Thrown when attempting to add a revert action to a non-playback node instance.
+
+### `RemoveRevertAction`
+
+`public void RemoveRevertAction(string revertActionUid)`
+
+Removes a revert action from the playback node instance.
+
+#### Parameters
+
+- `revertActionUid`: The unique identifier of the revert action to be removed.
+
+#### Exceptions
+
+- `InvalidOperationException`: Thrown when attempting to remove a revert action from a non-playback node instance.
+
+### `GetTitle`
+
+`public string GetTitle()`
+
+Returns the title of the node. If the title is not set, it returns the node's type name.
+
+### `GetDescription`
+
+`public string GetDescription()`
+
+Returns a brief description of the node's function.
+
+### `GetCategory`
+
+`public string GetCategory()`
+
+Returns the category of the node.
+
+### `GetColor`
+
+`public Color GetColor()`
+
+Returns the accent color of the node. If the color is not set or invalid, returns `Color.clear`.
+
+### `GetOptions`
+
+`public NodeOptions GetOptions()`
+
+Returns the options set for the node.
+
+### `GetInputPortInfo`
+
+`public virtual Port.Info GetInputPortInfo()`
+
+Returns information about the node's input port. By default, it returns an unnamed port of type `Port.None`.
+
+### `GetOutputPortsInfo`
+
+`public virtual Port.Info[] GetOutputPortsInfo()`
+
+Returns information about the node's output ports. By default, it returns an array with a single unnamed port of type `Port.None`.
+
+### `Validate`
+
+`public string[] Validate(bool quietly = false)`
+
+Performs a validation pass on this `JungleNode`.
+
+#### Parameters
+
+- `quietly`: If `true`, suppresses validation events.
+
+#### Returns
+
+An array of `string` containing all reported issues found on this `JungleNode`.
+
+### `GetDetails`
+
+`public virtual string GetDetails()`
+
+Override this method to add context in the Jungle Editor. Returns a `string` containing additional context for the node, or `null` if no context is provided.
+
+### `GetProgress`
+
+`public virtual float GetProgress()`
+
+Override this method to return a value between 0 and 1 to display the node's progress in the Jungle Editor. The default value is 1.
+
+### `DrawGizmos`
+
+`public virtual void DrawGizmos()`
+
+Override this method to draw gizmos in the scene.
+
+### `DrawGizmosSelected`
+
+`public virtual void DrawGizmosSelected()`
+
+Override this method to draw gizmos in the scene while the node is selected in the Jungle Editor.

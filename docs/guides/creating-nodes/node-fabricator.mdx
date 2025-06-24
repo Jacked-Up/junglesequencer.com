@@ -1,0 +1,71 @@
+---
+title: Creating Nodes
+slug: /guides/creating-nodes
+---
+
+Learning how to create your own nodes is a crucial part of using Jungle.
+This guide will walk you through the process of creating a new node in each variant.
+
+---
+## Node Variants
+
+Jungle offers four node variants, each with its own unique use case.
+Choosing the right variant for your node is essential. Here's a quick overview of each variant:
+
+| Variant       | Description                                                                                  |
+|---------------|----------------------------------------------------------------------------------------------|
+| Identity Node | A single input and a single output, where the input port type is defined by its connection.  |
+| IO Node       | A single input and a single output.                                                          |
+| Branch Node   | A single input and multiple outputs.                                                         |
+| Event Node    | No inputs but multiple outputs.                                                              |
+
+---
+## Using the Node Fabricator
+
+Jungle includes a tool to help you generate the boilerplate code for each node variant.
+
+![Node Fabricator](https://cdn.junglesequencer.com/v1.1.0/guides/creating-nodes/node-fabricator.jpg)
+
+---
+### Step 1: Open the Node Fabricator Window
+
+Right-click in the Assets window and select `Create > Jungle Node`.
+
+:::info Unity v6000+
+In Unity versions v6000 and above, you can find the create menu under `Create > Jungle > Jungle Node`.
+:::
+
+---
+### Step 2: Set the Node Properties (Page 1)
+
+Fill in the following details:
+
+- **Title:** The title of the node. This will be the class name. (e.g., "Hello World" becomes `HelloWorldNode`)
+- **Description:** A brief description of the node.
+- **Category:** The category of the node.
+- **Color:** The color of the node.
+- **Icon:** The icon of the node.
+- **Methods:** The methods to include in the generated script.
+
+---
+### Step 3: Select the Node Variant (Page 2)
+
+Choose the node variant you want to create:
+
+- [Identity Node](../../jungle-nodes/identity-node)
+- [IO Node](../../jungle-nodes/io-node)
+- [Branch Node](../../jungle-nodes/branch-node)
+- [Event Node](../../jungle-nodes/event-node)
+
+---
+### Step 4: Set Variant-Specific Properties (Page 3)
+
+Configure the properties specific to the selected node variant.
+
+---
+### Step 5: Create the Node Script
+
+Click the `Create` button to generate the node script.
+
+---
+By following these steps, you can easily generate the boilerplate for your custom nodes in Jungle!

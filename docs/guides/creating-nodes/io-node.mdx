@@ -1,0 +1,146 @@
+---
+title: IO Node
+slug: /guides/creating-nodes/io-node
+---
+
+This guide will walk you through creating IO nodes in Jungle manually.
+Let's get started!
+
+---
+## Step 1: Create a New C# Script
+
+First, create a new C# script in your Unity project.
+
+---
+## Step 2: Inherit from `IONode<T>`
+
+Next, make your new class inherit from the `IONode<T>` class.
+This will form the foundation of your IO node.
+
+```csharp
+using Jungle;
+
+// highlight-next-line
+public class MyIONode : IONode<...>
+{
+
+}
+```
+
+---
+## Step 3: Set the Input Port Type
+
+Set the accepted input port type in the angle brackets.
+For example, `IONode<int>`.
+
+```csharp
+using Jungle;
+
+// highlight-next-line
+public class MyIONode : IONode<INPUT_TYPE>
+{
+
+}
+```
+
+---
+## Step 4: Implement `OnStart` and `OnUpdate`
+
+Now, you need to implement the `OnStart` and `OnUpdate` methods.
+Ensure the `OnStart` method includes the input parameter.
+
+```csharp
+using Jungle;
+
+public class MyIONode : IONode<INPUT_TYPE>
+{
+    // highlight-start
+    protected override void OnStart(INPUT_TYPE inputValue)
+    {
+
+    }
+    // highlight-end
+
+    // highlight-start
+    protected override void OnUpdate()
+    {
+
+    }
+    // highlight-end
+}
+```
+
+---
+## Step 5: Add the `IONode` Attribute
+
+Add the `IONode` attribute to your class.
+This defines the input and output ports.
+
+:::tip
+If you don't want an output port, set the `OutputPortName` and `OutputPortType` properties to null.
+<br />(`OutputPortName = null` and `OutputPortType = null`)
+:::
+
+```csharp
+using Jungle;
+
+// highlight-start
+[IONode(
+    InputPortName = "My Input",
+    OutputPortName = "My Output",
+    OutputPortType = typeof(OUTPUT_TYPE)
+)]
+// highlight-end
+public class MyIONode : IONode<INPUT_TYPE>
+{
+    protected override void OnStart(INPUT_TYPE inputValue)
+    {
+
+    }
+
+    protected override void OnUpdate()
+    {
+
+    }
+}
+```
+
+---
+## Step 6: Add the `NodeProperties` Attribute
+
+Finally, add the `NodeProperties` attribute to your class.
+This defines additional properties such as the title, description, and category of your node.
+
+```csharp
+using Jungle;
+
+// highlight-start
+[NodeProperties(
+    Title = "My IO Node",
+    Description = "This is an IO node.",
+    Category = "My Nodes/IO",
+    Color = Green
+)]
+// highlight-end
+[IONode(
+    InputPortName = "My Input",
+    OutputPortName = "My Output",
+    OutputPortType = typeof(OUTPUT_TYPE)
+)]
+public class MyIONode : IONode<INPUT_TYPE>
+{
+    protected override void OnStart(INPUT_TYPE inputValue)
+    {
+
+    }
+
+    protected override void OnUpdate()
+    {
+
+    }
+}
+```
+
+---
+With these steps, you've created a basic IO node in Jungle.
+Feel free to customize the input and output types and the properties to suit your needs!

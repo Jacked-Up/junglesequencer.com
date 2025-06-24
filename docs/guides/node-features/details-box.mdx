@@ -1,0 +1,78 @@
+---
+title: Details Box
+slug: /guides/node-features/details-box
+---
+
+The details box is a handy tool for showing information directly within a node in the Jungle Editor.
+It appears at the bottom of the node view and updates automatically during validation calls.
+This feature provides quick context without requiring you to inspect the node manually.
+
+While the details box makes it easier to access information, adding too much text can make the interface cluttered.
+Use it thoughtfully to keep things clear and effective.
+
+import VideoPlayer from '@site/src/components/VideoPlayer';
+
+<VideoPlayer
+    videoUrl="https://youtu.be/NWDE9049-9U"
+    title="Implementing the Details Box"
+    description="Quick video guide on how to implement the details box into your Jungle Nodes."
+/>
+
+---
+## Implementation
+
+Adding a details box is easy. 
+Just override the `GetDetails` method in your node’s script. 
+The text you return from this method will appear in the details box.
+
+### Example
+
+Here’s an example of a node that waits for a specific amount of time. 
+The details box shows the wait time, so you don’t need to open the node in the inspector to see the wait time. 
+This saves time and improves your workflow.
+
+```csharp
+using Jungle;
+using UnityEngine;
+
+public class WaitForTimeNode : IdentityNode
+{
+    [SerializeField]
+    private float time = 2;
+    
+    private float _startTime;
+
+    protected override void OnStart()
+    {
+        _startTime = Time.time;
+    }
+    
+    protected override void OnUpdate()
+    {
+        if (Time.time - _startTime >= time)
+            CallAndStop();
+    }
+    
+    // highlight-start
+    public override string GetDetails()
+    {
+        // Return the text to be displayed in the details box.
+        return $"Wait for {time} seconds";
+    }
+    // highlight-end
+}
+```
+
+![Details Box Example](https://cdn.junglesequencer.com/v1.1.0/guides/node-features/details-box-example.png)
+
+In this example, the details box displays a message like "Wait for 2 seconds," 
+letting you quickly see how long the node will wait for.
+
+---
+## Best Practices
+
+- **Keep It Concise:** Use short and clear text. Include only the most important details.
+- **Use Only When Needed:** Only add details that help you understand the node at a glance.
+
+By adhering to these principles, 
+you can ensure that the details box remains a helpful and unobtrusive feature in your nodes.

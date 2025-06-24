@@ -1,0 +1,234 @@
+---
+title: IO Node<T>
+slug: /jungle-node/io-node
+---
+
+The IO Node is a simpler version of the Branch Node.
+It takes a single input of any type, and outputs to a single output of any type.
+
+import VideoPlayer from '@site/src/components/VideoPlayer';
+
+<VideoPlayer
+    videoUrl="https://www.youtube.com/watch?v=DAyAZErFx7A"
+    title="Creating Nodes"
+    description="Here's a video tutorial on creating all node variants in Jungle."
+/>
+
+---
+## Overview
+
+All IO Nodes are required to have an `IONode` class attribute defined. This attribute defines the input port and
+output port on the node.
+
+Here's a list of all the properties you can define in the `IONode` attribute:
+
+| Property         | Type     | Description                          |
+|------------------|----------|--------------------------------------|
+| `InputPortName`  | `string` | Defines the name of the input port.  |
+| `OutputPortName` | `string` | Defines the name of the output port. |
+| `OutputPortType` | `Type`   | Defines the ports outputted type.    |
+
+```csharp
+[IONode(
+    InputPortName = "My Input",
+    OutputPortName = "My Output",
+    OutputPortType = typeof(Port.None)
+)]
+public class MyIONode : IONode<Port.None>
+...
+```
+
+#### Result in the Jungle Editor
+![IO node attribute visual](https://cdn.junglesequencer.com/v1.1.0/documentation/jungle-node/io-node-attribute-visual.png)
+
+:::info WHERE IS THE INPUT TYPE DEFINED?
+The IO Node is a generic class, so you define the input port type when you inherit from the class.
+<br />**For example**, if you want the input port to accept a `float` value, you would set your script up like so:
+```csharp
+public class MyIONode : IONode<float>
+...
+```
+:::
+
+---
+:::tip
+The `IONode<T>` class inherits from the `JungleNode` class.
+This means all public and protected members of `JungleNode` are accessible within `IONode<T>`.
+
+Read about the base `JungleNode` class **[here](../jungle-node)**.
+:::
+
+## Properties
+
+### `Uid`
+
+`public string Uid { get; }`
+
+Gets the unique identifier for this node.
+
+### `JungleTree`
+
+`public JungleTree JungleTree { get; }`
+
+Gets a reference to the original tree this node is part of.
+
+### `OutputPorts`
+
+`public Port[] OutputPorts { get; }`
+
+Gets the list of output ports for this node.
+
+### `Nothing`
+
+`public static readonly Port.None Nothing`
+
+Gets the shorthand equivalent of `new Port.None()`.
+
+### `IsPlayback`
+
+`public bool IsPlayback { get; }`
+
+Indicates whether this node is an instance of a playback.
+
+### `Playback`
+
+`public JunglePlayback Playback`
+
+Gets the playback instance associated with this node.
+
+---
+## Methods
+
+### `GetInputPortInfo`
+
+`public override Port.Info GetInputPortInfo()`
+
+Returns information about the node's input port.
+
+### `GetOutputPortsInfo`
+
+`public override Port.Info[] GetOutputPortsInfo()`
+
+Returns information about the node's output ports.
+
+### `AddRevertAction`
+
+`public string AddRevertAction(Action action)`
+
+Adds a revert action to be executed when the playback stops.
+
+### `Call`
+
+`protected void Call(object outputValue)`
+
+Sends out a port call without stopping the node.
+
+### `Stop`
+
+`protected void Stop()`
+
+Stops the node without sending out a port call.
+
+### `CallAndStop`
+
+`protected void CallAndStop(object outputValue)`
+
+Sends out a port call and stops the node.
+
+### `OnStart`
+
+`protected abstract void OnStart(T inputValue)`
+
+Invoked immediately when this node is started.
+
+### `OnStop`
+
+`protected virtual void OnStop()`
+
+Invoked immediately when this node is stopped.
+
+### `OnUpdate`
+
+`protected abstract void OnUpdate()`
+
+Invoked every frame while this node is running.
+
+### `OnLateUpdate`
+
+`protected virtual void OnLateUpdate()`
+
+Invoked every frame after every update function has been called.
+
+### `OnFixedUpdate`
+
+`protected virtual void OnFixedUpdate()`
+
+Invoked every fixed frame while this node is running.
+
+### `OnValidation`
+
+`protected virtual string[] OnValidation()`
+
+Called whenever the tree performs a validation pass. Should return a list of issues with the node if any.
+
+---
+## Boilerplate
+
+```csharp
+using Jungle;
+
+[NodeProperties(
+    Title = "IO Node",
+    Description = "One input, one output."
+)]
+[IONode(
+    InputPortName = "Input",
+    OutputPortName = "Output",
+    OutputPortType = typeof(Port.None)
+)]
+public class MyIONode : IONode<Port.None>
+{
+    protected override void OnStart(Port.None _)
+    {
+        CallAndStop(Nothing);
+    }
+    
+    protected override void OnUpdate() { }
+}
+```
+
+---
+## Example
+
+Here's a simple example of an IO Node that squares the inputted number.
+
+```csharp
+using Jungle;
+
+[NodeProperties(
+    Title = "Square Number",
+    Description = "Squares a the inputted number.",
+    Color = Green
+)]
+[IONode(
+    InputPortName = "Number",
+    OutputPortName = "Square",
+    OutputPortType = typeof(int)
+)]
+public class SquareNumberNode : IONode<int>
+{
+    protected override void OnStart(int number)
+    {
+        CallAndStop(number * number);
+    }
+    
+    protected override void OnUpdate() { }
+}
+```
+
+As shown in the example above, the input port is named **Number** and accepts the type **int**. Also defined is the
+output named **squared** which outputs type **int**.
+
+With this setup, what a node calls this node, the inputted value is squared and outputted to the **Squared** port.
+
+![IO node example visual](https://cdn.junglesequencer.com/v1.1.0/documentation/jungle-node/io-node-example.png)

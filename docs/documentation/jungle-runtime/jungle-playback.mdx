@@ -1,0 +1,127 @@
+---
+title: Jungle Playback
+slug: /jungle-runtime/jungle-playback
+---
+
+The `JunglePlayback` class is responsible for managing the playback of a `JungleTree`.
+It handles the execution of nodes within the tree and provides various methods and properties to interact with the playback process.
+
+## Overview
+
+The `JunglePlayback` class facilitates the following functionalities:
+- Managing the runtime instances of nodes.
+- Handling the start, stop, and update cycles of the nodes.
+- Providing event hooks for node lifecycle events.
+- Allowing the addition and removal of revert actions.
+
+---
+## Properties
+
+### `Uid`
+
+`public readonly string Uid`
+
+The unique identifier of this playback.
+
+### `Tree`
+
+`public readonly JungleTree Tree`
+
+The tree this playback is playing.
+
+### `Nodes`
+
+`public IReadOnlyCollection<JungleNode> Nodes { get; }`
+
+List of runtime node instances.
+
+### `Time`
+
+`public float Time { get; }`
+
+The amount of time in seconds that this playback has been running, using unscaled time.
+
+---
+## Methods
+
+### `TryGetEquivalentNode`
+
+`public bool TryGetEquivalentNode(JungleNode originalNode, out JungleNode equivalentNode)`
+
+Tries to get an equivalent node from the internal dictionary based on the unique identifier of the original node.
+
+**Returns:**
+- `true` if an equivalent node is found; otherwise, `false`.
+
+### `TryGetNodeByUid`
+
+`public bool TryGetNodeByUid(string nodeUid, out JungleNode node)`
+
+Tries to get a node from the internal dictionary based on the unique identifier of the node.
+
+**Returns:**
+- `true` if the node is found; otherwise, `false`.
+
+### `IsNodeRunning`
+
+`public bool IsNodeRunning(JungleNode node)`
+
+Checks if the specified node is currently running.
+
+**Returns:**
+- `true` if the node is running; otherwise, `false`.
+
+### `IsNodeRunning`
+
+`public bool IsNodeRunning(string nodeUid)`
+
+Checks if a node with the specified unique identifier (UID) is currently running.
+
+**Returns:**
+- `true` if the node is running; otherwise, `false`.
+
+### `AddRevertAction`
+
+`public string AddRevertAction(Action action)`
+
+Adds a revert action to the internal dictionary and returns a unique identifier for the action.
+
+**Returns:**
+- A unique identifier for the added revert action.
+
+### `RemoveRevertAction`
+
+`public void RemoveRevertAction(string revertActionUid)`
+
+Removes a revert action from the internal dictionary using the provided unique identifier.
+
+---
+## Events
+
+### `OnNodeStart`
+
+`public event Action<string> OnNodeStart`
+
+Invoked when the playback starts a node.
+
+**Values:**
+- `string`: The UID of the node that is starting.
+
+### `OnNodeStop`
+
+`public event Action<string> OnNodeStop`
+
+Invoked when the playback stops a node.
+
+**Values:**
+- `string`: The UID of the node that is stopping.
+
+### `OnNodeError`
+
+`public event Action<string, string> OnNodeError`
+
+Invoked when a node encounters an error.
+
+**Values:**
+- `string`: The UID of the node that encountered the error.
+- `string`: The error message.

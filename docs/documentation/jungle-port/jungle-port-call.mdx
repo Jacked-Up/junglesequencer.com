@@ -1,0 +1,39 @@
+---
+title: Port.Call
+slug: /jungle-port/call
+---
+
+Object used to represent calls between input and output ports.
+
+---
+## Properties
+
+### `OutputPortIndex`
+`public readonly byte OutputPortIndex;`
+
+- Index of the output port from the calling node where the port call originates.
+
+---
+### `Value`
+`public readonly object Value;`
+
+- The payload value of the port call.
+
+---
+## Constructor
+
+### `Call`
+`public Call(byte outputPortIndex, object value)`
+
+- Initializes a port call object.
+- **Parameters:**
+    - `outputPortIndex`: Index of the output port from the calling node where the port call originates.
+    - `value`: The payload value of the port call.
+
+---
+## Methods
+
+### `ToString`
+`public override string ToString()`
+
+- Represents the port call as a string.

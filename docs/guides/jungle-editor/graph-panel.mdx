@@ -1,0 +1,126 @@
+---
+title: Graph Panel
+slug: /guides/jungle-editor/graph-panel
+---
+
+The node graph is the section of the interface where you put your sequences together.
+
+import VideoPlayer from '@site/src/components/VideoPlayer';
+
+<VideoPlayer
+    videoUrl="https://www.youtube.com/watch?v=RF3gCvzuTHo"
+    title="Using the Jungle Editor"
+    description="Here's a video style guide on how to use the Jungle Editor. Watch this if you prefer to watch rather than read!"
+/>
+
+<br />
+---
+## Adding Nodes
+
+There are two methods for adding nodes to the graph:
+1. [Node Explorer](#via-the-node-explorer)
+2. [Connection Lookup](#via-the-connection-lookup)
+
+### Via the Node Explorer
+
+The Node Explorer is a comprehensive, organized list of every available node in your project.
+This feature allows you to easily browse through the different types of nodes and find the one you need.
+
+![Adding nodes via the node explorer](https://cdn.junglesequencer.com/v1.1.0/guides/jungle-editor/node-graph-adding-nodes-via-node-explorer.gif)
+
+**To add a node via the Node Explorer:**
+- Scroll through the Node Explorer to find the node you want to add.
+You can also use the search bar at the top to quickly locate the desired node.
+- Click and hold on the node you wish to add. Drag it from the Node Explorer into the graph view.
+- Move the node to the desired position on the graph and release the mouse button.
+
+### Via the Connection Lookup
+
+The Connection Lookup offers a curated list of nodes specifically compatible with the selected output port.
+
+![Adding nodes via the search menu](https://cdn.junglesequencer.com/v1.1.0/guides/jungle-editor/node-graph-adding-nodes-via-search-menu.gif)
+
+**To add a node using the Connection Lookup:**
+- Click and hold on the output port of an existing node where you'd like to connect a new node.
+- Drag the connection line to an empty spot on the graph view and release the mouse button.
+The Connection Lookup will appear, displaying only the nodes that can be connected to the selected output port.
+- Browse through the curated list of compatible nodes and select the one you wish to add.
+You can also use the search bar at the top of the Connection Lookup to quickly locate the desired node.
+- Once you select the node, it will be added to your graph and automatically connected to the output port you initially clicked on.
+
+---
+## Selecting Nodes
+
+There are two method for selecting nodes in the graph:
+- [Selecting with the cursor](#selecting-with-cursor)
+- [Drawing a selection box](#drawing-a-selection-box)
+
+### Selecting With Cursor
+
+To select a node, simply click on it.
+To add multiple nodes to your selection, hold the `Ctrl` key while clicking on each additional node.
+
+![Selecting nodes with the cursor](https://cdn.junglesequencer.com/v1.1.0/guides/jungle-editor/node-graph-selecting-with-cursor.gif)
+
+### Drawing a Selection Box
+
+This method allows you to select multiple nodes simultaneously by enclosing them within a drawn box.
+
+![Draw a box selection](https://cdn.junglesequencer.com/v1.1.0/guides/jungle-editor/node-graph-box-selection.gif)
+
+- Left-click and hold.
+- Drag the cursor to create a selection box around the nodes you wish to select.
+- Release the mouse button to complete the selection.
+
+:::tip Append Box Selection
+You can append your selection by holding the `Ctrl` key while drawing a selection box.
+:::
+
+---
+## Connecting Nodes
+
+To connect a node to another:
+- Left-click and hold on the port of a node.
+- Drag the connection line to the port of another node.
+- Release the connection line to create the connection.
+
+![Connecting nodes in the graph](https://cdn.junglesequencer.com/v1.1.0/guides/jungle-editor/node-graph-connecting-nodes.gif)
+
+This process links the nodes together, forming a sequence that dictates the flow and logic of your tree.
+
+:::info CONNECTION RULES
+- Connections can only be made between ports of the same type.
+- You must connect output ports to input ports, and vice versa.
+:::
+
+---
+## Shortcuts & Controls
+
+#### Shortcuts
+
+| Action          | Windows Shortcuts | Mac Shortcuts |
+|-----------------|-------------------|---------------|
+| Select All      | Ctrl + A          | ⌘ + A         |
+| Copy            | Ctrl + C          | ⌘ + C         |
+| Cut             | Ctrl + X          | ⌘ + X         |
+| Paste           | Ctrl + V          | ⌘ + V         |
+| Duplicate       | Ctrl + D          | ⌘ + D         |
+| Delete          | Del               | ⌘ + ⌫         |
+| Frame Origin    | O                 | O             |
+| Frame All       | A                 | A             |
+| Frame Selection | F                 | F             |
+| Frame Next      | ]                 | ]             |
+| Frame Previous  | [                 | [             |
+
+#### Controls
+
+| Action        | Input             |
+|---------------|-------------------|
+| Pan Graph     | Middle Mouse      |
+| Zoom Graph    | Scroll Wheel      |
+| Selection Box | Left Click + Drag |
+
+:::tip PANNING WITH OTHER DEVICES
+If you're on a laptop/tablet, you can pan the graph by holding **Alt** and dragging with
+your _trackpad_, _stylus_, or _finger_.
+:::

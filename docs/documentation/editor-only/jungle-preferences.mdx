@@ -1,0 +1,265 @@
+---
+title: Jungle Preferences
+slug: /editor-only/jungle-preferences
+---
+
+The `JunglePreferences` class provides access to various preference settings for the Jungle editor tools.
+
+## Overview
+
+The `JunglePreferences` class includes functionalities for managing:
+- Cache size settings
+- Validation settings
+- Gizmos settings
+- Signature settings
+- Appearance settings
+
+---
+
+## Properties
+
+### `MaxCacheSize`
+
+`public static int MaxCacheSize { get; set; }`
+
+Gets or sets the maximum icon cache size.
+
+### `ValidatorEnabled`
+
+`public static bool ValidatorEnabled { get; set; }`
+
+Gets or sets whether the Jungle Validator is enabled.
+
+### `ValidateInPlayMode`
+
+`public static bool ValidateInPlayMode { get; set; }`
+
+Gets or sets whether validation is performed in play mode.
+
+### `ValidateOnBuild`
+
+`public static bool ValidateOnBuild { get; set; }`
+
+Gets or sets whether validation is performed during builds.
+
+### `GizmosEnabled`
+
+`public static bool GizmosEnabled { get; set; }`
+
+Gets or sets whether Gizmos are enabled.
+
+### `SignatureEnabled`
+
+`public static bool SignatureEnabled { get; set; }`
+
+Gets or sets whether the signature feature is enabled.
+
+### `Signature`
+
+`public static string Signature { get; set; }`
+
+Gets or sets the custom signature.
+
+### `TooltipMode`
+
+`public static TooltipModes TooltipMode { get; set; }`
+
+Gets or sets the tooltip mode.
+
+### `GridBackgroundEnabled`
+
+`public static bool GridBackgroundEnabled { get; set; }`
+
+Gets or sets whether the grid background is enabled in the Jungle editor.
+
+### `ApplyControlViewOffset`
+
+`public static bool ApplyControlViewOffset { get; set; }`
+
+Gets or sets whether control view offset is applied in the Jungle editor.
+
+### `BoxSelectionColor`
+
+`public static Color BoxSelectionColor { get; set; }`
+
+Gets or sets the color used for box selection in the Jungle editor.
+
+### `NodeActivityColor`
+
+`public static Color NodeActivityColor { get; set; }`
+
+Gets or sets the color used to indicate node activity in the Jungle editor.
+
+### `NodeErrorColor`
+
+`public static Color NodeErrorColor { get; set; }`
+
+Gets or sets the color used to indicate node errors in the Jungle editor.
+
+### `NonePortColor`
+
+`public static Color NonePortColor { get; set; }`
+
+Gets or sets the color used for "None" ports in the Jungle editor.
+
+### `StructPortColor`
+
+`public static Color StructPortColor { get; set; }`
+
+Gets or sets the color used for struct ports in the Jungle editor.
+
+### `PrimitivePortColor`
+
+`public static Color PrimitivePortColor { get; set; }`
+
+Gets or sets the color used for primitive ports in the Jungle editor.
+
+### `MonoBehaviourPortColor`
+
+`public static Color MonoBehaviourPortColor { get; set; }`
+
+Gets or sets the color used for MonoBehaviour ports in the Jungle editor.
+
+### `ScriptableObjectPortColor`
+
+`public static Color ScriptableObjectPortColor { get; set; }`
+
+Gets or sets the color used for ScriptableObject ports in the Jungle editor.
+
+### `StickyNoteHandWrittenFontEnabled`
+
+`public static bool StickyNoteHandWrittenFontEnabled { get; set; }`
+
+Gets or sets whether the handwritten font is used for sticky notes in the Jungle editor.
+
+---
+
+## Methods
+
+### `ResetPreferencesToDefault`
+
+`public static void ResetPreferencesToDefault(bool showDialogue)`
+
+Resets all preferences to their default values.
+
+#### Parameters
+
+- `showDialogue`: Determines whether a confirmation dialog is shown before resetting preferences.
+
+---
+
+## Events
+
+### `OnMaxCacheSizeChanged`
+
+`public static event Action<int> OnMaxCacheSizeChanged`
+
+Triggered when the maximum icon cache size is changed.
+
+### `OnValidatorEnabledChanged`
+
+`public static event Action<bool> OnValidatorEnabledChanged`
+
+Triggered when the Validator Enabled setting is changed.
+
+### `OnValidateInPlayModeChanged`
+
+`public static event Action<bool> OnValidateInPlayModeChanged`
+
+Triggered when the Validate in Play Mode setting is changed.
+
+### `OnValidateOnBuildChanged`
+
+`public static event Action<bool> OnValidateOnBuildChanged`
+
+Triggered when the Validate on Build setting is changed.
+
+### `OnGizmosEnabledChanged`
+
+`public static event Action<bool> OnGizmosEnabledChanged`
+
+Triggered when the Gizmos Enabled setting is changed.
+
+### `OnSignatureEnabledChanged`
+
+`public static event Action<bool> OnSignatureEnabledChanged`
+
+Triggered when the Signature Enabled setting is changed.
+
+### `OnSignatureChanged`
+
+`public static event Action<string> OnSignatureChanged`
+
+Triggered when the Signature setting is changed.
+
+### `OnTooltipModeChanged`
+
+`public static event Action<TooltipModes> OnTooltipModeChanged`
+
+Triggered when the Tooltip Mode setting is changed.
+
+### `OnGridBackgroundEnabledChanged`
+
+`public static event Action<bool> OnGridBackgroundEnabledChanged`
+
+Triggered when the Grid Background Enabled setting is changed.
+
+### `OnApplyControlViewOffsetChanged`
+
+`public static event Action<bool> OnApplyControlViewOffsetChanged`
+
+Triggered when the Apply Control View Offset setting is changed.
+
+### `OnBoxSelectionColorChanged`
+
+`public static event Action<Color> OnBoxSelectionColorChanged`
+
+Triggered when the Box Selection Color setting is changed.
+
+### `OnNodeActivityColorChanged`
+
+`public static event Action<Color> OnNodeActivityColorChanged`
+
+Triggered when the Node Activity Color setting is changed.
+
+### `OnNodeErrorColorChanged`
+
+`public static event Action<Color> OnNodeErrorColorChanged`
+
+Triggered when the Node Error Color setting is changed.
+
+### `OnNonePortColorChanged`
+
+`public static event Action<Color> OnNonePortColorChanged`
+
+Triggered when the None Port Color setting is changed.
+
+### `OnStructPortColorChanged`
+
+`public static event Action<Color> OnStructPortColorChanged`
+
+Triggered when the Struct Port Color setting is changed.
+
+### `OnPrimitivePortColorChanged`
+
+`public static event Action<Color> OnPrimitivePortColorChanged`
+
+Triggered when the Primitive Port Color setting is changed.
+
+### `OnMonoBehaviourPortColorChanged`
+
+`public static event Action<Color> OnMonoBehaviourPortColorChanged`
+
+Triggered when the MonoBehaviour Port Color setting is changed.
+
+### `OnScriptableObjectPortColorChanged`
+
+`public static event Action<Color> OnScriptableObjectPortColorChanged`
+
+Triggered when the ScriptableObject Port Color setting is changed.
+
+### `OnStickyNoteHandWrittenFontEnbaledChanged`
+
+`public static event Action<bool> OnStickyNoteHandWrittenFontEnbaledChanged`
+
+Triggered when the Sticky Note Handwritten Font Enabled setting is changed.

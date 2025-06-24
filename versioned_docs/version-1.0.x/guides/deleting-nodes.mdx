@@ -1,0 +1,56 @@
+---
+title: Deleting Nodes
+slug: /guides/deleting-nodes
+---
+
+Jungle is very strict about deleting node scripts. This is due to limitations with the Unity Asset Database and how it
+handles sub-assets. Jungle has safeguards in place to prevent nodes from losing metadata and serialized data when nodes
+go missing or are deleted via the file system.
+
+:::warning NEVER DELETE NODE SCRIPTS VIA THE FILE SYSTEM
+If you delete a node script from your file system, Jungle cannot detect the change and will not be able to perform 
+important clean up on your trees. This can create a ton of issues and is **NEVER** recommended.
+:::
+
+There are two options for deleting nodes:
+1. [Mark the node as deprecated](#marking-the-node-as-deprecated)
+2. [Delete the node via the Assets window](#deleting-the-node-via-assets-window)
+
+---
+## Marking the Node as Deprecated
+
+The `NodeProperties` attribute has a `Deprecated` property that can be set to `true`. This will mark the node as
+deprecated and will remove it from the explorer and mark all instances of the node in the validator.
+
+**Steps**
+1. Open the node script in your code editor.
+2. Add the `Deprecated` property to the `NodeProperties` attribute and set it to `true`.
+
+```csharp
+using Jungle;
+
+[NodeProperties(
+    Title = "My Node",
+//  ↓↓↓↓↓↓↓↓↓↓   ↓↓↓↓
+    Deprecated = true
+)]
+public class MyNode : IdentityNode
+...
+```
+
+---
+## Deleting the Node via Assets Window
+
+Nodes can also be deleted like any other asset in Unity. This method is safe but is irreversible. If any instances of
+the node being deleted are found in any trees, Jungle will display a warning dialog to confirm the deletion.
+
+**Steps**
+1. Locate the node script in the Assets window.
+2. Then you can either:
+    - Press the `Delete` key on your keyboard while the node script is selected.
+    - Right-click the node script and select `Delete` from the context menu.
+
+:::warning
+This method is **IRREVERSIBLE** and will permanently remove all instances of the deleted node from all trees.
+All connections, metadata, and serialized data will be lost.
+:::

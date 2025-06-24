@@ -1,0 +1,297 @@
+---
+title: Branch Node<T>
+slug: /jungle-nodes/branch-node
+---
+
+The Branch Node takes a single input of any type, and outputs to any number of outputs that all can output any types.
+
+import VideoPlayer from '@site/src/components/VideoPlayer';
+
+<VideoPlayer
+    videoUrl="https://www.youtube.com/watch?v=DAyAZErFx7A"
+    title="Creating Nodes"
+    description="Here's a video tutorial on creating all node variants in Jungle."
+/>
+
+---
+## Overview
+
+:::tip ONLY NEED ONE OUTPUT?
+If you plan to use only a single output from the branch node, we recommend building an **IO Node** instead.
+:::
+
+All Branch Nodes are required to have a `BranchNode` class attribute defined. This attribute defines the input port
+and output ports on the node.
+
+Here's a list of all the properties you can define in the `BranchNode` attribute:
+
+| Name               | Type       | Notes                                    |
+|--------------------|------------|------------------------------------------|
+| `InputPortName`    | `string`   | Defines the name of the input port       |
+| `OutputPortNames`  | `string[]` | Defines the names for each output port   |
+| `OutputPortTypes`  | `Type[]`   | Defines the outputted type for each port |
+
+The output port names and types should be defined in the same order and should always be the same length. You are
+limited to 256 output ports per node.
+
+Here's an example of a `BranchNode` attribute:
+```csharp
+[BranchNode(
+    InputPortName = "My Input",
+    OutputPortNames = new []
+    {
+        "My Output A",
+        "My Output B"
+    },
+    OutputPortTypes = new []
+    {
+        typeof(Port.None),
+        typeof(Port.None)
+    }
+)]
+public class MyBranchNode : BranchNode<Port.None>
+...
+```
+
+#### Result in the Jungle Editor
+
+![Branch node attribute visual](https://cdn.junglesequencer.com/v1.0.x/documentation/jungle-nodes/branch-node-attribute-visual.png)
+
+:::info WHERE IS THE INPUT TYPE DEFINED?
+The Branch Node is a generic class, so you define the input port type when you inherit from the class.
+<br />**For example**, if you want the input port to accept a `string` value, you would set your script up like so:
+```csharp
+public class MyBranchNode : BranchNode<string>
+...
+```
+:::
+
+---
+
+:::tip
+The `BranchNode<T>` class inherits from the `JungleNode` class.
+This means all public and protected members of `JungleNode` are accessible within `BranchNode<T>`.
+
+Read about the base `JungleNode` class **[here](../jungle-nodes/jungle-node)**.
+:::
+
+## Properties
+
+### `Uid`
+
+`public string Uid { get; }`
+
+Gets the unique identifier for this node.
+
+### `JungleTree`
+
+`public JungleTree JungleTree { get; }`
+
+Gets a reference to the original tree this node is part of.
+
+### `OutputPorts`
+
+`public Port[] OutputPorts { get; }`
+
+Gets the list of output ports for this node.
+
+### `Nothing`
+
+`public static readonly Port.None Nothing`
+
+Gets the shorthand equivalent of `new Port.None()`.
+
+### `IsPlayback`
+
+`public bool IsPlayback { get; }`
+
+Indicates whether this node is an instance of a playback.
+
+### `Playback`
+
+`public JunglePlayback Playback`
+
+Gets the playback instance associated with this node.
+
+---
+## Methods
+
+### `GetInputPortInfo`
+
+`public override Port.Info GetInputPortInfo()`
+
+Returns information about the node's input port.
+
+### `GetOutputPortsInfo`
+
+`public override Port.Info[] GetOutputPortsInfo()`
+
+Returns information about the node's output ports.
+
+### `AddRevertAction`
+
+`public string AddRevertAction(Action action)`
+
+Adds a revert action to be executed when the playback stops.
+
+### `Call`
+
+`protected void Call(Port.Call call)`
+
+Sends a port call to the node without stopping its execution.
+
+### `Call`
+
+`protected void Call(Port.Call[] calls)`
+
+Sends multiple port calls to the node without stopping its execution.
+
+### `Stop`
+
+`protected void Stop()`
+
+Stops the node without sending out any port calls.
+
+### `CallAndStop`
+
+`protected void CallAndStop(Port.Call call)`
+
+Sends out a port call and stops the node.
+
+### `CallAndStop`
+
+`protected void CallAndStop(Port.Call[] calls)`
+
+Sends out multiple port calls and stops the node.
+
+### `OnStart`
+
+`protected abstract void OnStart(T inputValue)`
+
+Invoked immediately when this node is started.
+
+### `OnStop`
+
+`protected virtual void OnStop()`
+
+Invoked immediately when this node is stopped.
+
+### `OnUpdate`
+
+`protected abstract void OnUpdate()`
+
+Invoked every frame while this node is running.
+
+### `OnLateUpdate`
+
+`protected virtual void OnLateUpdate()`
+
+Invoked every frame after every update function has been called.
+
+### `OnFixedUpdate`
+
+`protected virtual void OnFixedUpdate()`
+
+Invoked every fixed frame while this node is running.
+
+### `OnValidation`
+
+`protected virtual string[] OnValidation()`
+
+Called whenever the tree performs a validation pass. Should return a list of issues with the node if any.
+
+---
+## Boilerplate
+
+```csharp
+using Jungle;
+
+[NodeProperties(
+    Title = "Branch Node",
+    Description = "One input, multiple outputs."
+)]
+[BranchNode(
+    InputPortName = "Input",
+    OutputPortNames = new []
+    {
+        "Output A",
+        "Output B"
+    },
+    OutputPortTypes = new []
+    {
+        typeof(Port.None),
+        typeof(Port.None)
+    }
+)]
+public class MyBranchNode : BranchNode<Port.None>
+{
+    protected override void OnStart(Port.None _)
+    {
+        CallAndStop(new []
+        {
+            new Port.Call(0, Nothing),
+            new Port.Call(1, Nothing)
+        });
+    }
+    
+    protected override void OnUpdate() { }
+}
+```
+
+---
+## Example
+
+Here's a simple example of a Branch Node that takes in a number and outputs weather the number is positive or negative.
+
+```csharp
+using Jungle;
+
+[NodeProperties(
+    Title = "Positive/Negative",
+    Description = "Outputs weather the input is positive or negative."
+)]
+[BranchNode(
+    InputPortName = "Number",
+    OutputPortNames = new []
+    {
+        "Positive",
+        "Negative"
+    },
+    OutputPortTypes = new []
+    {
+        typeof(Port.None),
+        typeof(Port.None)
+    }
+)]
+public class PositiveNegativeNode : BranchNode<int>
+{
+    protected override void OnStart(int number)
+    {
+        if (number >= 0)
+        {
+            // Call the positive port
+            CallAndStop(new Port.Call(0, Nothing));
+        }
+        else
+        {
+            // Call the negative port
+            CallAndStop(new Port.Call(1, Nothing));
+        }
+    }
+    
+    protected override void OnUpdate() { }
+}
+```
+
+As shown in the example above, the input port is named **Number** and accepts the type **int**.
+Also defined are two output ports named **Positive** and **Negative** that output **nothing**.
+
+With this setup, when a node calls this node, it inputs a value of type int to the Number port. The node then checks if
+the number is greater than or equal to zero. If it is, it calls the Positive port. If it's not, it calls the Negative
+port.
+
+This configuration allows us to create a node with branching logic that can run different sequences based on whether the
+inputted number is positive or negative.
+
+![Branch node example visual](https://cdn.junglesequencer.com/v1.0.x/documentation/jungle-nodes/branch-node-example.png)
+
