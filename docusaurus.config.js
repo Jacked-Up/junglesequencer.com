@@ -176,9 +176,9 @@ module.exports = {
         },
         
         algolia: {
-            appId: '7651ITKIZU',
-            apiKey: 'd7260d5f1b5b2291f4509c0e9037adb4',
-            indexName: 'junglesequencer_docs',
+            appId: '5ZHIF50LLO',
+            apiKey: '4f98b75420d426f3b3910799bac46a4b',
+            indexName: 'junglesequencer',
             contextualSearch: true,
             searchPagePath: 'search',
             searchParameters: {
