@@ -161,23 +161,43 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 
 
 .frosted-glass,
-.dropdown__menu {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px) saturate(180%);
-    -webkit-backdrop-filter: blur(10px) saturate(180%);
+.dropdown__menu,
+.theme-back-to-top-button {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
     
-    border: 2px solid rgba(255, 255, 255, 0.30);
-    border-radius: var(--border-radius);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.30) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
 
-    isolation: isolate;
+    isolation: isolate !important;
 }
 
 [data-theme='light'] .frosted-glass,
-[data-theme='light'] .dropdown__menu {
-    background: rgba(217, 217, 217, 0.5);
-    border: 1px solid rgba(0, 0, 0, 0.10);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+[data-theme='light'] .dropdown__menu,
+[data-theme='light'] .theme-back-to-top-button {
+    background: rgba(217, 217, 217, 0.5) !important;
+    border: 2px solid rgba(0, 0, 0, 0.10) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10) !important;
+}
+
+
+
+
+
+
+.theme-back-to-top-button {
+    transition: transform 0.3s ease;
+}
+
+.theme-back-to-top-button:hover {
+    transform: scale(1.125);
+}
+
+.theme-back-to-top-button:active {
+    transform: scale(1);
+    transition: transform 0.05s ease-out;
 }
 
 
