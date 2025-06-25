@@ -42,7 +42,7 @@
     font-size: clamp(2rem, 8vw, 6rem);
     line-height: 1.1;
     margin-bottom: 1rem;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 2px 5px rgba(16, 17, 15, 0.5);
 }
 
 .hero__description {
@@ -51,7 +51,7 @@
     font-size: 1.2rem;
     line-height: 1.4;
     margin-bottom: 1.5rem;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 2px 3px rgba(16, 17, 15, 0.5);
 }
 
 .hero__actions {
@@ -81,7 +81,7 @@
     color: #fff;
     font-weight: bold;
     text-align: center;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    text-shadow: var(--text-shadow);
     
     /* Visual */
     background: linear-gradient(135deg,var(--bg-start) 0%,var(--bg-end) 100%);
@@ -258,13 +258,12 @@
 
     /* Typography */
     color: #fff;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: var(--text-shadow);
 }
 
 [data-theme='light'] .feature-card__text {
     /* Typography (light mode) */
     color: #000;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .feature-card__title {
@@ -458,7 +457,7 @@
     margin: 0 0 0.5rem;
     font-size: 1.5rem;
     font-weight: 700;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 2px 4px rgba(16, 17, 15, 0.5);
 }
 
 .community__card-description {
@@ -467,7 +466,7 @@
     font-size: 1.05rem;
     line-height: 1.4;
     color: var(--ifm-color-primary-lightest);
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 2px 3px rgba(16, 17, 15, 0.5);
 }
 
 .community__button {
@@ -489,7 +488,7 @@
     font-weight: 700;
     letter-spacing: 0.02em;
     color: #fff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    text-shadow: 1px 2px 3px rgba(16, 17, 15, 0.5);
 
     /* Visual */
     border-radius: var(--border-radius);

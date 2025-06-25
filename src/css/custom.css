@@ -35,7 +35,10 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --ifm-color-emphasis-800:  #d8d8d8 !important;
     --ifm-color-emphasis-900:  #d1d1d1 !important;
     --ifm-color-emphasis-1000: #cacaca !important;
-
+    
+    /* Text */
+    --text-shadow: 0 2px 3px rgba(130, 141, 123, 0.25);
+    
     /* Borders */
     --border-width: 2px;
     --border-radius: 12px;
@@ -54,7 +57,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --ifm-navbar-search-input-background-color: white !important;
     --ifm-navbar-search-input-color: black !important;
     --ifm-navbar-search-input-placeholder-color: rgba(0,0,0,0.3) !important;
-
+    
     /* Footer */
     --ifm-footer-background-color: #123c14;
     
@@ -86,6 +89,9 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --ifm-color-emphasis-800:  #363636 !important;
     --ifm-color-emphasis-900:  #3b3b3b !important;
     --ifm-color-emphasis-1000: #404040 !important;
+    
+    /* Text */
+    --text-shadow: 0 2px 3px rgba(20, 25, 20, 0.25);
     
     /* Borders */
     --border-primary-color: rgb(176, 182, 175);
@@ -262,6 +268,14 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     border: var(--border-primary) !important;
     transform: scale(1.02);
     border-color: var(--ifm-color-primary) !important;
+}
+
+
+
+
+
+.markdown h1, h2, h3, h4, h5, h6 {
+    text-shadow: var(--text-shadow);
 }
 
 
