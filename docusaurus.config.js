@@ -181,10 +181,6 @@ module.exports = {
             indexName: 'junglesequencer',
             contextualSearch: true,
             searchPagePath: 'search',
-            searchParameters: {
-                clickAnalytics: false,
-                facetFilters: ['type:docs'],
-            },
         },
         
         prism: {
