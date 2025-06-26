@@ -12,8 +12,9 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     /*--ifm-background-color: #f7faf6;
     --ifm-background-alt:   #eaf4ec;
     --ifm-surface-color:    #ffffff;*/
-    --ifm-dropdown-background-color: var(--ifm-color-primary-darker);
-
+    /* --ifm-dropdown-background-color: var(--ifm-color-primary-darker); */
+    --ifm-global-radius: 12px;
+    
     /* Color palette */
     --ifm-color-primary-darkest:  #0b290d;
     --ifm-color-primary-darker:   #16521a;
@@ -35,10 +36,13 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --ifm-color-emphasis-800:  #d8d8d8 !important;
     --ifm-color-emphasis-900:  #d1d1d1 !important;
     --ifm-color-emphasis-1000: #cacaca !important;
-
+    
+    /* Text */
+    --text-shadow: 0 2px 3px rgba(130, 141, 123, 0.25);
+    
     /* Borders */
     --border-width: 2px;
-    --border-radius: 12px;
+    --border-radius: var(--ifm-global-radius);
     --border-primary-color: rgb(57, 58, 54);
     --border-secondary-color: rgba(57, 58, 54, 0.5);
     --border-primary: var(--border-width) solid var(--border-primary-color);
@@ -54,7 +58,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --ifm-navbar-search-input-background-color: white !important;
     --ifm-navbar-search-input-color: black !important;
     --ifm-navbar-search-input-placeholder-color: rgba(0,0,0,0.3) !important;
-
+    
     /* Footer */
     --ifm-footer-background-color: #123c14;
     
@@ -86,6 +90,9 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --ifm-color-emphasis-800:  #363636 !important;
     --ifm-color-emphasis-900:  #3b3b3b !important;
     --ifm-color-emphasis-1000: #404040 !important;
+    
+    /* Text */
+    --text-shadow: 0 2px 3px rgba(20, 25, 20, 0.25);
     
     /* Borders */
     --border-primary-color: rgb(176, 182, 175);
@@ -149,6 +156,49 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     transition: transform 0.05s ease-out;
 }
 
+
+
+
+
+.frosted-glass,
+.dropdown__menu,
+.theme-back-to-top-button {
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
+    
+    border: 2px solid rgba(255, 255, 255, 0.30) !important;
+    border-radius: var(--border-radius) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+
+    isolation: isolate !important;
+}
+
+[data-theme='light'] .frosted-glass,
+[data-theme='light'] .dropdown__menu,
+[data-theme='light'] .theme-back-to-top-button {
+    background: rgba(217, 217, 217, 0.5) !important;
+    border: 2px solid rgba(0, 0, 0, 0.10) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10) !important;
+}
+
+
+
+
+
+
+.theme-back-to-top-button {
+    transition: transform 0.3s ease;
+}
+
+.theme-back-to-top-button:hover {
+    transform: scale(1.125);
+}
+
+.theme-back-to-top-button:active {
+    transform: scale(1);
+    transition: transform 0.05s ease-out;
+}
 
 
 
@@ -262,6 +312,14 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     border: var(--border-primary) !important;
     transform: scale(1.02);
     border-color: var(--ifm-color-primary) !important;
+}
+
+
+
+
+
+.markdown h1, h2, h3, h4, h5, h6 {
+    text-shadow: var(--text-shadow);
 }
 
 
