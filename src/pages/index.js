@@ -11,25 +11,19 @@ const LINKEDIN_URL = "/linkedin";
 export default function IndexPage() {
     const [zoomedImage, setZoomedImage] = useState(null);
     const [originRect, setOriginRect] = useState(null);
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [overlayOpen, setOverlayOpen] = useState(false);
 
-    // Handle click on any feature-card image (desktop only)
     function handleImageClick(e) {
-        if (window.innerWidth <= 768) return;
-
+        if (window.innerWidth <= 768) return; // disable on small screens
         const img = e.currentTarget.querySelector("img");
         const rect = img.getBoundingClientRect();
-
         setOriginRect(rect);
         setZoomedImage({ src: img.src, width: rect.width, height: rect.height });
-
-        // Delay adding the .open class until next tick so CSS transitions fire
-        setTimeout(() => setIsModalOpen(true), 0);
+        requestAnimationFrame(() => setOverlayOpen(true));
     }
 
-    // Close the modal (click overlay, X button, or scroll)
-    function handleClose() {
-        setIsModalOpen(false);
+    function closeOverlay() {
+        setOverlayOpen(false);
         setTimeout(() => {
             setZoomedImage(null);
             setOriginRect(null);
@@ -37,50 +31,43 @@ export default function IndexPage() {
     }
 
     function ZoomImageModal({ image, origin }) {
-        const zoomRef = useRef(null);
+        const ref = useRef(null);
 
         useEffect(() => {
-            const imgEl = zoomRef.current;
-            if (!imgEl) return;
+            const el = ref.current;
+            if (!el) return;
 
             document.body.style.overflow = "hidden";
+            el.getBoundingClientRect(); // force reflow
 
-            imgEl.getBoundingClientRect();
             const margin = 16;
-            const viewportW = window.innerWidth - margin * 2;
-            const viewportH = window.innerHeight - margin * 2;
-            const { naturalWidth, naturalHeight } = imgEl;
+            const vw = window.innerWidth - margin * 2;
+            const vh = window.innerHeight - margin * 2;
+            const { naturalWidth: nw, naturalHeight: nh } = el;
 
-            let targetW = viewportW,
-                targetH = viewportH;
-            if (naturalWidth / naturalHeight > viewportW / viewportH) {
-                // Image is wider than viewport ratio so limit by width
-                targetW = viewportW;
-                targetH = (naturalHeight / naturalWidth) * viewportW;
+            let w = vw, h = vh;
+            if (nw / nh > vw / vh) {
+                w = vw;
+                h = (nh / nw) * vw;
             } else {
-                // Taller so limit by height
-                targetH = viewportH;
-                targetW = (naturalWidth / naturalHeight) * viewportH;
+                h = vh;
+                w = (nw / nh) * vh;
             }
+            const left = (window.innerWidth - w) / 2;
+            const top = (window.innerHeight - h) / 2;
 
-            const targetLeft = (window.innerWidth - targetW) / 2;
-            const targetTop = (window.innerHeight - targetH) / 2;
-
-            // Use RAF to ensure the browser has applied initial position first
             requestAnimationFrame(() => {
-                imgEl.style.width = `${targetW}px`;
-                imgEl.style.height = `${targetH}px`;
-                imgEl.style.left = `${targetLeft}px`;
-                imgEl.style.top = `${targetTop}px`;
+                el.style.width = `${w}px`;
+                el.style.height = `${h}px`;
+                el.style.left = `${left}px`;
+                el.style.top = `${top}px`;
             });
 
-            // Close on any scroll
-            const onScroll = () => handleClose();
+            const onScroll = () => closeOverlay();
             window.addEventListener("scroll", onScroll);
-
             return () => {
                 window.removeEventListener("scroll", onScroll);
-                document.body.style.overflow = ""; // re-enable scrolling
+                document.body.style.overflow = "";
             };
         }, []);
 
@@ -95,16 +82,7 @@ export default function IndexPage() {
             zIndex: 1001,
         };
 
-        return (
-            <img
-                ref={zoomRef}
-                src={image.src}
-                alt="Zoomed preview"
-                className="zoom-image"
-                style={initStyle}
-                onClick={(e) => e.stopPropagation()}
-            />
-        );
+        return <img ref={ref} src={image.src} alt="" style={initStyle} />;
     }
 
     return (
@@ -296,18 +274,17 @@ export default function IndexPage() {
                     </div>
                 </div>
             </section>
-            
+
             {zoomedImage && (
                 <div
-                    className={`zoom-overlay ${isModalOpen ? "open" : ""}`}
-                    onClick={handleClose}
+                    className={`zoom-overlay ${overlayOpen ? "open" : ""}`}
+                    onClick={closeOverlay}
                 >
                     <ZoomImageModal image={zoomedImage} origin={originRect} />
-                    <button className="close-btn" onClick={handleClose}>
-                        &times;
-                    </button>
+                    <p className="zoom-hint">Click anywhere to close</p>
                 </div>
             )}
+
         </Layout>
     );
 }

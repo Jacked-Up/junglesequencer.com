@@ -327,10 +327,6 @@
     transform: rotateY(6deg);
 }
 
-
-
-
-
 .zoom-overlay {
     position: fixed;
     top: 0; left: 0;
@@ -365,14 +361,21 @@
     transition: opacity 0.3s ease;
 }
 
-.zoom-overlay.open .close-btn {
-    opacity: 1;
+.zoom-hint {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1002;
+    user-select: none;
 }
-.zoom-overlay .close-btn:hover {
-    color: #bbb;
+.zoom-overlay.open .zoom-hint {
+    opacity: 0.35;
 }
-
-
 
 @media (min-width: 769px) {
     .feature-card:not(.reverse) .feature-card__description {
