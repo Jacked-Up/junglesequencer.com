@@ -315,11 +315,6 @@
     border: 2px solid rgb(61, 123, 64);
     border-radius: var(--border-radius);
     box-shadow: 0 0 25px 5px rgba(0,0,0,0.25);
-    transition: transform 0.4s ease;
-}
-
-.feature-card:hover .feature-card__image {
-    transform: scale(1.05);
 }
 
 .feature-card:not(.reverse) .feature-card__image img {
@@ -330,6 +325,56 @@
 .feature-card.reverse .feature-card__image img {
     /* Transform */
     transform: rotateY(6deg);
+}
+
+.zoom-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center; justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+.zoom-overlay.open {
+    display: flex;
+    opacity: 1;
+}
+
+.zoom-overlay .zoom-image {
+    position: fixed;
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
+
+.zoom-overlay .close-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.zoom-hint {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1002;
+    user-select: none;
+}
+.zoom-overlay.open .zoom-hint {
+    opacity: 0.35;
 }
 
 @media (min-width: 769px) {
@@ -343,6 +388,14 @@
         /* Layout */
         margin-right: auto;
         text-align-last: left;
+    }
+
+    .feature-card__image {
+        transition: transform 0.3s ease;
+        cursor: zoom-in;
+    }
+    .feature-card__image:hover {
+        transform: scale(1.05);
     }
 }
 
