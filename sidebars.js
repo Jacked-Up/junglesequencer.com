@@ -64,15 +64,36 @@ const sidebars = {
         },
         {
             type: 'category',
+            label: 'Extensions',
+            link: {
+                "type": "generated-index"
+            },
+            collapsed: true,
+            items: [
+                'documentation/extensions/jungle-gui-layout',
+                {
+                    type: 'category',
+                    label: 'Over Time Helper',
+                    link: {
+                        type: 'doc',
+                        id: 'documentation/extensions/over-time-helper/over-time-helper',
+                    },
+                    collapsed: true,
+                    items: [
+                        'documentation/extensions/over-time-helper/over-time-helper-motion'
+                    ],
+                },
+            ],
+        },
+        {
+            type: 'category',
             label: 'Miscellaneous',
             link: {
                 "type": "generated-index"
             },
             collapsed: true,
             items: [
-                'documentation/miscellaneous/jungle-utils',
-                'documentation/miscellaneous/jungle-gui-layout',
-                'documentation/miscellaneous/over-time-helper'
+                'documentation/miscellaneous/jungle-utils'
             ],
         },
         {
