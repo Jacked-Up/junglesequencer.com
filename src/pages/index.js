@@ -24,10 +24,8 @@ export default function IndexPage() {
 
     function closeOverlay() {
         setOverlayOpen(false);
-        setTimeout(() => {
-            setZoomedImage(null);
-            setOriginRect(null);
-        }, 300);
+        setZoomedImage(null);
+        setOriginRect(null);
     }
 
     function ZoomImageModal({ image, origin }) {
@@ -40,7 +38,7 @@ export default function IndexPage() {
             document.body.style.overflow = "hidden";
             el.getBoundingClientRect(); // force reflow
 
-            const margin = 16;
+            const margin = 40;
             const vw = window.innerWidth - margin * 2;
             const vh = window.innerHeight - margin * 2;
             const { naturalWidth: nw, naturalHeight: nh } = el;
