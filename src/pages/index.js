@@ -28,46 +28,62 @@ export default function IndexPage() {
         setOriginRect(null);
     }
 
-    function ZoomImageModal({ image, origin }) {
+    function ZoomImageModal({ image, origin, onClose }) {
         const ref = useRef(null);
 
         useEffect(() => {
             const el = ref.current;
             if (!el) return;
 
+            const margin = 40;
+            function positionImage() {
+                const vw = window.innerWidth - margin * 2;
+                const vh = window.innerHeight - margin * 2;
+                const { naturalWidth: nw, naturalHeight: nh } = el;
+
+                let w = vw, h = vh;
+                if (nw / nh > vw / vh) {
+                    w = vw;
+                    h = (nh / nw) * vw;
+                } else {
+                    h = vh;
+                    w = (nw / nh) * vh;
+                }
+
+                const left = (window.innerWidth - w) / 2;
+                const top  = (window.innerHeight - h) / 2;
+
+                requestAnimationFrame(() => {
+                    el.style.width = `${w}px`;
+                    el.style.height = `${h}px`;
+                    el.style.left = `${left}px`;
+                    el.style.top = `${top}px`;
+                });
+            }
+
+            // Initial positioning
             document.body.style.overflow = "hidden";
             el.getBoundingClientRect(); // force reflow
+            positionImage();
 
-            const margin = 40;
-            const vw = window.innerWidth - margin * 2;
-            const vh = window.innerHeight - margin * 2;
-            const { naturalWidth: nw, naturalHeight: nh } = el;
-
-            let w = vw, h = vh;
-            if (nw / nh > vw / vh) {
-                w = vw;
-                h = (nh / nw) * vw;
-            } else {
-                h = vh;
-                w = (nw / nh) * vh;
+            function handleResize() {
+                if (window.innerWidth <= 768) {
+                    onClose(); // auto close on small screens
+                } else {
+                    positionImage();
+                }
             }
-            const left = (window.innerWidth - w) / 2;
-            const top = (window.innerHeight - h) / 2;
 
-            requestAnimationFrame(() => {
-                el.style.width = `${w}px`;
-                el.style.height = `${h}px`;
-                el.style.left = `${left}px`;
-                el.style.top = `${top}px`;
-            });
+            const handleScroll = () => onClose();
 
-            const onScroll = () => closeOverlay();
-            window.addEventListener("scroll", onScroll);
+            window.addEventListener("resize", handleResize);
+            window.addEventListener("scroll", handleScroll);
             return () => {
-                window.removeEventListener("scroll", onScroll);
+                window.removeEventListener("resize", handleResize);
+                window.removeEventListener("scroll", handleScroll);
                 document.body.style.overflow = "";
             };
-        }, []);
+        }, [onClose]);
 
         const initStyle = {
             position: "fixed",
@@ -278,7 +294,7 @@ export default function IndexPage() {
                     className={`zoom-overlay ${overlayOpen ? "open" : ""}`}
                     onClick={closeOverlay}
                 >
-                    <ZoomImageModal image={zoomedImage} origin={originRect} />
+                    <ZoomImageModal image={zoomedImage} origin={originRect} onClose={closeOverlay} />
                     <p className="zoom-hint">Click anywhere to close</p>
                 </div>
             )}
