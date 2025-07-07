@@ -234,23 +234,59 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --docsearch-searchbox-background: #e9f1e9 !important;
     --docsearch-searchbox-focus-background: #fafcf5 !important;
     --docsearch-modal-background: var(--ifm-background-color) !important;
+    --docsearch-footer-background: linear-gradient(to left, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 50%) !important;
     --docsearch-container-background: rgba(17, 24, 16, 0.3) !important;
     --docsearch-key-gradient: linear-gradient(45deg, #d7ded4 0%, #bfcbbf 100%) !important;
     --docsearch-key-shadow: inset 0 -2px 0 0 rgba(101, 107, 100, 0.3) !important;
     --docsearch-key-pressed-shadow: inset 0 -2px 0 0 rgba(101, 107, 100, 0.3) !important;
 }
 
-[data-theme='light'] .DocSearch {
-    
+.DocSearch-Form {
+    background: #101110 !important;
 }
 
-.DocSearch-Modal {
-
+.DocSearch-Dropdown .DocSearch-Label,
+.DocSearch-Footer .DocSearch-Label,
+.DocSearch-Input,
+.DocSearch-StartScreen .DocSearch-Help {
+    color: #e9f1e9 !important;
 }
 
-[data-theme='light'] .DocSearch-Modal {
-    
+.DocSearch-Help,
+.DocSearch-Hit-path,
+.DocSearch-Hit-icon,
+.DocSearch-Screen-Icon,
+.DocSearch-HitsFooter {
+    color: rgba(233, 241, 233, 0.3) !important;
 }
+
+.DocSearch-Footer a {
+    filter: saturate(0%) brightness(1000%) !important;
+}
+
+[data-theme='light'] .DocSearch-Form {
+    background: #eff8ef !important;
+}
+
+[data-theme='light'] .DocSearch-Dropdown .DocSearch-Label,
+[data-theme='light'] .DocSearch-Input,
+[data-theme='light'] .DocSearch-StartScreen .DocSearch-Help {
+    color: #1a1c1a !important;
+}
+
+[data-theme='light'] .DocSearch-Help,
+[data-theme='light'] .DocSearch-Hit-path,
+[data-theme='light'] .DocSearch-Hit-icon,
+[data-theme='light'] .DocSearch-Screen-Icon,
+[data-theme='light'] .DocSearch-HitsFooter {
+    color: rgba(26, 28, 26, 0.3) !important;
+}
+
+
+
+
+
+
 
 
 .theme-doc-version-banner {
@@ -258,19 +294,12 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     border-radius: var(--border-radius) !important;
 }
 
-
-
-
-
-
 .menu.thin-scrollbar {
     padding: 0.5rem 0.5rem 0 0.5rem !important;
 }
 .table-of-contents__left-border {
      border-left: var(--border-secondary) !important;
  }
-
-
 
 .theme-doc-sidebar-container {
     border-right: var(--border-secondary) !important;
@@ -289,10 +318,6 @@ h1, h2, h3, h4, h5, h6, p, a, button {
 .theme-doc-sidebar-container .button--secondary:hover {
     opacity: 1;
 }
-
-
-
-
 
 .pagination-nav__link {
     border: var(--border-primary);
