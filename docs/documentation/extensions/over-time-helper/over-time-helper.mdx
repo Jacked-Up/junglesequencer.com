@@ -62,6 +62,24 @@ public class SetPositionNode : IONode<Transform>
 ```
 
 ---
+## Constructor
+
+### `OverTimeHelper`
+
+`public OverTimeHelper(bool enabled, bool scaledTime, float rate, Motion method, float precision = 0.01f)`
+
+Initializes a new instance of the `OverTimeHelper` class.
+
+#### Parameters
+
+- `enabled`: Whether the helper is enabled.
+- `scaledTime`: Whether to use scaled delta time or fixed delta time for step calculations.
+- `rate`: The timescale rate.
+- `method`: The motion calculation method.
+- `precision`: The precision for determining if the calculation is done (default is 0.01f).
+
+
+---
 ## Properties
 
 ### `enabled`
@@ -107,22 +125,33 @@ Initializes an `OverTimeHelper` is the following options:
 - Method: `Motion.Lerp`
 - Precision: `0.01`
 
+:::info INTENDED USAGE
+Use the `OverTimeHelper.Default` property to initialize the `OverTimeHelper` with good default options.
+
+```csharp
+[SerializeField]
+private OverTimeHelper overTime = OverTimeHelper.Default;
+```
+
+Alternatively, you can set custom default options like so:
+```csharp
+[SerializeField]
+private OverTimeHelper overTime = new OverTimeHelper
+(
+    enabled: true,
+    scaledTime: true,
+    rate: 2f,
+    method: Motion.Lerp, 
+    precision: 0.0001f
+);
+```
+
+You can still tweak these values in the inspector later.
+The code above only sets the initial values when the `OverTimeHelper` is first created.
+:::
+
 ---
 ## Methods
-
-### `OverTimeHelper`
-
-`public OverTimeHelper(bool enabled, bool scaledTime, float rate, Motion method, float precision = 0.01f)`
-
-Initializes a new instance of the `OverTimeHelper` class.
-
-#### Parameters
-
-- `enabled`: Whether the helper is enabled.
-- `scaledTime`: Whether to use scaled delta time.
-- `rate`: The time scale rate.
-- `method`: The motion calculation method.
-- `precision`: The precision for determining if the calculation is done (default is 0.01f).
 
 ---
 ### `Step` (Float)
