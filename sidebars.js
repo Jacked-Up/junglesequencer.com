@@ -83,6 +83,9 @@ const sidebars = {
                         'documentation/extensions/over-time-helper/over-time-helper-motion'
                     ],
                 },
+                'documentation/extensions/units-attribute',
+                'documentation/extensions/disable-during-node-playback-attribute',
+                'documentation/extensions/disable-during-tree-playback-attribute'
             ],
         },
         {

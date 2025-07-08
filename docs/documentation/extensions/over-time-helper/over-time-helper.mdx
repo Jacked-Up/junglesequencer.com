@@ -78,7 +78,6 @@ Initializes a new instance of the `OverTimeHelper` class.
 - `method`: The motion calculation method.
 - `precision`: The precision for determining if the calculation is done (default is 0.01f).
 
-
 ---
 ## Properties
 
@@ -86,7 +85,7 @@ Initializes a new instance of the `OverTimeHelper` class.
 `public bool enabled { get; set; }`
 
 If the `OverTimeHelper` is enabled.
-:::info INFO
+:::info WHEN DISABLED
 While `enabled = false`, step will immediately step the value to the target value.
 :::
 
@@ -157,16 +156,16 @@ The code above only sets the initial values when the `OverTimeHelper` is first c
 ### `Step` (Float)
 `public float Step(float currentValue, float targetValue)`
 
-Smoothly transitions the current float value towards the target float value over time using the specified motion method.
+Calculates the step from the current `float` value towards the target `float` value for the current frame.
 
 #### Parameters
 
-- `currentValue`: The current value.
-- `targetValue`: The target value.
+- `currentValue`: The current `float` value.
+- `targetValue`: The target `float` value.
 
 #### Returns
 
-The new float value after applying the transition for the current frame.
+The new `float` value after applying the step for the current frame.
 
 ---
 ### `Step` (Vector2)
@@ -177,8 +176,8 @@ Smoothly transitions the current Vector2 value towards the target Vector2 value 
 
 #### Parameters
 
-- `currentValue`: The current value.
-- `targetValue`: The target value.
+- `currentValue`: The current `Vector2` value.
+- `targetValue`: The target `Vector2` value.
 
 #### Returns
 
@@ -233,28 +232,10 @@ Smoothly transitions the current color value towards the target color value over
 The new color value after applying the transition for the current frame.
 
 ---
-### `GetFloatProgress`
+### `GetProgress` (Float)
+`public static float GetProgress(float current, float target, float original)`
 
-`public static float GetFloatProgress(float current, float target, float original)`
-
-Returns the progress of a float value over time (0 - 1).
-
-#### Parameters
-
-- `current`: The current value.
-- `target`: The target value.
-- `original`: The original value.
-
-#### Returns
-
-The progress as a float between 0 and 1.
-
----
-### `GetVector2Progress`
-
-`public static float GetVector2Progress(Vector2 current, Vector2 target, Vector2 original)`
-
-Returns the progress of a Vector2 value over time (0 - 1).
+Returns the progress of a float value over time (0–1).
 
 #### Parameters
 
@@ -267,28 +248,10 @@ Returns the progress of a Vector2 value over time (0 - 1).
 The progress as a float between 0 and 1.
 
 ---
-### `GetVector3Progress`
+### `GetProgress` (Vector2)
+`public static float GetProgress(Vector2 current, Vector2 target, Vector2 original)`
 
-`public static float GetVector3Progress(Vector3 current, Vector3 target, Vector3 original)`
-
-Returns the progress of a Vector3 value over time (0 - 1).
-
-#### Parameters
-
-- `current`: The current value.
-- `target`: The target value.
-- `original`: The original value.
-
-#### Returns
-
-The progress as a float between 0 and 1.
-
----
-### `GetQuaternionProgress`
-
-`public static float GetQuaternionProgress(Quaternion current, Quaternion target, Quaternion original)`
-
-Returns the progress of a Quaternion value over time (0 - 1).
+Returns the progress of a Vector2 value over time (0–1).
 
 #### Parameters
 
@@ -301,11 +264,42 @@ Returns the progress of a Quaternion value over time (0 - 1).
 The progress as a float between 0 and 1.
 
 ---
-### `GetColorProgress`
+### `GetProgress` (Vector 3)
+`public static float GetProgress(Vector3 current, Vector3 target, Vector3 original)`
 
-`public static float GetColorProgress(Color current, Color target, Color original)`
+Returns the progress of a Vector3 value over time (0–1).
 
-Returns the progress of a Color value over time (0 - 1).
+#### Parameters
+
+- `current`: The current value.
+- `target`: The target value.
+- `original`: The original value.
+
+#### Returns
+
+The progress as a float between 0 and 1.
+
+---
+### `GetProgress` (Quaternion)
+`public static float GetProgress(Quaternion current, Quaternion target, Quaternion original)`
+
+Returns the progress of a Quaternion value over time (0–1).
+
+#### Parameters
+
+- `current`: The current value.
+- `target`: The target value.
+- `original`: The original value.
+
+#### Returns
+
+The progress as a float between 0 and 1.
+
+---
+### `GetProgress` (Color)
+`public static float GetProgress(Color current, Color target, Color original)`
+
+Returns the progress of a color value over time (0–1).
 
 #### Parameters
 
