@@ -3,4 +3,47 @@ title: Disable During Node Playback Attribute
 slug: /extensions/disable-during-node-playback-attribute
 ---
 
-Use this attribute to disable a serialized property while the node is playing.
+The `DisableDuringNodePlayback` attribute disabled a serialized field in the inspector while it's node is running.
+The attribute is intended to be used on properties that would break nodes if changed while the node is running.
+
+## Overview
+
+The `DisableDuringNodePlayback` attribute provides the following functionality:
+- Disables the given field in the inspector while the node it belongs to is running.
+
+:::info DOES NOT PREVENT VALUE CHANGES FROM CODE
+This attribute does **NOT** prevent value changes from code.
+It only prevents the field from being edited in the inspector while the node is running.
+:::
+
+---
+## How to Use
+
+- **Step 1:** Import the `Jungle.Extensions` namespace at the top of your script.
+- **Step 2:** Add the attribute to any fields you'd like to have disabled during node playback.
+
+---
+### Example
+
+Here's an example of a boolean field named `scaledTime` that disables during node playback.
+The `scaledTime` property is used to set whether scaled time should be used for the timer.
+
+If the `scaledTime` property is changed during node playback, it could lead to unexpected and strange behavior.
+The attribute disables the toggle while the node is running so that you can't accidentally break things.
+
+```csharp
+using Jungle;
+// highlight-next-line
+using Jungle.Extensions;
+using UnityEngine;
+
+public class WaitForTimeNode : IdentityNode
+{
+    [SerializeField]
+    // highlight-next-line
+    [DisabledDuringNodePlayback]
+    private bool scaledTime;
+
+    ...
+}
+```

@@ -3,4 +3,50 @@ title: Disable During Tree Playback Attribute
 slug: /extensions/disable-during-tree-playback-attribute
 ---
 
-Use this attribute to disable a serialized property while the tree is playing.
+
+The `DisableDuringTreePlayback` attribute disabled a serialized field in the inspector while it's tree is running.
+The attribute is intended to be used on properties that would break nodes if changed while the tree is running.
+
+## Overview
+
+The `DisableDuringTreePlayback` attribute provides the following functionality:
+- Disables the given field in the inspector while the tree it belongs to is running.
+
+:::info DOES NOT PREVENT VALUE CHANGES FROM CODE
+This attribute does **NOT** prevent value changes from code.
+It only prevents the field from being edited in the inspector while the tree is running.
+:::
+
+---
+## How to Use
+
+- **Step 1:** Import the `Jungle.Extensions` namespace at the top of your script.
+- **Step 2:** Add the attribute to any fields you'd like to have disabled during tree playback.
+
+---
+### Example
+
+Here's an example of a boolean field named `revertOnStop` that disables during tree playback.
+The `revertOnStop` property is used to set whether the offset set by the node should be reverted when the tree stops.
+
+If the `revertOnStop` property is changed during tree playback, it could lead to unexpected and strange behavior.
+This is because if we used the revert actions system, 
+the revert action likely wouldn't be registered/unregistered when toggling the value during playback.
+The attribute disables the toggle while the tree is running so that you can't accidentally break things.
+
+```csharp
+using Jungle;
+// highlight-next-line
+using Jungle.Extensions;
+using UnityEngine;
+
+public class OffsetTransformNode : IONode<Transform>
+{
+    [SerializeField]
+    // highlight-next-line
+    [DisabledDuringTreePlayback]
+    private bool revertOnStop;
+
+    ...
+}
+```
