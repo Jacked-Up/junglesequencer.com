@@ -3,4 +3,195 @@ title: Jungle GUI Layout
 slug: /miscellaneous/jungle-gui-layout
 ---
 
+The `JungleGUILayout` class provides IMGUI auto layout elements for use in the Jungle Node Control GUI and inspector.
 
+:::warning ONLY RENDERS IN EDITOR
+All methods within the `JungleGUILayout` class will not compile to build.
+Method declarations are still available; However, they will lack all functionality.
+:::
+
+## Overview
+
+The `JungleGUILayout` class provides the following functionality:
+- Auto-scaling fields for floats, integers, and toggles.
+- IMGUI Layout centering methods.
+- Jungle Nodes and Trees list editor.
+
+---
+### Example
+
+The following example is a snippet of the `SetFloatNode` that sets a float on a given animator.
+The full script has been cut down for brevity.
+
+As seen below, the script has two main fields: The `parameterName` and `value`.
+The node uses to `JungleGUILayout` class to draw these fields neatly within the node's control GUI.
+
+```csharp
+using Jungle;
+// highlight-next-line
+using Jungle.Extensions;
+using UnityEngine;
+
+public class SetFloatNode : IONode<Animator>
+{
+    ...
+
+    [SerializeField]
+    private string parameterName = "MyFloat";
+    [SerializeField]
+    private float value = 1;
+    
+    public override void OnDrawControlGUI()
+    {
+        // highlight-start
+        JungleGUILayout.BeginCenteredHorizontal();
+                
+            JungleGUILayout.TextLabel("Set");
+            parameterName = JungleGUILayout.ScalingTextField(parameterName);
+            JungleGUILayout.TextLabel("to");
+            value = JungleGUILayout.ScalingFloatField(value, minWidth: 24);
+
+        JungleGUILayout.EndCenteredHorizontal();
+        // highlight-end
+    }
+
+    ...
+}
+```
+
+![Jungle GUI Layout Example](https://cdn.junglesequencer.com/v2.0.0/documentation/extensions/jungle-gui-layout-example.gif)
+
+---
+## Methods
+
+### `BeginCenteredHorizontal`
+`public static void BeginCenteredHorizontal(bool drawBorder = false)`
+
+Begins a centered horizonal area.
+
+#### Parameters
+
+- `drawBorder`: If a border should be drawn around the area.
+
+---
+### `EndCenteredHorizontal`
+`public static void EndCenteredHorizontal()`
+
+Ends a centered horizonal area.
+
+---
+### `TextLabel`
+`public static void TextLabel(string text, bool bold = false, bool greyed = false)`
+
+Creates a text label that automatically scales to the amount of text in the label.
+
+#### Parameters
+
+- `text`: The text to display in the label.
+- `bold`: Set true if the displayed text should be bold. Default is false.
+- `greyed`: Set true if the displayed text should be greyed out. Default is false.
+
+---
+### `ScalingTextField`
+`public static string ScalingTextField(string text, float minWidth = 32, float maxWidth = 300, float padding = 6)`
+
+Creates a text field that automatically scales with the number of characters inside the field.
+
+#### Parameters
+
+- `text`: The text to edit.
+- `minWidth`: The minimum width of the field. Default is 32.
+- `maxWidth`: The maximum width of the field. Default is 300.
+- `padding`: The amount of space to add after the last character in the field. Default is 6.
+
+#### Returns
+
+The edited text in the field.
+
+---
+### `ScalingFloatField`
+`public static float ScalingFloatField(float value, float minWidth = 32, float maxWidth = 300, float padding = 6)`
+
+Creates a float field that automatically scales with the number of characters inside the field.
+
+#### Parameters
+
+- `value`: The float value to edit.
+- `minWidth`: The minimum width of the field. Default is 32.
+- `maxWidth`: The maximum width of the field. Default is 300.
+- `padding`: The amount of space to add after the last character in the field. Default is 6.
+
+#### Returns
+
+The edited float in the field.
+
+---
+### `ScalingIntField`
+`public static int ScalingIntField(int value, float minWidth = 32, float maxWidth = 300, float padding = 6)`
+
+Creates an integer field that automatically scales with the number of characters inside the field.
+
+#### Parameters
+
+- `value`: The integer value to edit.
+- `minWidth`: The minimum width of the field. Default is 32.
+- `maxWidth`: The maximum width of the field. Default is 300.
+- `padding`: The amount of space to add after the last character in the field. Default is 6.
+
+#### Returns
+
+The edited integer in the field.
+
+---
+### `Toggle`
+`public static bool Toggle(bool value)`
+
+Creates a toggle field.
+
+#### Parameters
+
+- `value`: The boolean value to edit.
+
+#### Returns
+
+The edited boolean in the field.
+
+---
+### `TreesListEditor`
+`public static void TreesListEditor(string headerText,
+string contextText,
+Func<JungleTree[]> getCurrentTrees,
+Func<JungleTree[]> getAvailableTrees,
+Action<JungleTree> onAddTree,
+Action<JungleTree> onRemoveTree)`
+
+Draws an editor for managing a list of Jungle Trees.
+
+#### Parameters
+
+- `headerText`: The text to display in the header label.
+- `contextText`: The text to display in the instructions label.
+- `getCurrentTrees`: A function that returns the trees currently in the list.
+- `getAvailableTrees` A function that returns the trees that can be added to the list.
+- `onAddTree` An action called when a tree is requesting to be added to the list.
+- `onRemoveTree` An action called when a tree is requesting to be removed from the list.
+
+---
+### `NodesListEditor`
+`public static void NodesListEditor(string headerText,
+string contextText,
+Func<JungleNode[]> getCurrentNodes,
+Func<JungleNode[]> getAvailableNodes,
+Action<JungleNode> onAddNode,
+Action<JungleNode> onRemoveNode)`
+
+Draws an editor for managing a list of Jungle Nodes.
+
+#### Parameters
+
+- `headerText`: The text to display in the header label.
+- `contextText`: The text to display in the instructions label.
+- `getCurrentNodes` A function that returns the nodes currently in the list.
+- `getAvailableNodes` A function that returns the nodes that can be added to the list.
+- `onAddNode` An action called when a node is requesting to be added to the list.
+- `onRemoveNode` An action called when a node is requesting to be removed from the list.
