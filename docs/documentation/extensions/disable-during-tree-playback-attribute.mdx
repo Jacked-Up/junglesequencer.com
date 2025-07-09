@@ -40,8 +40,10 @@ using Jungle;
 using Jungle.Extensions;
 using UnityEngine;
 
-public class OffsetTransformNode : IONode<Transform>
+public class OffsetPositionNode : IONode<Transform>
 {
+    ...
+
     [SerializeField]
     // highlight-next-line
     [DisabledDuringTreePlayback]
