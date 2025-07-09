@@ -37,8 +37,10 @@ using Jungle;
 using Jungle.Extensions;
 using UnityEngine;
 
-public class WaitForTimeNode : IdentityNode
+public class WaitForSecondsNode : IdentityNode
 {
+    ...
+
     [SerializeField]
     // highlight-next-line
     [DisabledDuringNodePlayback]
@@ -47,3 +49,5 @@ public class WaitForTimeNode : IdentityNode
     ...
 }
 ```
+
+![Disable During Node Playback](https://cdn.junglesequencer.com/v2.0.0/documentation/extensions/disable-during-node-playback.gif)
