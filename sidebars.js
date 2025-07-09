@@ -160,7 +160,6 @@ const sidebars = {
             ],
         },
         'guides/revert-actions',
-        'guides/over-time-helper',
         'guides/jungle-validator',
         'guides/jungle-preferences'
     ],

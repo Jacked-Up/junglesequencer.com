@@ -3,125 +3,167 @@ title: Jungle Playback
 slug: /jungle-runtime/jungle-playback
 ---
 
-The `JunglePlayback` class is responsible for managing the playback of a `JungleTree`.
-It handles the execution of nodes within the tree and provides various methods and properties to interact with the playback process.
+The `JunglePlayback` class handles the playback of a `JungleTree`.
+It handles various systems such as node lifecycle, error reporting, and revert actions.
+
+#### How it Works
+
+Playbacks are automatically created by the `JungleRuntime` when a tree is played.
+When the playback is initialized, it creates temporary copies of all `JungleNode` instances on the associated tree.
+These temporary copies are called playback node instances, and they are deleted when the tree stops playing.
+
+These temporary playback instances are created to prevent serialized data from being overridden during node playback.
 
 ## Overview
 
-The `JunglePlayback` class facilitates the following functionalities:
-- Managing the runtime instances of nodes.
-- Handling the start, stop, and update cycles of the nodes.
-- Providing event hooks for node lifecycle events.
-- Allowing the addition and removal of revert actions.
+The `JunglePlayback` class provides the following functionalities:
+- Automatically manages node lifecycle.
+- Provides event hooks for node lifecycle events.
+- Handles revert actions.
 
 ---
 ## Properties
 
 ### `Uid`
+`public readonly string Uid;`
 
-`public readonly string Uid`
-
-The unique identifier of this playback.
-
-### `Tree`
-
-`public readonly JungleTree Tree`
-
-The tree this playback is playing.
-
-### `Nodes`
-
-`public IReadOnlyCollection<JungleNode> Nodes { get; }`
-
-List of runtime node instances.
-
-### `Time`
-
-`public float Time { get; }`
-
-The amount of time in seconds that this playback has been running, using unscaled time.
+The unique identifier for the playback.
 
 ---
-## Methods
+### `Tree`
+`public readonly JungleTree Tree;`
 
-### `TryGetEquivalentNode`
+A reference to the `JungleTree` the playback is playing/associated with.
 
-`public bool TryGetEquivalentNode(JungleNode originalNode, out JungleNode equivalentNode)`
+---
+### `Nodes`
+`public IReadOnlyCollection<JungleNode> Nodes { get; }`
 
-Tries to get an equivalent node from the internal dictionary based on the unique identifier of the original node.
+A list of all the runtime equivalent `JungleNode` instances.
 
-**Returns:**
-- `true` if an equivalent node is found; otherwise, `false`.
+---
+### `Time`
+`public float Time { get; }`
 
-### `TryGetNodeByUid`
+The total amount of time in seconds that the playback has been playing for.
 
-`public bool TryGetNodeByUid(string nodeUid, out JungleNode node)`
-
-Tries to get a node from the internal dictionary based on the unique identifier of the node.
-
-**Returns:**
-- `true` if the node is found; otherwise, `false`.
-
-### `IsNodeRunning`
-
-`public bool IsNodeRunning(JungleNode node)`
-
-Checks if the specified node is currently running.
-
-**Returns:**
-- `true` if the node is running; otherwise, `false`.
-
-### `IsNodeRunning`
-
-`public bool IsNodeRunning(string nodeUid)`
-
-Checks if a node with the specified unique identifier (UID) is currently running.
-
-**Returns:**
-- `true` if the node is running; otherwise, `false`.
-
-### `AddRevertAction`
-
-`public string AddRevertAction(Action action)`
-
-Adds a revert action to the internal dictionary and returns a unique identifier for the action.
-
-**Returns:**
-- A unique identifier for the added revert action.
-
-### `RemoveRevertAction`
-
-`public void RemoveRevertAction(string revertActionUid)`
-
-Removes a revert action from the internal dictionary using the provided unique identifier.
+:::note
+The `Time` property uses unscaled time.
+:::
 
 ---
 ## Events
 
 ### `OnNodeStart`
-
 `public event Action<string> OnNodeStart`
 
-Invoked when the playback starts a node.
+Invoked when the playback starts a `JungleNode`.
 
-**Values:**
-- `string`: The UID of the node that is starting.
+#### Values
 
+- `string`: The unique identifier of the `JungleNode` that started.
+
+---
 ### `OnNodeStop`
-
 `public event Action<string> OnNodeStop`
 
-Invoked when the playback stops a node.
+Invoked when the playback stops a `JungleNode`.
 
-**Values:**
-- `string`: The UID of the node that is stopping.
+#### Values
 
+- `string`: The unique identifier of the `JungleNode` that stopped.
+
+---
 ### `OnNodeError`
-
 `public event Action<string, string> OnNodeError`
 
-Invoked when a node encounters an error.
+Invoked when a `JungleNode` encounters an error.
 
-**Values:**
-- `string`: The UID of the node that encountered the error.
+#### Values
+
+- `string`: The unique identifier of the `JungleNode` that encountered the error.
 - `string`: The error message.
+
+---
+## Methods
+
+### `TryGetEquivalentNode`
+`public bool TryGetEquivalentNode(JungleNode originalNode, out JungleNode equivalentNode)`
+
+Tries to get the equivalent playback `JungleNode` instance to the given original `JungleNode` instance.
+
+#### Parameters
+
+- `originalNode`: The original `JungleNode` instance to find an equivalent of.
+- `out equivalentNode`: The equivalent playback instance to the original node instance. (`null` if not found)
+
+#### Returns
+
+`true` if an equivalent playback instance could be found; otherwise, `false`.
+
+---
+### `TryGetNodeByUid`
+`public bool TryGetNodeByUid(string nodeUid, out JungleNode node)`
+
+Tries to get a `JungleNode` with the given unique identifier.
+
+#### Parameters
+
+- `nodeUid`: The unique identifier of the `JungleNode` to find.
+- `out node`: The `JungleNode` found with the given unique identifier. (`null` if not found)
+
+#### Returns
+
+- `true` if a `JungleNode` with the given unique identifier could be found; otherwise, `false`.
+
+:::note
+The returned `JungleNode` instance is the playback's copied instance, not the original tree instance.
+:::
+
+---
+### `IsNodeRunning`
+`public bool IsNodeRunning(string nodeUid)`
+
+Checks if a `JungleNode` with the given unique identifier is running.
+
+#### Parameters
+
+- `nodeUid`: The unique identifier of the `JungleNode` to check.
+
+#### Returns
+
+`true` if a `JungleNode` with the given unique identifier is running; otherwise, `false`.
+
+---
+### `StopNode`
+`public void StopNode(string nodeUid)`
+
+Stops a `JungleNode` with the given unique identifier.
+
+#### Parameters
+
+- `nodeUid`: The unique identifier of the `JungleNode` to be stopped.
+
+---
+### `AddRevertAction`
+`public string AddRevertAction(Action action)`
+
+Adds the given action to the list of actions to be called when the playback stops.
+
+#### Parameters
+
+- `action`: The action to be reverted when the playback stops.
+
+#### Returns
+
+A unique identifier for the given revert action.
+
+---
+### `RemoveRevertAction`
+`public void RemoveRevertAction(string revertActionUid)`
+
+Removes a revert action with the given unique identifier from the list of actions to be called when the playback stops.
+
+#### Parameters
+
+- `revertActionUid`: The unique identifier of the revert action to remove.

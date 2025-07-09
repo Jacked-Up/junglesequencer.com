@@ -3,67 +3,45 @@ title: Jungle Exception
 slug: /jungle-runtime/jungle-exception
 ---
 
-Jungle handles exceptions very strictly. If a node throws an exception, the node will be immediately stopped.
-Exceptions should be thrown whenever a node encounters a problem that would prevent it from continuing.
-This is useful for displaying when a critical error occurs in your tree and prevent subsequent nodes from
-running, which could cause even more errors.
+The `JungleException` is Jungle's builtin exception object.
+This exception should be used inside node scripts when things go wrong during playback.
 
-You can throw an exception of any type, but it is recommended to use the `JungleException` class.
-
-An exception can be thrown anywhere at any time within a node.
+Jungle's runtime handles exception very strictly.
+This is purposeful, since running a sequence of code where one of the links malfunctions could be pretty wrong.
+If an exception is detected during node playback, the node is immediately stopped and then reported.
 
 ---
-## When to Throw Exceptions?
+## When to Throw Exceptions
 
-You should throw exceptions when a critical error occurs in your nodes that prevents the node from performing its task.
-
-#### Example
-
-Let's say you have a node named `FindGameObject` that finds a game object in the scene and outputs it.
-Any nodes connected to the output of the `FindGameObject` node will expect a game object.
-
-Let's say that the `FindGameObject` node is run and it can't find the game object in the scene.
-If the node just continues anyways, then all connected nodes would be expecting a game object,
-except they would be getting `null` instead.
-
-To prevent this, you should throw an exception if the game object is not found.
-This will prevent any subsequent nodes from running and more causing errors.
+Throw exceptions if anything during node playback goes critically wrong.
+For example, if a node looking for a game object couldn't find the game object, throw an exception.
 
 ---
-## Throwing an Exception
+### Example
 
-Throwing exceptions is extremely easy.
-
-You should always throw a `JungleException` when an error occurs. This will ensure that the error is caught by the error
-handler. You can also pass a message to the exception to display in the console.
+The example below shows a node named `FindGameObjectNode` that looks for a game object with the name 'MyGameObject'.
+In the case where the game object cannot be found, it throws an exception.
 
 ```csharp
-throw new JungleException("YOUR MESSAGE");
-```
-
-You can throw Jungle exceptions inside any inherited Jungle Node method.
-
----
-## Example
-
-Here's an example of a node that sets the position of a transform to the origin.
-If the inputted transform is null, then an exception is thrown.
-
-```csharp
+// highlight-next-line
 using Jungle;
 using UnityEngine;
 
-public class ExceptionNode : IONode<Transform>
+[IONode(OutputPortType = typeof(GameObject))]
+public class FindGameObjectNode : IONode<Port.None>
 {
-    protected override void OnStart(Transform transform)
+    protected override void OnStart(Port.None _)
     {
-        if (transform == null)
-            throw new JungleException("Inputted transform is null.");
+        GameObject gameObject = GameObject.Find("MyGameObject");
+        
+        // highlight-start
+        if (gameObject == null)
+            throw new JungleException("Failed to find a game object with the name MyGameObject");
+        // highlight-end
 
-        transform.position = Vector3.zero;
-        CallAndStop(transform);
+        CallAndStop(gameObject);
     }
-
-    protected override void OnUpdate() { }
+    
+    ...
 }
 ```
