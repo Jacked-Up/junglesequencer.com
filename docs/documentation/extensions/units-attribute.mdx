@@ -1,0 +1,52 @@
+---
+title: Units Attribute
+slug: /extensions/units-attribute
+---
+
+The `Units` attribute allows you to easily display the units for a serialized field in the inspector.
+This attribute can be used on both Jungle nodes and Unity objects.
+
+:::warning MAY BREAK ON SOME FIELDS
+The `Units` attribute adds a label next to the serialized fields property drawer in the inspector.
+Some large or complex property drawers may break when the `Unit` attribute is used.
+:::
+
+## Overview
+
+The `Units` attribute provides the following functionality:
+- Displays units in the inspector on the given serialized fields property drawer.
+
+---
+### Example
+
+```csharp
+[SerializeField]
+// highlight-next-line
+[Units("Second(s)")]
+private float fadeDuration = 1f;
+
+[SerializeField]
+// highlight-next-line
+[Units("ms")]
+private float responseTime = 0.025f;
+    
+[SerializeField]
+// highlight-next-line
+[Units("Frame(s)")]
+private int frameDelay = 5;
+```
+
+![Units Attribute Example](https://cdn.junglesequencer.com/v2.0.0/documentation/extensions/units-attribute-example.jpg)
+
+---
+## How to Use
+
+Add the `Units` attribute to the serialized field you'd like to have units.
+
+For example, here's a `Vector2` named offset with units 'Miles'.
+```csharp
+[SerializedField]
+// highlight-next-line
+[Units("Mile(s)")]
+private Vector2 offset = Vector2.one;  
+```
