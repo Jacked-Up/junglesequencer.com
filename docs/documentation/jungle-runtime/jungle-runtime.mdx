@@ -4,7 +4,6 @@ slug: /jungle-runtime
 ---
 
 The `JungleRuntime` class manages the playback of `JungleTree` instances.
-It handles starting, stopping, and updating the playbacks, and provides events for monitoring the lifecycle of the trees.
 
 ## Overview
 
@@ -12,78 +11,6 @@ The `JungleRuntime` class provides the following functionalities:
 - Managing the playback lifecycle of `JungleTree` instances.
 - Providing events for tree start and stop.
 - Ensuring that playbacks are properly cleaned up.
-
----
-## Methods
-
-### `TryGetPlayback`
-
-`public static bool TryGetPlayback(JungleTree tree, out JunglePlayback playback)`
-
-Attempts to get the `JunglePlayback` associated with the specified `JungleTree`.
-
-**Returns:**
-- `true` if the playback is found; otherwise, `false`.
-
-### `IsPlaying`
-
-`public static bool IsPlaying(JungleTree tree)`
-
-Checks if the specified `JungleTree` instance is currently running.
-
-**Returns:**
-- `true` if the tree is running; otherwise, `false`.
-
-### `Play`
-
-`public static string Play(JungleTree tree)`
-
-Starts playing the specified `JungleTree` instance.
-
-**Returns:**
-- A string representing the unique identifier of the playback, or `null` if the tree cannot be played.
-
-### `Play`
-
-`public static string Play(JungleTree tree, out JunglePlayback playback)`
-
-Starts playing the specified `JungleTree` instance and returns the associated `JunglePlayback`.
-
-**Returns:**
-- A string representing the unique identifier of the playback, or `null` if the tree cannot be played.
-
-### `Stop`
-
-`public static void Stop(JungleTree tree)`
-
-Stops the specified `JungleTree` instance if it is currently running.
-
-### `Stop`
-
-`public static void Stop(JunglePlayback playback)`
-
-Stops the specified `JunglePlayback` instance if it is currently registered and running.
-
----
-## Events
-
-### `OnTreePlay`
-
-`public static event Action<JungleTree> OnTreePlay`
-
-Called when a `JungleTree` has begun playing.
-
-**Values:**
-- `JungleTree`: The tree that has started playing.
-
-### `OnTreeStop`
-
-`public static event Action<JungleTree> OnTreeStop`
-
-Called when a `JungleTree` has finished playing or was stopped.
-
-**Values:**
-- `JungleTree`: The tree that has stopped playing.
 
 ---
 ## Examples
@@ -146,3 +73,131 @@ public class JungleExample : MonoBehaviour
     }
 }
 ```
+
+---
+## Properties
+
+### `Playbacks`
+`public static IReadOnlyList<JunglePlayback> Playbacks { get; }`
+
+List of all currently running 
+<a href="./jungle-runtime/jungle-playback" target="_blank" rel="noopener noreferrer">*Jungle Playbacks*</a>.
+
+---
+## Events
+
+### `OnTreePlay`
+`public static event Action<JungleTree> OnTreePlay`
+
+Called when a `JungleTree` has started playing.
+
+#### Values
+- `JungleTree`: A reference to the tree that has started playing.
+
+---
+### `OnTreeStop`
+`public static event Action<JungleTree> OnTreeStop`
+
+Called when a `JungleTree` has finished playing or was stopped.
+
+#### Values
+- `JungleTree`: A reference to the tree that has stopped playing.
+
+---
+## Methods
+
+### `TryGetPlayback`
+`public static bool TryGetPlayback(JungleTree tree, out JunglePlayback playback)`
+
+Attempts to get the `JunglePlayback` associated with the given `JungleTree`.
+
+#### Parameters
+
+- `tree`: The `JungleTree` instance to find an associated `JunglePlayback` for.
+- `out playback`: A reference to the `JunglePlayback` instance associated with the given tree. (`null` if not found)
+
+#### Returns
+
+`true` if a playback associated with the given tree is found; otherwise, `false`.
+
+---
+### `IsTreePlaying`
+`public static bool IsTreePlaying(JungleTree tree)`
+
+Checks if the given `JungleTree` instance is currently playing.
+
+#### Parameters
+
+- `tree`: The `JungleTree` instance to check.
+
+#### Returns
+
+`true` if the given tree is playing; otherwise, `false`.
+
+---
+### `Play`
+`public static string Play(JungleTree tree)`
+
+Starts playing the given `JungleTree`.
+
+#### Parameters
+
+- `tree`: The `JungleTree` instance to play.
+
+#### Returns
+
+A string representing the unique identifier of the `JunglePlayback` associated with the tree.
+(`null` if the tree cannot be played)
+
+:::note CAN ONLY BE CALLED WHILE IN PLAY MODE
+The `Play` method can only be called while in play mode.
+:::
+
+---
+### `Play` (w/ out playback)
+`public static string Play(JungleTree tree, out JunglePlayback playback)`
+
+Starts playing the specified `JungleTree` instance and returns the associated `JunglePlayback`.
+
+#### Parameters
+
+- `tree`: The `JungleTree` instance to play.
+- `out playback`: A reference to the `JunglePlayback` associated with the given tree.
+(`null` if the tree cannot be played)
+
+#### Returns
+
+A string representing the unique identifier of the `JunglePlayback` associated with the tree.
+(`null` if the tree cannot be played)
+
+:::note CAN ONLY BE CALLED WHILE IN PLAY MODE
+The `Play` method can only be called while in play mode.
+:::
+
+---
+### `Stop` (JungleTree)
+`public static void Stop(JungleTree tree)`
+
+Stops the given `JungleTree` if it's currently running.
+
+#### Parameters
+
+- `tree`: The `JungleTree` instance to stop.
+
+:::note CAN ONLY BE CALLED WHILE IN PLAY MODE
+The `Stop` method can only be called while in play mode.
+:::
+
+---
+### `Stop` (JunglePlayback)
+`public static void Stop(JunglePlayback playback)`
+
+Stops the given `JunglePlayback` if it's currently running.
+
+#### Parameters
+
+- `playback`: The `JunglePlayback` instance to stop.
+
+:::note CAN ONLY BE CALLED WHILE IN PLAY MODE
+The `Stop` method can only be called while in play mode.
+:::
