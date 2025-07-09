@@ -20,6 +20,10 @@ The `Units` attribute provides the following functionality:
 ### Example
 
 ```csharp
+// Import the namespace
+// highlight-next-line
+using Jungle.Extensions;
+
 [SerializeField]
 // highlight-next-line
 [Units("Second(s)")]
@@ -41,10 +45,16 @@ private int frameDelay = 5;
 ---
 ## How to Use
 
-Add the `Units` attribute to the serialized field you'd like to have units.
+First, make sure to import the Jungle extensions namespace at the top of your script:
+`using Jungle.Extensions;`
+
+Then, you can add the `Units` attribute to the serialized field you'd like to have units.
 
 For example, here's a `Vector2` named offset with units 'Miles'.
 ```csharp
+// highlight-next-line
+using Jungle.Extensions;
+
 [SerializedField]
 // highlight-next-line
 [Units("Mile(s)")]
