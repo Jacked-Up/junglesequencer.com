@@ -10,66 +10,38 @@ The `JungleRuntime` class manages the playback of `JungleTree` instances.
 The `JungleRuntime` class provides the following functionalities:
 - Managing the playback lifecycle of `JungleTree` instances.
 - Providing events for tree start and stop.
-- Ensuring that playbacks are properly cleaned up.
 
 ---
-## Examples
+### Example
 
-### Playing a `JungleTree`
-
-To start playing a `JungleTree` instance, use the `Play` method:
+Below is an example of a script that plays a tree and stops it five seconds later.
 
 ```csharp
+// highlight-next-line
 using Jungle;
 using UnityEngine;
 
-public class JungleExample : MonoBehaviour
+public class JungleRuntimeExample : MonoBehaviour
 {
     [SerializeField]
+    // highlight-next-line
     private JungleTree tree;
 
     private string _playbackUid;
 
     private void Start()
     {
-        // Option 1:
+        // highlight-next-line
         _playbackUid = JungleRuntime.Play(tree);
-
-        // Option 2:
-        _playbackUid = JungleRuntime.Play(tree, out JunglePlayback playback);
-    }
-}
-```
-
-### Stopping a `JungleTree`
-
-To stop a running `JungleTree` instance, use the `Stop` method:
-
-```csharp
-using Jungle;
-using UnityEngine;
-
-public class JungleExample : MonoBehaviour
-{
-    [SerializeField]
-    private JungleTree tree;
-
-    private string _playbackUid;
-    private JunglePlayback _playback;
-
-    private void Start()
-    {
-        _playbackUid = JungleRuntime.Play(tree, out _playback);
+        
+        // Stop the tree after five seconds
         Invoke(nameof(StopTreeAfterFiveSeconds), 5);
     }
-
+    
     private void StopTreeAfterFiveSeconds()
     {
-        // Option 1: Stop via a playback uid
+        // highlight-next-line
         JungleRuntime.Stop(_playbackUid);
-
-        // Option 2: Stop via a playback reference
-        JungleRuntime.Stop(_playback);
     }
 }
 ```
