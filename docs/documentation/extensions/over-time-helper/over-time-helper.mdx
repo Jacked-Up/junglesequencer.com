@@ -1,0 +1,312 @@
+---
+title: Over Time Helper
+slug: /extensions/over-time-helper
+---
+
+The `OverTimeHelper` provides you with a simple and easy way to step values over time.
+The class also provides an intuitive, easy-to-use inspector for editing the options.
+
+## Overview
+
+The `OverTimeHelper` class includes functionalities for:
+- Stepping float, Vector2, Vector3, Quaternion, and Color values over time.
+- An intuitive, easy-to-use inspector for editing the options.
+
+---
+### Example
+
+Here's an example of a node that uses the `OverTimeHelper`.
+This node moves the inputted transform to the set target position.
+The `OverTimeHelper` in this instance is used to move the transform position over time.
+
+```csharp
+using Jungle;
+// highlight-next-line
+using Jungle.Extensions;
+using UnityEngine;
+
+[IONode(
+    OutputPortType = typeof(Transform)
+)]
+public class SetPositionNode : IONode<Transform>
+{
+    [SerializeField]
+    private Vector3 position;
+
+    // Initialize the over time helper with good options
+    // highlight-start
+    [SerializeField]
+    private OverTimeHelper overTime = OverTimeHelper.Default;
+    // highlight-end
+
+    private Transform _transform;
+
+    protected override void OnStart(Transform transform)
+    {
+        _transform = transform;
+    }
+
+    protected override void OnUpdate()
+    {
+        // Step the transform position toward the target position
+        // highlight-next-line
+        _transform.position = overTime.Step(_transform.position, position);
+
+        // Stop the node once the target position has been reached
+        // highlight-start
+        if (overTime.IsDone)
+            CallAndStop(_transform);
+        // highlight-end
+    }
+}
+```
+
+---
+## Constructor
+
+### `OverTimeHelper`
+
+`public OverTimeHelper(bool enabled, bool scaledTime, float rate, Motion method, float precision = 0.01f)`
+
+Initializes a new instance of the `OverTimeHelper` class.
+
+#### Parameters
+
+- `enabled`: Whether the helper is enabled.
+- `scaledTime`: Whether to use scaled delta time or fixed delta time for step calculations.
+- `rate`: The timescale rate.
+- `method`: The motion calculation method.
+- `precision`: The precision for determining if the calculation is done (default is 0.01f).
+
+---
+## Properties
+
+### `enabled`
+`public bool enabled { get; set; }`
+
+If the `OverTimeHelper` is enabled.
+:::info WHEN DISABLED
+While `enabled = false`, step will immediately step the value to the target value.
+:::
+
+---
+### `scaledTime`
+`public bool scaledTime { get; set; }`
+
+If the step calculations should be calculated with scaled time or fixed time.
+
+---
+### `rate`
+`public float rate { get; set; }`
+
+The rate at which the step calculations should be calculated.
+
+---
+### `method`
+`public OverTimeHelper.Motion method { get; set; }`
+
+The method used to calculate the steps.
+
+---
+### `IsDone`
+`public bool IsDone { get; }`
+
+Returns true if the last step method call reached the target position.
+
+---
+### `Default`
+`public static OverTimeHelper Default { get; }`
+
+Initializes an `OverTimeHelper` is the following options:
+- Enabled: `false`
+- scaled Time: `true`
+- Rate: `1`
+- Method: `Motion.Lerp`
+- Precision: `0.01`
+
+:::info INTENDED USAGE
+Use the `OverTimeHelper.Default` property to initialize the `OverTimeHelper` with good default options.
+
+```csharp
+[SerializeField]
+private OverTimeHelper overTime = OverTimeHelper.Default;
+```
+
+Alternatively, you can set custom default options like so:
+```csharp
+[SerializeField]
+private OverTimeHelper overTime = new OverTimeHelper
+(
+    enabled: true,
+    scaledTime: true,
+    rate: 2f,
+    method: Motion.Lerp, 
+    precision: 0.0001f
+);
+```
+
+You can still tweak these values in the inspector later.
+The code above only sets the initial values when the `OverTimeHelper` is first created.
+:::
+
+---
+## Methods
+
+---
+### `Step` (Float)
+`public float Step(float currentValue, float targetValue)`
+
+Calculates the step from the current `float` value towards the target `float` value for the current frame.
+
+#### Parameters
+
+- `currentValue`: The current `float` value.
+- `targetValue`: The target `float` value.
+
+#### Returns
+
+The new `float` value after applying the step for the current frame.
+
+---
+### `Step` (Vector2)
+
+`public Vector2 Step(Vector2 currentValue, Vector2 targetValue)`
+
+Smoothly transitions the current Vector2 value towards the target Vector2 value over time using the specified motion method.
+
+#### Parameters
+
+- `currentValue`: The current `Vector2` value.
+- `targetValue`: The target `Vector2` value.
+
+#### Returns
+
+The new Vector2 value after applying the transition for the current frame.
+
+---
+### `Step` (Vector3)
+
+`public Vector3 Step(Vector3 currentValue, Vector3 targetValue)`
+
+Smoothly transitions the current Vector3 value towards the target Vector3 value over time using the specified motion method.
+
+#### Parameters
+
+- `currentValue`: The current value.
+- `targetValue`: The target value.
+
+#### Returns
+
+The new Vector3 value after applying the transition for the current frame.
+
+---
+### `Step` (Quaternion)
+
+`public Quaternion Step(Quaternion currentValue, Quaternion targetValue)`
+
+Smoothly transitions the current Quaternion value towards the target Quaternion value over time using the specified motion method.
+
+#### Parameters
+
+- `currentValue`: The current value.
+- `targetValue`: The target value.
+
+#### Returns
+
+The new Quaternion value after applying the transition for the current frame.
+
+---
+### `Step` (Color)
+
+`public Color Step(Color currentValue, Color targetValue)`
+
+Smoothly transitions the current color value towards the target color value over time using the specified motion method.
+
+#### Parameters
+
+- `currentValue`: The current color value.
+- `targetValue`: The target color value.
+
+#### Returns
+
+The new color value after applying the transition for the current frame.
+
+---
+### `GetProgress` (Float)
+`public static float GetProgress(float current, float target, float original)`
+
+Returns the progress of a float value over time (0–1).
+
+#### Parameters
+
+- `current`: The current value.
+- `target`: The target value.
+- `original`: The original value.
+
+#### Returns
+
+The progress as a float between 0 and 1.
+
+---
+### `GetProgress` (Vector2)
+`public static float GetProgress(Vector2 current, Vector2 target, Vector2 original)`
+
+Returns the progress of a Vector2 value over time (0–1).
+
+#### Parameters
+
+- `current`: The current value.
+- `target`: The target value.
+- `original`: The original value.
+
+#### Returns
+
+The progress as a float between 0 and 1.
+
+---
+### `GetProgress` (Vector 3)
+`public static float GetProgress(Vector3 current, Vector3 target, Vector3 original)`
+
+Returns the progress of a Vector3 value over time (0–1).
+
+#### Parameters
+
+- `current`: The current value.
+- `target`: The target value.
+- `original`: The original value.
+
+#### Returns
+
+The progress as a float between 0 and 1.
+
+---
+### `GetProgress` (Quaternion)
+`public static float GetProgress(Quaternion current, Quaternion target, Quaternion original)`
+
+Returns the progress of a Quaternion value over time (0–1).
+
+#### Parameters
+
+- `current`: The current value.
+- `target`: The target value.
+- `original`: The original value.
+
+#### Returns
+
+The progress as a float between 0 and 1.
+
+---
+### `GetProgress` (Color)
+`public static float GetProgress(Color current, Color target, Color original)`
+
+Returns the progress of a color value over time (0–1).
+
+#### Parameters
+
+- `current`: The current color value.
+- `target`: The target color value.
+- `original`: The original color value.
+
+#### Returns
+
+The progress as a float between 0 and 1.
