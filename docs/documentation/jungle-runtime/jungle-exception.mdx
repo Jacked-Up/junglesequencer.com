@@ -36,8 +36,8 @@ public class FindGameObjectNode : IONode<Port.None>
         
         // highlight-start
         if (gameObject == null)
-            throw new JungleException($"Failed to find game object with the name MyGameObject");
-        // highlight-end        
+            throw new JungleException("Failed to find a game object with the name MyGameObject");
+        // highlight-end
 
         CallAndStop(gameObject);
     }
