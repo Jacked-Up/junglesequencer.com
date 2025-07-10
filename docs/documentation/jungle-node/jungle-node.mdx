@@ -3,8 +3,17 @@ title: Jungle Node
 slug: /jungle-node
 ---
 
-The `JungleNode` class represents the base class for all nodes in the Jungle Sequencer.
-It serves as the foundation for creating various types of nodes with specific functionalities and properties.
+The `JungleNode` class represents the base class for all node variants in the Jungle Sequencer.
+
+It serves as the foundation for the four variants: 
+1. Branch node
+2. IO node (input/output)
+3. Identity node
+4. Event node
+
+:::note NO SUPPORT FOR CUSTOM VARIANTS
+As of currently, Jungle Sequencer does not natively support the creation of custom node variant types.
+:::
 
 ## Overview
 
@@ -14,7 +23,6 @@ The `JungleNode` class provides the following functionalities:
 - Providing editor-specific functionalities for managing nodes within the Jungle Editor.
 
 ---
-
 ## Properties
 
 ### `Uid`
@@ -23,30 +31,35 @@ The `JungleNode` class provides the following functionalities:
 
 Gets the unique identifier for this node.
 
+---
 ### `Tree`
 
 `public JungleTree Tree { get; }`
 
 Gets a reference to the original tree this node is part of.
 
+---
 ### `OutputPorts`
 
 `public Port[] OutputPorts { get; }`
 
 Gets the list of output ports for this node.
 
+---
 ### `Nothing`
 
 `public static readonly Port.None Nothing`
 
 Gets the shorthand equivalent of `new Port.None()`.
 
+---
 ### `IsPlayback`
 
 `public bool IsPlayback { get; }`
 
 Indicates whether this node is an instance of a playback.
 
+---
 ### `Playback`
 
 `public JunglePlayback Playback`
@@ -54,11 +67,9 @@ Indicates whether this node is an instance of a playback.
 Gets the playback instance associated with this node. Throws an `InvalidOperationException` if the node is not an instance of a playback.
 
 ---
-
 ## Methods
 
 ### `AddRevertAction`
-
 `public string AddRevertAction(Action action)`
 
 Adds a revert action to be executed when the playback stops.
@@ -75,8 +86,8 @@ A unique identifier for the added revert action.
 
 - `InvalidOperationException`: Thrown when attempting to add a revert action to a non-playback node instance.
 
+---
 ### `RemoveRevertAction`
-
 `public void RemoveRevertAction(string revertActionUid)`
 
 Removes a revert action from the playback node instance.
