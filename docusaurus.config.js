@@ -24,7 +24,7 @@ module.exports = {
                     editUrl: 'https://github.com/Jacked-Up/junglesequencer.com/blob/live/',
                     versions: {
                         current: {
-                            label: '2.0.x (WIP 🚧)',
+                            label: '2.0.x (Unreleased)',
                             path: '2.0.x' 
                         }
                     },
