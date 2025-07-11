@@ -3,6 +3,9 @@ import "../css/BorderedSection.css";
 
 const BorderedSection = ({ children }) => {
     const sectionRef = useRef(null);
+
+    const tiltXAmount = 5; // Tilt forward/backward amount
+    const tiltYAmount = -2.5; // Tilt left/right amount
     
     const handleMouseMove = (e) => {
         const section = sectionRef.current;
@@ -17,8 +20,8 @@ const BorderedSection = ({ children }) => {
         const clampedDeltaX = Math.max(-1, Math.min(deltaX, 1));
         const clampedDeltaY = Math.max(-1, Math.min(deltaY, 1));
 
-        const rotateX = clampedDeltaY * 5; // Tilt forward/backward
-        const rotateY = clampedDeltaX * -2.5; // Tilt left/right
+        const rotateX = clampedDeltaY * tiltXAmount;
+        const rotateY = clampedDeltaX * tiltYAmount;
 
         section.style.setProperty('--rotateX', `${rotateX}deg`);
         section.style.setProperty('--rotateY', `${rotateY}deg`);
