@@ -38,18 +38,16 @@ const VideoPlayer = ({ videoUrl, title, description }) => {
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
         >
-            <div className="video-container">
-                <div className="player-wrapper">
-                    <ReactPlayer
-                        url={videoUrl}
-                        controls={true}
-                        width="100%"
-                        height="100%"
-                        className="react-player"
-                    />
-                </div>
+            <div className="video-player__container">
+                <ReactPlayer
+                    url={videoUrl}
+                    controls={true}
+                    width="100%"
+                    height="100%"
+                    className="video-player__react-player"
+                />
             </div>
-            <div className="text-container">
+            <div className="video-player__text">
                 <h2>{title}</h2>
                 <p>{description}</p>
             </div>

@@ -37,7 +37,7 @@ const BorderedSection = ({ children }) => {
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
         >
-            <div className="section-content">
+            <div className="bordered-section__content">
                 {children}
             </div>
         </div>
