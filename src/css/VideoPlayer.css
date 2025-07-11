@@ -17,7 +17,7 @@
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-    transition: transform 0.25s ease;
+    transition: transform 0.3s ease;
     will-change: transform;
 
     --rotateX: 0deg;
