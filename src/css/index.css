@@ -14,9 +14,9 @@
     padding-top: 2.5rem;
     padding-bottom: 5rem;
     width: 100%;
-
+    
     /* Visual */
-    border-bottom: 2px solid rgb(61, 123, 64);
+    border-bottom: var(--border-width) solid rgb(61, 123, 64);
 }
 
 .hero__content {
