@@ -4,12 +4,15 @@ import '../css/VideoPlayer.css';
 
 const VideoPlayer = ({ videoUrl, title, description }) => {
     const videoPlayerRef = useRef(null);
-
+    
+    const tiltXAmount = 5; // Tilt forward/backward amount
+    const tiltYAmount = -2.5; // Tilt left/right amount
+    
     const handleMouseMove = (e) => {
         const section = videoPlayerRef.current;
         const rect = section.getBoundingClientRect();
-        const x = e.clientX - rect.left; // X position within the element
-        const y = e.clientY - rect.top;  // Y position within the element
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
         const deltaX = (x - centerX) / centerX;
@@ -18,8 +21,8 @@ const VideoPlayer = ({ videoUrl, title, description }) => {
         const clampedDeltaX = Math.max(-1, Math.min(deltaX, 1));
         const clampedDeltaY = Math.max(-1, Math.min(deltaY, 1));
 
-        const rotateX = clampedDeltaY * 5;  // Tilt forward/backward
-        const rotateY = clampedDeltaX * -2.5; // Tilt left/right
+        const rotateX = clampedDeltaY * tiltXAmount;
+        const rotateY = clampedDeltaX * tiltYAmount;
 
         section.style.setProperty('--rotateX', `${rotateX}deg`);
         section.style.setProperty('--rotateY', `${rotateY}deg`);
@@ -33,17 +36,13 @@ const VideoPlayer = ({ videoUrl, title, description }) => {
 
     return (
         <div
-            className="video-player"
-            ref={videoPlayerRef}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
+            className="video-player" ref={videoPlayerRef}
+            onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}
         >
             <div className="video-player__container">
                 <ReactPlayer
-                    url={videoUrl}
-                    controls={true}
-                    width="100%"
-                    height="100%"
+                    url={videoUrl} controls={true}
+                    width="100%" height="100%"
                     className="video-player__react-player"
                 />
             </div>
