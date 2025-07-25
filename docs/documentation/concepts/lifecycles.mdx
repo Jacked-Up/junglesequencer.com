@@ -1,0 +1,46 @@
+---
+title: Lifecycles
+slug: /concepts/lifecycles
+---
+
+Understanding the lifecycles of the different runtime systems is key to implementing Jungle Sequencer effectively.
+
+This page has explanations and visual diagrams that break down the lifecycles of both `JunglePlayback` and `JungleNode`.
+These will help you get a clear picture of how each component behaves over time and how they interact with each other.
+
+---
+## Playback Lifecycle
+
+The `JunglePlayback` is an object created by the runtime used to handle playback of a `JungleTree`.
+When a tree is played, the runtime automatically creates a playback for the tree.
+The created playback is then initialized and registered with the runtime and begins execution.
+
+### Diagram
+
+![Jungle Playback Lifecycle Diagram](https://cdn.junglesequencer.com/v2.0.0/documentation/concepts/jungle-playback-lifecycle-diagram.jpg)
+
+---
+## Node Lifecycle
+
+`JunglePlayback` is responsible for each node's lifecycle.
+
+1. When the runtime starts playback for a tree, it spins up a `JunglePlayback` and *clones every node* in the tree.
+   These clones are known as *playback instances*.
+2. The playback runs and updates only the playback instances.
+   Each run gets a fresh copy of the node, so nothing that happens in one playback leaks into the next.
+
+Changes made to a playback instance's serialized data are **never saved**.
+
+### Diagram
+
+1. **Start:** `OnStart()` is invoked.
+2. **Early Exit?** If the node is already stopped, skip straight to `OnStop()` and finish.
+3. **Update Cycle** *(these three may fire in any order)*:
+    - `OnUpdate()`
+    - `OnLateUpdate()`
+    - `OnFixedUpdate()`
+4. **After Loop Cycle**:
+    - **Not Stopped** ➡️ go back to step three.
+    - **Stopped** ➡️ call `OnStop()` and finish.
+
+![Jungle Node Lifecycle Diagram](https://cdn.junglesequencer.com/v2.0.0/documentation/concepts/jungle-node-lifecycle-diagram.jpg)

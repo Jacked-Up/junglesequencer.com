@@ -1,108 +1,9 @@
 ---
-title: Concepts
-slug: /concepts
+title: Port Calls
+slug: /concepts/port-calls
 ---
 
 import BorderedSection from '@site/src/components/BorderedSection';
-
-There are many unique concepts and ideas that are essential to understanding Jungle.
-This page will help you understand these core concepts and ideas.
-
----
-## Important Terms
-
-- **Tree**: Collection of nodes connected together to form sequences.
-- **Node**: Unit of logic/behavior that performs a specific task.
-- **Port**: Connection point on a node where calls are sent or received.
-- **Edge**: Link between an input port and output port.
-- **Call**: Payload of data sent from an output port to an input port.
-
----
-## Node Variants
-
-Jungle has four node variants builtin.
-Each node variant has a unique purpose and use case.
-Understanding the differences between each node variant is essential to creating custom nodes.
-
-<BorderedSection>
-#### Branch Node
-
-One input port and multiple output ports.
-It is used for conditional logic and branching behavior.
-</BorderedSection>
-
-<BorderedSection>
-#### IO Node
-
-One input port and one output port.
-It is designed for simple logic and behavior. The "IO" stands for Input/Output.
-</BorderedSection>
-
-<BorderedSection>
-#### Identity Node
-
-One input port and one output port.
-Its port types are automatically defined based on the nodes connected to it.
-This makes it flexible and useful for nodes like "Wait for Seconds," which don’t need predefined inputs to function.
-</BorderedSection>
-
-<BorderedSection>
-#### Event Node
-
-No input ports and one or more output ports.
-It is used for event-driven logic and starts automatically when the tree is played.
-</BorderedSection>
-
----
-## Lifecycles
-
-Both trees and nodes follow a lifecycle managed by Jungle's runtime.
-Understanding the lifecycle will help you to better understand the process of creating and managing trees and nodes.
-
-### Trees
-<BorderedSection>
-#### ▶️ On Played:
-- All event nodes in the tree are started.
-    - For example, the start node is an event node started when the tree is played.
-</BorderedSection>
-
-<BorderedSection>
-#### 🔄 While Running:
-- The tree automatically manages and updates running nodes.
-:::info Automatic Stopping
-The tree will automatically stop when no nodes are running. 
-:::
-</BorderedSection>
-
-<BorderedSection>
-#### 🛑 On Stopped:
-- All running nodes (if any) are stopped.
-- All created revert actions (if any) are called.
-</BorderedSection>
-
-### Nodes
-<BorderedSection>
-#### ▶️ On Started:
-- The `OnStart` method is called on the node.
-
-:::info Immediately Stopping Node
-If the `Stop` or `CallAndStop` method is called from the `OnStart` method,
-the `OnUpdate`, `OnLateUpdate`, and `OnFixedUpdate` methods will not be called by the runtime.
-:::
-</BorderedSection>
-
-<BorderedSection>
-#### 🔄 While Running:
-- The `OnUpdate`, `OnLateUpdate`, and `OnFixedUpdate` methods are called on the node.
-</BorderedSection>
-
-<BorderedSection>
-#### 🛑 On Stopped:
-- The `OnStop` method is called on the node.
-</BorderedSection>
-
----
-## Port Calls
 
 Nodes use ports to send and receive data.
 Ports are linked by edges, which connect an output port on one node to an input port on another.
@@ -170,42 +71,42 @@ Call(new []
 
 #### `BranchNode.Call(Port.Call)`
 <BorderedSection>
-This example makes individual calls to both output ports and the node continues running.
-```csharp
-//      Port Index ↓  ↓ Payload
-Call(new Port.Call(0, 1));
-```
-```csharp
-//      Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
-Call(new Port.Call(1, "Hello, World!"));
-```
+    This example makes individual calls to both output ports and the node continues running.
+    ```csharp
+    //      Port Index ↓  ↓ Payload
+    Call(new Port.Call(0, 1));
+    ```
+    ```csharp
+    //      Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
+    Call(new Port.Call(1, "Hello, World!"));
+    ```
 </BorderedSection>
 
 #### `BranchNode.CallAndStop(Port.Call[])`
 <BorderedSection>
-This example makes calls to both output ports and the node stops running.
-```csharp
-CallAndStop(new []
-{
-    // Port Index ↓  ↓ Payload
-    new Port.Call(0, 1),
-    // Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
-    new Port.Call(1, "Hello, World!")
-});
-```
+    This example makes calls to both output ports and the node stops running.
+    ```csharp
+    CallAndStop(new []
+    {
+        // Port Index ↓  ↓ Payload
+        new Port.Call(0, 1),
+        // Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
+        new Port.Call(1, "Hello, World!")
+    });
+    ```
 </BorderedSection>
 
 #### `BranchNode.CallAndStop(Port.Call)`
 <BorderedSection>
-This example makes individual calls to both output ports and the node stops running.
-```csharp
-//             Port Index ↓  ↓ Payload
-CallAndStop(new Port.Call(0, 1));
-```
-```csharp
-//             Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
-CallAndStop(new Port.Call(1, "Hello, World!"));
-```
+    This example makes individual calls to both output ports and the node stops running.
+    ```csharp
+    //             Port Index ↓  ↓ Payload
+    CallAndStop(new Port.Call(0, 1));
+    ```
+    ```csharp
+    //             Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
+    CallAndStop(new Port.Call(1, "Hello, World!"));
+    ```
 </BorderedSection>
 
 ---
@@ -235,20 +136,20 @@ public class MyIONode : IONode<int>
 
 #### `IONode.Call(object)`
 <BorderedSection>
-This example makes a call to the output port and the node continues running.
-```csharp
-//   ↓ Payload
-Call(1);
-```
+    This example makes a call to the output port and the node continues running.
+    ```csharp
+    //   ↓ Payload
+    Call(1);
+    ```
 </BorderedSection>
 
 #### `IONode.CallAndStop(object)`
 <BorderedSection>
-This example makes a call to the output port and the node stops running.
-```csharp
-//          ↓ Payload
-CallAndStop(1);
-```
+    This example makes a call to the output port and the node stops running.
+    ```csharp
+    //          ↓ Payload
+    CallAndStop(1);
+    ```
 </BorderedSection>
 
 ---
@@ -267,18 +168,18 @@ public class MyIdentityNode : IdentityNode
 
 #### `IdentityNode.Call()`
 <BorderedSection>
-This example makes a call to the output port and the node continues running.
-```csharp
-Call();
-```
+    This example makes a call to the output port and the node continues running.
+    ```csharp
+    Call();
+    ```
 </BorderedSection>
 
 #### `IdentityNode.CallAndStop()`
 <BorderedSection>
-This example makes a call to the output port and the node stops running.
-```csharp
-CallAndStop();
-```
+    This example makes a call to the output port and the node stops running.
+    ```csharp
+    CallAndStop();
+    ```
 </BorderedSection>
 
 ---
@@ -318,54 +219,55 @@ public class MyEventNode : EventNode
 
 #### `EventNode.Call(Port.Call[])`
 <BorderedSection>
-This example makes calls to both output ports and the node continues running.
-```csharp
-Call(new []
-{
-    // Port Index ↓  ↓ Payload
-    new Port.Call(0, 1),
-    // Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
-    new Port.Call(1, "Hello, World!")
-});
-```
+    This example makes calls to both output ports and the node continues running.
+    ```csharp
+    Call(new []
+    {
+        // Port Index ↓  ↓ Payload
+        new Port.Call(0, 1),
+        // Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
+        new Port.Call(1, "Hello, World!")
+    });
+    ```
 </BorderedSection>
 
 #### `EventNode.Call(Port.Call)`
 <BorderedSection>
-This example makes individual calls to both output ports and the node continues running.
-```csharp
-//      Port Index ↓  ↓ Payload
-Call(new Port.Call(0, 1));
-```
-```csharp
-//      Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
-Call(new Port.Call(1, "Hello, World!"));
-```
+    This example makes individual calls to both output ports and the node continues running.
+    ```csharp
+    //      Port Index ↓  ↓ Payload
+    Call(new Port.Call(0, 1));
+    ```
+    ```csharp
+    //      Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
+    Call(new Port.Call(1, "Hello, World!"));
+    ```
 </BorderedSection>
 
 #### `EventNode.CallAndStop(Port.Call[])`
 <BorderedSection>
-This example makes calls to both output ports and the node stops running.
-```csharp
-CallAndStop(new []
-{
-    // Port Index ↓  ↓ Payload
-    new Port.Call(0, 1),
-    // Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
-    new Port.Call(1, "Hello, World!")
-});
-```
+    This example makes calls to both output ports and the node stops running.
+    ```csharp
+    CallAndStop(new []
+    {
+        // Port Index ↓  ↓ Payload
+        new Port.Call(0, 1),
+        // Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
+        new Port.Call(1, "Hello, World!")
+    });
+    ```
 </BorderedSection>
 
 #### `EventNode.CallAndStop(Port.Call)`
 <BorderedSection>
-This example makes individual calls to both output ports and the node stops running.
-```csharp
-//             Port Index ↓  ↓ Payload
-CallAndStop(new Port.Call(0, 1));
-```
-```csharp
-//             Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
-CallAndStop(new Port.Call(1, "Hello, World!"));
-```
+    This example makes individual calls to both output ports and the node stops running.
+    ```csharp
+    //             Port Index ↓  ↓ Payload
+    CallAndStop(new Port.Call(0, 1));
+    ```
+    ```csharp
+    //             Port Index ↓   ↓↓↓↓↓↓↓↓↓↓↓↓↓ Payload
+    CallAndStop(new Port.Call(1, "Hello, World!"));
+    ```
 </BorderedSection>
+

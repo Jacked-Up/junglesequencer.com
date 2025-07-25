@@ -31,6 +31,10 @@ module.exports = {
                     sidebarCollapsible: true,
                     showLastUpdateAuthor: false,
                     showLastUpdateTime: false,
+                    
+                    remarkPlugins: [
+                        require('./src/plugins/remark-bordered-section'),
+                    ],
                 },
                 
                 // Blog config

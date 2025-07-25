@@ -2,7 +2,22 @@
 const sidebars = {
     documentationSidebar: [
         'documentation/welcome',
-        'documentation/concepts',
+        'documentation/getting-started',
+
+        {
+            type: 'category',
+            label: 'Concepts',
+            link: {
+                type: 'doc',
+                id: 'documentation/concepts/concepts',
+            },
+            collapsed: true,
+            items: [
+                'documentation/concepts/port-calls',
+                'documentation/concepts/lifecycles',
+                'documentation/concepts/performance',
+            ],
+        },
         {
             type: 'category',
             label: 'Jungle Tree',

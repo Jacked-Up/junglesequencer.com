@@ -1,0 +1,132 @@
+.socials-prompt {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    
+    background: rgba(19, 23, 13, 0.125);
+    backdrop-filter: blur(10px);
+    
+    border: var(--border-width) solid rgba(224, 241, 225, 0.5);
+    border-radius: var(--border-radius);
+    
+    box-shadow: var(--box-shadow-primary);
+    z-index: 9999;
+
+    width: 350px;
+    
+    padding: 1rem;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: socialsSlideIn 0.3s ease forwards;
+}
+.socials-prompt.hide {
+    animation: socialsSlideOut 0.3s ease forwards;
+    pointer-events: none;
+}
+
+.socials-prompt__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+.socials-prompt__close:hover {
+    transform: scale(1.25);
+}
+
+.socials-prompt__content h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+[data-theme='light'] .socials-prompt__content h3 {
+    color: #333333;
+}
+
+.socials-prompt__content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    line-height: 1.25;
+}
+
+.socials-prompt__actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.socials-button {
+    display: inline-block;
+    padding: 0.5rem;
+    width: 5rem;
+    height: 3rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease !important;
+    opacity: 0;
+    transform: translateY(20%);
+    animation: fadeInUp 0.3s ease forwards;
+}
+.socials-button:hover {
+    transform: scale(1.05) !important;
+}
+
+.socials-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.socials-button--discord   { background: linear-gradient(135deg, #6572FF 10%, #5865F2 100%); }
+.socials-button--github    { background: linear-gradient(135deg, #24292f 10%, #0d1117 100%); }
+.socials-button--linkedin  { background: linear-gradient(135deg, #0A66C2 0%,  #33AFFF 100%); }
+
+.socials-button--linkedin  { animation-delay: 0.5s; }
+.socials-button--discord   { animation-delay: 0.6s; }
+.socials-button--github    { animation-delay: 0.7s; }
+
+@keyframes socialsSlideIn {
+    from { transform: translateY(300%); }
+    to   { transform: translateY(0); }
+}
+@keyframes socialsSlideOut {
+    from { transform: translateY(0); }
+    to   { transform: translateY(300%); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20%); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .socials-prompt {
+        bottom: 1rem;
+        right: 1rem;
+        left: 1rem;
+        width: auto;
+        text-align: center;
+        padding: 1rem;
+        transform: none !important;
+    }
+    .socials-prompt__actions {
+        justify-content: center;
+    }
+}
