@@ -1,0 +1,138 @@
+---
+title: Performance
+slug: /performance
+---
+
+The performance of Jungle Sequencer is incredibly important to me.
+This page is mostly used to showcase performance benchmarks but also contains useful information for speeding things up.
+
+Jungle Sequencer's systems can be split up into two groups:
+- *The editor:* Code that only runs within the Unity Editor and is stripped from the build binaries.
+- *The runtime:* Code that runs both in the Unity Editor and in the built application.
+
+---
+## Benchmark Machines Specs
+
+Performance benchmarks for Windows and macOS we're tested on machines with the following specs:
+
+- **Windows:**
+    - Processor: Intel i7-8700k (4.36 GHz)
+    - Memory: 64 GB (2667 MHz)
+    - Graphics: GeForce RTX 3070 Ti (8 GB)
+- **macOS:**
+    - Model: 14-inch MacBook Pro
+    - Processor: Apple M4
+    - Memory: 16 GB
+
+---
+### Runtime Benchmarks
+
+Jungle Sequencer's runtime system is quite efficient.
+The runtime code is compiled to the build binaries.
+
+Jungle Sequencer's runtime code is single-threaded and runs on the main thread.
+
+---
+### Editor Benchmarks
+
+Jungle Sequence's editor systems can be quite resource-intensive,
+which is why many of its systems are disabled in play mode.
+The editor code is never compiled to the build binaries.
+
+---
+## Performance Tips & Tricks
+
+Here's a list of tips and tricks that can improve performance both in the editor and in the build.
+These are completely optional, and some are only helpful when system resources are scarce.
+
+Regardless, if your Unity Editor is running sluggishly or your application isn't running as efficiently as you want,
+try implementing some of these tricks.
+
+---
+#### Close Unused Jungle Editors in Play Mode
+
+:::tip LARGE PERFORMANCE IMPROVEMENT
+:::
+
+Jungle Editor windows require a **LOT** of system resources to render, 
+especially when the Jungle Tree open within it is playing.
+While in future updates I plan to improve the performance of the editor,
+it will still likely have quite a performance impact.
+
+That said, when you're not using a Jungle Editor window, consider closing it to save some system resources.
+
+---
+#### Disable Jungle Validator in Play Mode
+
+:::tip MEDIUM/LARGE PERFORMANCE IMPROVEMENT
+:::
+
+*By default, the Jungle Sequencer Validator is disabled in play mode.*
+
+The validator requires a **LOT** of system resources to process everything.
+In addition, the more Jungle Trees you have, the longer the validator takes to process everything.
+
+It's not recommended to completely disable the validator, 
+however, disabling the validator in play mode will significantly decrease the overhead while in play mode.
+
+---
+#### Don't Use the Legacy Port Call System
+
+:::tip SMALL PERFORMANCE IMPROVEMENT
+:::
+
+Jungle Sequencer v2.0.0 introduced the new port call system.
+The old/legacy port call system still exists, however, it's recommended developers use the new system.
+
+The legacy port call system created GC (garbage collector) allocations that could slow down low-end systems.
+The new port call system does NOT create GC allocations when creating port calls.
+
+Here are examples of legacy port calls:
+```csharp
+// Single port call with legacy method:
+Call(new Port.Call(OUPUT_PORT_INDEX, OUTPUT_VALUE));
+
+// Multiple port calls with legacy method:
+Call(new []
+{
+    new Port.Call(OUPUT_PORT_INDEX, OUTPUT_VALUE),
+    new Port.Call(OUPUT_PORT_INDEX, OUTPUT_VALUE)
+});
+```
+
+Here are examples of new port calls:
+```csharp
+// Single Port Call with NEW method:
+Call(OUTPUT_PORT_INDEX, OUTPUT_VALUE);
+
+// Multiple port calls with new method:
+Call(new (byte, object)[]
+{
+    (OUPUT_PORT_INDEX, OUTPUT_VALUE),
+    (OUPUT_PORT_INDEX, OUTPUT_VALUE)
+});
+```
+
+Do note: The multiple port calls method in the new system still creates GC allocations due to allocating for the array.
+
+If you would like to have zero GC allocations, create port calls for each output individually like so:
+```csharp
+Call(OUTPUT_PORT_ONE, OUTPUT_VALUE_1);
+Call(OUTPUT_PORT_TWO, OUTPUT_VALUE_2);
+```
+
+---
+#### Don't Create Port Calls On Update
+
+:::tip SMALL PERFORMANCE IMPROVEMENT
+:::
+
+The Jungle Playback system is very efficient at processing port calls, especially with the new port call system; 
+However, creating port calls every frame or during updates can be quite inefficient.
+
+Not only would you be hammering the Jungle Runtime and Jungle Playbacks port call system,
+you'd be starting nodes over and over that could have costly initializations 
+(Ex. Node that finds a game object in the scene, Node that gets a component from a given game object, etc.).
+
+Generally, it's just bad practice to create port calls every frame.
+Avoid doing so if you can!

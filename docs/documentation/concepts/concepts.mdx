@@ -1,0 +1,54 @@
+---
+title: Concepts
+slug: /concepts
+---
+
+import BorderedSection from '@site/src/components/BorderedSection';
+
+There are many unique concepts and ideas that are essential to understanding Jungle.
+This page will help you understand these core concepts and ideas.
+
+---
+## Important Terms
+
+- **Tree**: Collection of nodes connected together to form sequences.
+- **Node**: Unit of logic/behavior that performs a specific task.
+- **Port**: Connection point on a node where calls are sent or received.
+- **Edge**: Link between an input port and output port.
+- **Call**: Payload of data sent from an output port to an input port.
+
+---
+## Node Variants
+
+Jungle has four node variants builtin.
+Each node variant has a unique purpose and use case.
+Understanding the differences between each node variant is essential to creating custom nodes.
+
+<BorderedSection>
+#### Branch Node
+
+One input port and multiple output ports.
+It is used for conditional logic and branching behavior.
+</BorderedSection>
+
+<BorderedSection>
+#### IO Node
+
+One input port and one output port.
+It is designed for simple logic and behavior. The "IO" stands for Input/Output.
+</BorderedSection>
+
+<BorderedSection>
+#### Identity Node
+
+One input port and one output port.
+Its port types are automatically defined based on the nodes connected to it.
+This makes it flexible and useful for nodes like "Wait for Seconds," which don’t need predefined inputs to function.
+</BorderedSection>
+
+<BorderedSection>
+#### Event Node
+
+No input ports and one or more output ports.
+It is used for event-driven logic and starts automatically when the tree is played.
+</BorderedSection>

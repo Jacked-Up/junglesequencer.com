@@ -48,6 +48,9 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     --border-primary: var(--border-width) solid var(--border-primary-color);
     --border-secondary: var(--border-width) solid var(--border-secondary-color);
     
+    /* Box Shadows */
+    --box-shadow-primary: 0 0 10px 0 rgba(0, 0, 0, 0.125);
+    
     /* Navbar */
     --ifm-navbar-background-color: #123c14;
     --ifm-navbar-height: 4rem;
@@ -100,6 +103,9 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     /* Borders */
     --border-primary-color: rgb(176, 182, 175);
     --border-secondary-color: rgba(176, 182, 175, 0.5);
+    
+    /* Box Shadows */
+    --box-shadow-primary: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     
     /* Sidebar */
     --docusaurus-collapse-button-bg: rgb(236, 241, 236) !important;
