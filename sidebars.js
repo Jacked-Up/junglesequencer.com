@@ -3,7 +3,6 @@ const sidebars = {
     documentationSidebar: [
         'documentation/welcome',
         'documentation/getting-started',
-
         {
             type: 'category',
             label: 'Concepts',

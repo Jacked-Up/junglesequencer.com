@@ -11,7 +11,7 @@ export default function LayoutWrapper(props) {
             <CookieConsent />
             
             { /* Socials prompt */ }
-            <SocialsPrompt />
+            { /* <SocialsPrompt /> */ }
             
             { /* Main Docusaurus layout */ }
             <Layout {...props} />
