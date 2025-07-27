@@ -22,25 +22,24 @@ The created playback is then initialized and registered with the runtime and beg
 ---
 ## Node Lifecycle
 
-`JunglePlayback` is responsible for each node's lifecycle.
+`JunglePlayback` is responsible for handling each node's lifecycle.
 
 1. When the runtime starts playback for a tree, it spins up a `JunglePlayback` and *clones every node* in the tree.
-   These clones are known as *playback instances*.
-2. The playback runs and updates only the playback instances.
-   Each run gets a fresh copy of the node, so nothing that happens in one playback leaks into the next.
+   These clones are known as *playback node instances*.
+2. The playback runs and updates only the playback node instances.
+   Each play gets a fresh copy of the node, so nothing that happens in one playback leaks into the next.
 
 Changes made to a playback instance's serialized data are **never saved**.
 
 ### Diagram
 
-1. **Start:** `OnStart()` is invoked.
-2. **Early Exit?** If the node is already stopped, skip straight to `OnStop()` and finish.
-3. **Update Cycle** *(these three may fire in any order)*:
-    - `OnUpdate()`
-    - `OnLateUpdate()`
-    - `OnFixedUpdate()`
-4. **After Loop Cycle**:
-    - **Not Stopped** ➡️ go back to step three.
-    - **Stopped** ➡️ call `OnStop()` and finish.
+1. **On Start** (`OnStart()`):
+    - Runs once.
+    - If you call `Stop()` or `CallAndStop()` here ➡️ jump straight to `OnStop()`.
+2. **Update Cycle:**
+    - `OnUpdate()`, `OnLateUpdate()`, `OnFixedUpdate()` (fired in any order).
+    - Repeat until you call `Stop()` or `CallAndStop()`.
+3. **On Stop** (`OnStop()`):
+    - Runs once when the node stops.
 
-![Jungle Node Lifecycle Diagram](https://cdn.junglesequencer.com/v2.0.0/documentation/concepts/jungle-node-lifecycle-diagram.jpg)
+![Jungle Playback Lifecycle Diagram](https://cdn.junglesequencer.com/v2.0.0/documentation/concepts/jungle-node-lifecycle-diagram.jpg)
