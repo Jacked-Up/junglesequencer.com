@@ -1,6 +1,11 @@
 @font-face {
     font-family: 'Rubik';
-    src: url('https://cdn.junglesequencer.com/fonts/rubik.ttf') format('truetype');
+    src: url('/static/Rubik-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GoogleSansCode';
+    src: url('/static/GoogleSansCode-Light.ttf') format('truetype');
 }
 
 h1, h2, h3, h4, h5, h6, p, a, button {
@@ -74,6 +79,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     
     /* Code block */
     --docusaurus-highlighted-code-line-bg: rgba(58, 202, 68, 0.15);
+    --ifm-font-family-monospace: GoogleSansCode !important;
     
     /* Markdown section border */
     --ifm-hr-background-color: var(--border-secondary-color);
