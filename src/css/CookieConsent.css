@@ -1,12 +1,12 @@
-.cookie-prompt{
+.cookie-prompt {
     position: fixed;
     top: 5rem;
     left: 50%;
     transform: translateX(-50%);
     
     background: rgba(19, 23, 13, 0.25);
-    backdrop-filter: blur(12px);
-    border: var(--border-width) solid rgba(176, 234, 180, 0.15);
+    backdrop-filter: blur(8px);
+    border: var(--border-width) solid rgba(227, 227, 227, 0.25);
     border-radius: var(--border-radius);
     box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
     
@@ -23,13 +23,18 @@
     animation: slideDown 0.5s ease forwards;
 }
 
+[data-theme='light'] .cookie-prompt {
+    background: rgba(19, 23, 13, 0.5);
+    border: var(--border-width) solid rgba(227, 227, 227, 0.5);
+}
+
 .cookie-prompt.hide {
     animation: slideUp 0.5s ease forwards;
     pointer-events: none;
 }
 
-.cookie-prompt__content{
-    flex:1;
+.cookie-prompt__content {
+    flex: 1;
     color: #fff;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -38,12 +43,12 @@
     margin: 0;
 }
 
-.cookie-prompt__content p{
+.cookie-prompt__content p {
     margin: 0;
     color: #e0e0e0;
 }
 
-.cookie-prompt__actions{
+.cookie-prompt__actions {
     display: flex; gap: 1rem;
 }
 
@@ -91,8 +96,8 @@
 }
 
 .cookie-prompt__button--reject{
-    --bg-start:#7b7b7b;
-    --bg-end:#9d9d9d;
+    --bg-start: #7b7b7b;
+    --bg-end: #9d9d9d;
 }
 .cookie-prompt__button--reject::before{
     background-image:url("https://cdn.junglesequencer.com/homepage/decline.svg");
